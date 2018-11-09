@@ -1,0 +1,22 @@
+body{
+margin: 0;
+padding: 0;
+}
+
+.formulario{
+width: 347px;
+height: 363px;
+top:280px;
+background-color: #FFFEFE;
+border-radius:18px 18px 18px 18px;
+position: absolute;
+
+}
+.txtform{
+  font-family: verdana, bold;
+  top:280px;
+  font-size: 15px;
+  color: #1D8841;
+  font-weight:bold;
+  text-align: center;
+}
