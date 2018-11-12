@@ -1,3 +1,39 @@
 .bg-company-red {
-    background-color: darkred;
+    background-color: #04190B;
+
+
+}
+
+
+.informativo{
+
+    content: "";
+    min-height: 20%;
+    background-color: #1D8841;
+    width: 100%;
+    height: 27px;
+
+
+}
+
+
+.tittle_comofunciona {
+    color: #1EC857;
+    font-size: 50px;
+    font-family: "Verdana, Bold";
+}
+
+
+.footer{
+    background-color: #186031;
+    width: 100%;
+
+}
+
+
+
+.p_footer {
+    font-size: 17px;
+    color:#fff;
+    font-family: "Verdana, Regular";
 }
