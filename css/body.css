@@ -7,16 +7,68 @@ padding: 0;
 width: 347px;
 height: 363px;
 top:280px;
+margin-left: 55%;
 background-color: #FFFEFE;
 border-radius:18px 18px 18px 18px;
 position: absolute;
+float: right;
+
 
 }
 .txtform{
   font-family: verdana, bold;
-  top:280px;
   font-size: 15px;
   color: #1D8841;
   font-weight:bold;
   text-align: center;
+  margin-top: 24px;
+}
+.img-background{
+
+}
+.box{
+  width: 140px;
+  height: 50px;
+  border-radius: 14px 14px 14px 14px;
+  border-color: #1D8841;
+  border-style: solid;
+  margin-left:22px;
+}
+.boxtext{
+  text-align: center;
+  font-size: 15px;
+  color: #1D8841;
+  font-weight:bold;
+  margin-top:9px;
+}
+.simule{
+  margin: 0 auto;
+  font-size: 20px;
+  text-decoration: underline;
+  color: #1D8841;
+  font-weight:bold;
+}
+.credito{
+  float: left;
+  top:333px;
+  margin-left: 5px;
+  position: absolute;
+}
+.textcredito{
+  font-family: Verdana, Bold;
+  font-size: 24px;
+  color: #FFFFFF;
+  font-weight:bold;
+  text-shadow: #000000 0px 3px 6px;
+
+}
+.valores{
+  font-family: Verdana, Regular;
+  font-size: 23px;
+  color: #FFFFFF;
+  text-shadow: #000000 0px 3px 6px;
+  top: 488px;
+  position: absolute;
+  width: 408px;
+  margin-left: 15px;
 }
