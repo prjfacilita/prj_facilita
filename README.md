@@ -88,9 +88,8 @@ git pull origin master
 
 
 ## Banco de dados
+* [Bnaco de dados PDF 0.1](https://github.com/prjfacilita/prj_facilita/blob/master/database/Facilita_MD.pdf) - Diagrama do banco de dados
 
-
-## Built With
 
 * [Laravel Framework](http://www.dropwizard.io/1.0.2/docs/) - Framework Laravel construido em PHP
 * [Maven](https://maven.apache.org/) - Dependency Management
