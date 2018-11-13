@@ -58,29 +58,33 @@ Que irá iniciar o artesão do laravel para que você possa visualizar o seu pro
 
 
 ## Publicando alterações
+Para você que esta iniciando agora com github segue um passo a passo de como publicar suas alterações sem complicações
+### Após fazer uma edição em algum arquivo ou função
 
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
 
 ```
-Give an example
+git add <nome do arquivo> ou git add . para adicionar todos os arquivos modificados
 ```
-
-### And coding style tests
-
-Explain what these tests test and why
+Agora que você já adicionou os arquivos necessários na memória, você precisa fazer um comentário para essas alterações, isso vai te ajudar com o histórico de bugs ou de releases
 
 ```
-Give an example
+git commit -m "[BUG] Correção de bug de login"
 ```
 
-## Deployment
+### Após fazer um comentário, você precisa enviar todas essas alterações para o repositório do github
 
-Add additional notes about how to deploy this on a live system
+Agora é só enviar
 
+```
+git push origin master
+```
+
+## IMPORTANTE, lembrando que antes de fazer alterações, você precisa atualizar o seu projeto
+Basta rodar o seguinte comando
+
+```
+git pull origin master
+```
 ## Built With
 
 * [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
@@ -95,7 +99,7 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
-## Authors
+## Autor
 
 * **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
 
