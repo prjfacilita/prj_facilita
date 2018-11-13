@@ -1,2 +1,113 @@
-# prj_facilita
-Projeto facilita
+# Projeto Facilita
+
+Breve descrição sobre o projeto
+
+## Getting Started
+
+Para começar o desenvolvimento deste projeto sera necessário a instalação de algumsa ferramentas listadas abaixo:
+
+
+
+Instalação de um servidor com Apache e PHP 
+Apache 2.4 <br>
+PHP 5.6 <br>
+Laravel Framework 5.6 <br>
+Bootstrap 4.1 <br>
+NPM 6.4.1 <br>
+
+
+
+### Pré Requisitos
+
+What things you need to install the software and how to install them
+
+```
+Give examples
+```
+
+### Instalando
+
+Passo a passo de instalação do projeto na sua máquina local
+
+** Lembrando que este é o ambiente de desenvolvimento
+
+```
+git clone git@github.com:prjfacilita/prj_facilita.git
+```
+
+Após clonar o projeto entre dentro da pasta através do terminal
+
+```
+cd prj_facilita
+```
+
+Agora que você esta na raiz do projeto execute os seguintes comandos para configurar o ambiente de desenvolvimento
+
+** Este comando irá instalar as bibliotecas do front-end
+```
+npm install
+```
+
+Após instalar as bibliotecas necessárias, você pode rodar o projeto através do comando 
+
+```
+php artisan serve
+```
+Que irá iniciar o artesão do laravel para que você possa visualizar o seu projeto no navegador
+
+
+
+## Publicando alterações
+
+Explain how to run the automated tests for this system
+
+### Break down into end to end tests
+
+Explain what these tests test and why
+
+```
+Give an example
+```
+
+### And coding style tests
+
+Explain what these tests test and why
+
+```
+Give an example
+```
+
+## Deployment
+
+Add additional notes about how to deploy this on a live system
+
+## Built With
+
+* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
+* [Maven](https://maven.apache.org/) - Dependency Management
+* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+
+## Contributing
+
+Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+
+## Versioning
+
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+
+## Authors
+
+* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+
+See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+* Hat tip to anyone whose code was used
+* Inspiration
+* etc
+
