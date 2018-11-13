@@ -18,12 +18,12 @@ NPM 6.4.1 <br>
 
 
 ### Pré Requisitos
+Apache 2.4 <br>
+PHP 5.6 <br>
+Laravel Framework 5.6 <br>
+Bootstrap 4.1 <br>
+NPM 6.4.1 <br>
 
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
 
 ### Instalando
 
@@ -87,7 +87,7 @@ git pull origin master
 ```
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
+* [Laravel Framework](http://www.dropwizard.io/1.0.2/docs/) - Framework Laravel construido em PHP
 * [Maven](https://maven.apache.org/) - Dependency Management
 * [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
 
