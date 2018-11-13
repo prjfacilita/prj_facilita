@@ -177,3 +177,10 @@ hr {
     font-family: "Verdana, Italic";
 
 }
+
+
+.nav-link{
+    color:#fff !important;
+    font-family: "Verdana, Regular";
+    font-size: 14px;
+}
