@@ -85,6 +85,11 @@ Basta rodar o seguinte comando
 ```
 git pull origin master
 ```
+
+
+## Banco de dados
+
+
 ## Built With
 
 * [Laravel Framework](http://www.dropwizard.io/1.0.2/docs/) - Framework Laravel construido em PHP
