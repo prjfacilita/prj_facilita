@@ -1,68 +1,75 @@
-body{
+body {
   margin: 0;
   padding: 0;
 }
-.formulario{
-width: 347px;
-height: 363px;
-top:280px;
-margin-left: 55%;
-background-color: #FFFEFE;
-border-radius:18px 18px 18px 18px;
-position: absolute;
-float: right;
 
-
+.formulario {
+  width: 347px;
+  height: 363px;
+  top: 280px;
+  margin-left: 55%;
+  background-color: #FFFEFE;
+  border-radius: 18px 18px 18px 18px;
+  position: absolute;
+  float: right;
+  box-shadow:  0px 10px 29px;
 }
-.txtform{
+
+.txtform {
   font-family: verdana, bold;
   font-size: 15px;
   color: #1D8841;
-  font-weight:bold;
+  font-weight: bold;
   text-align: center;
   margin-top: 24px;
 }
-.img-background img{
-max-width: 100%;
-position: relative;
+
+.img-background img {
+  width: 100%;
+  height: auto;
 }
-.box{
+
+.box {
   width: 140px;
   height: 50px;
   border-radius: 14px 14px 14px 14px;
   border-color: #1D8841;
   border-style: solid;
-  margin-left:22px;
+  margin-left: 22px;
 }
-.boxtext{
+
+.boxtext {
   text-align: center;
   font-size: 15px;
   color: #1D8841;
-  font-weight:bold;
-  margin-top:9px;
+  font-weight: bold;
+  margin-top: 9px;
 }
-.simule{
+
+.simule {
   margin: 0 auto;
   font-size: 20px;
   text-decoration: underline;
   color: #1D8841;
-  font-weight:bold;
+  font-weight: bold;
 }
-.credito{
+
+.credito {
   float: left;
-  top:333px;
+  top: 333px;
   margin-left: 5px;
   position: absolute;
 }
-.textcredito{
+
+.textcredito {
   font-family: Verdana, Bold;
   font-size: 24px;
   color: #FFFFFF;
-  font-weight:bold;
+  font-weight: bold;
   text-shadow: #000000 0px 3px 6px;
-
 }
-.valores{
+
+.valores {
   font-family: Verdana, Regular;
   font-size: 23px;
   color: #FFFFFF;
@@ -72,20 +79,61 @@ position: relative;
   width: 408px;
   margin-left: 15px;
 }
-.cmfunciona, .txtfunciona{
-  top:69px;
+
+.cmfunciona, .txtfunciona {
+  top: 69px;
   color: #958F8F;
   font-size: 75px;
   font-family: Verdana, Regular;
   text-shadow: #000000 0px 3px 6px;
 }
-.icone1{
-  top:150px;
+
+.icone1 {
+  top: 150px;
   padding-left: 7%;
 }
-.txticone{
+
+.txticone {
   font-size: 15px;
   font-family: verdana, Regular;
   color: #958F8F;
-  text-shadow:  0px 1px 1px;
+  text-shadow: 0px 1px 1px;
+}
+
+.txtvantagens {
+  font-size: 70px;
+  color: #FCFCFC;
+  margin: 37px auto;
+  letter-spacing: 5px;
+  text-shadow: #000000 0px 3px 6px;
+}
+
+#vantagens {
+  top: 192px;
+  background: linear-gradient(to right bottom, #067010, #5CBF23);
+  position: relative;
+}
+.icone2{
+  margin-left: 10%;
+}
+.txticon2{
+  font-size: 25px;
+  font-family: verdana, Regular;
+  margin-left: -10%;
+  color: #FCFCFC;
+}
+.txticon3{
+  font-size: 17px;
+  color: #FCFCFC;
+  margin-left: -15%;
+  font-family: verdana, Regular;
+}
+#clientes{
+ 
+
+}
+.txtcli{
+  font-size: 50px;
+  font-family: verdana, Regular;
+  color: #1EC857;
 }
