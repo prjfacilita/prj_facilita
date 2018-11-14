@@ -10,7 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.5.0",
-    "FortAwesome/Font-Awesome": "*",
     "bootstrap": "^4.1.3"
   }
 }
