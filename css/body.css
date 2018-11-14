@@ -109,27 +109,31 @@ body {
 }
 
 #vantagens {
-  top: 192px;
+  margin-top: 14%;
+  padding: 0;
+}
+.bg-vntg{
   background: linear-gradient(to right bottom, #067010, #5CBF23);
-  position: relative;
+  padding-bottom: 20px;
 }
 .icone2{
-  margin-left: 10%;
+  margin-left: 12%;
+
 }
 .txticon2{
-  font-size: 25px;
+  font-size: 20px;
   font-family: verdana, Regular;
-  margin-left: -10%;
+  margin-left: -11%;
   color: #FCFCFC;
 }
 .txticon3{
   font-size: 17px;
   color: #FCFCFC;
-  margin-left: -15%;
+  margin-left: -10%;
   font-family: verdana, Regular;
 }
 #clientes{
- 
+
 
 }
 .txtcli{
