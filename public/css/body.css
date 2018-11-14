@@ -132,12 +132,24 @@ body {
   margin-left: -10%;
   font-family: verdana, Regular;
 }
-#clientes{
-
+.slick{
 
 }
 .txtcli{
   font-size: 50px;
-  font-family: verdana, Regular;
+  font-family: verdana, Bold;
+  font-weight: bold;
   color: #1EC857;
+}
+.comentario{
+  font-size: 21px;
+  color: #585B59;
+  font-family: verdana, Regular;
+}
+.bg.footer{
+  background-color: #186031;
+}
+.footer, a, img{
+
+
 }
