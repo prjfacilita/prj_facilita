@@ -30,6 +30,6 @@ class CreateCadastroTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cadastro');
+        Schema::dropIfExists('pre_cadastro');
     }
 }
