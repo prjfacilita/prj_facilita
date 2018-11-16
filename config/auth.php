@@ -41,11 +41,8 @@ return [
             'driver' => 'session',
             'provider' => 'login',
         ],
-
-
-
         'api' => [
-            'driver' => 'token',
+            'driver' => 'passport',
             'provider' => 'login',
         ],
     ],

@@ -59,7 +59,7 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => $data['password'],
             'permissao' => 1,
-            'cpf' =>1,
+            'cpf' => $data['cpf'],
             'status' => 1,
         ]);
     }
