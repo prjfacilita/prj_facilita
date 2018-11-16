@@ -55,6 +55,12 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+
+        $hashed = Hash::make($data['password'], [
+            'memory' => 1024,
+            'time' => 2,
+            'threads' => 2,
+        ]);
         return Login::create([
             'email' => $data['email'],
             'password' => $data['password'],

@@ -17,7 +17,7 @@ class Login extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'email','password','permissao', 'cpf','status'
+        'email','password'
     ];
 
     /**
@@ -26,12 +26,12 @@ class Login extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'passcode', 'remember_token',
+
     ];
 
 
     public function getAuthPassword()
     {
-        return $this->passcode;
+
     }
 }
