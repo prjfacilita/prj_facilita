@@ -10,3 +10,17 @@ https://medium.com/trainingcenter/php-criando-um-crud-b%C3%A1sico-com-laravel-5-
 
 
 https://bootsnipp.com/snippets/Q0em5
+
+
+
+mostrar rotas em tempo real
+
+https://pusher.com/tutorials/realtime-map-laravel/
+
+
+Reverting Migrations: Now if you wanted to rollback migrations, we could use
+
+php artisan migrate:rollback or
+
+php artisan migrate:reset.
+Now that we have our table, lets create sample users.

@@ -26,4 +26,4 @@ Route::group(['middleware' => 'auth:api'], function(){
     Route::post('details', 'API\UserController@details');
 });
 
-$this->get('/verify-user/{code}', 'Auth\RegisterController@activateUser')->name('activate.user');
+//$this->get('/verify-user/{code}', 'Auth\RegisterController@activateUser')->name('activate.user');
