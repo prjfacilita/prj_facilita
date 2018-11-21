@@ -22,6 +22,37 @@
             background-size: cover;
             -o-background-size: cover;
         }
+
+        .facilita-bar{
+            width: 100%;
+            background: #074A1E;
+
+        }
+
+        .facilita-bar p{
+
+            font-family: 'Verdana, Regular';
+            font-size: 10px;
+            color:#FFFFFF;
+            text-align: left;
+
+        }
+
+        .login-text01{
+
+            font-family: 'Verdana, Bold';
+            color:#FBFFFC;
+            font-size: 50px;
+            text-align: left;
+        }
+
+        .login-text02{
+            font-family: 'Verdana, Bold';
+            color:#FBFFFC;
+            font-size:35px;
+            text-align: left;
+        }
+
     </style>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
@@ -31,6 +62,8 @@
 {{--<div id="app">--}}
 
 
+
+
     <div class="bg"></div>
 
 
@@ -38,22 +71,27 @@
             <div class="row">
 
 
-                <div class="col-md-12 col-lg-12 col-sm-12">
-                    <p>Atenção! A Facilita não solicita depósito antecipado para empréstimo. Em caso de dúvida entre em contato.</p>
+                <div class="facilita-bar col-md-12 col-lg-12 col-sm-12">
+                    <p class="mt-3">Atenção! A Facilita não solicita depósito antecipado para empréstimo. Em caso de dúvida entre em contato.</p>
                 </div>
 
 
-                <div class="col-md-12 col-lg-12 col-sm-12">
+                <div class="facilita-logo col-md-6 col-lg-6 col-sm-6">
+                    <img class="mt-1 ml-5" src="imagens/LogoFacilita.png" width="35%">
+                </div>
 
-                   <div class="col-md-6 col-lg-6 col-sm-6 text-center">
-                       <span class="text-center">ACESSE SUA CONTA</span>
+
+
+
+                   <div class="col-md-12 col-lg-12 col-sm-12 text-center">
+                       <span class="login-text01 text-center">ACESSE SUA CONTA</span>
                    </div>
 
-                    <div class="col-md-6 col-lg-6 col-sm-6 text-center">
-                        <span class="text-center">Empréstimo Pessoal</span>
+                    <div class="col-md-12 col-lg-12 col-sm-12 text-center">
+                        <span class="login-text02 text-center">Empréstimo Pessoal</span>
                     </div>
                     {{--<p>Atenção! A Facilita não solicita depósito antecipado para empréstimo. Em caso de dúvida entre em contato.</p>--}}
-                </div>
+
 
 
 

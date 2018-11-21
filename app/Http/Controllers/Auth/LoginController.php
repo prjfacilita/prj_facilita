@@ -99,7 +99,7 @@ class LoginController extends Controller
 
                 // validation successful!
                 // redirect them to the secure section or whatever
-                 return Redirect::to('home');
+                return redirect()->intended('home');
                 // for now we'll just echo success (even though echoing in a controller is bad)
               //  echo 'sucesso!';
 

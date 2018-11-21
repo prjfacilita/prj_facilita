@@ -24,3 +24,8 @@ php artisan migrate:rollback or
 
 php artisan migrate:reset.
 Now that we have our table, lets create sample users.
+
+
+///////////////////////////////////////////
+Pegar geolocalização laravel
+https://artisansweb.net/user-registration-login-system-laravel/
