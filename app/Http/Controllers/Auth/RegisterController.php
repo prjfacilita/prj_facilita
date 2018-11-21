@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Login;
+
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
-Use Illuminate\Support\Facades\Hash;
+use App\Login;
+
 class RegisterController extends Controller
 {
 
@@ -39,9 +40,20 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
 
+        /* $table->increments('id');
+            $table->string('email')->unique();
+            $table->string('password');
+            $table->string('permissao');
+            $table->string('cpf')->unique();
+            $table->integer('status');
+            $table->rememberToken();
+            $table->timestamps();*/
         return Validator::make($data, [
             'email' => 'required|string|max:255|unique:login',
             'password' => 'required|string|max:255|',
+            'permissao' => 'required|string|max:255|',
+            'cpf' => 'required|string|max:255|unique:login',
+            'status' => 'required|string|max:255|',
 
         ]);
     }
@@ -50,15 +62,14 @@ class RegisterController extends Controller
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
-     * @return \App\Login
+     * @return \App\User
      */
     protected function create(array $data)
     {
-        $password = Hash::make($data['password']);
         return Login::create([
             'email' => $data['email'],
-            'password' => $password,
-            'permissao' => 1,
+            'password' => $data['password'],
+            'permissao' => $data['permissao'],
             'cpf' => $data['cpf'],
             'status' => 1,
         ]);

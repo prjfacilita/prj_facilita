@@ -19,7 +19,9 @@ class CreateCadastroTable extends Migration
             $table->char('email');
             $table->integer('celular');
             $table->integer('status');
-           // $table->timestamps();
+            $table->char('cpf');
+
+            // $table->timestamps();
         });
     }
 

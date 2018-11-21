@@ -16,7 +16,7 @@
     <style>
 
         body {
-            background: url('http://placehold.it/1920x1080') no-repeat center center fixed;
+            background: url('imagens/group197.png') no-repeat center center fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             background-size: cover;
