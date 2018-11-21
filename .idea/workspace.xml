@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="206981e0-7df5-403e-bdbb-bb160092db92" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Duvidas" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Duvidas" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -94,13 +92,13 @@
           <entry key="Documentação Sistema" value="33" />
           <entry key="Duvidas" value="252" />
           <entry key="env" value="18" />
-          <entry key="php" value="2376" />
+          <entry key="php" value="2657" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key=".env file" value="18" />
-          <entry key="Blade" value="751" />
+          <entry key="Blade" value="1032" />
           <entry key="PHP" value="1625" />
           <entry key="PLAIN_TEXT" value="285" />
         </counts>
@@ -112,8 +110,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="79" column="36" selection-start-line="79" selection-start-column="36" selection-end-line="79" selection-end-column="36" />
+            <state relative-caret-position="324">
+              <caret line="182" column="52" selection-start-line="182" selection-start-column="52" selection-end-line="182" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -368,12 +366,12 @@
       <workItem from="1542128207709" duration="144000" />
       <workItem from="1542128390586" duration="6107000" />
       <workItem from="1542203836683" duration="21591000" />
-      <workItem from="1542800308159" duration="11378000" />
+      <workItem from="1542800308159" duration="12734000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64021000" />
+    <option name="totallyTimeSpent" value="65377000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -690,8 +688,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="79" column="36" selection-start-line="79" selection-start-column="36" selection-end-line="79" selection-end-column="36" />
+        <state relative-caret-position="324">
+          <caret line="182" column="52" selection-start-line="182" selection-start-column="52" selection-end-line="182" selection-end-column="52" />
         </state>
       </provider>
     </entry>

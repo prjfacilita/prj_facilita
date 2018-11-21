@@ -53,6 +53,22 @@
             text-align: left;
         }
 
+
+        .input-login{
+            
+            position: relative;
+            background: transparent;
+            width: 100%;
+            border: none;
+            outline: none;
+            padding: 8px 0;
+            font-size: 16px;
+            border-bottom: 1px solid;
+            border-color: #ccc;
+            /*border-bottom-width:;*/
+        }
+
+
     </style>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
@@ -93,73 +109,88 @@
                     {{--<p>Atenção! A Facilita não solicita depósito antecipado para empréstimo. Em caso de dúvida entre em contato.</p>--}}
 
 
+                <div class="col-md-6 col-lg-6 col-sm-6 mx-auto rounded-6">
+                <div class="card">
+                    {{--<div class="card-header">--}}
+                        {{--Featured--}}
+                    {{--</div>--}}
+                    <div class="card-body">
+                        <form class="form-horizontal" method="POST" action="{{ route('login') }}">
+                            {{ csrf_field() }}
 
+                            <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                                <label for="email" class=" col-md-4 control-label">E-Mail Address</label>
 
+                                <div class="col-md-6">
+                                    <input id="email" type="email" class="input-login " name="email" value="{{ old('email') }}" required autofocus>
 
-
-                <div class="col-md-8 col-md-offset-2">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">Login</div>
-
-                        <div class="panel-body">
-                            <form class="form-horizontal" method="POST" action="{{ route('login') }}">
-                                {{ csrf_field() }}
-
-                                <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                                    <label for="email" class="col-md-4 control-label">E-Mail Address</label>
-
-                                    <div class="col-md-6">
-                                        <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
-
-                                        @if ($errors->has('email'))
-                                            <span class="help-block">
+                                    @if ($errors->has('email'))
+                                        <span class="help-block">
                                         <strong>{{ $errors->first('email') }}</strong>
                                     </span>
-                                        @endif
-                                    </div>
+                                    @endif
                                 </div>
+                            </div>
 
-                                <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                                    <label for="password" class="col-md-4 control-label">Password</label>
+                            <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                                <label for="password" class="col-md-4 control-label">Password</label>
 
-                                    <div class="col-md-6">
-                                        <input id="password" type="password" class="form-control" name="password" required>
+                                <div class="col-md-6">
+                                    <input id="password" type="password" class="input-login" name="password" required>
 
-                                        @if ($errors->has('password'))
-                                            <span class="help-block">
+                                    @if ($errors->has('password'))
+                                        <span class="help-block">
                                         <strong>{{ $errors->first('password') }}</strong>
                                     </span>
-                                        @endif
-                                    </div>
+                                    @endif
                                 </div>
+                            </div>
 
-                                <div class="form-group">
-                                    <div class="col-md-6 col-md-offset-4">
-                                        <div class="checkbox">
-                                            <label>
-                                                <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
-                                            </label>
-                                        </div>
-                                    </div>
+                            {{--<div class="form-group">--}}
+                                {{--<div class="col-md-6 col-md-offset-4">--}}
+                                    {{--<div class="checkbox">--}}
+                                        {{--<label>--}}
+                                            {{--<input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me--}}
+                                        {{--</label>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+
+                            <div class="form-group">
+                                <div class="col-md-8 col-md-offset-4">
+
+
+                                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                                        Esqueci minha senha
+                                    </a>
+
+
+                                    <button type="submit" class="btn btn-success">
+                                        ENTRAR
+                                    </button>
                                 </div>
-
-                                <div class="form-group">
-                                    <div class="col-md-8 col-md-offset-4">
-                                        <button type="submit" class="btn btn-primary">
-                                            Login
-                                        </button>
-
-                                        <a class="btn btn-link" href="{{ route('password.request') }}">
-                                            Forgot Your Password?
-                                        </a>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
+
+                </div>
+
             </div>
 
+
+            <div class="form-group">
+                <div class="col-md-8 col-md-offset-8 mx-auto">
+
+
+                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                        Não tem cadastro?
+                    </a>
+
+
+
+                </div>
+            </div>
 
         </div>
 
