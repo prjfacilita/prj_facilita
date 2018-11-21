@@ -26,12 +26,19 @@ class Login extends Authenticatable
      * @var array
      */
     protected $hidden = [
-
+        'password'
     ];
 
 
-    public function getAuthPassword()
+    public function types($types =  null) //admin, instrutor, paciente
     {
-
+        $opTypes = [
+//            'patient'       => 'Paciente',
+//            'instructor'    => 'Instrutor',
+//            'administrator' => 'Administrador',
+        ];
+        if (!$types)
+            return $opTypes;
+        return $opTypes[$types];
     }
 }

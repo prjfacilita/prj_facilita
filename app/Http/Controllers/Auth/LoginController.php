@@ -15,6 +15,10 @@ use App\Login;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+
+use Illuminate\Support\Facades\DB;
+//use App\Http\Controllers\Controller;
+
 class LoginController extends Controller
 {
     /*
@@ -56,14 +60,12 @@ class LoginController extends Controller
 
         /// fazer busca no banco de dados e pegar a senha do usuário para comparar
         ///
+        ///
+        ///
 
-        $hashedPassword = '$2y$10$R7MK2evWfb2isHTDxer5ge1dBCHbwDy9uwC0DHhqeVngzPHFJd0Fm';
-        if (Hash::check('hotmail123', $password))
-        {
-           echo 'teste senha ok';
-        }else{
-            echo 'errox';
-        }
+       // $data = Login::where('email', Input::get('email'))->first();
+
+
 
 
 
@@ -97,16 +99,16 @@ class LoginController extends Controller
 
                 // validation successful!
                 // redirect them to the secure section or whatever
-                // return Redirect::to('secure');
+                 return Redirect::to('home');
                 // for now we'll just echo success (even though echoing in a controller is bad)
-                echo 'sucesso!';
+              //  echo 'sucesso!';
 
             } else {
 
                 // validation not successful, send back to form
 
-                echo 'erro!';
-               // return Redirect::to('login');
+               // echo 'erro!';
+                return Redirect::to('login');
 
             }
 
