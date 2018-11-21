@@ -1,0 +1,86 @@
+@media (min-width: 370px) and (max-width: 770px){
+
+  .formulario{
+  	margin-left: 55%;
+  	float:left;
+  	top: 100px;
+    width: 280px;
+    height: 300px;
+
+ }
+ .box {
+   width: 100px;
+   height: 30px;
+   border-radius: 14px 14px 14px 14px;
+   border-color: #1D8841;
+   border-style: solid;
+   margin-left: 26px;
+ }
+ .boxtext {
+   text-align: center;
+   font-size: 10px;
+   color: #1D8841;
+   font-weight: bold;
+   margin-top: 5px;
+ }
+ .credito{
+  float: left;
+  top: 200px;
+  margin-left: 5px;
+
+}
+.valores {
+
+  top: 350px;
+  font-size: 15px;
+  margin-left: 5px;
+}
+.icone1 {
+  top: 100px;
+  padding-left: 12%;
+  margin:0 auto;
+}
+.txtfooter{
+  font-size: 14px;
+  margin-left: 25%;
+}
+
+}
+@media (min-width: 320px) and (max-width: 375px){
+  .formulario{
+  	margin:0 auto;
+  	
+  	top: 220px;
+    width: 250px;
+    height: 280px;
+
+ }
+ .py-3{
+  padding-bottom: inherit!important;
+ }
+  .box {
+    width: 73px;
+    height: 44px;
+    border-radius: 14px 14px 14px 14px;
+    border-color: #1D8841;
+    border-style: solid;
+    margin-left: 36px;
+
+  }
+  .boxtext {
+    text-align: center;
+    font-size: 10px;
+    color: #1D8841;
+    font-weight: bold;
+    margin-top: 9px;
+  }
+  .cmfunciona, .txtfunciona {
+    top: 69px;
+    font-size: 45px;
+}
+.textcredito {
+
+  font-size: 18px;
+
+}
+}
