@@ -21,6 +21,7 @@ class CreateLoginTable extends Migration
             $table->string('permissao');
             $table->string('cpf')->unique();
             $table->integer('status');
+            $table->string('confirmation_code')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
