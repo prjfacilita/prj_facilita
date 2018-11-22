@@ -27,3 +27,7 @@ Route::group(['middleware' => 'auth:api'], function(){
 });
 
 //$this->get('/verify-user/{code}', 'Auth\RegisterController@activateUser')->name('activate.user');
+
+//
+//$this->get('register1', 'Auth\RegisterController@showRegistrationForm')->name('register');
+//$this->post('register1', 'Auth\RegisterController@register');

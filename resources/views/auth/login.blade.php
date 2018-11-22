@@ -56,18 +56,40 @@
 
         .input-login{
             
-            position: relative;
+
             background: transparent;
             width: 100%;
             border: none;
             outline: none;
-            padding: 8px 0;
+
             font-size: 16px;
             border-bottom: 1px solid;
             border-color: #ccc;
+
+
+
+
+            height: 2em;
+            line-height: 2em;
+
+
+
+
+
             /*border-bottom-width:;*/
         }
 
+
+        .panel-login{
+
+            border-radius: 8px;
+            border: 1px solid #707070;
+            background-color: #FFFFFF;
+            padding-top: 1%;
+            padding-bottom: 1%;
+
+
+        }
 
     </style>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -109,17 +131,17 @@
                     {{--<p>Atenção! A Facilita não solicita depósito antecipado para empréstimo. Em caso de dúvida entre em contato.</p>--}}
 
 
-                <div class="col-md-6 col-lg-6 col-sm-6 mx-auto rounded-6">
-                <div class="card">
+                <div class="col-md-6 col-lg-5 col-sm-6 mx-auto panel-login">
+                {{--<div class="card ">--}}
                     {{--<div class="card-header">--}}
                         {{--Featured--}}
                     {{--</div>--}}
-                    <div class="card-body">
-                        <form class="form-horizontal" method="POST" action="{{ route('login') }}">
+                    {{--<div class="card-body">--}}
+                        <form class="form-horizontal mb-3 mt-3" method="POST" action="{{ route('login') }}">
                             {{ csrf_field() }}
 
                             <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                                <label for="email" class=" col-md-4 control-label">E-Mail Address</label>
+                                <label for="email" class=" col-md-4 control-label">Email</label>
 
                                 <div class="col-md-6">
                                     <input id="email" type="email" class="input-login " name="email" value="{{ old('email') }}" required autofocus>
@@ -133,7 +155,7 @@
                             </div>
 
                             <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                                <label for="password" class="col-md-4 control-label">Password</label>
+                                <label for="password" class="col-md-4 control-label">Senha</label>
 
                                 <div class="col-md-6">
                                     <input id="password" type="password" class="input-login" name="password" required>
@@ -171,8 +193,8 @@
                                 </div>
                             </div>
                         </form>
-                    </div>
-                </div>
+                    {{--</div>--}}
+                {{--</div>--}}
 
                 </div>
 
@@ -183,7 +205,7 @@
                 <div class="col-md-8 col-md-offset-8 mx-auto">
 
 
-                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                    <a class="btn btn-link" href="{{ route('register') }}">
                         Não tem cadastro?
                     </a>
 

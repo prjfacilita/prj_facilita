@@ -15,7 +15,13 @@
 
     <style>
 
-
+        body {
+            background: url('imagens/group197.png') no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            background-size: cover;
+            -o-background-size: cover;
+        }
 
         .facilita-bar{
             width: 100%;
@@ -32,7 +38,46 @@
 
         }
 
+        .login-text01{
 
+            font-family: 'Verdana, Bold';
+            color:#FBFFFC;
+            font-size: 50px;
+            text-align: left;
+        }
+
+        .login-text02{
+            font-family: 'Verdana, Bold';
+            color:#FBFFFC;
+            font-size:35px;
+            text-align: left;
+        }
+
+
+        .input-login{
+
+
+            background: transparent;
+            width: 100%;
+            border: none;
+            outline: none;
+
+            font-size: 16px;
+            border-bottom: 1px solid;
+            border-color: #ccc;
+
+
+
+
+            height: 2em;
+            line-height: 2em;
+
+
+
+
+
+            /*border-bottom-width:;*/
+        }
 
 
         .panel-login{
@@ -55,13 +100,13 @@
 {{--<div id="app">--}}
 
 
-{{--<div class="h-75 d-inline-block bg" style="width: 120px; background-color: rgba(0,0,255,.1)">Height 75%</div>--}}
+
+
+<div class="bg"></div>
 
 
 <div class="container-fluid">
     <div class="row">
-
-        <div class="col-lg-12 col-md-12 col-ms-12 h-75 d-inline-block" style="width: 100%x; background-color: #ccc;"></div>
 
 
         <div class="facilita-bar col-md-12 col-lg-12 col-sm-12">
@@ -74,32 +119,36 @@
         </div>
 
 
-        <div class="col-md-6 col-lg-6 col-sm-6">
 
+
+        <div class="col-md-12 col-lg-12 col-sm-12 text-center">
+            <span class="login-text01 text-center">ACESSE SUA CONTA</span>
         </div>
 
+        <div class="col-md-12 col-lg-12 col-sm-12 text-center">
+            <span class="login-text02 text-center">Empréstimo Pessoal</span>
+        </div>
+        {{--<p>Atenção! A Facilita não solicita depósito antecipado para empréstimo. Em caso de dúvida entre em contato.</p>--}}
 
 
-
-        <div class="col-md-6 col-lg-6 col-sm-6 mx-auto  panel-login ">
+        <div class="col-md-6 col-lg-5 col-sm-6 mx-auto panel-login">
             {{--<div class="card ">--}}
             {{--<div class="card-header">--}}
             {{--Featured--}}
             {{--</div>--}}
             {{--<div class="card-body">--}}
-            <form class="form-horizontal mt-4 mb-4 ml-4 mr-4" method="POST" action="{{ route('register') }}">
+            <form class="form-horizontal" method="POST" action="{{ route('register') }}">
                 {{ csrf_field() }}
 
-
-                <div class="form-group{{ $errors->has('nome') ? ' has-error' : '' }}">
-                    <label for="nome" class="col-md-4 control-label">Nome</label>
+                <div class="form-group{{ $errors->has('cpf') ? ' has-error' : '' }}">
+                    <label for="name" class="col-md-4 control-label">Cpf</label>
 
                     <div class="col-md-6">
-                        <input id="nome" type="text" class="form-control" name="nome" value="{{ old('nome') }}" required autofocus>
+                        <input id="cpf" type="text" class="form-control" name="cpf" value="{{ old('cpf') }}" required autofocus>
 
-                        @if ($errors->has('nome'))
+                        @if ($errors->has('cpf'))
                             <span class="help-block">
-                                        <strong>{{ $errors->first('nome') }}</strong>
+                                        <strong>{{ $errors->first('cpf') }}</strong>
                                     </span>
                         @endif
                     </div>
@@ -119,63 +168,32 @@
                     </div>
                 </div>
 
-                <div class="form-group{{ $errors->has('cpf') ? ' has-error' : '' }}">
-                    <label for="cpf" class="col-md-4 control-label">Cpf</label>
+                <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                    <label for="password" class="col-md-4 control-label">Password</label>
 
                     <div class="col-md-6">
-                        <input id="cpf" type="text" class="form-control" name="cpf" value="{{ old('cpf') }}" required autofocus>
+                        <input id="password" type="password" class="form-control" name="password" required>
 
-                        @if ($errors->has('cpf'))
+                        @if ($errors->has('password'))
                             <span class="help-block">
-                                        <strong>{{ $errors->first('cpf') }}</strong>
+                                        <strong>{{ $errors->first('password') }}</strong>
                                     </span>
                         @endif
                     </div>
                 </div>
-
-
-                <div class="form-group{{ $errors->has('tel') ? ' has-error' : '' }}">
-                    <label for="tel" class="col-md-4 control-label">Telefone</label>
-
-                    <div class="col-md-6">
-                        <input id="tel" type="text" class="form-control" name="tel" value="{{ old('tel') }}" required autofocus>
-
-                        @if ($errors->has('tel'))
-                            <span class="help-block">
-                                        <strong>{{ $errors->first('tel') }}</strong>
-                                    </span>
-                        @endif
-                    </div>
-                </div>
-
-
-
-                {{--<div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">--}}
-                    {{--<label for="password" class="col-md-4 control-label">Password</label>--}}
-
-                    {{--<div class="col-md-6">--}}
-                        {{--<input id="password" type="password" class="form-control" name="password" required>--}}
-
-                        {{--@if ($errors->has('password'))--}}
-                            {{--<span class="help-block">--}}
-                                        {{--<strong>{{ $errors->first('password') }}</strong>--}}
-                                    {{--</span>--}}
-                        {{--@endif--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-
-                {{--<div class="form-group">--}}
-                    {{--<label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>--}}
-
-                    {{--<div class="col-md-6">--}}
-                        {{--<input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
 
                 <div class="form-group">
-                    <div class="col-md-6 mx-auto">
+                    <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
+
+                    <div class="col-md-6">
+                        <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-6 col-md-offset-4">
                         <button type="submit" class="btn btn-primary">
-                            Enviar
+                            Register
                         </button>
                     </div>
                 </div>
@@ -189,7 +207,7 @@
 
 
     <div class="form-group">
-        <div class="col-md-8 col-md-offset-8 ">
+        <div class="col-md-8 col-md-offset-8 mx-auto">
 
 
             <a class="btn btn-link" href="{{ route('register') }}">
