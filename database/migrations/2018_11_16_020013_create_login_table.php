@@ -17,10 +17,10 @@ class CreateLoginTable extends Migration
         Schema::create('login', function (Blueprint $table) {
             $table->increments('id');
             $table->string('email')->unique();
-            $table->string('password');
+            $table->string('password')->default('testesistema');
             $table->string('permissao');
             $table->string('cpf')->unique();
-            $table->integer('status');
+            $table->integer('status')->default('1');;
             $table->string('confirmation_code')->nullable();
             $table->rememberToken();
             $table->timestamps();

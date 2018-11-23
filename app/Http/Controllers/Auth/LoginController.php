@@ -57,29 +57,18 @@ class LoginController extends Controller
     {
 
 
+        //validar os campos informados pelo usuario
 
-        /// fazer busca no banco de dados e pegar a senha do usuário para comparar
-        ///
-        ///
-        ///
-
-       // $data = Login::where('email', Input::get('email'))->first();
-
-
-
-
-
-
-// validate the info, create rules for the inputs
         $rules = array(
             'email' => 'required|email', // make sure the email is an actual email
             'password' => 'required|alphaNum|min:3' // password can only be alphanumeric and has to be greater than 3 characters
         );
 
-// run the validation rules on the inputs from the form
         $validator = Validator::make(Input::all(), $rules);
 
-// if the validator fails, redirect back to the form
+
+        /// se o validador retornar erro
+        ///
         if ($validator->fails()) {
             return Redirect::to('login')
                 ->withErrors($validator)// send back all errors to the login form

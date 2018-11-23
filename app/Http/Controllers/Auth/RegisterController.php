@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use App\Login;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 
 
 class RegisterController extends Controller
@@ -52,11 +53,17 @@ class RegisterController extends Controller
             $table->timestamps();*/
         return Validator::make($data, [
             'email' => 'required|string|max:255|unique:login',
-            'password' => 'required|string|max:255|',
+
             'cpf' => 'required|string|max:255|unique:login'
 
 
         ]);
+
+
+
+        // após validar enviar o email
+
+
     }
 
     /**
@@ -67,12 +74,33 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return Login::create([
+         Login::create([
             'email' => $data['email'],
-            'password' =>  Hash::make($data['password']),
+//            'password' =>  Hash::make($data['password']),
             'permissao' => 1,
             'cpf' => $data['cpf'],
             'status' => 1,
         ]);
+
+
+
+
+
+//        $user = auth()->user();
+////        Mail::to($user)->send(new Login($user));
+//
+//        Mail::send('emails.confirmacao', ['user' => $user], function ($m) use ($user) {
+//            $m->from('rodrigo@apple.com', 'Facilita');
+//
+//            $m->to('rtelesc@gmail.com', $user->name)->subject($data['cpf']);
+//        });
+
+        Mail::send('emails.confirmacao', ['title' => 'teste', 'message' => 'teste'], function ($message)
+        {
+            $message->from('no-reply@scotch.io', 'Scotch.IO');
+            $message->to('batman@batcave.io');
+        });
+
+
     }
 }
