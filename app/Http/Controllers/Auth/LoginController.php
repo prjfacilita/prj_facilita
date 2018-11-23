@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 
 
 
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Redirect;
 
 use Illuminate\Support\Facades\Auth;
@@ -83,11 +84,49 @@ class LoginController extends Controller
                 'password' => Input::get('password')
             );
 
+
+
+            $selectIfActive = DB::table('login')
+                ->where('status', '=', '1')
+                ->where('email', '=',  $userdata['email'])
+//                ->orderBy('quantity', 'asc')
+                ->first();
+
+
+
+            // se o status do usuário for 1, ele ainda não esta com o token confirmado
+
+            if($selectIfActive->status == 1){
+
+                return print_r('não autorizado');
+            }else{
+
+            }
+
+
+            //criar condição para enviar novamente o código  caso dê erro
+
+
+
+
+
+//             return print_r($userdata);/
+
+
+
+
+            // verificar se o usuário esta ativado
+
             // attempt to do the login
             if (Auth::attempt($userdata)) {
 
                 // validation successful!
                 // redirect them to the secure section or whatever
+
+//                $email = Auth::user()->email;
+
+
+                /// verificar se o usuário já esta ativado
                 return redirect()->intended('home');
                 // for now we'll just echo success (even though echoing in a controller is bad)
               //  echo 'sucesso!';

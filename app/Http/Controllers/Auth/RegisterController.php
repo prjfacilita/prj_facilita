@@ -74,17 +74,12 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-         Login::create([
-            'email' => $data['email'],
-//            'password' =>  Hash::make($data['password']),
-            'permissao' => 1,
-            'cpf' => $data['cpf'],
-            'status' => 1,
-        ]);
 
 
 
 
+
+         // gerar token
 
 //        $user = auth()->user();
 ////        Mail::to($user)->send(new Login($user));
@@ -95,12 +90,36 @@ class RegisterController extends Controller
 //            $m->to('rtelesc@gmail.com', $user->name)->subject($data['cpf']);
 //        });
 
-        Mail::send('emails.confirmacao', ['title' => 'teste', 'message' => 'teste'], function ($message)
+        $rand = $this->generateRandomString(6);
+
+
+        Login::create([
+            'email' => $data['email'],
+//            'password' =>  Hash::make($data['password']),
+            'permissao' => 1,
+            'cpf' => $data['cpf'],
+            'status' => 1,
+            'confirmation_code' => $rand,
+        ]);
+
+        Mail::send('emails.confirmacao', ['title' => 'teste', 'rand' =>  $rand], function ($message)
         {
             $message->from('no-reply@scotch.io', 'Scotch.IO');
             $message->to('batman@batcave.io');
         });
 
 
+    }
+
+
+
+    public function generateRandomString($length) {
+        $characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $charactersLength = strlen($characters);
+        $randomString = '';
+        for ($i = 0; $i < $length; $i++) {
+            $randomString .= $characters[rand(0, $charactersLength - 1)];
+        }
+        return $randomString;
     }
 }

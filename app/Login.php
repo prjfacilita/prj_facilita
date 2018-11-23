@@ -30,6 +30,7 @@ class Login extends Authenticatable
     ];
 
 
+
     public function types($types =  null) //admin, instrutor, paciente
     {
         $opTypes = [

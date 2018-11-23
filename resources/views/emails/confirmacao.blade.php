@@ -4,6 +4,6 @@
     <title>Send Email</title>
 </head>
 <body>
-{{--<h2>Hi Welcome to Test Mail : {!! $user->email !!}</h2>--}}
+<h2>Hi Welcome to Test Mail : {!! $rand !!}</h2>
 </body>
 </html>
