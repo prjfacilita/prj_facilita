@@ -98,8 +98,11 @@ class LoginController extends Controller
 
             if($selectIfActive->status == 1){
 
-                return print_r('não autorizado');
+//                return print_r('não autorizado');
+                return view('api.ativacao', ['name' => 'James']);
+
             }else{
+
 
             }
 
@@ -171,5 +174,42 @@ class LoginController extends Controller
         return redirect()->back()
             ->withInput($request->only($this->username(), 'remember'))
             ->withErrors($errors);
+    }
+
+    public function AtivacaoUsuario(Request $request){
+
+
+
+        // create our user data for the authentication
+        $userdata = array(
+            'confirmation_code' => Input::get('confirmation_code'),
+        );
+
+
+
+        // buscar email através do código de ativação
+
+        $selectIfActive = DB::table('login')
+            ->where('status', '=', '1')
+            ->where('confirmation_code', '=',  $userdata['confirmation_code'])
+//                ->orderBy('quantity', 'asc')
+            ->first();
+
+
+
+//        if($selectIfActive)
+
+
+        //atualizar senha e autorizar acesso
+
+        return view('Auth\cadastrar_senha',
+            ['confirmation_code' => $selectIfActive->confirmation_code],
+            ['email' => $selectIfActive->email]
+        );
+
+
+
+
+//        return $selectIfActive->email;
     }
 }

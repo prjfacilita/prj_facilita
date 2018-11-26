@@ -26,8 +26,14 @@ Route::group(['middleware' => 'auth:api'], function(){
     Route::post('details', 'API\UserController@details');
 });
 
-//$this->get('/verify-user/{code}', 'Auth\RegisterController@activateUser')->name('activate.user');
-
+//Route::any('official/form/reject-form}', 'FormStatus@rejectForm')->name('reject-form');
 //
+
+
+//Route::post('/ativacao', 'Auth\LoginController@AtivacaoUsuario');
+Route::post('ativacao', [ 'as' => 'ativacao', 'uses' => 'Auth\LoginController@AtivacaoUsuario']);
+
 //$this->get('register1', 'Auth\RegisterController@showRegistrationForm')->name('register');
 //$this->post('register1', 'Auth\RegisterController@register');
+
+
