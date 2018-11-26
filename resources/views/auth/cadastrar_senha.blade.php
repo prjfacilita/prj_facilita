@@ -96,6 +96,10 @@
 
                 <input name="confirmation_code" type="hidden" value="{{$confirmation_code}}">
                 <input name="email" type="hidden" value="{{$email}}">
+
+
+
+
                 <div class="col-md-6">
                     <input id="senha" type="text" class="form-control" name="senha" value="{{ old('senha') }}" required autofocus>
 

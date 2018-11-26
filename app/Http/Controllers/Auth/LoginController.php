@@ -230,12 +230,19 @@ class LoginController extends Controller
            // update password e status
 
 
-            DB::table('login')
-                ->where('email', $request->email)
-                ->update(array('status' => 2,  'password' =>  Hash::make($request->senha)));
+            if($request->senha == $request->confirmar_senha){
+                DB::table('login')
+                    ->where('email', $request->email)
+                    ->update(array('status' => 2,  'password' =>  Hash::make($request->senha)));
 
 
-            return 'ok';
+                return redirect()->intended('home');
+            }
+
+
+
+
+
 
         }
 
