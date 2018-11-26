@@ -110,7 +110,7 @@
                                     <div class="col-md-8 col-md-offset-8 ">
 
 
-                                        <a class="btn btn-link" href="{{ route('reset_code',   ['email' => $email]) }}">
+                                        <a class="btn btn-link" href="{{ route('reset_code') }}">
                                             Não recebi o código
                                         </a>
 

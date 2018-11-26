@@ -180,6 +180,7 @@ return [
 
         /*Dependencia para APIs*/
         Laravel\Passport\PassportServiceProvider::class,
+        LaravelLegends\PtBrValidator\ValidatorProvider::class,
 //        Jrean\UserVerification\UserVerificationServiceProvider::class,
 
     ],

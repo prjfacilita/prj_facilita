@@ -10,7 +10,8 @@
         "jrean/laravel-user-verification": "^4.1",
         "laravel/framework": "5.4.*",
         "laravel/passport": "^4.0",
-        "laravel/tinker": "~1.0"
+        "laravel/tinker": "~1.0",
+        "laravellegends/pt-br-validator": "5.1.*"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

@@ -29,3 +29,7 @@ Now that we have our table, lets create sample users.
 ///////////////////////////////////////////
 Pegar geolocalização laravel
 https://artisansweb.net/user-registration-login-system-laravel/
+
+
+biblioteca validação cpf (implementado
+https://github.com/LaravelLegends/pt-br-validator
