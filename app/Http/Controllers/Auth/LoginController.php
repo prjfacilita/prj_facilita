@@ -93,28 +93,22 @@ class LoginController extends Controller
                 ->first();
 
 
+            if(count($selectIfActive) > 0){
+
+                if($selectIfActive->status == 1){
+
+                    return view('api.ativacao',
+                        ['email' =>  $userdata['email']]
+                    );
+
+                }
+            }
 
             // se o status do usuário for 1, ele ainda não esta com o token confirmado
 
-            if($selectIfActive->status == 1){
-
-//                return print_r('não autorizado');
-                return view('api.ativacao', ['name' => 'James']);
-
-            }else{
-
-
-            }
 
 
             //criar condição para enviar novamente o código  caso dê erro
-
-
-
-
-
-//             return print_r($userdata);/
-
 
 
 
@@ -125,9 +119,6 @@ class LoginController extends Controller
 
                 // validation successful!
                 // redirect them to the secure section or whatever
-
-//                $email = Auth::user()->email;
-
 
                 /// verificar se o usuário já esta ativado
                 return redirect()->intended('home');
@@ -195,10 +186,11 @@ class LoginController extends Controller
 //                ->orderBy('quantity', 'asc')
             ->first();
 
+        //validar se retornou resultados
+        if(count($selectIfActive) == 0){
 
-
-//        if($selectIfActive)
-
+            return 'o código que você inseriu não existe';
+        }
 
         //atualizar senha e autorizar acesso
 
@@ -207,9 +199,53 @@ class LoginController extends Controller
             ['email' => $selectIfActive->email]
         );
 
-
-
-
-//        return $selectIfActive->email;
     }
+
+
+
+    public function CriarSenha(Request $request){
+
+//        return print_r($request);
+
+        // tratar a senha,  update na senha e no status, que vai para status 2
+
+
+
+        $rules = array(
+            'email' => 'required|email', // make sure the email is an actual email
+            'confirmation_code' => 'required|alphaNum|min:6' // password can only be alphanumeric and has to be greater than 3 characters
+        );
+
+        $validator = Validator::make(Input::all(), $rules);
+
+
+        /// se o validador retornar erro
+        ///
+        if ($validator->fails()) {
+            return Redirect::to('login')
+                ->withErrors($validator)// send back all errors to the login form
+                ->withInput(Input::except('password')); // send back the input (not the password) so that we can repopulate the form
+        } else {
+
+           // update password e status
+
+
+            DB::table('login')
+                ->where('email', $request->email)
+                ->update(array('status' => 2,  'password' =>  Hash::make($request->senha)));
+
+
+            return 'ok';
+
+        }
+
+    }
+
+
+    public function reset_code(Request $request){
+
+      $this->AtivacaoUsuario($request);
+    }
+
+
 }

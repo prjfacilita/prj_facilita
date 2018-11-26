@@ -32,6 +32,8 @@ Route::group(['middleware' => 'auth:api'], function(){
 
 //Route::post('/ativacao', 'Auth\LoginController@AtivacaoUsuario');
 Route::post('ativacao', [ 'as' => 'ativacao', 'uses' => 'Auth\LoginController@AtivacaoUsuario']);
+Route::post('confirmacao', [ 'as' => 'confirmacao', 'uses' => 'Auth\LoginController@CriarSenha']);
+Route::post('reset_code', [ 'as' => 'reset_code', 'uses' => 'Auth\LoginController@reset_code']);
 
 //$this->get('register1', 'Auth\RegisterController@showRegistrationForm')->name('register');
 //$this->post('register1', 'Auth\RegisterController@register');

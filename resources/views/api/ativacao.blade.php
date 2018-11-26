@@ -33,18 +33,14 @@
         }
 
 
-
-
-        .panel-login{
-
-            border-radius: 8px;
-            border: 1px solid #707070;
-            background-color: #FFFFFF;
-            padding-top: 1%;
-            padding-bottom: 1%;
-
-
+        .teste{
+            width: 100%;
+            height: 35%;
+            background-color: #04190B;
+            /*opacity 50%;*/
         }
+
+
 
     </style>
 
@@ -114,7 +110,7 @@
                                     <div class="col-md-8 col-md-offset-8 ">
 
 
-                                        <a class="btn btn-link" href="{{ route('register') }}">
+                                        <a class="btn btn-link" href="{{ route('reset_code',   ['email' => $email]) }}">
                                             Não recebi o código
                                         </a>
 
@@ -133,7 +129,6 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-12 col-md-12 col-ms-12 h-75 d-inline-block" style="width: 100%x; background-color: #ccc;"></div>
 
 
         <div class="facilita-bar col-md-12 col-lg-12 col-sm-12">
@@ -141,10 +136,12 @@
         </div>
 
 
+        <div class="col-md-12 col-xs-12 col-lg-12 teste">
         <div class="facilita-logo col-md-6 col-lg-6 col-sm-6">
             <img class="mt-1 ml-5" src="imagens/LogoFacilita.png" width="35%">
         </div>
 
+        </div>
 
 
 

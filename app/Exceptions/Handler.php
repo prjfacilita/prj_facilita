@@ -42,9 +42,24 @@ class Handler extends ExceptionHandler
      * @param  \Exception  $exception
      * @return \Illuminate\Http\Response
      */
-    public function render($request, Exception $exception)
+    /**
+     * Render an exception into an HTTP response.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \Exception  $e
+     * @return \Illuminate\Http\Response
+     */
+    public function render($request, Exception $e)
     {
-        return parent::render($request, $exception);
+        if ($e instanceof ModelNotFoundException) {
+            $e = new NotFoundHttpException($e->getMessage(), $e);
+        }
+
+        if ($e instanceof \Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException) {
+            return abort('503');
+        }
+
+        return parent::render($request, $e);
     }
 
     /**
@@ -62,4 +77,7 @@ class Handler extends ExceptionHandler
 
         return redirect()->guest(route('login'));
     }
+
+
+
 }
