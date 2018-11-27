@@ -88,7 +88,7 @@ git pull origin master
 
 
 ## Banco de dados
-* [Bnaco de dados PDF 0.1](https://github.com/prjfacilita/prj_facilita/blob/master/database/Facilita_MD.pdf) - Diagrama do banco de dados
+* [Banco de dados PDF 0.1](https://github.com/prjfacilita/prj_facilita/blob/master/database/Facilita_MD.pdf) - Diagrama do banco de dados
 
 ## Ferramentas
 * [Laravel Framework](http://www.dropwizard.io/1.0.2/docs/) - Framework Laravel construido em PHP
@@ -100,7 +100,7 @@ git pull origin master
 
 * **Rodrigo Teles** -
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors] ( https://github.com/prjfacilita/prj_facilita/graphs/contributors ) who participated in this project.
 
 
 ## Recomendações
