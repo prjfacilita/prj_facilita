@@ -36,7 +36,8 @@
         .teste{
             width: 100%;
             height: 35%;
-            background-color: #04190B;
+            background-color: #1D8841;
+            -moz-box-shadow: #000000;
             /*opacity 50%;*/
         }
 

@@ -171,6 +171,7 @@ class LoginController extends Controller
 
 
 
+
         // create our user data for the authentication
         $userdata = array(
             'confirmation_code' => Input::get('confirmation_code'),
