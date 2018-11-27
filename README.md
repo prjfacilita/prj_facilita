@@ -100,7 +100,7 @@ git pull origin master
 
 * **Rodrigo Teles** -
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors] ( https://github.com/prjfacilita/prj_facilita/graphs/contributors ) who participated in this project.
 
 
 ## Recomendações
