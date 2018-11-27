@@ -14,6 +14,12 @@ body {
   float: left;
   box-shadow:  0px 10px 29px;
 }
+.parcelas{
+  font-family: verdana, regular;
+  font-size: 15px;
+  color:#1D8841;
+
+}
 
 .txtform {
   font-family: verdana, bold;
@@ -26,6 +32,8 @@ body {
 
 .img-background img {
   width: 100%;
+  margin-left: 0;
+  margin-right: 0;
   height: auto;
 }
 
@@ -33,11 +41,16 @@ body {
   width: 140px;
   height: 50px;
   border-radius: 14px 14px 14px 14px;
-  border-color: #1D8841;
-  border-style: solid;
+  border: 3px solid #1D8841;
   margin-left: 22px;
 }
-
+.box2{
+  width: 62px;
+  height: 50px;
+  border-radius: 14px 14px 14px 14px;
+  border: 3px solid #1D8841;
+  margin-left: 10%;
+}
 .boxtext {
   text-align: center;
   font-size: 15px;
@@ -116,19 +129,20 @@ body {
   padding-bottom: 20px;
 }
 .icone2{
-  margin-left: 12%;
+  text-align: center;
+  margin:0 auto;
 
 }
 .txticon2{
   font-size: 20px;
   font-family: verdana, Regular;
-  margin-left: -11%;
+  text-align: center;
   color: #FCFCFC;
 }
 .txticon3{
   font-size: 17px;
   color: #FCFCFC;
-  margin-left: -10%;
+  text-align: left;
   font-family: verdana, Regular;
 }
 .slick{
@@ -161,7 +175,7 @@ body {
 }
 .bgcopy{
   background-color: #113e1c;
-  
+
 }
 .txtcopy{
   font-size: 15px;
@@ -183,4 +197,24 @@ body {
   width: 160px;
   height: 50px;
   color:white;
+}
+button{
+  background-color: transparent;
+
+}
+button:focus{
+  outline-style:none;
+  background-color: green;
+}
+button:hover{
+  background-color: green;
+}
+
+label, #valor{
+  font-family: verdana;
+  font-weight: bold;
+  color: #1D8841;
+  font-size: 28px;
+  text-align: center;
+  margin-left: 27%;
 }

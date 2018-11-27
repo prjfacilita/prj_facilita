@@ -38,11 +38,7 @@ $('#carouselExample').on('slide.bs.carousel', function (e) {
     }
 });
 
-
-
-
-
-  $(document).ready(function() {
+$(document).ready(function() {
 /* show lightbox when clicking a thumbnail */
     $('a.thumb').click(function(event){
       event.preventDefault();
@@ -55,3 +51,10 @@ $('#carouselExample').on('slide.bs.carousel', function (e) {
     });
 
   });
+
+  $('button').click(function(){
+    $('#f2').addClass('d-block');
+    $('#f1').addClass('d-none');
+  var botao = $(this).attr('value');
+  $("label#valor").text(botao);
+});

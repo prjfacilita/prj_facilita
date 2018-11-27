@@ -20,13 +20,13 @@
 	<header>
 		<section>
 
-	   <nav class="navbar navbar-expand-lg fixed-top">
+			<nav class="navbar navbar-expand-lg fixed-top">
 
-	   	<div class="navtop">
-	   		<p class="txtnav">Atenção! A Facilita não solicita depósito antecipado para empréstimo. Em caso de dúvida entre em contato.</p>
-	   	</div>
+				<div class="navtop col-12">
+					<p class="txtnav">Atenção! A Facilita não solicita depósito antecipado para empréstimo. Em caso de dúvida entre em contato.</p>
+				</div>
 
-         <a class="navbar-brand" href="#"><img src="imagens/LogoFacilita.png" class="logonav"></a>
+				<a class="navbar-brand" href="#"><img src="imagens/LogoFacilita.png" class="logonav"></a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
@@ -49,42 +49,73 @@
 	<section>
 
 		<div class="img-background">
-			<img class="img-responsive" src="imagens/Group130.jpg" alt="">
+			<img class="" src="imagens/Group130.jpg" alt="">
 		</div>
-	</section>
-	<div class="container">
-		<div class="row ">
-			<div class="formulario col-lg-7 col-sm-6">
-				<p class="txtform">QUANTO VOCÊ PRECISA?</p>
-				<div class="row py-3">
-					<div class="box">
-						<p class="boxtext">R$ 1.000,00</p>
+
+		<div class="container">
+			<div class="row">
+				<div id="f1" class="formulario col-lg-7 col-sm-6">
+					<p class="txtform">QUANTO VOCÊ PRECISA?</p>
+					<div class="row py-3">
+						<button value="1.000,00" class="box">
+								<p class="boxtext">R$ 1.000,00</p>
+							</button>
+						<button value="5.000,00" class="box">
+							<p class="boxtext">R$ 5.000,00</p>
+						</button>
 					</div>
-					<div class="box">
-						<p class="boxtext">R$ 5.000,00</p>
+					<div class="row py-3">
+						<button value="10.000,00" class="box">
+							<p class="boxtext">R$ 10.000,00</p>
+						</button>
+						<button value="15.000,00" class="box">
+							<p class="boxtext">R$ 15.000,00</p>
+						</button>
+					</div>
+					<div class="row py-3">
+						<button value="20.000,00" class="box">
+							<p class="boxtext">R$ 20.000,00</p>
+						</button>
+						<button class="box">
+							<p class="boxtext">OUTRO VALOR</p>
+						</button>
+					</div>
+					<div class="row">
+						<p class="simule">Simule agora </p>
 					</div>
 				</div>
-				<div class="row py-3">
-					<div class="box">
-						<p class="boxtext">R$ 10.000,00</p>
+				<div id="f2" class="formulario col-lg-7 col-sm-6 d-none">
+					<p class="txtform">Valor selecionado</p>
+					<label id="valor"></label>
+					 <div class="col"></div>
+          <p class="parcelas ml-3">Em quantas parcelas?</p>
+					<div class="row mx-auto">
+						<button class="box2">
+							<p class="boxtext">24</p>
+						</button>
+						<button class="box2">
+							<p class="boxtext">20</p>
+						</button>
+						<button class="box2">
+							<p class="boxtext">18</p>
+						</button>
 					</div>
-					<div class="box">
-						<p class="boxtext">R$ 15.000,00</p>
+					<div class="row mx-auto py-4">
+						<button class="box2">
+							<p class="boxtext">24</p>
+						</button>
+						<button class="box2">
+							<p class="boxtext">20</p>
+						</button>
+						<button class="box2">
+							<p class="boxtext">18</p>
+						</button>
 					</div>
-				</div>
-				<div class="row py-3">
-					<div class="box">
-						<p class="boxtext">R$ 20.000,00</p>
+					<div class="row">
+						<p class="simule">Simule agora </p>
 					</div>
-					<div class="box">
-						<p class="boxtext">OUTRO VALOR</p>
-					</div>
-				</div>
-				<div class="row">
-					<p class="simule">Simule agora </p>
 				</div>
 			</div>
-		</div>
 		<div class="row">
 			<div class="credito col-lg-5 col-md-6">
 				<p class="textcredito">CRÉDITO PARA VOCÊ SUPERAR OS OBSTACULOS DO DIA-A-DIA!</p>
@@ -95,7 +126,7 @@
 				<p class="textvalor">Valores de 1 a 20 mil reais Taxas entre 3,99% a 12,49 ao mês Prazo de 3 a 24 meses</p>
 			</div>
 		</div>
-	</div>
+		</div>
 	</section>
 	<section>
 		<div class="container">
@@ -138,18 +169,18 @@
 			<div class="row icone2">
 				<div class="col-lg-4 col-md-4 col-sm-12">
 					<img src="iconessvg/relogio.svg" width="150" height="147" alt="" />
-					<p class="txticon2 pt-5 col-10">RÁPIDO, PRÁTICO E SEGURO</p>
-					<p class="txticon3 col-8">O dinheiro cai na sua conta em até 24 horas após aprovação.</p>
+					<p class="txticon2 pt-5">RÁPIDO, PRÁTICO E SEGURO</p>
+					<p class="txticon3 col-9 mx-auto">O dinheiro cai na sua conta em até 24 horas após aprovação.</p>
 				</div>
 				<div class="col-lg-4 col-md-4 col-sm-12">
 					<img src="iconessvg/money.svg" width="150" height="147" alt="" />
-					<p class="txticon2 pt-5 col-10">SOLUÇÃO PARA SEUS PROBLEMAS</p>
-					<p class="txticon3 col-8">Você simula o valor na hora e escolhe a parcela que cabe no seu bolso.</p>
+					<p class="txticon2 pt-5">SOLUÇÃO PARA SEUS PROBLEMAS</p>
+					<p class="txticon3 col-9 mx-auto">Você simula o valor na hora e escolhe a parcela que cabe no seu bolso.</p>
 				</div>
 				<div class="col-lg-4 col-md-4 col-sm-12">
 					<img src="iconessvg/juros.svg" width="150" height="147" alt="" />
-					<p class="txticon2 pt-5 col-10">JUROS MAIS BARATO</p>
-					<p class="txticon3 col-8 py-2">Combinamos a melhor taxa para seu perfil, diminuindo os juros e aumenta suas chances de aprovação.</p>
+					<p class="txticon2 pt-5">JUROS MAIS BARATO</p>
+					<p class="txticon3 col-7 col-sm-10 mx-auto py-2">Combinamos a melhor taxa para seu perfil, diminuindo os juros e aumenta suas chances de aprovação.</p>
 				</div>
 			</div>
 		</div>
@@ -259,36 +290,36 @@
 
 	</section>
 	<section>
-    <footer>
-    	  <div class="container-fluid bgfooter">
-    	  	<div class="row">
-    	  		<div class="footer col-lg-3 col-md-5 py-3 mx-auto">
-                 <a href="#"><img src="imagens/LogoFacilita.png" class="logorodape" alt=""/></a>
-    	  		</div>
-    	  	</div>
-    	  	<div class="row">
-    	  		<div class="col-lg-6 col-md-12 py-5">
-    	  			<p class="txtfooter col-md-7">Somos um correspondente bancário. A FACILITA é uma empresa fundada em 2016 em São Paulo com o objetivo de disponibilizar uma taxa de acesso fácil e descomplicada.</p>
-    	  		</div>
-    	  		<div class="col-lg-6 py-5">
-    	  			<p class="txtfooter col-md-9">Termos e Condições | FAQ | Pólitica de privacidade</p>
-    	  			<p class="col-lg-4 col-md-4 mx-auto email">atendimento@facilitaapp.com.br</p>
-    	  		</div>
-    	  	</div>
-    	  	<div class="row">
-    	  		<div class="col-lg-3">
-    	  			<i class="fab fa-facebook"></i>
-    	  		</div>
-    	  	</div>
-    	  </div>
-    	  <div class="container-fluid bgcopy py-2">
-    	  	<div class="row">
-    	  		<div class="col-lg-3 mx-auto">
-    	  			<p class=" txtcopy">2018 © Todos os direitos reservados.</p>
-    	  		</div>
-    	  	</div>
-    	  </div>
-    </footer>
+		<footer>
+			<div class="container-fluid bgfooter">
+				<div class="row">
+					<div class="footer col-lg-3 col-md-5 col-10 py-3 mx-auto">
+						<a href="#"><img src="imagens/LogoFacilita.png" class="logorodape" alt="" /></a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-6 col-md-12 col-12 py-5">
+						<p class="txtfooter small col-md-7 col-12">Somos um correspondente bancário. A FACILITA é uma empresa fundada em 2016 em São Paulo com o objetivo de disponibilizar uma taxa de acesso fácil e descomplicada.</p>
+					</div>
+					<div class="col-lg-6 col-9 py-5">
+						<p class="txtfooter col-md-9 col-12">Termos e Condições | FAQ | Pólitica de privacidade</p>
+						<p class="col-lg-4 col-md-4 col-7 mx-auto email">atendimento@facilitaapp.com.br</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-3">
+						<i class="fab fa-facebook"></i>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid bgcopy py-2">
+				<div class="row">
+					<div class="col-lg-3 mx-auto">
+						<p class=" txtcopy">2018 © Todos os direitos reservados.</p>
+					</div>
+				</div>
+			</div>
+		</footer>
 	</section>
 
 </body>
