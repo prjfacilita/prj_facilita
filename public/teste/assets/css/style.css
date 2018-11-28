@@ -1,0 +1,402 @@
+/****
+	Description: Style sistema Facilita
+    Version: 1.0
+
+    1 - Reset
+    2 - Propriedade de elementos
+    3 - Top bar/header
+    4 - Login
+    5 - Cadastro
+
+****/
+
+@import url("https://fonts.googleapis.com/css?family=Verdana:300,400,700");
+
+/************************************************************************************************************
+* 
+*
+1 - RESET
+************************************************************************************************************/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, input, select, textarea{
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+	text-decoration: none;
+	transition: All 0.5s;	
+}
+
+/************************************************************************************************************
+* 
+*
+2 - PROPRIEDADE DE ELEMENTOS
+************************************************************************************************************/
+html { overflow-y: scroll; }
+html { overflow: -moz-scrollbars-vertical; }
+html { overflow-x: auto; }
+
+body{
+  line-height: 1;
+  font-family: 'Verdana', sans-serif;
+  color: #958F8F;
+  background:#ffffff;
+}
+
+a:hover,
+a:active,
+a:focus{
+    color: #1D8841;
+}
+
+::-webkit-input-placeholder{ /* WebKit, Blink, Edge */
+    color:    #958F8F;
+}
+:-moz-placeholder{ /* Mozilla Firefox 4 to 18 */
+   color:    #958F8F;
+   opacity:  1;
+}
+::-moz-placeholder{ /* Mozilla Firefox 19+ */
+   color:    #958F8F;
+   opacity:  1;
+}
+:-ms-input-placeholder{ /* Internet Explorer 10-11 */
+   color:    #958F8F;
+}
+::-ms-input-placeholder{ /* Microsoft Edge */
+   color:    #958F8F;
+}
+::placeholder{ /* Most modern browsers support this now. */
+   color:    #958F8F;
+}
+
+/************************************************************************************************************
+* 
+*
+3 - TOP BAR/HEADER
+************************************************************************************************************/
+.top-bar{
+    padding: 8px 0;
+    background: #074A1E;
+}
+    .top-bar p{
+        font-size: 12px;
+        color: #ffffff;
+    }
+header{
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    height: 125px;
+    background-image: linear-gradient(to bottom left, #1D8841, rgba(26, 175, 77, 0.85));
+}   
+    .logomarca{
+        line-height: 100px;
+    }
+    .image-logomarca{
+        display: inline-block;
+        width: 216px;
+        height: auto;
+    }
+    .user-logged{
+        margin: 0 auto;
+        text-align: center;
+    }
+        .icon-user-logged{
+            padding-top: 5px;
+            max-width: 100%;
+            width: 60px;
+            height: auto;
+        }
+        .user-logged p{
+            padding-top: 5px;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 24px;
+            color: #063114;
+        }
+/*****************
+    -- ajustes para mobile
+******************/   
+    @media only screen and (max-width: 768px){
+        .logomarca{
+            width: 100%;
+            line-height: 0;
+            text-align: center;
+        }
+            .image-logomarca {
+                width: 126px;
+            }
+        .icon-user-logged{
+            width: 30px;
+        }
+            .user-logged p{
+                font-size: 15px;
+            }
+
+    }   
+
+/************************************************************************************************************
+* 
+*
+4 - LOGIN
+************************************************************************************************************/
+
+/*****************
+    -- Adiciona background na tag body estando na página de login 
+******************/
+#login{
+    background: url(../images/bg-login.jpg) top center no-repeat;
+    background-size: cover;
+}
+    #login header{
+        background-image: none;
+    }
+/*****************/    
+.login-area{
+    float: left;
+    width: 100%;
+}
+    .login-form{
+        float: left;
+        margin: 30px 0;
+        padding: 50px;
+        width: 100%;
+        background: #fff;
+        border-radius: 25px;
+    }
+        .login-area h2{
+            font-size: 50px;
+            text-transform: uppercase;
+            font-weight: bold;
+            line-height: 60px;
+        }
+        .login-area h3{
+            font-size: 36px;
+            line-height: 42px;
+        }
+        .login-area h2,
+        .login-area h3{
+            padding-bottom: 10px;
+            text-align: center;
+            color: #ffffff;
+        }
+		.login-form form{
+			position: relative;
+		}
+        .password-reveal{
+            position: absolute;
+            right: 0;
+            top: calc(100%/2.2);
+            font-size: 25px;
+            color: #958F8F;
+        }
+        .login-form input:not([type=submit]){
+            padding: 35px 10px;
+            margin-bottom: 15px;
+            width: 100%;
+            font-size: 28px;
+            color: #958F8F;
+            border-bottom: 1px solid #707070;
+        }
+        .login-form input:not([type=submit]):focus{
+            border-color: #1EC857;
+        }
+        .login-form-action{
+            display: flex;
+            display: -webkit-flex;
+            align-items: center;
+            -webkit-align-items: center;
+            justify-content: space-between;
+            -webkit-justify-content: space-between;
+            padding: 25px 0;
+        }
+            .login-form__recover-password{
+                float: left;
+                font-size: 22px;
+                text-decoration: underline;
+                color: #958F8F;
+            }
+            .login-form__submit{
+                width: 243.81px;
+                height: 72.58px;
+                font-size: 30px;
+                text-transform: uppercase;
+                cursor: pointer;
+                border-radius: 32px;
+                box-shadow: 7px 7px 6px rgba(0, 0, 0, 0.16);
+                    -webkit-box-shadow: 7px 7px 6px rgba(0, 0, 0, 0.16);
+                    -moz-box-shadow: 7px 7px 6px rgba(0, 0, 0, 0.16);       
+                background: #1D8841;
+                color: #fff;    
+            }
+    .login-area__register{
+        float: left;
+        margin-bottom: 30px;
+        width: 100%;
+        text-align: center;
+        font-weight: bold;
+        text-decoration: underline;
+        font-size: 20px;
+        color: #ffffff;
+    }
+/*****************
+    -- ajustes para mobile
+******************/   
+    @media only screen and (max-width: 768px){
+        .login-form{
+            padding: 50px 20px;
+        }
+            .login-form-action{
+                display: block;
+            }
+            .login-form__submit{
+                margin-top: 20px;
+                width: 100%;
+            }
+    }
+    
+/************************************************************************************************************
+* 
+*
+5 - CADASTRO
+************************************************************************************************************/
+.register__area{
+    padding: 30px 0;
+    text-align: center;
+}
+    .register__token{
+        font-size: 23px;
+        text-transform: uppercase;
+        color: #958F8F;
+    }
+    .register__form{
+        padding: 30px 0;
+        width: 100%;
+    }
+        .register__password{
+            margin: 0 auto;
+            width: 700px;
+        }
+        @media only screen and (max-width: 768px){
+            .register__password{
+                width: 100%;
+            }
+        }
+        .register__form h3{
+            font-size: 50px;
+            line-height: 60px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #1EC857;
+        }
+        .register__form form{
+            float: left;
+            padding: 30px;
+            width: 100%;
+        }
+            .register__form label{
+                display: block;
+                text-align: left;
+                font-size: 20px;
+                color: #958F8F;
+            }
+            .register__input__password{
+                padding: 10px;
+                margin: 20px 20px 0 0;
+                width: 325px;
+                height: 66px;
+                font-style: italic;
+                border-radius: 12px;
+                border: 1px solid #707070;
+            }
+            @media only screen and (max-width: 768px){
+                .register__input__password{
+                    width: 100%;
+                }
+            }
+            .register__input__password:focus{
+                border-color: #1EC857;
+            }
+            .register__password p{
+                padding: 40px 0;
+                clear: both;
+                text-transform: uppercase;
+                font-size: 17px;
+                font-style: italic;
+                color: #958F8F;
+            }
+    .register__terms{
+        margin-top: 40px;
+        font-style: italic;
+    } 
+        .register__terms p,
+        .terms__link-process{
+            display: block;
+            font-size: 17px;
+            text-transform: uppercase;
+            line-height: 21px;
+        }
+        .register__terms p{
+            color: #575656;
+        }
+        .register__terms a{
+            text-decoration: underline;
+            text-transform: uppercase;
+        }
+        .terms__link-process{
+            padding: 10px 0 20px 0;
+            color: #1EC857;
+        }
+        .terms__accept{
+            font-size: 13px;
+            color: #777575;
+            text-transform: uppercase;
+        }
+        .register__terms input[type=checkbox]{
+            -moz-appearance:none;
+            -webkit-appearance:none;
+            -o-appearance:none;
+            outline: none;
+            content: none;	
+        }
+        .register__terms input[type=checkbox]:before{
+            display: block;
+            width: 20px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "FontAwesome";
+            content: "\f00c";
+            color: transparent;
+            border: 2px solid #91DC5A;
+        }
+        .register__terms input[type=checkbox]:checked:before{
+            color: #91DC5A;
+        }
+    .register__password__submit{
+        margin: 20px 0 0 0;
+        padding: 15px 35px 15px 15px;
+        width: 245px;
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+        cursor: pointer;
+        border-radius: 21px;
+        box-shadow: 7px 7px 6px rgba(0, 0, 0, 0.16);
+        -webkit-box-shadow: 7px 7px 6px rgba(0, 0, 0, 0.16);
+        -moz-box-shadow: 7px 7px 6px rgba(0, 0, 0, 0.16);
+        background: #1D8841;
+        color: #fff;   
+    }
+    .submit__icon{
+        position: relative;
+        left: -45px;
+        top: 4px;
+        font-size: 28px !important;
+        color: #fff;
+    }
