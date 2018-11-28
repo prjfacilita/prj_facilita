@@ -214,7 +214,7 @@
     //
     // $('#confirmation_code').mask('00000-000', options);
 
-    $('#confirmation_code').mask("0000000", {placeholder: "__/__/____"});
+    // $('#confirmation_code').mask("0000000", {placeholder: "__/__/____"});
 
 </script>
 </body>

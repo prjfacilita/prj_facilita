@@ -40,7 +40,7 @@
     <section>
         <div class="container">
             <div class="row">
-                <div class="col-6 login mx-auto">
+                <div class="col-md-6 col-lg-6 col-sm-6 login mx-auto">
 
                     <div class="login-area">
                         <h2>Acesse sua conta</h2>
@@ -52,7 +52,7 @@
                                 <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
 
                                     {{ csrf_field() }}
-                                    <label for="email" class=" col-md-4 control-label">Email</label>
+                                    {{--<label for="email" class=" col-md-4 control-label">Email</label>--}}
 
 
                                     <input id="email" type="email" placeholder="E-mail" class="login-form__email"  name="email" value="{{ old('email') }}" required autofocus>
@@ -67,7 +67,7 @@
 
 
                                 <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                                    <label for="password" class="col-md-4 control-label">Senha</label>
+                                    {{--<label for="password" class="col-md-4 control-label">Senha</label>--}}
 
                                     {{--<div class="col-md-6">--}}
                                         <input id="password" type="password" placeholder="Senha" class="login-form__password"  name="password" required>
