@@ -55,6 +55,16 @@ $(document).ready(function() {
   $('button').click(function(){
     $('#f2').addClass('d-block');
     $('#f1').addClass('d-none');
+
+
+     if($('#f2').addClass('d-block'))
+    {
+    $('button').click(function(){
+      $('#f3').addClass('d-block')
+      $('#f2').addClass('d-none')
+    })
+
+    }
   var botao = $(this).attr('value');
   $("label#valor").text(botao);
 });

@@ -12,13 +12,25 @@ body {
   position: absolute;
   margin-left: 55%;
   float: left;
-  box-shadow:  0px 10px 29px;
+  box-shadow: 0px 10px 29px;
 }
-.parcelas{
+
+.formulario3 {
+  width: 347px;
+  height: 630px;
+  top: 280px;
+  background-color: #FFFEFE;
+  border-radius: 18px 18px 18px 18px;
+  position: absolute;
+  margin-left: 55%;
+  float: left;
+  box-shadow: 0px 10px 29px;
+}
+
+.parcelas {
   font-family: verdana, regular;
   font-size: 15px;
-  color:#1D8841;
-
+  color: #1D8841;
 }
 
 .txtform {
@@ -44,13 +56,15 @@ body {
   border: 3px solid #1D8841;
   margin-left: 22px;
 }
-.box2{
+
+.box2 {
   width: 62px;
   height: 50px;
   border-radius: 14px 14px 14px 14px;
   border: 3px solid #1D8841;
   margin-left: 10%;
 }
+
 .boxtext {
   text-align: center;
   font-size: 15px;
@@ -59,12 +73,22 @@ body {
   margin-top: 9px;
 }
 
+.boxtext:hover {
+  color: white;
+}
+
 .simule {
   margin: 0 auto;
   font-size: 20px;
   text-decoration: underline;
   color: #1D8841;
   font-weight: bold;
+}
+
+.simule1 {
+  font-size: 12px;
+  color: #aeaeae;
+  font-family: verdana, regular;
 }
 
 .credito {
@@ -124,97 +148,173 @@ body {
   margin-top: 14%;
   padding: 0;
 }
-.bg-vntg{
+
+.bg-vntg {
   background: linear-gradient(to right bottom, #067010, #5CBF23);
   padding-bottom: 20px;
 }
-.icone2{
-  text-align: center;
-  margin:0 auto;
 
+.icone2 {
+  text-align: center;
+  margin: 0 auto;
 }
-.txticon2{
+
+.txticon2 {
   font-size: 20px;
   font-family: verdana, Regular;
   text-align: center;
   color: #FCFCFC;
 }
-.txticon3{
+
+.txticon3 {
   font-size: 17px;
   color: #FCFCFC;
   text-align: left;
   font-family: verdana, Regular;
 }
-.slick{
 
-}
-.txtcli{
+.slick {}
+
+.txtcli {
   font-size: 50px;
   font-family: verdana, Bold;
   font-weight: bold;
   color: #1EC857;
 }
-.comentario{
+
+.comentario {
   font-size: 21px;
   color: #585B59;
   font-family: verdana, Regular;
 }
-.bgfooter{
+
+.bgfooter {
   background-color: #186031;
 }
 
-.txtfooter{
+.txtfooter {
   font-size: 17px;
   font-family: verdana, regular;
   color: #F8FFFB;
   margin-left: 120px;
 }
-.email{
+
+.email {
   font-size: 15px;
   color: #F8FFFB;
 }
-.bgcopy{
-  background-color: #113e1c;
 
+.bgcopy {
+  background-color: #113e1c;
 }
-.txtcopy{
+
+.txtcopy {
   font-size: 15px;
-  font-family: Verdana , itálico;
+  font-family: Verdana, itálico;
   color: #1D8841;
 }
-.logorodape{
+
+.logorodape {
   width: 292px;
   height: 82;
 }
 
-.panel-thumbnail img:hover{
+.panel-thumbnail img:hover {
   background-color: #070000;
   opacity: 0.7;
   transition: 1s;
-
 }
-.logonav{
+
+.logonav {
   width: 160px;
   height: 50px;
-  color:white;
+  color: white;
 }
-button{
+
+button {
   background-color: transparent;
+}
 
-}
-button:focus{
-  outline-style:none;
-  background-color: green;
-}
-button:hover{
+button:focus {
+  outline-style: none;
   background-color: green;
 }
 
-label, #valor{
+button:hover {
+  background-color: green;
+}
+
+#valor {
   font-family: verdana;
   font-weight: bold;
   color: #1D8841;
   font-size: 28px;
   text-align: center;
   margin-left: 27%;
+}
+
+.form-item {
+  position: relative;
+}
+
+.form-control {
+  height: 35px;
+  border: none;
+  border-bottom: solid 1px #707070cc;
+  margin-bottom: 15px;
+  display: block;
+  width: 100%;
+}
+
+.form-control:valid {
+  border-color: #00b232;
+}
+
+.form-control:focus {
+  border-color: #428bca;
+}
+
+
+.label-float {
+  color: #999;
+  font-size: 12px;
+  font-family: verdana, regular;
+  margin-bottom: 0;
+  position: absolute;
+  top: 0;
+  padding: 0 10px;
+  -webkit-transition: line-height linear 0.2s;
+  transition: line-height linear 0.2s;
+  cursor: text;
+}
+.label-float1 {
+  color: #999;
+  font-size: 12px;
+  font-family: verdana, regular;
+  margin-bottom: 0;
+  padding: 0 10px;
+  -webkit-transition: line-height linear 0.2s;
+  transition: line-height linear 0.2s;
+  cursor:pointer;
+}
+
+.form-control:focus +.label-float,
+.form-control:valid +.label-float {
+  color: #ccc;
+  font-size: 8px;
+  line-height: 1.5;
+}
+#botao{
+  outline-style: none;
+  background-color: transparent;
+  color: #1D8841;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: verdana, regular;
+  text-align: center;
+  border: none;
+  margin-left: 36%;
+  margin-top: 13px;
+  text-decoration: none;
+  cursor: pointer;
 }

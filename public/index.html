@@ -50,16 +50,17 @@
 
 		<div class="img-background">
 			<img class="" src="imagens/Group130.jpg" alt="">
-		</div>
+
 
 		<div class="container">
 			<div class="row">
-				<div id="f1" class="formulario col-lg-7 col-sm-6">
+				<!-- primeiro form -->
+				<div id="f1" class="formulario col-lg-7 col-sm-6 ">
 					<p class="txtform">QUANTO VOCÊ PRECISA?</p>
 					<div class="row py-3">
 						<button value="1.000,00" class="box">
-								<p class="boxtext">R$ 1.000,00</p>
-							</button>
+							<p class="boxtext">R$ 1.000,00</p>
+						</button>
 						<button value="5.000,00" class="box">
 							<p class="boxtext">R$ 5.000,00</p>
 						</button>
@@ -84,11 +85,12 @@
 						<p class="simule">Simule agora </p>
 					</div>
 				</div>
+				<!-- segundo form -->
 				<div id="f2" class="formulario col-lg-7 col-sm-6 d-none">
 					<p class="txtform">Valor selecionado</p>
 					<label id="valor"></label>
-					 <div class="col"></div>
-          <p class="parcelas ml-3">Em quantas parcelas?</p>
+					<div class="col"></div>
+					<p class="parcelas ml-3">Em quantas parcelas?</p>
 					<div class="row mx-auto">
 						<button class="box2">
 							<p class="boxtext">24</p>
@@ -102,6 +104,27 @@
 					</div>
 					<div class="row mx-auto py-4">
 						<button class="box2">
+							<p class="boxtext">12</p>
+						</button>
+						<button class="box2">
+							<p class="boxtext">06</p>
+						</button>
+						<button class="box2">
+							<p class="boxtext">03</p>
+						</button>
+					</div>
+					<div class="row">
+						<p class="simule">Simule agora </p>
+					</div>
+				</div>
+				<!-- terceiro form -->
+				<div id="f3" class="formulario3 col-lg-7 col-sm-6 d-none">
+					<p class="txtform">Valor selecionado</p>
+					<label id="valor"></label>
+					<div class="col"></div>
+					<p class="parcelas ml-3">Em quantas parcelas?</p>
+					<div class="row mx-auto">
+						<button class="box2">
 							<p class="boxtext">24</p>
 						</button>
 						<button class="box2">
@@ -111,19 +134,64 @@
 							<p class="boxtext">18</p>
 						</button>
 					</div>
+					<div class="row mx-auto py-4">
+						<button class="box2">
+							<p class="boxtext">12</p>
+						</button>
+						<button class="box2">
+							<p class="boxtext">06</p>
+						</button>
+						<button class="box2">
+							<p class="boxtext">03</p>
+						</button>
+					</div>
 					<div class="row">
-						<p class="simule">Simule agora </p>
+						<p class="simule1 col-10 mx-auto">*Sua parcela mensal será entre R$ 327,60 e R$ 663,89</p>
+					</div>
+
+					<div class="form-row">
+						<div class="form-group col-md-12">
+							<form method="POST" action="">
+                <div class="form-item">
+                <input type="text" class="form-control " required>
+                  <label class="label-float" for="name">Nome Completo</label>
+								</div>
+								<div class="form-item">
+                <input type="text" class="form-control" onkeypress="$(this).mask('000.000.000-00');" required>
+                   <label class="label-float" for="cpf">CPF</label>
+								 </div>
+								 <div class="form-item">
+                <input type="email" class="form-control" required>
+                    <label class="label-float" for="email">E-mail</label>
+									</div>
+									<div class="form-item">
+                <input type="text" class="form-control" required>
+                     <label class="label-float" for="cel">Cel</label>
+										 </div>
+								<select type="text" class="form-control label-float1" name="qualFinalidade">
+									<option class="label-float">Qual a finalidade?</option>
+									<option>Escolha 1</option>
+									<option>Escolha 2</option>
+									<option>Escolha 3</option>
+									<option>Escolha 4</option>
+									<option>Escolha 5</option>
+									<option>Escolha 6</option>
+								</select>
+                  <input type="submit" id="botao" required>
+							</form>
+						</div>
 					</div>
 				</div>
 			</div>
-		<div class="row">
-			<div class="credito col-lg-5 col-md-6">
-				<p class="textcredito">CRÉDITO PARA VOCÊ SUPERAR OS OBSTACULOS DO DIA-A-DIA!</p>
+			<div class="row">
+				<div class="credito col-lg-5 col-md-6">
+					<p class="textcredito">CRÉDITO PARA VOCÊ SUPERAR OS OBSTACULOS DO DIA-A-DIA!</p>
+				</div>
 			</div>
-		</div>
-		<div class="row">
-			<div class="valores col-lg-4 col-md-6">
-				<p class="textvalor">Valores de 1 a 20 mil reais Taxas entre 3,99% a 12,49 ao mês Prazo de 3 a 24 meses</p>
+			<div class="row">
+				<div class="valores col-lg-4 col-md-6">
+					<p class="textvalor">Valores de 1 a 20 mil reais Taxas entre 3,99% a 12,49 ao mês Prazo de 3 a 24 meses</p>
+				</div>
 			</div>
 		</div>
 		</div>
@@ -325,6 +393,7 @@
 </body>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <script src="js/efeitos.js"></script>
