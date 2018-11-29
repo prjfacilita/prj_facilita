@@ -182,6 +182,7 @@ return [
         Laravel\Passport\PassportServiceProvider::class,
         LaravelLegends\PtBrValidator\ValidatorProvider::class,
 //        Jrean\UserVerification\UserVerificationServiceProvider::class,
+        Clockwork\Support\Laravel\ClockworkServiceProvider::class
 
     ],
 
