@@ -60,8 +60,9 @@ $(document).ready(function() {
      if($('#f2').addClass('d-block'))
     {
     $('button').click(function(){
-      $('#f3').addClass('d-block')
-      $('#f2').addClass('d-none')
+      $('#f3').addClass('d-block');
+      $('#f2').addClass('d-none');
+
     })
 
     }

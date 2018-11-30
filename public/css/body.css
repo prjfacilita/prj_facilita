@@ -10,19 +10,19 @@ body {
   background-color: #FFFEFE;
   border-radius: 18px 18px 18px 18px;
   position: absolute;
-  margin-left: 55%;
   float: left;
+  margin-left: 12%;
   box-shadow: 0px 10px 29px;
 }
 
 .formulario3 {
   width: 347px;
   height: 630px;
-  top: 280px;
+  top: 195px;
   background-color: #FFFEFE;
   border-radius: 18px 18px 18px 18px;
   position: absolute;
-  margin-left: 55%;
+  margin-left: 12%;
   float: left;
   box-shadow: 0px 10px 29px;
 }
@@ -42,11 +42,19 @@ body {
   margin-top: 24px;
 }
 
-.img-background img {
+.img-background{
+  background: url('../imagens/group.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 800px;
   width: 100%;
-  margin-left: 0;
-  margin-right: 0;
-  height: auto;
+
+}
+.icone-img{
+  background: url('../imagens/iconessvg/seta.svg');
+  background-repeat: no-repeat;
+  width: 133px;
+  height: 133px;
 }
 
 .box {
@@ -54,7 +62,9 @@ body {
   height: 50px;
   border-radius: 14px 14px 14px 14px;
   border: 3px solid #1D8841;
-  margin-left: 22px;
+  margin:0 auto;
+  padding: 0;
+
 }
 
 .box2 {
@@ -94,7 +104,7 @@ body {
 .credito {
   float: left;
   top: 333px;
-  margin-left: 5px;
+  margin-left: 6%;
   position: absolute;
 }
 
@@ -113,7 +123,7 @@ body {
   text-shadow: #000000 0px 3px 6px;
   top: 488px;
   position: absolute;
-  margin-left: 15px;
+  margin-left: 6%;
 }
 
 .cmfunciona, .txtfunciona {

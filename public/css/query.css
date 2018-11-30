@@ -1,8 +1,22 @@
-@media (min-width: 370px) and (max-width: 770px) {
+@media (max-width: 992px) {
+  .formulario{
+    top: 50px;
+  }
+  .credito{
+    top: 50px;
+  }
+  .valores{
+    top:200px;
+  }
+  .cmfunciona{
+    top:0;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px)  {
   .formulario {
-    margin-left: 55%;
+    margin: 0 auto;
     float: left;
-    top: 100px;
+    top: 491px;
     width: 280px;
     height: 300px;
   }
@@ -13,7 +27,7 @@
     border-radius: 14px 14px 14px 14px;
     border-color: #1D8841;
     border-style: solid;
-    margin-left: 26px;
+
   }
 
   .boxtext {
@@ -26,14 +40,14 @@
 
   .credito {
     float: left;
-    top: 200px;
-    margin-left: 5px;
+    top: 120px;
+    margin-left:2%;
   }
 
   .valores {
-    top: 350px;
+    top: 280px;
     font-size: 15px;
-    margin-left: 5px;
+    margin-left: 2%;
   }
 
   .icone1 {
@@ -44,16 +58,21 @@
 
   .txtfooter {
     font-size: 14px;
-    margin-left: 25%;
+    margin-left: 1%;
   }
 }
 
-@media (min-width: 320px) and (max-width: 375px) {
+@media  (max-width: 576px) {
   .formulario {
-    margin: 15px auto -33px;
-    position: static;
     width: 250px;
     height: 280px;
+    margin: 65% auto;
+    float: left;
+
+
+  }
+  .icone1{
+    top:0;
   }
 
   .py-3 {
@@ -63,7 +82,7 @@
   .box {
     width: 73px;
     height: 44px;
-    margin-left: 36px;
+
     margin-top: -11px;
   }
 
@@ -80,7 +99,7 @@
   }
 
   .cmfunciona, .txtfunciona {
-    top: 69px;
+    top: -65px;
     font-size: 45px;
   }
 
@@ -89,14 +108,14 @@
   }
 
   .valores {
-    top: 155px;
+    
     font-size: 13px;
     margin-left: 5px;
   }
 
   .credito {
     float: left;
-    top: 97px;
+    margin:15% auto;
     margin-left: 5px;
     position: absolute;
   }
@@ -106,7 +125,7 @@
   }
 
   #vantagens {
-    margin-top: 27%;
+    margin-top: 38%;
   }
 
   .txtcli {
