@@ -9,6 +9,7 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use App\Login;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
+use App\Mail\WelcomeEmail;
 
 
 class RegisterController extends Controller
@@ -93,7 +94,7 @@ class RegisterController extends Controller
         $rand = $this->generateRandomString(6);
 
 
-        Login::create([
+        $user = Login::create([
             'email' => $data['email'],
 //            'password' =>  Hash::make($data['password']),
             'permissao' => 1,
@@ -109,6 +110,10 @@ class RegisterController extends Controller
         });
 
 
+
+        dispatch(new WelcomeEmail($user));
+
+//        return $user;
 
 
     }

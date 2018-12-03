@@ -40,7 +40,7 @@
     <section>
         <div class="container">
             <div class="row">
-                <div class="col-8 login mx-auto">
+                <div class="col-md-8 col-lg-8 col-sm-8 login mx-auto">
 
                     <div class="login-area">
                         {{--<h2>Acesse sua conta</h2>--}}
@@ -147,7 +147,7 @@
                                 <div class="login-form-action">
 
 {{--                                    <a href="{{ route('password.request') }}" class="login-form__recover-password">Esqueci minha senha</a>--}}
-                                    <input type="submit" value="Enviar" class="login-form__submit" />
+                                    <input type="submit" value="Enviar" class="mx-auto login-form__submit" />
                                 </div>
                             </form>
                         </div>
@@ -164,3 +164,6 @@
 </div>
 </body>
 </html>
+
+
+
