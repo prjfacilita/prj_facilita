@@ -54,9 +54,30 @@ body {
   background: url('../imagens/iconessvg/seta.svg');
   background-repeat: no-repeat;
   width: 133px;
+  margin:0 auto;
   height: 133px;
 }
-
+.icone-img2{
+  background: url('../imagens/iconessvg/cadastro.svg');
+  background-repeat: no-repeat;
+  width: 133px;
+  margin:0 auto;
+  height: 133px;
+}
+.icone-img3{
+  background: url('../imagens/iconessvg/banco.svg');
+  background-repeat: no-repeat;
+  width: 133px;
+  margin:0 auto;
+  height: 133px;
+}
+.icone-img4{
+  background: url('../imagens/iconessvg/cifrao.svg');
+  background-repeat: no-repeat;
+  width: 133px;
+  margin:0 auto;
+  height: 133px;
+}
 .box {
   width: 140px;
   height: 50px;
@@ -135,8 +156,7 @@ body {
 }
 
 .icone1 {
-  top: 150px;
-  padding-left: 7%;
+  top: 8rem;
 }
 
 .txticone {
@@ -238,7 +258,7 @@ body {
 .logonav {
   width: 160px;
   height: 50px;
-  color: white;
+
 }
 
 button {
@@ -247,11 +267,11 @@ button {
 
 button:focus {
   outline-style: none;
-  background-color: green;
+  background-color: #1D8841;
 }
 
 button:hover {
-  background-color: green;
+  background-color: #1D8841;
 }
 
 #valor {

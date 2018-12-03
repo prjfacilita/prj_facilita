@@ -72,11 +72,13 @@
   background-image: url("../imagens/next.png");
   background-repeat: no-repeat;
   background-color: transparent;
+  background-size: 100%;
   width: 45%;
   height: 70%;
 }
 .carousel-control-next{
   opacity: 1;
+  right: 0px;
 }
 .carousel-control-prev{
   opacity: 1;
@@ -85,6 +87,7 @@
   background-image: url("../imagens/back.png");
   background-repeat: no-repeat;
   background-color: transparent;
+  background-size: 100%;
   width: 45%;
   height: 70%;
 }

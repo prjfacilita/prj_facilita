@@ -52,16 +52,14 @@ $(document).ready(function() {
 
   });
 
-  $('button').click(function(){
+  $('.box').click(function(){
     $('#f2').addClass('d-block');
     $('#f1').addClass('d-none');
-
-
-     if($('#f2').addClass('d-block'))
+    if($('#f2').addClass('d-block'))
     {
-    $('button').click(function(){
+    $('.box2').click(function(){
       $('#f3').addClass('d-block');
-      $('#f2').addClass('d-none');
+      $('#f2').removeClass('d-block');
 
     })
 

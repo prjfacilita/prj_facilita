@@ -1,8 +1,9 @@
 
 .navbar{
-top:3%;
-background-color: rgba(0.2, 0.1, 0, 0.6);
+top:2%;
+background-color: rgba(0.2, 0.1, 0, 0.7);
 box-shadow: 1px 6px 29px;
+padding-top: 1rem;
 }
 
 .nav-text{
@@ -13,13 +14,13 @@ box-shadow: 1px 6px 29px;
     -webkit-text-decoration-skip: objects;
 }
 .navbar-collapse{
-  color: #FFFEFE;
+
   background-color: transparent;
 
 }
 .navbar-toggler-icon {
   background-color:transparent;
-  color: #FFFEFE;
+
 
 }
 .navbar-brand{
