@@ -123,6 +123,7 @@ return [
     'log' => env('APP_LOG', 'single'),
 
     'log_level' => env('APP_LOG_LEVEL', 'debug'),
+    'Debugbar' => Barryvdh\Debugbar\Facade::class,
 
     /*
     |--------------------------------------------------------------------------
@@ -182,7 +183,8 @@ return [
         Laravel\Passport\PassportServiceProvider::class,
         LaravelLegends\PtBrValidator\ValidatorProvider::class,
 //        Jrean\UserVerification\UserVerificationServiceProvider::class,
-        Clockwork\Support\Laravel\ClockworkServiceProvider::class
+        Clockwork\Support\Laravel\ClockworkServiceProvider::class,
+        Barryvdh\Debugbar\ServiceProvider::class,
 
     ],
 

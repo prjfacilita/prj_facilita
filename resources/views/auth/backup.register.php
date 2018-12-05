@@ -46,10 +46,10 @@
 
         }
 
-
-
-
     </style>
+
+
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 <body>
@@ -63,6 +63,12 @@
 
     <div class="container-fluid">
         <div class="row">
+            <!-- Button trigger modal -->
+            {{--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">--}}
+                {{--Launch demo modal--}}
+                {{--</button>--}}
+
+            <!-- Modal -->
 
             <div class="col-lg-12 col-md-12 col-ms-12 h-75 d-inline-block" style="width: 100%x; background-color: #ccc;"></div>
 
@@ -77,132 +83,76 @@
             </div>
 
 
-            <div class="col-md-6 col-lg-6 col-sm-6">
-
-            </div>
 
 
+            <form class="form-horizontal mt-4 mb-4 ml-4 mr-4" method="POST" action="{{ route('confirmacao') }}">
+                {{ csrf_field() }}
 
 
-            <div class="col-md-6 col-lg-6 col-sm-6 mx-auto  panel-login ">
-                {{--<div class="card ">--}}
-                    {{--<div class="card-header">--}}
-                        {{--Featured--}}
-                        {{--</div>--}}
-                    {{--<div class="card-body">--}}
-                        <form class="form-horizontal mt-4 mb-4 ml-4 mr-4" method="POST" action="{{ route('register') }}">
-                            {{ csrf_field() }}
+
+                <div class="form-group{{ $errors->has('senha') ? ' has-error' : '' }}">
+                    <label for="senha" class="col-md-4 control-label">Cadastrando senha</label>
 
 
-                            <div class="form-group{{ $errors->has('nome') ? ' has-error' : '' }}">
-                                <label for="nome" class="col-md-4 control-label">Nome</label>
+                    <input name="confirmation_code" type="hidden" value="{{$confirmation_code}}">
+                    <input name="email" type="hidden" value="{{$email}}">
 
-                                <div class="col-md-6">
-                                    <input id="nome" type="text" class="form-control" name="nome" value="{{ old('nome') }}" required autofocus>
 
-                                    @if ($errors->has('nome'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('nome') }}</strong>
+
+
+                    <div class="col-md-6">
+                        <input id="senha" type="text" class="form-control" name="senha" value="{{ old('senha') }}" required autofocus>
+
+                        @if ($errors->has('senha'))
+                        <span class="help-block">
+                                        <strong>{{ $errors->first('senha') }}</strong>
                                     </span>
-                                    @endif
-                                </div>
-                            </div>
+                        @endif
+                    </div>
 
-                            <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                                <label for="email" class="col-md-4 control-label">E-Mail</label>
 
-                                <div class="col-md-6">
-                                    <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
+                    <label for="confirmar_senha" class="col-md-4 control-label">Cadastrando senha</label>
 
-                                    @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
+                    <div class="col-md-6">
+                        <input id="confirmar_senha" type="text" class="form-control" name="confirmar_senha" value="{{ old('confirmar_senha') }}" required autofocus>
+
+                        @if ($errors->has('confirmar_senha'))
+                        <span class="help-block">
+                                        <strong>{{ $errors->first('confirmar_senha') }}</strong>
                                     </span>
-                                    @endif
-                                </div>
-                            </div>
-
-                            <div class="form-group{{ $errors->has('cpf') ? ' has-error' : '' }}">
-                                <label for="cpf" class="col-md-4 control-label">Cpf</label>
-
-                                <div class="col-md-6">
-                                    <input id="cpf" type="text" class="form-control" name="cpf" value="{{ old('cpf') }}" required autofocus>
-
-                                    @if ($errors->has('cpf'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('cpf') }}</strong>
-                                    </span>
-                                    @endif
-                                </div>
-                            </div>
-
-
-                            <div class="form-group{{ $errors->has('tel') ? ' has-error' : '' }}">
-                                <label for="tel" class="col-md-4 control-label">Telefone</label>
-
-                                <div class="col-md-6">
-                                    <input id="tel" type="text" class="form-control" name="tel" value="{{ old('tel') }}" required autofocus>
-
-                                    @if ($errors->has('tel'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('tel') }}</strong>
-                                    </span>
-                                    @endif
-                                </div>
-                            </div>
+                        @endif
+                    </div>
+                </div>
 
 
 
-                            {{--<div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">--}}
-                                {{--<label for="password" class="col-md-4 control-label">Password</label>--}}
+                <div class="form-group">
+                    <div class="col-md-6 mx-auto">
+                        <span>Termos de contrato</span>
+                    </div>
 
-                                {{--<div class="col-md-6">--}}
-                                    {{--<input id="password" type="password" class="form-control" name="password" required>--}}
+                </div>
 
-                                    {{--@if ($errors->has('password'))--}}
-                                    {{--<span class="help-block">--}}
-                                        {{--<strong>{{ $errors->first('password') }}</strong>--}}
-                                    {{--</span>--}}
-                                    {{--@endif--}}
-                                    {{--</div>--}}
-                                {{--</div>--}}
+                <div class="form-group">
+                    <div class="col-md-6 mx-auto">
+                        <button type="submit" class="btn btn-primary">
+                            Criar conta
+                        </button>
+                    </div>
 
-                            {{--<div class="form-group">--}}
-                                {{--<label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>--}}
+                </div>
 
-                                {{--<div class="col-md-6">--}}
-                                    {{--<input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>--}}
-                                    {{--</div>--}}
-                                {{--</div>--}}
 
-                            <div class="form-group">
-                                <div class="col-md-6 mx-auto">
-                                    <button type="submit" class="btn btn-primary">
-                                        Enviar
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                        {{--</div>--}}
-                    {{--</div>--}}
 
-            </div>
+
+            </form>
+
+
 
         </div>
 
 
-        <div class="form-group">
-            <div class="col-md-8 col-md-offset-8 ">
 
-
-                <a class="btn btn-link" href="{{ route('register') }}">
-                    Não tem cadastro?
-                </a>
-
-
-
-            </div>
-        </div>
 
     </div>
 
@@ -221,3 +171,4 @@
 
 </body>
 </html>
+

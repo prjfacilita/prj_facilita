@@ -58,6 +58,18 @@
             font-family: 'Verdana, Regular';
             font-size: 35px;
         }
+
+        .screen{
+            left: 0;
+            top: 0;
+            background-color: #060606;
+            filter: alpha(opacity =         65);
+            height: 100%;
+            width: 100%;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=65)";
+            opacity: 0.95;
+            z-index: 9998;
+        }
     </style>
 
 
@@ -80,71 +92,6 @@
     {{--Launch demo modal--}}
     {{--</button>--}}
 
-    <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    {{--<div class="modal-header">--}}
-                    {{--<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>--}}
-                    {{--<button type="button" class="close" data-dismiss="modal" aria-label="Close">--}}
-                    {{--<span aria-hidden="true">&times;</span>--}}
-                    {{--</button>--}}
-                    {{--</div>--}}
-                    <div class="modal-body">
-                        <form class="form-horizontal" method="POST" action="{{ route('ativacao') }}">
-                            {{ csrf_field() }}
-
-
-
-                            <div class="form-group{{ $errors->has('confirmation_code') ? ' has-error' : '' }}">
-                                <label for="tel" class="col-md-12 control-label text-center text-modal">Insira o código</label>
-
-                                <div class="col-md-12">
-                                    <input data-inputmask="'mask': '9 9 9 9'" id="confirmation_code" type="text" class="form-control" name="confirmation_code" value="{{ old('confirmation_code') }}" required autofocus>
-                                    {{--<input " type="text"  />--}}
-                                    @if ($errors->has('confirmation_code'))
-                                        <span class="help-block">
-                                        <strong>{{ $errors->first('confirmation_code') }}</strong>
-                                    </span>
-                                    @endif
-                                </div>
-                            </div>
-
-
-
-                            <div class="form-group text-center">
-                                {{--<div class="col-md-12 mx-auto">--}}
-                                <button type="submit" class="btn btn-success ">
-                                    Enviar
-                                </button>
-                                {{--</div>--}}
-
-                            </div>
-
-
-                            <div class="form-group">
-                                <div class="col-md-8 col-md-offset-8 ">
-
-
-                                    <a class="btn btn-link" href="{{ route('reset_code') }}">
-                                        Não recebi o código
-                                    </a>
-
-
-
-                                </div>
-                            </div>
-
-
-                        </form>
-                    </div>
-                    {{--<div class="modal-footer">--}}
-                    {{--<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>--}}
-                    {{--<button type="button" class="btn btn-primary">Save changes</button>--}}
-                    {{--</div>--}}
-                </div>
-            </div>
-        </div>
 
 
         <div class="facilita-bar col-md-12 col-lg-12 col-sm-12">
@@ -160,6 +107,12 @@
         </div>
 
 
+
+
+        <div class="screen">
+
+            <span>Enviamos um  link para o seu email</span>
+        </div>
 
 
 
@@ -189,10 +142,10 @@
 <script src="node_modules/jQuery-Mask-Plugin-master/dist/jquery.mask.js"></script>
 <script>
 
-    $( document ).ready(function() {
-
-        $('#exampleModal').modal('toggle');
-    });
+//    $( document ).ready(function() {
+//
+//        $('#exampleModal').modal('toggle');
+//    });
 
 
     // var options =  {
@@ -216,6 +169,9 @@
 
     // $('#confirmation_code').mask("0000000", {placeholder: "__/__/____"});
 
+window.setTimeout( function(){
+    window.location = "/login";
+}, 100 );
 </script>
 </body>
 </html>
