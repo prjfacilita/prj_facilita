@@ -42,33 +42,55 @@
         }
 
 
-        .modal-open .modal.modal-center {
-            display: flex!important;
-            align-items: center!important;
-
-        }
-
-        .modal-dialog {
-            flex-grow: 1;
-        }
-
-        .text-modal{
-
-            color: #958F8F;
-            font-family: 'Verdana, Regular';
-            font-size: 35px;
-        }
-
-        .screen{
+        .loader.is-active{
+            background-color: rgba(0,0,0,.85);
+            width: 100%;
+            height: 100%;
             left: 0;
             top: 0;
-            background-color: #060606;
-            filter: alpha(opacity =         65);
-            height: 100%;
-            width: 100%;
-            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=65)";
-            opacity: 0.95;
-            z-index: 9998;
+        }
+
+
+
+        .loader{
+            color: #fff;
+            position: fixed;
+            box-sizing: border-box;
+            left: -9999px;
+            top: -9999px;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+            z-index: 999999;
+        }
+
+        .loading_gif{
+            position: fixed;
+            width: 98px;
+            height: 98px;
+            /* border: 8px solid #fff; */
+            /* border-left-color: transparent; */
+            border-radius: 50%;
+            top: calc(50% - 24px);
+            left: calc(44% - 0px);
+        }
+
+        .frase_envio_link{
+            position: fixed;
+            top: calc(50% - 150px);
+            left: calc(40% - 200px);
+            color: #ACFFAA;
+            font-family: 'Verdana, Bold';
+            font-size: 30px;
+        }
+
+        .frase_envio_link_2{
+            position: fixed;
+            top: calc(50% - 80px);
+            left: calc(40% - 130px);
+            color: #ACFFAA;
+            font-family: 'Verdana, Regular';
+            font-size: 23px;
         }
     </style>
 
@@ -109,9 +131,19 @@
 
 
 
-        <div class="screen">
+        {{--<div class="screen">--}}
 
-            <span>Enviamos um  link para o seu email</span>
+            {{--<span>Enviamos um  link para o seu email</span>--}}
+        {{--</div>--}}
+
+        <div class="loader loader-default is-active">
+            <div class="col-md-6">
+                <span class="frase_envio_link">Enviamos um link de confimação no seu E-mail</span>
+
+                <span class="frase_envio_link_2">verifique seu e-mail e clique no link para prosseguir.</span>
+                <img src="imagens/Enviando.gif" class="img-responsive loading_gif">
+            </div>
+
         </div>
 
 
@@ -171,7 +203,7 @@
 
 window.setTimeout( function(){
     window.location = "/login";
-}, 100 );
+}, 300 );
 </script>
 </body>
 </html>
