@@ -57,19 +57,12 @@
             color: #fff;
         }
 
-        .reset-form input:not([type=submit]){
-            padding: 5px 10px;
-            margin-bottom: 15px;
-            width: 100%;
-            font-size: 18px;
-            color: #958F8F;
-            border-bottom: 1px solid #707070;
-        }
+
         .reset-form input:not([type=submit]):focus{
             border-color: #1EC857;
         }
 
-        .register__input__password{
+        .register__input__password {
             padding: 10px;
             margin: 20px 20px 0 0;
             width: 325px;
@@ -77,6 +70,29 @@
             font-style: italic;
             border-radius: 12px;
             border: 1px solid #707070;
+        }
+
+        .span_class_001{
+            font-family: 'Verdana, Bold';
+            font-size: 38px;
+            color:#1D8841;
+        }
+
+        .span_class_002{
+            color: #1D8841;
+            font-size: 23px;
+            font-family: 'Verdana, Regular';
+        }
+
+
+        .reset-form input:not([type=submit]){
+            padding: 15px 10px;
+            margin-bottom: 15px;
+            width: 100%;
+            font-size: 18px;
+            color: #958F8F;
+            border-bottom: 1px solid #707070;
+        }
     </style>
 
 
@@ -115,15 +131,15 @@
 
 
 
-        <div class="col-md-8">
+        {{--<div class="col-md-8">--}}
             {{--@extends('layouts.app')--}}
 
 {{--            @section('content')--}}
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-8 col-md-offset-2">
+                        <div class="col-md-12 col-lg-12 col-sm-12 mx-auto">
                             <div class="panel panel-default">
-                                <div class="panel-heading">Redefinir Senha</div>
+                                <div class="panel-heading span_class_001 text-center">Redefinir Senha</div>
 
                                 <div class="panel-body">
                                     @if (session('status'))
@@ -132,25 +148,29 @@
                                         </div>
                                     @endif
 
-                                    <h4>Enviaremos um link para redefinir senha</h4>
-                                    <form class="form-horizontal reset-form" name="reset-form" method="POST" action="{{ route('password.email') }}">
+
+                                    <form class=" reset-form" name="reset-form" method="POST" action="{{ route('password.email') }}">
                                         {{ csrf_field() }}
 
 
-
+                                        <div class="col-md-6 col-lg-6 col-sm-6">
                                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                                             {{--<label for="email" class="col-md-4 control-label">E-Mail Address</label>--}}
 
                                             {{--<div class="col-md-6">--}}
-                                                <input placeholder="Email:" id="email" type="email" class="register__input__password" name="email" value="{{ old('email') }}" required>
+
+                                            <span class="span_class_002">Enviaremos um link para redefinir senha</span>
+                                            <input placeholder="Email:" id="email" type="email" class="register__input__password" name="email" value="{{ old('email') }}" required>
 
                                                 @if ($errors->has('email'))
                                                     <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
+                                                    <strong>{{ $errors->first('email') }}</strong>
+                                                    </span>
                                                 @endif
                                             {{--</div>--}}
                                         </div>
+
+                                        </div> <!-- end col md 6 col lg col sm -->
 
                                         <div class="form-group">
                                             <div class="col-md-6 col-md-offset-4">
@@ -168,7 +188,7 @@
 
 
 
-        </div>
+        {{--</div>--}}
 
 
 
