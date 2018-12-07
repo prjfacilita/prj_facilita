@@ -13,31 +13,7 @@ $(document).ready(function() {
       $(".navbar").removeClass("compressed");
     }
   });
-});
-
-
-$('#carouselExample').on('slide.bs.carousel', function (e) {
-
-
-    var $e = $(e.relatedTarget);
-    var idx = $e.index();
-    var itemsPerSlide = 3;
-    var totalItems = $('.carousel-item').length;
-
-    if (idx >= totalItems-(itemsPerSlide-1)) {
-        var it = itemsPerSlide - (totalItems - idx);
-        for (var i=0; i<it; i++) {
-            // append slides to end
-            if (e.direction=="left") {
-                $('.carousel-item').eq(i).appendTo('.carousel-inner');
-            }
-            else {
-                $('.carousel-item').eq(0).appendTo('.carousel-inner');
-            }
-        }
-    }
-});
-
+})
 $(document).ready(function() {
 /* show lightbox when clicking a thumbnail */
     $('a.thumb').click(function(event){
@@ -53,17 +29,19 @@ $(document).ready(function() {
   });
 
   $('.box').click(function(){
-    $('#f2').addClass('d-block');
+    $('#f2').removeClass('d-none');
     $('#f1').addClass('d-none');
-    if($('#f2').addClass('d-block'))
-    {
-    $('.box2').click(function(){
-      $('#f3').addClass('d-block');
-      $('#f2').removeClass('d-block');
-
-    })
-
-    }
-  var botao = $(this).attr('value');
-  $("label#valor").text(botao);
+    var botao = $(this).attr('value');
+    $("label#valor").text(botao);
 });
+
+    $('.box2').click(function(){
+      $('#f3').removeClass('d-none');
+      $('#f2').addClass('d-none');
+    });
+
+    $('#botao').click(function (){
+    $('#f3').addClass('d-none');
+    $('#f4').removeClass('d-none');
+
+  });

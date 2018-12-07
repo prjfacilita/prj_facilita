@@ -1,0 +1,61 @@
+.bg-form {
+  background-color: #F5EBEB;
+  text-align: center;
+}
+
+.bg-form2 {
+  border: 1px solid #1EC857;
+  padding: 0;
+}
+
+.label {
+  font-family: Verdana;
+  font-weight: bold;
+  font-size: 1.08rem;
+  text-align: left;
+}
+
+.txtform {
+  font-family: Verdana;
+  font-weight: bold;
+  display: table-row;
+  font-size: 15px;
+  color: #958F8F;
+  text-align: center;
+}
+
+.button1{
+  margin-top:0.5rem;
+  margin-left: 2rem;
+  padding: 0;
+  border: 1px solid #1EC857;
+  border-radius: unset;
+  background-color: transparent;
+  color: #1EC857;
+  width: 75px;
+  height: 30px;
+  text-align: center;
+  font-family: Verdana;
+  font-size: 18px;
+}
+.card{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-color: white;
+  border: 1px solid #1EC857;
+}
+.card-header{
+  background-color: rgba(0, 0, 0, 0);
+  border-bottom: 1px solid #1EC857;
+}
+span {
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  font-size: 40px;
+  line-height: 0.8em;
+  color: #1EC857;
+  height: 40px;
+  width: 40px;
+  border: 2px solid #1EC857;
+}
