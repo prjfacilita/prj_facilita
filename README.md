@@ -103,9 +103,16 @@ git pull origin master
 See also the list of [contributors] ( https://github.com/prjfacilita/prj_facilita/graphs/contributors ) who participated in this project.
 
 
+## Produção
+
+Ao publicar o sistema, colocar o "Supervisor" para rodar os jobs automaticos ->
+https://blog.especializati.com.br/queues-no-laravel-filas/
+
 ## Recomendações
 
 * Prepare um café
 * Coloque uma música
 * go to code  <3
+
+
 

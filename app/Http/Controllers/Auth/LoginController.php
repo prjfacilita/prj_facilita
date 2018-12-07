@@ -167,14 +167,14 @@ class LoginController extends Controller
             ->withErrors($errors);
     }
 
-    public function AtivacaoUsuario(Request $request){
+    public function AtivacaoUsuario(Request $request, $code){
 
 
 
 
         // create our user data for the authentication
         $userdata = array(
-            'confirmation_code' => Input::get('confirmation_code'),
+            'confirmation_code' => $request->code,
         );
 
 
@@ -194,6 +194,7 @@ class LoginController extends Controller
         }
 
         //atualizar senha e autorizar acesso
+
 
         return view('Auth\cadastrar_senha',
             ['confirmation_code' => $selectIfActive->confirmation_code],
@@ -231,7 +232,7 @@ class LoginController extends Controller
            // update password e status
 
 
-            if($request->senha == $request->confirmar_senha){
+            if($request->senha == $request->confirm_password){
                 DB::table('login')
                     ->where('email', $request->email)
                     ->update(array('status' => 2,  'password' =>  Hash::make($request->senha)));
@@ -239,10 +240,6 @@ class LoginController extends Controller
 
                 return redirect()->intended('home');
             }
-
-
-
-
 
 
         }
@@ -254,6 +251,15 @@ class LoginController extends Controller
 
       $this->AtivacaoUsuario($request);
     }
+
+    public function ConfirmarUserLink(Request $request, $code){
+
+
+        return $request->code; // validar o código
+
+    }
+
+
 
 
 }

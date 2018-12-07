@@ -1,174 +1,98 @@
-<!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
+<!doctype html>
+<html lang="pt-BR">
 <head>
+    <title>Facillita</title>
+    <!-- Required meta tags -->
+    <meta name="description" content="Cadastre sua senha">
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
-    {{--<!-- Styles -->--}}
-    {{--<link href="{{ asset('css/app.css') }}" rel="stylesheet">--}}
-
-    <style>
-
-
-
-        .facilita-bar{
-            width: 100%;
-            background: #074A1E;
-
-        }
-
-        .facilita-bar p{
-
-            font-family: 'Verdana, Regular';
-            font-size: 10px;
-            color:#FFFFFF;
-            text-align: left;
-
-        }
-
-
-
-
-        .panel-login{
-
-            border-radius: 8px;
-            border: 1px solid #707070;
-            background-color: #FFFFFF;
-            padding-top: 1%;
-            padding-bottom: 1%;
-
-
-        }
-
-    </style>
-
-
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css"  href="/teste/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"  href="/teste/assets/css/style.css">
+    <link rel="stylesheet" type="text/css"  href="/teste/assets/css/font-awesome.min.css">
 </head>
+
 <body>
 
-
-{{--<div id="app">--}}
-
-
-{{--<div class="h-75 d-inline-block bg" style="width: 120px; background-color: rgba(0,0,255,.1)">Height 75%</div>--}}
-
-
-<div class="container-fluid">
-    <div class="row">
-        <!-- Button trigger modal -->
-    {{--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">--}}
-    {{--Launch demo modal--}}
-    {{--</button>--}}
-
-    <!-- Modal -->
-
-        <div class="col-lg-12 col-md-12 col-ms-12 h-75 d-inline-block" style="width: 100%x; background-color: #ccc;"></div>
-
-
-        <div class="facilita-bar col-md-12 col-lg-12 col-sm-12">
-            <p class="mt-3">Atenção! A Facilita não solicita depósito antecipado para empréstimo. Em caso de dúvida entre em contato.</p>
+<div class="top-bar">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <p>Atenção! A Facilita não solicita depósito antecipado para empréstimo. Em caso de dúvida entre em contato.</p>
+            </div>
         </div>
-
-
-        <div class="facilita-logo col-md-6 col-lg-6 col-sm-6">
-            <img class="mt-1 ml-5" src="imagens/LogoFacilita.png" width="35%">
-        </div>
-
-
-
-
-        <form class="form-horizontal mt-4 mb-4 ml-4 mr-4" method="POST" action="{{ route('confirmacao') }}">
-            {{ csrf_field() }}
-
-
-
-            <div class="form-group{{ $errors->has('senha') ? ' has-error' : '' }}">
-                <label for="senha" class="col-md-4 control-label">Cadastrando senha</label>
-
-
-                <input name="confirmation_code" type="hidden" value="{{$confirmation_code}}">
-                <input name="email" type="hidden" value="{{$email}}">
-
-
-
-
-                <div class="col-md-6">
-                    <input id="senha" type="text" class="form-control" name="senha" value="{{ old('senha') }}" required autofocus>
-
-                    @if ($errors->has('senha'))
-                        <span class="help-block">
-                                        <strong>{{ $errors->first('senha') }}</strong>
-                                    </span>
-                    @endif
-                </div>
-
-
-                <label for="confirmar_senha" class="col-md-4 control-label">Cadastrando senha</label>
-
-                <div class="col-md-6">
-                    <input id="confirmar_senha" type="text" class="form-control" name="confirmar_senha" value="{{ old('confirmar_senha') }}" required autofocus>
-
-                    @if ($errors->has('confirmar_senha'))
-                        <span class="help-block">
-                                        <strong>{{ $errors->first('confirmar_senha') }}</strong>
-                                    </span>
-                    @endif
-                </div>
-            </div>
-
-
-
-            <div class="form-group">
-                <div class="col-md-6 mx-auto">
-                    <span>Termos de contrato</span>
-                </div>
-
-            </div>
-
-            <div class="form-group">
-                <div class="col-md-6 mx-auto">
-                    <button type="submit" class="btn btn-primary">
-                        Criar conta
-                    </button>
-                </div>
-
-            </div>
-
-
-
-
-        </form>
-
-
-
     </div>
-
-
-
-
 </div>
 
-{{--</div>--}}
+<header>
+    <div class="container">
+        <div class="row">
+            <a class="logomarca" href="#"><img src="/teste/assets/images/logo-facilita.png" alt="Logomarca Facilita" class="image-logomarca"/></a>
+            <div class="user-logged">
+                <img src="/teste/assets/images/icon-user.png" alt="Ícone Usuário" class="icon-user-logged"/>
+                <p>Olá Maria, seja bem vinda!</p>
+            </div>
+        </div>
+    </div>
+</header>
 
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<div class="page-content">
+    <!-- register -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 register">
 
+                    <div class="register__area">
+                        <h2 class="register__token">Token validado com sucesso!</h2>
 
+                        <div class="register__form">
+                            <h3>Cadastre sua senha:</h3>
 
-<link href="css/facilita.css" rel="stylesheet">
-<link href="node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css" rel="stylesheet">
+                            <form method="POST" action="{{ url('/ativarconta') }}">
 
+                                {{ csrf_field() }}
+
+                                <input name="confirmation_code" type="hidden" value="{{$confirmation_code}}">
+                                <input name="email" type="hidden" value="{{$email}}">
+
+                                <div class="register__password">
+                                    <label>Senha:</label>
+                                    <input type="password" name="senha" id="senha" placeholder="Criar senha" class="register__input__password" />
+                                    @if ($errors->has('senha'))
+                                        <span class="help-block">
+                                        <strong>{{ $errors->first('senha') }}</strong>
+                                    </span>
+                                    @endif
+
+                                    <input  id="confirm-password" type="password" name="confirm_password" placeholder="Confirmar senha" class="register__input__password" />
+                                    <p>A senha deverá ter no mínimo 8 caracteres com letras e números.</p>
+                                </div>
+
+                                <div class="register__terms">
+                                    <p>A facilita crédito pessoal irá consultar seu histórico de crédito e seus dados pessoais. isso é importante para confirmarmos a sua identidade e avaliarmos corretamente o seu crédito.</p>
+                                    <a href="#" target="_blank" class="terms__link-process">saiba mais sobre o processo de avaliação de crédito.</a>
+
+                                    <input type="checkbox" name="accept-terms" value="accept" />
+                                    <a href="#" target="_blank" class="terms__accept">Aceito os termos de cadastro</a>
+                                </div>
+
+                                <input type="submit" value="Criar conta" class="register__password__submit" />
+                                <i class="fa fa-caret-right submit__icon" aria-hidden="true"></i>
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- register -->
+
+</div>
 </body>
 </html>
-

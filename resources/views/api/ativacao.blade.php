@@ -42,21 +42,55 @@
         }
 
 
-        .modal-open .modal.modal-center {
-            display: flex!important;
-            align-items: center!important;
-
+        .loader.is-active{
+            background-color: rgba(0,0,0,.85);
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
         }
 
-        .modal-dialog {
-            flex-grow: 1;
+
+
+        .loader{
+            color: #fff;
+            position: fixed;
+            box-sizing: border-box;
+            left: -9999px;
+            top: -9999px;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+            z-index: 999999;
         }
 
-        .text-modal{
+        .loading_gif{
+            position: fixed;
+            width: 98px;
+            height: 98px;
+            /* border: 8px solid #fff; */
+            /* border-left-color: transparent; */
+            border-radius: 50%;
+            top: calc(50% - 24px);
+            left: calc(44% - 0px);
+        }
 
-            color: #958F8F;
+        .frase_envio_link{
+            position: fixed;
+            top: calc(50% - 150px);
+            left: calc(40% - 200px);
+            color: #ACFFAA;
+            font-family: 'Verdana, Bold';
+            font-size: 30px;
+        }
+
+        .frase_envio_link_2{
+            position: fixed;
+            top: calc(50% - 80px);
+            left: calc(40% - 130px);
+            color: #ACFFAA;
             font-family: 'Verdana, Regular';
-            font-size: 35px;
+            font-size: 23px;
         }
     </style>
 
@@ -80,71 +114,6 @@
     {{--Launch demo modal--}}
     {{--</button>--}}
 
-    <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    {{--<div class="modal-header">--}}
-                    {{--<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>--}}
-                    {{--<button type="button" class="close" data-dismiss="modal" aria-label="Close">--}}
-                    {{--<span aria-hidden="true">&times;</span>--}}
-                    {{--</button>--}}
-                    {{--</div>--}}
-                    <div class="modal-body">
-                        <form class="form-horizontal" method="POST" action="{{ route('ativacao') }}">
-                            {{ csrf_field() }}
-
-
-
-                            <div class="form-group{{ $errors->has('confirmation_code') ? ' has-error' : '' }}">
-                                <label for="tel" class="col-md-12 control-label text-center text-modal">Insira o código</label>
-
-                                <div class="col-md-12">
-                                    <input data-inputmask="'mask': '9 9 9 9'" id="confirmation_code" type="text" class="form-control" name="confirmation_code" value="{{ old('confirmation_code') }}" required autofocus>
-                                    {{--<input " type="text"  />--}}
-                                    @if ($errors->has('confirmation_code'))
-                                        <span class="help-block">
-                                        <strong>{{ $errors->first('confirmation_code') }}</strong>
-                                    </span>
-                                    @endif
-                                </div>
-                            </div>
-
-
-
-                            <div class="form-group text-center">
-                                {{--<div class="col-md-12 mx-auto">--}}
-                                <button type="submit" class="btn btn-success ">
-                                    Enviar
-                                </button>
-                                {{--</div>--}}
-
-                            </div>
-
-
-                            <div class="form-group">
-                                <div class="col-md-8 col-md-offset-8 ">
-
-
-                                    <a class="btn btn-link" href="{{ route('reset_code') }}">
-                                        Não recebi o código
-                                    </a>
-
-
-
-                                </div>
-                            </div>
-
-
-                        </form>
-                    </div>
-                    {{--<div class="modal-footer">--}}
-                    {{--<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>--}}
-                    {{--<button type="button" class="btn btn-primary">Save changes</button>--}}
-                    {{--</div>--}}
-                </div>
-            </div>
-        </div>
 
 
         <div class="facilita-bar col-md-12 col-lg-12 col-sm-12">
@@ -160,6 +129,22 @@
         </div>
 
 
+
+
+        {{--<div class="screen">--}}
+
+            {{--<span>Enviamos um  link para o seu email</span>--}}
+        {{--</div>--}}
+
+        <div class="loader loader-default is-active">
+            <div class="col-md-6">
+                <span class="frase_envio_link">Enviamos um link de confimação no seu E-mail</span>
+
+                <span class="frase_envio_link_2">verifique seu e-mail e clique no link para prosseguir.</span>
+                <img src="imagens/Enviando.gif" class="img-responsive loading_gif">
+            </div>
+
+        </div>
 
 
 
@@ -189,10 +174,10 @@
 <script src="node_modules/jQuery-Mask-Plugin-master/dist/jquery.mask.js"></script>
 <script>
 
-    $( document ).ready(function() {
-
-        $('#exampleModal').modal('toggle');
-    });
+//    $( document ).ready(function() {
+//
+//        $('#exampleModal').modal('toggle');
+//    });
 
 
     // var options =  {
@@ -216,6 +201,9 @@
 
     // $('#confirmation_code').mask("0000000", {placeholder: "__/__/____"});
 
+window.setTimeout( function(){
+    window.location = "/login";
+}, 300 );
 </script>
 </body>
 </html>
