@@ -82,16 +82,26 @@ body {
   width: 140px;
   height: 50px;
   border-radius: 14px 14px 14px 14px;
+  cursor: pointer;
   border: 3px solid #1D8841;
   margin:0 auto;
   padding: 0;
 
 }
 
-.box2 {
+.box2{
   width: 62px;
   height: 50px;
   border-radius: 14px 14px 14px 14px;
+  cursor: pointer;
+  border: 3px solid #1D8841;
+  margin-left: 10%;
+}
+.box3{
+  width: 147px;
+  height: 50px;
+  border-radius: 14px 14px 14px 14px;
+  cursor: pointer;
   border: 3px solid #1D8841;
   margin-left: 10%;
 }
@@ -103,11 +113,20 @@ body {
   font-weight: bold;
   margin-top: 9px;
 }
-
-.boxtext:hover {
-  color: white;
+.boxtext1{
+  text-align: center;
+  font-size: 11px;
+  color: #1D8841;
+  font-weight: bold;
+  margin-top: 9px;
 }
 
+.boxtext:hover{
+  color:white;
+}
+.boxtext1:hover{
+    color:white;
+}
 .simule {
   margin: 0 auto;
   font-size: 20px;
@@ -269,10 +288,10 @@ button:focus {
   outline-style: none;
   background-color: #1D8841;
 }
-
-button:hover {
-  background-color: #1D8841;
+button:hover{
+  background: #1D8841;
 }
+
 
 #valor {
   font-family: verdana;
