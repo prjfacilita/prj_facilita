@@ -21,7 +21,7 @@
                 ],
                 "summary": "Display a listing of the resource.",
                 "description": "Returns dashboard overview.",
-                "operationId": "api.emprestimo.index",
+                "operationId": "api.emprestimo2.index",
                 "produces": [
                     "application/json"
                 ],

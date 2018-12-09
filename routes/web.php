@@ -15,11 +15,11 @@ Route::get('/home', 'HomeController@index')->name('home');
 //});
 
 
-Route::post('api/login', 'API\UserController@login');
-Route::post('api/register', 'API\UserController@register');
-Route::group(['middleware' => 'auth:api'], function(){
-    Route::post('details', 'API\UserController@details');
-});
+//Route::post('api/login', 'API\UserController@login');
+//Route::post('api/register', 'API\UserController@register');
+//Route::group(['middleware' => 'auth:api'], function(){
+//    Route::post('details', 'API\UserController@details');
+//});
 
 //Route::any('official/form/reject-form}', 'FormStatus@rejectForm')->name('reject-form');
 //
@@ -64,5 +64,5 @@ Route::get('/banco/api/configuracoes', ['as' => '/banco/api/configuracoes', 'use
 /* API FACILITA EMPRESTIMOS*/
 
 Route::group(['prefix' => 'api/'], function () {
-    Route::get('emprestimo2', 'EmprestimoController@index');
+    Route::get('emprestimo2', 'EmprestimoController@get');
 });

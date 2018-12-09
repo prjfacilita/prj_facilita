@@ -45,8 +45,8 @@ class EmprestimoController extends Controller
     public function index()
     {
         //
-        $this->ConfiguracoesAPI();
-//        return view('emprestimo.pedido');
+//        $this->ConfiguracoesAPI();
+        return view('emprestimo.pedido');
     }
 
     /**
@@ -159,7 +159,7 @@ class EmprestimoController extends Controller
      * @SWG\Get(
      *     path="/api/emprestimo2",
      *     description="Returns dashboard overview.",
-     *     operationId="api.emprestimo.index",
+     *     operationId="api.emprestimo2.index",
      *     produces={"application/json"},
      *     tags={"emprestimo"},
      *     @SWG\Response(
