@@ -1,0 +1,58 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Emprestimo Facilita API",
+        "contact": {
+            "name": "Rodrigo Teles Correia",
+            "url": "rtelesc@gmail.com"
+        },
+        "version": "0.1"
+    },
+    "host": "localhost:8000",
+    "basePath": "",
+    "schemes": [
+        "http"
+    ],
+    "paths": {
+        "/api/emprestimo2": {
+            "get": {
+                "tags": [
+                    "emprestimo"
+                ],
+                "summary": "Display a listing of the resource.",
+                "description": "Returns dashboard overview.",
+                "operationId": "api.emprestimo.index",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Dashboard overview."
+                    },
+                    "401": {
+                        "description": "Unauthorized action."
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "Error": {
+            "required": [
+                "code",
+                "message"
+            ],
+            "properties": {
+                "code": {
+                    "description": "Class EmprestimoController",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "message": {
+                    "description": "Class EmprestimoController",
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

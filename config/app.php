@@ -185,6 +185,7 @@ return [
 //        Jrean\UserVerification\UserVerificationServiceProvider::class,
         Clockwork\Support\Laravel\ClockworkServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
+        \L5Swagger\L5SwaggerServiceProvider::class
 
     ],
 

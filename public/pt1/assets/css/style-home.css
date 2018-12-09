@@ -1,0 +1,102 @@
+/****
+    STYLE PÁGINA HOME
+    
+    Cor principal: color: #1D8841;
+****/
+
+#banner{
+    margin-top: -126px;
+	display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+	height: 800px;
+	background: url(../images/banner-home.jpg) top center no-repeat;
+    background-size: cover;
+}
+    #banner h1,
+    #banner p{
+        color: #ffffff;
+    }
+    #banner h1{
+        padding-bottom: 60px;
+        font-size: 32px;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 40px;
+    }
+    #banner p{
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+/**** BOX SIMULAÇÃO ****/
+.banner__simulation{
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    padding: 20px;
+    background: #fff;
+    border-radius: 18px;
+}
+    .banner__simulation h2{
+        font-weight: bold;
+        font-size: 20px;
+        color: #1D8841;
+    }
+    .simulation-box__day{
+        float: left;
+        padding: 10px;
+        margin: 5px 30px;
+        width: calc(100%/6);
+
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        -o-appearance: none;
+        outline: none;
+        content: none;
+    }
+        .simulation-box__day:before{
+            display: flex;
+            display: -webkit-flex;
+            align-items: center;
+            -webkit-align-items: center;
+            justify-content: center;
+            -webkit-justify-content: center;
+            width: 60px;
+            height: 45px;
+            font-size: 18px;
+            font-weight: bold;
+            content: attr(data-line);
+            border: 2px solid #1D8841;
+            border-radius: 15px;
+            color: #1D8841;   
+        }
+        .simulation-box__day:checked:before{
+            color: #ffffff;
+            background: #1D8841;
+        }
+    .simulation-other-day{
+        float: left;
+        padding: 10px;
+        margin: 30px;
+        width: auto;
+        border: 2px solid #1D8841;
+        border-radius: 15px;
+        color: #1D8841;   
+    }
+        .simulation-other-day label{
+            display: block;
+            font-size: 14px;
+        }
+        .simulation-other-day input{
+            padding: 10px 0px 0 0;
+            width: 100%;
+            color: #1D8841;
+            font-size: 11px;
+        }

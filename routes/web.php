@@ -1,15 +1,5 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
 Route::get('/', function () {
     return view('welcome');
@@ -50,6 +40,9 @@ Route::post('reset_code', [ 'as' => 'reset_code', 'uses' => 'Auth\LoginControlle
 Route::get('confirmar-usuario/{code}', [ 'as' => 'confirmar-usuario/{code}', 'uses' => 'Auth\LoginController@AtivacaoUsuario']);
 
 
+
+Route::get('pedido', [ 'as' => 'pedido', 'uses' => 'EmprestimoController@PedirEmprestimo']);
+
 //Route::get('ativar-conta', ['as' => 'ativar-conta', 'uses' => 'Auth\LoginController@CriarSenha']);
 
 /*
@@ -59,3 +52,17 @@ Route::get('confirmar-usuario/{code}', [ 'as' => 'confirmar-usuario/{code}', 'us
  *
  *
  * */
+
+
+/*Conexão API Banco*/
+
+Route::get('/banco/api/configuracoes', ['as' => '/banco/api/configuracoes', 'uses' => 'EmprestimoController@ConfiguracoesAPI']);
+
+
+
+
+/* API FACILITA EMPRESTIMOS*/
+
+Route::group(['prefix' => 'api/'], function () {
+    Route::get('emprestimo2', 'EmprestimoController@index');
+});
