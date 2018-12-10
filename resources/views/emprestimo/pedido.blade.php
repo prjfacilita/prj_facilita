@@ -165,7 +165,33 @@
                                                     <label>UF:
                                                         <select id="uf">
                                                             <option disabled selected>Selecionar</option>
+                                                            <option value="ac">AC</option>
+                                                            <option value="al">AL</option>
+                                                            <option value="ap">AP</option>
+                                                            <option value="am">AM</option>
+                                                            <option value="ba">BA</option>
+                                                            <option value="ce">CE</option>
+                                                            <option value="df">DF</option>
+                                                            <option value="es">ES</option>
+                                                            <option value="go">GO</option>
+                                                            <option value="ma">MA</option>
+                                                            <option value="mt">MT</option>
+                                                            <option value="ms">MS</option>
                                                             <option value="mg">MG</option>
+                                                            <option value="pa">PA</option>
+                                                            <option value="pb">PB</option>
+                                                            <option value="pr">PR</option>
+                                                            <option value="pe">PE</option>
+                                                            <option value="pi">PI</option>
+                                                            <option value="rj">RJ</option>
+                                                            <option value="rn">RN</option>
+                                                            <option value="rs">RS</option>
+                                                            <option value="ro">RO</option>
+                                                            <option value="rr">RR</option>
+                                                            <option value="sc">SC</option>
+                                                            <option value="sp">SP</option>
+                                                            <option value="se">SE</option>
+                                                            <option value="to">TO</option>
                                                         </select></label>
                                                 </div>
 
@@ -190,12 +216,10 @@
                                                         </select></label>
                                                 </div>
 
+
+
                                                 <div class="col-sm-4">
-                                                    <label>Nacionalidade:
-                                                        <select id="pais">
-                                                            <option disabled selected>Selecionar</option>
-                                                            <option value="brasil">Brasil</option>
-                                                        </select></label>
+                                                    <label>Nacionalidade: <input type="nacionalidade" name="solicitation-phone" class="solicitation-form__phone solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-4">
@@ -238,9 +262,99 @@
                                         <h3>Renda e ocupação</h3>
                                         <div class="solicitation-register__form">
 
-                                            <!-- inicio form -->
-                                            <form action="" method="post">
-                                                ESPAÇO PARA FORMULARIO
+    <!-- inicio form -->
+                                        <form action="" method="post">
+                                                <div class="col-sm-2">
+                                                    <label>Salário: <input type="text" name="salario-name" class="solicitation-form__name solicitation-input"></label>
+                                                </div>
+
+                                                <div class="col-sm-5">
+                                                    <label>Ocupação:
+                                                        <select id="ocupacao-id">
+                                                            <option disabled selected>Selecionar</option>
+                                                            <option value="empregado_setor_privado">EMPREGADO SETOR PRIVADO</option>
+                                                            <option value="empregado_setor_publico">EMPREGADO SETOR PÚBLICO</option>
+                                                            <option value="profissional_liberal">PROFISSIONAL LIBERAL</option>
+                                                            <option value="empresario">EMPRESÁRIO</option>
+                                                            <option value="aposentado_ou_pensionista">APOSENTADO OU PENSIONISTA</option>
+                                                            <option value="autonomo">AUTÔNOMO</option>
+                                                            <option value="outros">OUTROS</option>
+                                                        </select></label>
+                                                </div>
+
+                                                <div class="col-sm-5">
+                                                    <label>Escolaridade:
+                                                        <select id="escolaridade-id">
+                                                            <option disabled selected>Selecionar</option>
+                                                            <option value="1_grau_completo">1o. GRAU COMPLETO (FUNDAMENTAL)</option>
+                                                            <option value="2_grau_completo">2o. GRAU COMPLETO (ENSINO MÉDIO)</option>
+                                                            <option value="superior_incompleto">SUPERIOR INCOMPLETO</option>
+                                                            <option value="superior_completo">SUPERIOR COMPLETO</option>
+                                                            <option value="pos_graducao">PÓS-GRADUADO</option>
+                                                        </select></label>
+                                                </div>
+
+                                                <div class="col-sm-6">
+                                                    <label>Profissão: <input type="text" name="profissao-emission-id" class="solicitation-form__id solicitation-input"></label>
+                                                </div>
+
+                                                <div class="col-sm-6">
+                                                    <label>Cargo: <input type="text" name="cargo-emission-id" class="solicitation-form__id solicitation-input"></label>
+                                                </div>
+
+                                                <div class="col-sm-8">
+                                                    <label>Endereço Comercial: <input type="endereco_comercial" name="solicitation-phone" class="solicitation-form__phone solicitation-input"></label>
+                                                </div>
+
+                                                <div class="col-sm-2">
+                                                    <label>Nro: <input type="endereco_comercial_nro" name="solicitation-cellphone" class="solicitation-form__phone solicitation-input"></label>
+                                                </div>
+
+                                                <div class="col-sm-2">
+                                                    <label>CEP: <input type="endereco_comercial_cep" name="solicitation-phone-message" class="solicitation-form__phone solicitation-input"></label>
+                                                </div>
+
+                                                <div class="col-sm-5">
+                                                    <label>Bairro: <input type="endereco_comercial_bairro" name="solicitation-phone-message" class="solicitation-form__phone solicitation-input"></label>
+                                                </div>
+
+                                                <div class="col-sm-5">
+                                                    <label>Cidade: <input type="endereco_comercial_cidade" name="solicitation-phone-message" class="solicitation-form__phone solicitation-input"></label>
+                                                </div>
+
+                                                <div class="col-sm-2">
+                                                    <label>UF:
+                                                        <select id="endereco_comercial_uf">
+                                                            <option disabled selected>Selecionar</option>
+                                                            <option value="ac">AC</option>
+                                                            <option value="al">AL</option>
+                                                            <option value="ap">AP</option>
+                                                            <option value="am">AM</option>
+                                                            <option value="ba">BA</option>
+                                                            <option value="ce">CE</option>
+                                                            <option value="df">DF</option>
+                                                            <option value="es">ES</option>
+                                                            <option value="go">GO</option>
+                                                            <option value="ma">MA</option>
+                                                            <option value="mt">MT</option>
+                                                            <option value="ms">MS</option>
+                                                            <option value="mg">MG</option>
+                                                            <option value="pa">PA</option>
+                                                            <option value="pb">PB</option>
+                                                            <option value="pr">PR</option>
+                                                            <option value="pe">PE</option>
+                                                            <option value="pi">PI</option>
+                                                            <option value="rj">RJ</option>
+                                                            <option value="rn">RN</option>
+                                                            <option value="rs">RS</option>
+                                                            <option value="ro">RO</option>
+                                                            <option value="rr">RR</option>
+                                                            <option value="sc">SC</option>
+                                                            <option value="sp">SP</option>
+                                                            <option value="se">SE</option>
+                                                            <option value="to">TO</option>
+                                                        </select></label>
+                                                </div>
                                             </form>
                                             <!-- fim form -->
                                         </div>
@@ -251,7 +365,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- fim formulário renda e ocupação -->
+ <!-- fim formulário renda e ocupação -->
 
                             <!-- formulário de endereço  -->
                             <div class="solicitation-accordion-form card">
@@ -266,9 +380,86 @@
                                         <h3>Endereço</h3>
                                         <div class="solicitation-register__form">
 
-                                            <!-- inicio form -->
-                                            <form action="" method="post">
-                                                ESPAÇO PARA FORMULARIO
+    <!-- inicio form -->
+                            <form action="" method="post">
+
+                                                <div class="col-sm-2">
+                                                    <label>CEP: <input type="cep" name="solicitation-phone-message" class="solicitation-form__phone solicitation-input"></label>
+                                                </div>
+
+                                                <div class="col-sm-8">
+                                                    <label>Endereço: <input type="endereco" name="solicitation-phone" class="solicitation-form__phone solicitation-input"></label>
+                                                </div>
+
+                                                <div class="col-sm-2">
+                                                    <label>Nro: <input type="nro" name="solicitation-cellphone" class="solicitation-form__phone solicitation-input"></label>
+                                                </div>
+
+                                                <div class="col-sm-6">
+                                                    <label>Complemento: <input type="complemento" name="solicitation-phone-message" class="solicitation-form__phone solicitation-input"></label>
+                                                </div>
+
+                                                <div class="col-sm-6">
+                                                    <label>Bairro: <input type="bairro" name="solicitation-phone-message" class="solicitation-form__phone solicitation-input"></label>
+                                                </div>
+
+                                                <div class="col-sm-4">
+                                                    <label>Tipo de Residência:
+                                                        <select id="tipo-residencia-id">
+                                                            <option disabled selected>Selecionar</option>
+                                                            <option value="propria_quitada">PRÓPRIA QUITADA</option>
+                                                            <option value="propria_financiada">PRÓPRIA FINANCIADA</option>
+                                                            <option value="alugada">ALUGADA</option>
+                                                            <option value="de_familiares_ou_conjuge">DE FAMILIARES OU CÔNJUGE</option>
+
+                                                        </select></label>
+                                                </div>
+
+                                                <div class="col-sm-6">
+                                                    <label>Cidade: <input type="cidade" name="solicitation-phone-message" class="solicitation-form__phone solicitation-input"></label>
+                                                </div>
+
+                                                <div class="col-sm-2">
+                                                    <label>UF:
+                                                        <select id="uf">
+                                                            <option disabled selected>Selecionar</option>
+                                                            <option value="ac">AC</option>
+                                                            <option value="al">AL</option>
+                                                            <option value="ap">AP</option>
+                                                            <option value="am">AM</option>
+                                                            <option value="ba">BA</option>
+                                                            <option value="ce">CE</option>
+                                                            <option value="df">DF</option>
+                                                            <option value="es">ES</option>
+                                                            <option value="go">GO</option>
+                                                            <option value="ma">MA</option>
+                                                            <option value="mt">MT</option>
+                                                            <option value="ms">MS</option>
+                                                            <option value="mg">MG</option>
+                                                            <option value="pa">PA</option>
+                                                            <option value="pb">PB</option>
+                                                            <option value="pr">PR</option>
+                                                            <option value="pe">PE</option>
+                                                            <option value="pi">PI</option>
+                                                            <option value="rj">RJ</option>
+                                                            <option value="rn">RN</option>
+                                                            <option value="rs">RS</option>
+                                                            <option value="ro">RO</option>
+                                                            <option value="rr">RR</option>
+                                                            <option value="sc">SC</option>
+                                                            <option value="sp">SP</option>
+                                                            <option value="se">SE</option>
+                                                            <option value="to">TO</option>
+                                                        </select></label>
+                                                </div>
+
+                                                <div class="col-sm-3">
+                                                    <label>Valor do Patrimônio: <input type="text" name="valor-patrimonio-name" class="solicitation-form__name solicitation-input"></label>
+                                                </div>
+
+
+
+
                                             </form>
                                             <!-- fim form -->
                                         </div>
@@ -296,7 +487,26 @@
 
                                             <!-- inicio form -->
                                             <form action="" method="post">
-                                                ESPAÇO PARA FORMULARIO
+
+                                            <div class="col-sm-5">
+                                                    <label>Banco:
+                                                        <select id="banco-id">
+                                                            <option disabled selected>Selecionar</option>
+                                                            <option value="237">237 BRADESCO</option>
+                                                            <option value="341">341 ITAÚ</option>
+
+                                                        </select></label>
+                                                </div>
+
+                                                <div class="col-sm-3">
+                                                    <label>Nro. AGÊNCIA: <input type="text" name="nro_agencia-name" class="solicitation-form__name solicitation-input"></label>
+                                                </div>
+
+                                                <div class="col-sm-4">
+                                                    <label>CONTA: <input type="text" name="conta-name" class="solicitation-form__name solicitation-input"></label>
+                                                </div>
+
+
                                             </form>
                                             <!-- fim form -->
                                         </div>
