@@ -80,22 +80,30 @@
 
                 <div class="col-sm-4 banner__simulation simulation-value">
                     <div class="simulation-box">
-                        <h2>Quanto você precisa</h2>
-                        <form id="part-1-simulation" name="part-1-simulation" action="#">
+
+
+                        {{--<div class="part1">--}}
+                        <h2 class="pt1">Quanto você precisa</h2>
+                        <form class="pt1" id="part-1-simulation" name="part-1-simulation" >
 
                             {{--<a class="simulation-box__value">R$ 1.000,00</a>--}}
-                            <input type="radio" name="simulation-value" value="1000" class="simulation-box__value" data-line="R$ 1.000,00">
-                            <input type="radio" name="simulation-value" value="5000" class="simulation-box__value" data-line="R$ 5.000,00">
-                            <input type="radio" name="simulation-value" value="10000" class="simulation-box__value" data-line="R$ 10.000,00">
-                            <input type="radio" name="simulation-value" value="15000" class="simulation-box__value" data-line="R$ 15.000,00">
-                            <input type="radio" name="simulation-value" value="20000" class="simulation-box__value" data-line="R$ 20.000,00">
+                            <input type="radio" name="simulation-value" value="100000" class="simulation-box__value" data-line="R$ 1.000,00">
+                            <input type="radio" name="simulation-value" value="500000" class="simulation-box__value" data-line="R$ 5.000,00">
+                            <input type="radio" name="simulation-value" value="1000000" class="simulation-box__value" data-line="R$ 10.000,00">
+                            <input type="radio" name="simulation-value" value="1500000" class="simulation-box__value" data-line="R$ 15.000,00">
+                            <input type="radio" name="simulation-value" value="2000000" class="simulation-box__value" data-line="R$ 20.000,00">
                             <input type="text" name="simulation-other-value" placeholder="Outro valor" class="simulation-other-value">
 
-                            <div class="simulation-button"><input type="submit" value="Simule agora" class="simulation-box__submit" /></div>
+                            <div class="simulation-button"><input type="button" value="Simule agora" class="simulation-box__submit" /></div>
                         </form>
 
 
-                        <form id="part-2-simulation" style="display: none;" action="#">
+
+                        {{--SEGUNDA PARTE DA SIMULAÇÃO--}}
+
+                        <h2 style="display: none;" class="pt2">Valor selecionado</h2>
+                        <p style="display: none;" class="pt2">R$5.000,00</p>
+                        <form style="display: none;" class="pt2">
                             <span class="plots">Em quantas parcelas?</span>
                             <input type="radio" name="simulation-plots" value="24" class="simulation-item" data-line="24">
                             <input type="radio" name="simulation-plots" value="20" class="simulation-item" data-line="20">
@@ -104,22 +112,27 @@
                             <input type="radio" name="simulation-plots" value="06" class="simulation-item" data-line="06">
                             <input type="radio" name="simulation-plots" value="03" class="simulation-item" data-line="03">
 
-                            <div class="simulation-button"><input type="submit" value="Simule agora" class="simulation-box__submit" /></div>
+                            <div class="simulation-button"><input type="button" value="Simule agora" class="simulation-box__submit" /></div>
                         </form>
 
-                        <form id="part-3-simulation" style="display: none;" action="#">
+
+                        {{-- TERCEIRA PARTE DA SIMULAÇÃO --}}
+
+                        <h2 style="display:none;" class="pt3">Valor selecionado</h2>
+                        <p style="display:none;" class="pt3">R$5.000,00</p>
+                        <form style="display:none;" class="pt3" >
                             <span class="plots">Em quantas parcelas?</span>
-                            <input type="radio" name="simulation-plots2" value="24" class="simulation-item selected" data-line="24">
-                            <input type="radio" name="simulation-plots2" value="20" class="simulation-item" data-line="20">
-                            <input type="radio" name="simulation-plots2" value="18" class="simulation-item" data-line="18">
-                            <input type="radio" name="simulation-plots2" value="12" class="simulation-item" data-line="12">
-                            <input type="radio" name="simulation-plots2" value="06" class="simulation-item" data-line="06">
-                            <input type="radio" name="simulation-plots2" value="03" class="simulation-item" data-line="03">
+                            <input type="radio" name="simulation-plots" value="24" class="simulation-item selected" data-line="24" disabled>
+                            <input type="radio" name="simulation-plots" value="20" class="simulation-item" data-line="20" disabled>
+                            <input type="radio" name="simulation-plots" value="18" class="simulation-item" data-line="18" disabled>
+                            <input type="radio" name="simulation-plots" value="12" class="simulation-item" data-line="12" disabled>
+                            <input type="radio" name="simulation-plots" value="06" class="simulation-item" data-line="06" disabled>
+                            <input type="radio" name="simulation-plots" value="03" class="simulation-item" data-line="03" disabled>
 
                             <span class="plots-value">*Sua parcela mensal será entre R$ 327,60 e R$ 663,89</span>
 
                             <input type="text" name="simulation-name" placeholder="Nome completo" class="simulation-info"/>
-                            <input type="text" name="simulation-cpf" placeholder="CPF" class="simulation-info"/>
+                            <input type="text" name="simulation-cpf" id="simulation-cpf" placeholder="CPF" class="simulation-info"/>
                             <input type="email" name="simulation-email" placeholder="E-mail" class="simulation-info"/>
                             <select id="reason" class="simulation-info">
                                 <option disabled selected>Qual a finalidade?</option>
@@ -134,10 +147,13 @@
                                 <option value="outros-motivos">Outros motivos</option>
                             </select>
 
-                            <div class="simulation-button"><input type="submit" value="Continuar" class="simulation-box__submit" /></div>
+                            <div class="simulation-button"><input type="button" value="Continuar" class="simulation-box__submit" /></div>
                         </form>
 
-                        <form id="part-4-simulation"  style="display: none;" action="#">
+                        {{--QUARTA PARTE DA SIMULAÇÃO--}}
+
+                        <h2 style="display: none;" class="pt4">Melhor dia para pagamento</h2>
+                        <form style="display: none;"  class="pt4" >
                             <input type="radio" name="simulation-day" value="05" class="simulation-box__day" data-line="05">
                             <input type="radio" name="simulation-day" value="07" class="simulation-box__day" data-line="07">
                             <input type="radio" name="simulation-day" value="10" class="simulation-box__day" data-line="10">
@@ -145,14 +161,15 @@
                             <input type="radio" name="simulation-day" value="20" class="simulation-box__day" data-line="20">
                             <input type="radio" name="simulation-day" value="30" class="simulation-box__day" data-line="30">
 
-                            <span class="simulation-other-day">
-                    <label>Escolher outro:</label>
-                      <input type="text" name="simulation-other-day" placeholder="Digite a melhor data">
-                                </label>
-                  </span>
+                            <span class="simulation-other-day pt4">
+                                <label class="">Escolher outro:</label>
+                                  <input type="text" name="simulation-other-day " placeholder="Digite a melhor data">
+                                            </label>
+                              </span>
 
-                            <div class="simulation-button"><input type="submit" value="Simule agora" class="simulation-box__submit" /></div>
+                            <div class="simulation-button"><input type="button" value="Simule agora" class="simulation-box__submit" /></div>
                         </form>
+
                     </div>
                 </div>
 
@@ -328,6 +345,8 @@
 </div>
 
 <!--  script slider recomendações -->
+
+<script src="node_modules/jQuery-Mask-Plugin-master/dist/jquery.mask.js"></script>
 <script>
     $('.slider-for').slick({
         slidesToShow: 1,
@@ -372,49 +391,127 @@
 
 
 
-    $("input[name='simulation-value']").change(function(){
+    // $("input[name='simulation-box__submit']").change(function() {
+    //
+    //
+    //
+    //
+    //
+    //
+    // });
+
+    var clicks = 0;
+    var value = 0;
+    $(document).on('click','.simulation-box__submit', function(){
+
+            clicks += 1;
 
 
-        // pegar o valor que foi selecionado
 
-        var value = $(this).val();
+            if(clicks == 1){
 
-        //ocultar primeiro formulário
-        var part1  =  document.getElementById("part-1-simulation").style.display = 'none';
-        var part2  =  document.getElementById("part-2-simulation").style.display = 'block';
+                //verificars se ele preencheu ou então seelecionou
+            // var value = $(this).val();
 
 
-    });
 
-    $("input[name='simulation-plots']").change(function(){
+                if(document.querySelector('input[name="simulation-value"]:checked').value){
 
+                    value = document.querySelector('input[name="simulation-value"]:checked').value;
 
-        // pegar o valor que foi selecionado
-
-        var value = $(this).val();
-
-        //ocultar primeiro formulário
-        var part1  =  document.getElementById("part-2-simulation").style.display = 'none';
-        var part2  =  document.getElementById("part-3-simulation").style.display = 'block';
+                    console.log(value);
+                }
 
 
-    });
+            $(".simulation-box form.pt1").css('display','none'); // ocultar formulario
+            $(".simulation-box h2.pt1").css('display','none'); // ocultar h2
 
 
-    $("input[name='simulation-plots2']").change(function(){
+            //mostrar segundo form
+
+            $(".simulation-box form.pt2").css('display','block'); // ocultar formulario
+            $(".simulation-box p.pt2").css('display','block'); // ocultar h2
+            $(".simulation-box h2.pt2").css('display','block'); // ocultar h2
 
 
-        // pegar o valor que foi selecionado
+            $(".simulation-box p.pt2").html('R$ ' + formatReal( value ));
 
-        var value = $(this).val();
+            //adicionar classe selected
 
-        //ocultar primeiro formulário
-        var part1  =  document.getElementById("part-3-simulation").style.display = 'none';
-        var part2  =  document.getElementById("part-4-simulation").style.display = 'block';
+            $('.banner__simulation').addClass('simulation-value-selected');
+            $('.banner__simulation').removeClass('simulation-value');
 
 
-    });
+            }
 
+
+            if(clicks == 2){
+                // alert('testeee');
+
+                $(".simulation-box form.pt2").css('display','none'); // ocultar formulario
+                $(".simulation-box h2.pt2").css('display','none'); // ocultar h2
+                $(".simulation-box p.pt2").css('display','none');
+
+
+                //mostrar segundo form
+
+                $(".simulation-box form.pt3").css('display','block'); // ocultar formulario
+                $(".simulation-box p.pt3").css('display','block'); // ocultar h2
+                $(".simulation-box h2.pt3").css('display','block'); // ocultar h2
+
+
+                $(".simulation-box p.pt3").html('R$' + formatReal( value ));
+
+                //adicionar classe selected
+                //
+                // $('.banner__simulation').addClass('simulation-value-selected');
+                // $('.banner__simulation').removeClass('simulation-value');
+            }
+
+
+            if(clicks == 3){
+                $(".simulation-box form.pt3").css('display','none'); // ocultar formulario
+                $(".simulation-box h2.pt3").css('display','none'); // ocultar h2
+                $(".simulation-box p.pt3").css('display','none'); // ocultar h2
+
+
+
+                //mostrar segundo form
+
+                $(".simulation-box form.pt4").css('display','block'); // ocultar formulario
+                // $(".simulation-box p.pt4").css('display','block'); // ocultar h2
+                $(".simulation-box h2.pt4").css('display','block'); // ocultar h2
+                // $(".simulation-box p.pt4").html(formatReal( value ));
+
+
+                // $(".simulation-box p.pt3").html(value);
+
+            }
+
+
+        //// passar para step 2
+
+    })
+
+
+    function getMoney( str )
+    {
+        return parseInt( str.replace(/[\D]+/g,'') );
+    }
+    function formatReal( int )
+    {
+        var tmp = int+'';
+        tmp = tmp.replace(/([0-9]{2})$/g, ",$1");
+        if( tmp.length > 6 )
+            tmp = tmp.replace(/([0-9]{3}),([0-9]{2}$)/g, ".$1,$2");
+
+        return tmp;
+    }
+
+
+
+    $('#simulation-cpf').mask('000.000.000-00', {reverse: true});
+    // $('#tel').mask('(00) 0000-00000');
 </script>
 
 </body>
