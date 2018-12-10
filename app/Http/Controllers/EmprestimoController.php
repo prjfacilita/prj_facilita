@@ -6,6 +6,12 @@ use Illuminate\Http\Request;
 use Illuminate\View\View;
 use GuzzleHttp\Client;
 
+
+/*
+ *
+ * http://www.befirstcode.com/2017/03/integrate-swagger-in-laravel-project-l5.html
+ * */
+
 /**
  * Class EmprestimoController
  *
@@ -45,6 +51,8 @@ class EmprestimoController extends Controller
     public function index()
     {
         //
+
+        /*Fazer consulta na api do banco cbss para retornar os dados do contrato e também limites*/
 //        $this->ConfiguracoesAPI();
         return view('emprestimo.pedido');
     }
