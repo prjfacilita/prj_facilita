@@ -11,10 +11,12 @@
         "guzzlehttp/guzzle": "~6.0",
         "itsgoingd/clockwork": "^3.0",
         "jrean/laravel-user-verification": "^4.1",
+        "kamermans/guzzle-oauth2-subscriber": "^1.0",
         "laravel/framework": "5.4.*",
         "laravel/passport": "^4.0",
         "laravel/tinker": "~1.0",
         "laravellegends/pt-br-validator": "5.1.*",
+        "league/oauth2-client": "^2.4",
         "zircote/swagger-php": "^2.0"
     },
     "require-dev": {

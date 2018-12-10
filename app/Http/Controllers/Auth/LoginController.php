@@ -121,7 +121,7 @@ class LoginController extends Controller
                 // redirect them to the secure section or whatever
 
                 /// verificar se o usuário já esta ativado
-                return redirect()->intended('home');
+                return redirect()->intended('pedido');
                 // for now we'll just echo success (even though echoing in a controller is bad)
               //  echo 'sucesso!';
 

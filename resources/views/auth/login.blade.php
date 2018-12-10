@@ -10,9 +10,9 @@
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css"  href="teste/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css"  href="teste/assets/css/style.css">
-    <link rel="stylesheet" type="text/css"  href="teste/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css"  href="assets/cadastro/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"  href="assets/cadastro/css/style.css">
+    <link rel="stylesheet" type="text/css"  href="assets/cadastro/css/font-awesome.min.css">
 </head>
 
 <body id="login">
@@ -30,7 +30,7 @@
 <header>
     <div class="container">
         <div class="row">
-            <a class="logomarca" href="#"><img src="teste/assets/images/logo-facilita.png" alt="Logomarca Facilita" class="image-logomarca"/></a>
+            <a class="logomarca" href="#"><img src="assets/cadastro/images/logo-facilita.png" alt="Logomarca Facilita" class="image-logomarca"/></a>
         </div>
     </div>
 </header>
