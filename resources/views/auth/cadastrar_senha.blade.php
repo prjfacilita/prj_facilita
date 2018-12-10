@@ -10,9 +10,9 @@
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css"  href="/teste/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css"  href="/teste/assets/css/style.css">
-    <link rel="stylesheet" type="text/css"  href="/teste/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css"  href="/assets/cadastro/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"  href="/assets/cadastro/css/style.css">
+    <link rel="stylesheet" type="text/css"  href="/assets/cadastro/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -30,9 +30,9 @@
 <header>
     <div class="container">
         <div class="row">
-            <a class="logomarca" href="#"><img src="/teste/assets/images/logo-facilita.png" alt="Logomarca Facilita" class="image-logomarca"/></a>
+            <a class="logomarca" href="#"><img src="/assets/cadastro/images/logo-facilita.png" alt="Logomarca Facilita" class="image-logomarca"/></a>
             <div class="user-logged">
-                <img src="/teste/assets/images/icon-user.png" alt="Ícone Usuário" class="icon-user-logged"/>
+                <img src="/assets/cadastro/images/icon-user.png" alt="Ícone Usuário" class="icon-user-logged"/>
                 <p>Olá Maria, seja bem vinda!</p>
             </div>
         </div>
