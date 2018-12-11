@@ -103,7 +103,7 @@
 
                         <h2 style="display: none;" class="pt2">Valor selecionado</h2>
                         <p style="display: none;" class="pt2">R$5.000,00</p>
-                        <form style="display: none;" class="pt2">
+                        <form style="display: none;" id="pt2" class="pt2">
                             <span class="plots">Em quantas parcelas?</span>
                             <input type="radio" name="simulation-plots" value="24" class="simulation-item" data-line="24">
                             <input type="radio" name="simulation-plots" value="20" class="simulation-item" data-line="20">
@@ -119,10 +119,10 @@
                         {{-- TERCEIRA PARTE DA SIMULAÇÃO --}}
 
                         <h2 style="display:none;" class="pt3">Valor selecionado</h2>
-                        <p style="display:none;" class="pt3">R$5.000,00</p>
+                        <p style="display:none;" id="pt3" class="pt3">R$5.000,00</p>
                         <form style="display:none;" class="pt3" >
                             <span class="plots">Em quantas parcelas?</span>
-                            <input type="radio" name="simulation-plots" value="24" class="simulation-item selected" data-line="24" disabled>
+                            <input type="radio" name="simulation-plots" value="24" class="simulation-item" data-line="24" disabled>
                             <input type="radio" name="simulation-plots" value="20" class="simulation-item" data-line="20" disabled>
                             <input type="radio" name="simulation-plots" value="18" class="simulation-item" data-line="18" disabled>
                             <input type="radio" name="simulation-plots" value="12" class="simulation-item" data-line="12" disabled>
@@ -402,6 +402,7 @@
 
     var clicks = 0;
     var value = 0;
+    var qtdParcelas = 0;
     $(document).on('click','.simulation-box__submit', function(){
 
             clicks += 1;
@@ -410,6 +411,9 @@
 
             if(clicks == 1){
 
+
+
+                // QUANTO VOCÊ PRECISA
                 //verificars se ele preencheu ou então seelecionou
             // var value = $(this).val();
 
@@ -427,6 +431,7 @@
             $(".simulation-box h2.pt1").css('display','none'); // ocultar h2
 
 
+                //VALOR SEELECIONADO
             //mostrar segundo form
 
             $(".simulation-box form.pt2").css('display','block'); // ocultar formulario
@@ -436,6 +441,9 @@
 
             $(".simulation-box p.pt2").html('R$ ' + formatReal( value ));
 
+
+
+            //.pt2 simulation-plots
             //adicionar classe selected
 
             $('.banner__simulation').addClass('simulation-value-selected');
@@ -453,7 +461,7 @@
                 $(".simulation-box p.pt2").css('display','none');
 
 
-                //mostrar segundo form
+                //mostrar terceiro form
 
                 $(".simulation-box form.pt3").css('display','block'); // ocultar formulario
                 $(".simulation-box p.pt3").css('display','block'); // ocultar h2
@@ -462,6 +470,17 @@
 
                 $(".simulation-box p.pt3").html('R$' + formatReal( value ));
 
+
+                qtdParcelas = document.querySelector('#pt2 input[name="simulation-plots"]:checked').value;
+
+                $("input[name='simulation-plots'][value='"+qtdParcelas+"']").prop('checked', true);
+
+                // alert('x');
+                // qtdParcelas = document.querySelector('#pt2 input[name="simulation-plots"]:checked').value;
+
+
+
+                //add class na quantidade de parcelas selecionada
                 //adicionar classe selected
                 //
                 // $('.banner__simulation').addClass('simulation-value-selected');
@@ -482,6 +501,9 @@
                 // $(".simulation-box p.pt4").css('display','block'); // ocultar h2
                 $(".simulation-box h2.pt4").css('display','block'); // ocultar h2
                 // $(".simulation-box p.pt4").html(formatReal( value ));
+
+
+
 
 
                 // $(".simulation-box p.pt3").html(value);
