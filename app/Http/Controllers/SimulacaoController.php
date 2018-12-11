@@ -38,10 +38,10 @@ class SimulacaoController extends Controller
             [
                 \GuzzleHttp\RequestOptions::JSON => ["valorSolicitado" => $request->ValorSolicitado,
                   "qteParcelas" => [
-                            10,
+                            $request->qteParcelas,
                         ],
                   "taxaJurosMensal" => '0.55',
-                  "dataPrimeiraParcela" => "2019-01-20",
+                  "dataPrimeiraParcela" => $request->dataPrimeiraParcela,
                   "tarifaCadastro" => '5.99']
             ]);
 

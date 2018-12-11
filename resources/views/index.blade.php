@@ -84,7 +84,7 @@
 
                         {{--<div class="part1">--}}
                         <h2 class="pt1">Quanto você precisa</h2>
-                        <form class="pt1" id="part-1-simulation" name="part-1-simulation" >
+                        <form class="pt1" id="part-1-simulation" id="pt1" name="part-1-simulation" >
 
                             {{--<a class="simulation-box__value">R$ 1.000,00</a>--}}
                             <input type="radio" name="simulation-value" value="100000" class="simulation-box__value" data-line="R$ 1.000,00">
@@ -120,7 +120,7 @@
 
                         <h2 style="display:none;" class="pt3">Valor selecionado</h2>
                         <p style="display:none;" id="pt3" class="pt3">R$5.000,00</p>
-                        <form style="display:none;" class="pt3" >
+                        <form style="display:none;" id="pt3" class="pt3" >
                             <span class="plots">Em quantas parcelas?</span>
                             <input type="radio" name="simulation-plots" value="24" class="simulation-item" data-line="24" disabled>
                             <input type="radio" name="simulation-plots" value="20" class="simulation-item" data-line="20" disabled>
@@ -147,13 +147,14 @@
                                 <option value="outros-motivos">Outros motivos</option>
                             </select>
 
-                            <div class="simulation-button"><input type="button" value="Continuar" class="simulation-box__submit" /></div>
+                            <div class="simulation-button"><input type="button" value="Continuar" class="simular_agora simulation-box__submit" /></div>
                         </form>
 
                         {{--QUARTA PARTE DA SIMULAÇÃO--}}
 
                         <h2 style="display: none;" class="pt4">Melhor dia para pagamento</h2>
-                        <form style="display: none;"  class="pt4" >
+                        <form style="display: none;"  id="pt4" class="pt4" >
+                            <meta name="csrf-token" content=" {{ csrf_field() }}">
                             <input type="radio" name="simulation-day" value="05" class="simulation-box__day" data-line="05">
                             <input type="radio" name="simulation-day" value="07" class="simulation-box__day" data-line="07">
                             <input type="radio" name="simulation-day" value="10" class="simulation-box__day" data-line="10">
@@ -533,6 +534,50 @@
 
 
     $('#simulation-cpf').mask('000.000.000-00', {reverse: true});
+
+
+    $(document).on('click', '.simular_agora', function () {
+
+        var bet = {
+            "valorSolicitado": 9999.99,
+            "qteParcelas": [
+                10,
+                12
+            ],
+            "taxaJurosMensal": 0.55,
+            "dataPrimeiraParcela": "2018-10-01",
+            "tarifaCadastro": 5.99
+        };
+
+        var token;
+        token='{{ csrf_token() }}';
+        console.log(token);
+        $.ajax({
+            headers: {
+                'X-CSRF-TOKEN': token
+            },
+            type: 'POST',
+            url: '{{'api/simulador'}}',
+            data: bet,
+            dataType: 'html',
+            success: function(data) {
+                if(data.error) {
+                    sweetAlert("Oops...", data.data, "error");
+                } else {
+                    console.log(data);
+
+                }
+            },
+            error: function(html, status) {
+                console.log(html.responseText);
+                console.log(status);
+            }
+        });
+
+    });
+
+
+
     // $('#tel').mask('(00) 0000-00000');
 </script>
 
