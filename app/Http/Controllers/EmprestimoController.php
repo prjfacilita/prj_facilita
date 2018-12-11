@@ -48,6 +48,20 @@ use kamermans\OAuth2\GrantType\NullGrantType;
  */
 class EmprestimoController extends Controller
 {
+
+    public static function URL_ENDPOINT(){
+        return 'https://c2gvw4lxh9.execute-api.sa-east-1.amazonaws.com/hmg/';
+    }
+
+    public static function URL_TOKEN_API(){
+        return 'https://c2gvw4lxh9.execute-api.sa-east-1.amazonaws.com/hmg/oauth2/token';
+    }
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -72,54 +86,81 @@ class EmprestimoController extends Controller
     public function ConfiguracoesAPI(){
 
         // CHAMADA API FUNCIONANDO
-//        $token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Im9uRXlwQllvVWY1QnFjYXFMOHRtWEZrQTRxcyJ9.eyJhdWQiOiJtaWNyb3NvZnQ6aWRlbnRpdHlzZXJ2ZXI6NzIxYzQwNzUtMmM2Zi00MWRkLWI2MDktM2Q3YzVhYWJiN2ZkIiwiaXNzIjoiaHR0cDovL2ZzLmNic3NkaWdpdGFsLmNvbS5ici9hZGZzL3NlcnZpY2VzL3RydXN0IiwiaWF0IjoxNTQ0NDUyMzE3LCJleHAiOjE1NDQ0NTU5MTcsImNsaWVudF9hcHAiOiJGYWNpbGl0YSBFUCIsImNsaWVudF9jb21wYW55IjoiRmFjaWxpdGEiLCJhcHB0eXBlIjoiQ29uZmlkZW50aWFsIiwiYXBwaWQiOiI3MjFjNDA3NS0yYzZmLTQxZGQtYjYwOS0zZDdjNWFhYmI3ZmQiLCJhdXRobWV0aG9kIjoiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2F1dGhlbnRpY2F0aW9ubWV0aG9kL3Bhc3N3b3JkIiwiYXV0aF90aW1lIjoiMjAxOC0xMi0xMFQxNDozMTo1Ny4wNzNaIiwidmVyIjoiMS4wIn0.W9ykvNf3P4s9hrZFm8ajCZtESlaAffnJfllSU6tr1Q6HREHdiEUKhexiogzvNd-ALPHl7qfoRMh2N6cAL5MUZSApbp8YFyR3LUGsk6k1RRPIHvWXGXJR6C3DLFQ3TbERWF_oTzQrM-pdV5SEkwszJocBDj-nds3UbgqIlI03CCBOmjfJgKhDpH63QMbFR4F7rGJLN3QqNcpaNkuYRNt4bb36ZGSwCgyyCsvSV0xL4skW3vU9eO6q7dE-9m_OS74NAB7XFFsuEp3jxU5ooKpiVPwY5x-XCmaRrQDgoXnLkVVttJtxTafQ8us4sZJQ-SJ7fRi6bipv61nOQba7ucuz5g';
 //
-//       $client =   new Client([
-//            'base_uri' => 'https://c2gvw4lxh9.execute-api.sa-east-1.amazonaws.com/hmg/api/v1/ep/dominios/bancos',
-//            'headers' => [
-//                'Accept' => 'application/json',
-//                'Authorization' => 'Bearer ' . $token,
-//                'Content-Type' => 'application/json',
-//            ],
+//
+//        $client = new Client();
+//        $response = $client->get('https://c2gvw4lxh9.execute-api.sa-east-1.amazonaws.com/hmg/api/v1/ep/dominios/bancos', [
+//            'form_params' =>
+//                [
+////                    'code'          => $code,
+//                    'client_id'     => '721c4075-2c6f-41dd-b609-3d7c5aabb7fd',
+//                    'client_secret' => 'uvMl9-rRr_Nexx4LuZYsgaRedsS7iLVEl5j2aBqO',
+//                    'redirect_uri'  => 'https://c2gvw4lxh9.execute-api.sa-east-1.amazonaws.com/hmg',
+//                    'grant_type'    => 'authorization_code'
+//                ]
 //        ]);
-//
-//
-//      $teste  =  $client->request('GET', 'https://c2gvw4lxh9.execute-api.sa-east-1.amazonaws.com/hmg/api/v1/ep/dominios/bancos');
-//
-//
-//        echo $teste->getStatusCode();
-//
-//        echo $teste->getBody();
+        $uri = $this->URL_TOKEN_API();
+        $clientId = '721c4075-2c6f-41dd-b609-3d7c5aabb7fd';
+        $secret = 'uvMl9-rRr_Nexx4LuZYsgaRedsS7iLVEl5j2aBqO';
+
+        $client = new \GuzzleHttp\Client();
+        $response = $client->request('POST', $uri, [
+                'headers' =>
+                    [
+                        'Accept' => 'application/json',
+                        'Accept-Language' => 'en_US',
+                        'Content-Type' => 'application/x-www-form-urlencoded',
+                    ],
+                'body' => 'grant_type=client_credentials',
+
+                'auth' => [$clientId, $secret, 'basic']
+            ]
+        );
+
+        $data = json_decode($response->getBody(), true);
+
+        $token = (string) $data['access_token'];
 
 
-        $config = [
-            'client_id' => env('CLIENT_ID', ''),
-            'client-secret' => env('CLIENT_SECRET', ''),
-        ];
+        session()->put('token_key',  $token);
 
-        $client = new \GuzzleHttp\Client($config);
+        return $token;
 
 
 
-        $json = $client->get('https://www.google.com/m8/feeds/contacts/default/full/',  [
+    }
 
+
+    /*
+     *
+//        $token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Im9uRXlwQllvVWY1QnFjYXFMOHRtWEZrQTRxcyJ9.eyJhdWQiOiJtaWNyb3NvZnQ6aWRlbnRpdHlzZXJ2ZXI6NzIxYzQwNzUtMmM2Zi00MWRkLWI2MDktM2Q3YzVhYWJiN2ZkIiwiaXNzIjoiaHR0cDovL2ZzLmNic3NkaWdpdGFsLmNvbS5ici9hZGZzL3NlcnZpY2VzL3RydXN0IiwiaWF0IjoxNTQ0NDUyMzE3LCJleHAiOjE1NDQ0NTU5MTcsImNsaWVudF9hcHAiOiJGYWNpbGl0YSBFUCIsImNsaWVudF9jb21wYW55IjoiRmFjaWxpdGEiLCJhcHB0eXBlIjoiQ29uZmlkZW50aWFsIiwiYXBwaWQiOiI3MjFjNDA3NS0yYzZmLTQxZGQtYjYwOS0zZDdjNWFhYmI3ZmQiLCJhdXRobWV0aG9kIjoiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2F1dGhlbnRpY2F0aW9ubWV0aG9kL3Bhc3N3b3JkIiwiYXV0aF90aW1lIjoiMjAxOC0xMi0xMFQxNDozMTo1Ny4wNzNaIiwidmVyIjoiMS4wIn0.W9ykvNf3P4s9hrZFm8ajCZtESlaAffnJfllSU6tr1Q6HREHdiEUKhexiogzvNd-ALPHl7qfoRMh2N6cAL5MUZSApbp8YFyR3LUGsk6k1RRPIHvWXGXJR6C3DLFQ3TbERWF_oTzQrM-pdV5SEkwszJocBDj-nds3UbgqIlI03CCBOmjfJgKhDpH63QMbFR4F7rGJLN3QqNcpaNkuYRNt4bb36ZGSwCgyyCsvSV0xL4skW3vU9eO6q7dE-9m_OS74NAB7XFFsuEp3jxU5ooKpiVPwY5x-XCmaRrQDgoXnLkVVttJtxTafQ8us4sZJQ-SJ7fRi6bipv61nOQba7ucuz5g';
+
+       $client =   new Client([
+            'base_uri' => 'https://c2gvw4lxh9.execute-api.sa-east-1.amazonaws.com/hmg/api/v1/ep/dominios/bancos',
             'headers' => [
-
+                'Accept' => 'application/json',
                 'Authorization' => 'Bearer ' . $token,
-
+                'Content-Type' => 'application/json',
             ],
         ]);
 
-        dd($json);
 
-        return $json;
+      $teste  =  $client->request('GET', 'https://c2gvw4lxh9.execute-api.sa-east-1.amazonaws.com/hmg/api/v1/ep/dominios/bancos');
 
-    }
-    public function PedirEmprestimo(){
+
+        echo $teste->getStatusCode();
+
+        echo $teste->getBody();
+
+     *
+     * */
+    public function PedirEmprestimo(Request $request){
 
         /*Consultar API*/
 
         $this->ConfiguracoesAPI();
+
+        //        echo session('token_key');
         return view('emprestimo.pedido');
 
     }

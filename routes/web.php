@@ -65,4 +65,7 @@ Route::get('/banco/api/configuracoes', ['as' => '/banco/api/configuracoes', 'use
 
 Route::group(['prefix' => 'api/'], function () {
     Route::get('emprestimo2', 'EmprestimoController@get');
+
+    /*ROTA PARA SIMULAR EMPRESTIMO E PARCELAS*/
+    Route::post('simulador', 'SimulacaoController@Simular');
 });

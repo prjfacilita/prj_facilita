@@ -19,6 +19,9 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 use Illuminate\Support\Facades\DB;
 //use App\Http\Controllers\Controller;
+use App\Http\Controllers\EmprestimoController;
+use Illuminate\Support\Facades\Session;
+//use \Session;
 
 class LoginController extends Controller
 {
@@ -117,13 +120,18 @@ class LoginController extends Controller
             // attempt to do the login
             if (Auth::attempt($userdata)) {
 
-                // validation successful!
-                // redirect them to the secure section or whatever
 
                 /// verificar se o usuário já esta ativado
+                ///
+
+                $key = new EmprestimoController();
+                $token = (string) $key->ConfiguracoesAPI();
+
+
+
+
                 return redirect()->intended('pedido');
-                // for now we'll just echo success (even though echoing in a controller is bad)
-              //  echo 'sucesso!';
+
 
             } else {
 
