@@ -25,6 +25,8 @@ use Illuminate\Support\Facades\Session;
 
 class LoginController extends Controller
 {
+
+    protected $table = "login";
     /*
     |--------------------------------------------------------------------------
     | Login Controller

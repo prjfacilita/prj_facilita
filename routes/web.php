@@ -70,3 +70,6 @@ Route::group(['prefix' => 'api/'], function () {
     /*ROTA PARA SIMULAR EMPRESTIMO E PARCELAS*/
     Route::post('simulador', 'SimulacaoController@Simular');
 });
+
+
+Route::post('login', 'Auth\LoginController@login');
