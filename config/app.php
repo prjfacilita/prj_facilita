@@ -123,7 +123,6 @@ return [
     'log' => env('APP_LOG', 'single'),
 
     'log_level' => env('APP_LOG_LEVEL', 'debug'),
-    'Debugbar' => Barryvdh\Debugbar\Facade::class,
 
     /*
     |--------------------------------------------------------------------------
@@ -185,7 +184,6 @@ return [
 //        Jrean\UserVerification\UserVerificationServiceProvider::class,
         Clockwork\Support\Laravel\ClockworkServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
-        \L5Swagger\L5SwaggerServiceProvider::class
 
     ],
 
