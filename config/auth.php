@@ -92,17 +92,19 @@ return [
     */
 
     'passwords' => [
-        'users' => [
-            'provider' => 'users',
-            'table' => 'password_resets',
-            'expire' => 60,
-        ],
 
+
+        'users' => [
+            'driver' => 'eloquent',
+            'model' => App\Login::class,
+        ],
         'login' => [
             'provider' => 'login',
             'table' => 'password_resets',
             'expire' => 60,
         ],
+
+
     ],
 
 
