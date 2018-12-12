@@ -160,6 +160,8 @@ class EmprestimoController extends Controller
 
         $this->ConfiguracoesAPI();
 
+//        SimulacaoController::
+
         //        echo session('token_key');
         return view('emprestimo.pedido');
 

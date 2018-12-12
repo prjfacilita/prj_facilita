@@ -17,11 +17,31 @@ class SimulacaoController extends Controller
 //        $this->middleware('auth');
     }
 
+
+    public function VerificarDataMes($dataPrimeiraParcela, $dateNow){
+
+
+//        $dt_atual		= date("Y-m-d"); // data atual
+        $timestamp_dt_atual 	= strtotime($dateNow); // converte para timestamp Unix
+
+        $dt_expira		= "2012-10-05"; // data de expiração do anúncio
+        $timestamp_dt_expira	= strtotime($dt_expira); // converte para timestamp Unix
+
+// data atual é maior que a data de expiração
+        if ($timestamp_dt_atual > $timestamp_dt_expira) // true
+            echo  "Seu anuncio expirou! Deseja renovar?";
+        else // false
+            echo "Anuncio ativo";
+    }
     public function Simular(Request $request){
 
 
 
-        $token = session('token_key');
+        //fazer chamada do token
+        $simulacao = new EmprestimoController();
+        $token = $simulacao->ConfiguracoesAPI();
+
+//        $token = session('token_key');
 
         $client =   new Client([
             'base_uri' => EmprestimoController::URL_TOKEN_API(),
@@ -34,17 +54,21 @@ class SimulacaoController extends Controller
 
 
 
+//        $data = $this->VerificarDataMes($request->dataPrimeiraParcela, date('Y-m-d',strtotime("+30 days")));
+
         $teste  =  $client->request('POST', EmprestimoController::URL_ENDPOINT(). 'api/v1/ep/simuladores',
             [
-                \GuzzleHttp\RequestOptions::JSON => ["valorSolicitado" => $request->ValorSolicitado,
+                \GuzzleHttp\RequestOptions::JSON => ["valorSolicitado" => number_format($request->valorSolicitado, 2, '.', ''),
                   "qteParcelas" => [
                             $request->qteParcelas,
                         ],
-                  "taxaJurosMensal" => '0.55',
-                  "dataPrimeiraParcela" => $request->dataPrimeiraParcela,
+                  "taxaJurosMensal" => '5.99',
+                  "dataPrimeiraParcela" =>  date('Y-m-d',strtotime("+30 days")) ,
                   "tarifaCadastro" => '5.99']
             ]);
 
+
+//         . PHP_EOL;
 
 
         return $teste->getBody();

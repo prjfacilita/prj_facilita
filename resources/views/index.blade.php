@@ -87,11 +87,11 @@
                         <form class="pt1" id="part-1-simulation" id="pt1" name="part-1-simulation" >
 
                             {{--<a class="simulation-box__value">R$ 1.000,00</a>--}}
-                            <input type="radio" name="simulation-value" value="100000" class="simulation-box__value" data-line="R$ 1.000,00">
-                            <input type="radio" name="simulation-value" value="500000" class="simulation-box__value" data-line="R$ 5.000,00">
-                            <input type="radio" name="simulation-value" value="1000000" class="simulation-box__value" data-line="R$ 10.000,00">
-                            <input type="radio" name="simulation-value" value="1500000" class="simulation-box__value" data-line="R$ 15.000,00">
-                            <input type="radio" name="simulation-value" value="2000000" class="simulation-box__value" data-line="R$ 20.000,00">
+                            <input type="radio" name="simulation-value" id="simulation-value" value="100000" class="simulation-box__value" data-line="R$ 1.000,00">
+                            <input type="radio" name="simulation-value" id="simulation-value" value="500000" class="simulation-box__value" data-line="R$ 5.000,00">
+                            <input type="radio" name="simulation-value" id="simulation-value" value="1000000" class="simulation-box__value" data-line="R$ 10.000,00">
+                            <input type="radio" name="simulation-value" id="simulation-value" value="1500000" class="simulation-box__value" data-line="R$ 15.000,00">
+                            <input type="radio" name="simulation-value" id="simulation-value" value="2000000" class="simulation-box__value" data-line="R$ 20.000,00">
                             <input type="text" name="simulation-other-value" placeholder="Outro valor" class="simulation-other-value">
 
                             <div class="simulation-button"><input type="button" value="Simule agora" class="simulation-box__submit" /></div>
@@ -122,12 +122,12 @@
                         <p style="display:none;" id="pt3" class="pt3">R$5.000,00</p>
                         <form style="display:none;" id="pt3" class="pt3" >
                             <span class="plots">Em quantas parcelas?</span>
-                            <input type="radio" name="simulation-plots" value="24" class="simulation-item" data-line="24" disabled>
-                            <input type="radio" name="simulation-plots" value="20" class="simulation-item" data-line="20" disabled>
-                            <input type="radio" name="simulation-plots" value="18" class="simulation-item" data-line="18" disabled>
-                            <input type="radio" name="simulation-plots" value="12" class="simulation-item" data-line="12" disabled>
-                            <input type="radio" name="simulation-plots" value="06" class="simulation-item" data-line="06" disabled>
-                            <input type="radio" name="simulation-plots" value="03" class="simulation-item" data-line="03" disabled>
+                            <input type="radio" name="simulation-plots2" value="24" class="simulation-item" data-line="24" disabled>
+                            <input type="radio" name="simulation-plots2" value="20" class="simulation-item" data-line="20" disabled>
+                            <input type="radio" name="simulation-plots2" value="18" class="simulation-item" data-line="18" disabled>
+                            <input type="radio" name="simulation-plots2" value="12" class="simulation-item" data-line="12" disabled>
+                            <input type="radio" name="simulation-plots2" value="06" class="simulation-item" data-line="06" disabled>
+                            <input type="radio" name="simulation-plots2" value="03" class="simulation-item" data-line="03" disabled>
 
                             <span class="plots-value">*Sua parcela mensal será entre R$ 327,60 e R$ 663,89</span>
 
@@ -152,24 +152,24 @@
 
                         {{--QUARTA PARTE DA SIMULAÇÃO--}}
 
-                        <h2 style="display: none;" class="pt4">Melhor dia para pagamento</h2>
-                        <form style="display: none;"  id="pt4" class="pt4" >
-                            <meta name="csrf-token" content=" {{ csrf_field() }}">
-                            <input type="radio" name="simulation-day" value="05" class="simulation-box__day" data-line="05">
-                            <input type="radio" name="simulation-day" value="07" class="simulation-box__day" data-line="07">
-                            <input type="radio" name="simulation-day" value="10" class="simulation-box__day" data-line="10">
-                            <input type="radio" name="simulation-day" value="15" class="simulation-box__day" data-line="15">
-                            <input type="radio" name="simulation-day" value="20" class="simulation-box__day" data-line="20">
-                            <input type="radio" name="simulation-day" value="30" class="simulation-box__day" data-line="30">
+                        {{--<h2 style="display: none;" class="pt4">Melhor dia para pagamento</h2>--}}
+                        {{--<form style="display: none;"  id="pt4" class="pt4" >--}}
+                            {{--<meta name="csrf-token" content=" {{ csrf_field() }}">--}}
+                            {{--<input type="radio" name="simulation-day" value="05" class="simulation-box__day" data-line="05">--}}
+                            {{--<input type="radio" name="simulation-day" value="07" class="simulation-box__day" data-line="07">--}}
+                            {{--<input type="radio" name="simulation-day" value="10" class="simulation-box__day" data-line="10">--}}
+                            {{--<input type="radio" name="simulation-day" value="15" class="simulation-box__day" data-line="15">--}}
+                            {{--<input type="radio" name="simulation-day" value="20" class="simulation-box__day" data-line="20">--}}
+                            {{--<input type="radio" name="simulation-day" value="30" class="simulation-box__day" data-line="30">--}}
 
-                            <span class="simulation-other-day pt4">
-                                <label class="">Escolher outro:</label>
-                                  <input type="text" name="simulation-other-day " placeholder="Digite a melhor data">
-                                            </label>
-                              </span>
+                            {{--<span class="simulation-other-day pt4">--}}
+                                {{--<label class="">Escolher outro:</label>--}}
+                                  {{--<input type="text" name="simulation-other-day " placeholder="Digite a melhor data">--}}
+                                            {{--</label>--}}
+                              {{--</span>--}}
 
-                            <div class="simulation-button"><input type="button" value="Simule agora" class="simulation-box__submit" /></div>
-                        </form>
+                            {{--<div class="simulation-button"><input type="button" value="Simule agora" class="simulation-box__submit simular_agora" /></div>--}}
+                        {{--</form>--}}
 
                     </div>
                 </div>
@@ -474,7 +474,7 @@
 
                 qtdParcelas = document.querySelector('#pt2 input[name="simulation-plots"]:checked').value;
 
-                $("input[name='simulation-plots'][value='"+qtdParcelas+"']").prop('checked', true);
+                $("input[name='simulation-plots2'][value='"+qtdParcelas+"']").prop('checked', true);
 
                 // alert('x');
                 // qtdParcelas = document.querySelector('#pt2 input[name="simulation-plots"]:checked').value;
@@ -490,17 +490,17 @@
 
 
             if(clicks == 3){
-                $(".simulation-box form.pt3").css('display','none'); // ocultar formulario
-                $(".simulation-box h2.pt3").css('display','none'); // ocultar h2
-                $(".simulation-box p.pt3").css('display','none'); // ocultar h2
-
-
-
-                //mostrar segundo form
-
-                $(".simulation-box form.pt4").css('display','block'); // ocultar formulario
-                // $(".simulation-box p.pt4").css('display','block'); // ocultar h2
-                $(".simulation-box h2.pt4").css('display','block'); // ocultar h2
+                // $(".simulation-box form.pt3").css('display','none'); // ocultar formulario
+                // $(".simulation-box h2.pt3").css('display','none'); // ocultar h2
+                // $(".simulation-box p.pt3").css('display','none'); // ocultar h2
+                //
+                //
+                //
+                // //mostrar segundo form
+                //
+                // $(".simulation-box form.pt4").css('display','block'); // ocultar formulario
+                // // $(".simulation-box p.pt4").css('display','block'); // ocultar h2
+                // $(".simulation-box h2.pt4").css('display','block'); // ocultar h2
                 // $(".simulation-box p.pt4").html(formatReal( value ));
 
 
@@ -517,10 +517,7 @@
     })
 
 
-    function getMoney( str )
-    {
-        return parseInt( str.replace(/[\D]+/g,'') );
-    }
+
     function formatReal( int )
     {
         var tmp = int+'';
@@ -536,45 +533,42 @@
     $('#simulation-cpf').mask('000.000.000-00', {reverse: true});
 
 
-    $(document).on('click', '.simular_agora', function () {
+    $(document).on('click', '.simular_agora', function (e) {
 
-        var bet = {
-            "valorSolicitado": 9999.99,
-            "qteParcelas": [
-                10,
-                12
-            ],
-            "taxaJurosMensal": 0.55,
-            "dataPrimeiraParcela": "2018-10-01",
-            "tarifaCadastro": 5.99
-        };
 
-        var token;
-        token='{{ csrf_token() }}';
-        console.log(token);
+    // <input type="text" name="simulation-name" placeholder="Nome completo" class="simulation-info"/>
+    //         <input type="text" name="simulation-cpf" id="simulation-cpf" placeholder="CPF" class="simulation-info"/>
+    //         <input type="email" name="simulation-email" placeholder="E-mail" class="simulation-info"/>
+    //         <select id="reason" class="simulation-info">
+
+        // var input_1 =
+
+
+
+
+        var valorSolicitado = $("input[name=simulation-value]:checked").val();
+        var qteParcelas = $("input[name=simulation-plots]").val();
+        var cpf = $("input[name=simulation-cpf]").val();
+        var email = $("input[name=simulation-email]").val();
+        var name = $("input[name=simulation-name]").val();
+
         $.ajax({
-            headers: {
-                'X-CSRF-TOKEN': token
-            },
-            type: 'POST',
-            url: '{{'api/simulador'}}',
-            data: bet,
-            dataType: 'html',
-            success: function(data) {
-                if(data.error) {
-                    sweetAlert("Oops...", data.data, "error");
-                } else {
-                    console.log(data);
+            type: "POST",
+            url:  '{{'/api/simulador'}}',
+            data: {valorSolicitado: valorSolicitado, qteParcelas: qteParcelas, cpf:cpf, email:email, name:name},
+            success: function( msg ) {
 
-                }
-            },
-            error: function(html, status) {
-                console.log(html.responseText);
-                console.log(status);
+                alert(msg);
+                // $("#ajaxResponse").append("<div>"+msg+"</div>");
             }
+        // });
         });
 
     });
+
+
+
+
 
 
 
