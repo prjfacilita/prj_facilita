@@ -11,7 +11,7 @@
 
     <!-- CSS -->
 
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Verdana:300,400,700">
+    <link rel="stylesheet" type="text/css" href="assets/index/css/fonts.css">
     <link rel="stylesheet" type="text/css"  href="assets/index/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css"  href="assets/index/css/style.css">
     <link rel="stylesheet" type="text/css"  href="assets/index/css/style-home.css">
