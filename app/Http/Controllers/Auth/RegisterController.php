@@ -115,7 +115,7 @@ class RegisterController extends Controller
 
         dispatch(new WelcomeEmail($user));
 
-        return \App\$user;
+        return new $user;
 
 
     }
