@@ -117,9 +117,7 @@ class RegisterController extends Controller
 
 
 
-        return view('api.ativacao',
-            ['email' => 'rtelesc@gmail.com']
-        );
+       
 
         return new $user;
 
