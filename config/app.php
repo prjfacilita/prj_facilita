@@ -51,7 +51,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost'),
+    'url' => env('APP_URL', 'http://ec2-18-212-126-252.compute-1.amazonaws.com/prj_facilita/public/'),
 
     /*
     |--------------------------------------------------------------------------
