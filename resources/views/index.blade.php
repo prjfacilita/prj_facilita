@@ -558,7 +558,7 @@
 
         $.ajax({
             type: "POST",
-            url:  '{{url::route('/api/simulador')}}',
+            url:  '{{'/api/simulador'}}',
             data: {valorSolicitado: valorSolicitado, qteParcelas: qteParcelas, cpf:cpf, email:email, name:name},
             success: function( msg ) {
 
