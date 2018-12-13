@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\WelcomeEmail;
 
-
+use Illuminate\View\View;
 
 
 class RegisterController extends Controller
@@ -114,6 +114,14 @@ class RegisterController extends Controller
 
 
         dispatch(new WelcomeEmail($user));
+//        $this->view('api.ativacao',
+//            ['email' =>  $userdata['email']]
+//        );
+
+        \View::make('api.ativacao',
+            ['email' =>  $data['email']]
+        );
+
 
         return new $user;
 
