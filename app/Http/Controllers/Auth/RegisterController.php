@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\Mail;
 use App\Mail\WelcomeEmail;
 
 
+
+
 class RegisterController extends Controller
 {
 
@@ -113,7 +115,7 @@ class RegisterController extends Controller
 
         dispatch(new WelcomeEmail($user));
 
-//        return \App\$user;
+        return \App\$user;
 
 
     }

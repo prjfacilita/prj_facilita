@@ -72,4 +72,4 @@ Route::group(['prefix' => 'api/'], function () {
 });
 
 
-Route::post('login', 'Auth\LoginController@login');
+//Route::post('login', 'Auth\LoginController@login');
