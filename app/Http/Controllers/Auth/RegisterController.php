@@ -118,12 +118,14 @@ class RegisterController extends Controller
 //            ['email' =>  $userdata['email']]
 //        );
 
-        \View::make('api.ativacao',
+//        \View::make('api.ativacao',
+//            ['email' =>  $data['email']]
+//        );
+
+
+        return view('api.ativacao',
             ['email' =>  $data['email']]
         );
-
-
-        return new $user;
 
 
     }
