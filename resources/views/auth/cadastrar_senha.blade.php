@@ -11,8 +11,8 @@
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css"  href="{{asset('assets/cadastro/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" type="text/css"  href="{{asset('assets/cadastro/css/style.css'}}">
-    <link rel="stylesheet" type="text/css"  href="{{asset('assets/cadastro/css/font-awesome.min.css'}}">
+    <link rel="stylesheet" type="text/css"  href="{{asset('assets/cadastro/css/style.css')}}">
+    <link rel="stylesheet" type="text/css"  href="{{asset('assets/cadastro/css/font-awesome.min.css')}}">
 </head>
 
 <body>
@@ -30,9 +30,9 @@
 <header>
     <div class="container">
         <div class="row">
-            <a class="logomarca" href="#"><img src="{{asset('/assets/cadastro/images/logo-facilita.png'}}" alt="Logomarca Facilita" class="image-logomarca"/></a>
+            <a class="logomarca" href="#"><img src="{{asset('/assets/cadastro/images/logo-facilita.png')}}" alt="Logomarca Facilita" class="image-logomarca"/></a>
             <div class="user-logged">
-                <img src="{{asset('/assets/cadastro/images/icon-user.png'}}" alt="Ícone Usuário" class="icon-user-logged"/>
+                <img src="{{asset('/assets/cadastro/images/icon-user.png')}}" alt="Ícone Usuário" class="icon-user-logged"/>
                 <p>Olá Maria, seja bem vinda!</p>
             </div>
         </div>
