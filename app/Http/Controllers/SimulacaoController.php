@@ -67,16 +67,16 @@ class SimulacaoController extends Controller
                   "tarifaCadastro" => '5.99']
             ]);
 
-//        $retorno02 =  $client->request('POST', EmprestimoController::URL_ENDPOINT(). 'api/v1/ep/simuladores',
-//            [
-//                \GuzzleHttp\RequestOptions::JSON => ["valorSolicitado" => number_format($request->valorSolicitado, 2, '.', ''),
-//                    "qteParcelas" => [
-//                        $request->qteParcelas,
-//                    ],
-//                    "taxaJurosMensal" => '11.99',
-//                    "dataPrimeiraParcela" =>  date('Y-m-d',strtotime("+30 days")) ,
-//                    "tarifaCadastro" => '11.99']
-//            ]);
+        $retorno02 =  $client->request('POST', EmprestimoController::URL_ENDPOINT(). 'api/v1/ep/simuladores',
+            [
+                \GuzzleHttp\RequestOptions::JSON => ["valorSolicitado" => number_format($request->valorSolicitado, 2, '.', ''),
+                    "qteParcelas" => [
+                        $request->qteParcelas,
+                    ],
+                    "taxaJurosMensal" => '11.99',
+                    "dataPrimeiraParcela" =>  date('Y-m-d',strtotime("+30 days")) ,
+                    "tarifaCadastro" => '11.99']
+            ]);
 
 //         . PHP_EOL;
 
@@ -84,9 +84,10 @@ class SimulacaoController extends Controller
 //        $teste = array ('retorno' => $retorno01, 'retorno2' => $retorno02);
 
         $arr = json_decode($retorno01->getBody(), true);
+        $arr2 = json_decode($retorno02->getBody(), true);
 // Access values from the associative array
 //        echo $arr["Peter"];  // Output: 65
-        return $arr["valorSolicitado"]; // teste
+        return array("teste" => number_format($arr["retorno"]["planosPgamento"][0]["valorParcela"], 2, ',', '.'), "teste2" => number_format($arr2["retorno"]["planosPgamento"][0]["valorParcela"], 2, ',', '.')); // teste
 
     }
 

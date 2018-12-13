@@ -20,4 +20,11 @@
         </div>
     </div>
 </div>
+
+
+    <script>
+        window.setTimeout( function(){
+            window.location = "/prj_facilita/public/pedido";
+        }, 300 );
+    </script>
 @endsection

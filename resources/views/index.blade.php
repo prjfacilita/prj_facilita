@@ -91,11 +91,11 @@
                         <form class="pt1" id="part-1-simulation" id="pt1" name="part-1-simulation" >
 
                             {{--<a class="simulation-box__value">R$ 1.000,00</a>--}}
-                            <input type="radio" name="simulation-value" id="simulation-value" value="100000" class="simulation-box__value" data-line="R$ 1.000,00">
-                            <input type="radio" name="simulation-value" id="simulation-value" value="500000" class="simulation-box__value" data-line="R$ 5.000,00">
-                            <input type="radio" name="simulation-value" id="simulation-value" value="1000000" class="simulation-box__value" data-line="R$ 10.000,00">
-                            <input type="radio" name="simulation-value" id="simulation-value" value="1500000" class="simulation-box__value" data-line="R$ 15.000,00">
-                            <input type="radio" name="simulation-value" id="simulation-value" value="2000000" class="simulation-box__value" data-line="R$ 20.000,00">
+                            <input type="radio" name="simulation-value" id="simulation-value" data-value="100000" value="1000.00" class="simulation-box__value" data-line="R$ 1.000,00">
+                            <input type="radio" name="simulation-value" id="simulation-value" data-value="500000" value="5000.00" class="simulation-box__value" data-line="R$ 5.000,00">
+                            <input type="radio" name="simulation-value" id="simulation-value" data-value="1000000" value="10000.00" class="simulation-box__value" data-line="R$ 10.000,00">
+                            <input type="radio" name="simulation-value" id="simulation-value" data-value="1500000" value="15000.00" class="simulation-box__value" data-line="R$ 15.000,00">
+                            <input type="radio" name="simulation-value" id="simulation-value" data-value="2000000" value="20000.00" class="simulation-box__value" data-line="R$ 20.000,00">
                             <input type="text" name="simulation-other-value" placeholder="Outro valor" class="simulation-other-value">
 
                             <div class="simulation-button"><input type="button" value="Simule agora" class="simulation-box__submit" /></div>
@@ -133,7 +133,7 @@
                             <input type="radio" name="simulation-plots2" value="06" class="simulation-item" data-line="06" disabled>
                             <input type="radio" name="simulation-plots2" value="03" class="simulation-item" data-line="03" disabled>
 
-                            <span class="plots-value">*Sua parcela mensal será entre R$ 327,60 e R$ 663,89</span>
+                            <span class="plots-value">*</span>
 
                             <input type="text" name="simulation-name" placeholder="Nome completo" class="simulation-info"/>
                             <input type="text" name="simulation-cpf" id="simulation-cpf" placeholder="CPF" class="simulation-info"/>
@@ -410,6 +410,11 @@
     var qtdParcelas = 0;
     $(document).on('click','.simulation-box__submit', function(){
 
+
+        if ( ! $("input[name=\"simulation-value\"]:checked").is(':checked') ){
+
+            return false;
+        }
             clicks += 1;
 
 
@@ -426,7 +431,8 @@
 
                 if(document.querySelector('input[name="simulation-value"]:checked').value){
 
-                    value = document.querySelector('input[name="simulation-value"]:checked').value;
+                    // value = document.querySelector('input[name="simulation-value"]:checked').attr("data-value");
+                     value = $('input[name="simulation-value"]:checked').attr("data-value");
 
                     console.log(value);
                 }
@@ -459,6 +465,11 @@
 
 
             if(clicks == 2){
+
+                if ( ! $("input[name=\"simulation-plots\"]:checked").is(':checked') ){
+
+                    return false;
+                }
                 // alert('testeee');
 
                 $(".simulation-box form.pt2").css('display','none'); // ocultar formulario
@@ -560,8 +571,12 @@
             type: "POST",
             url:  '{{'http://ec2-18-212-126-252.compute-1.amazonaws.com/prj_facilita/public//api/simulador'}}',
             data: {valorSolicitado: valorSolicitado, qteParcelas: qteParcelas, cpf:cpf, email:email, name:name},
-            success: function( msg ) {
+            success: function( data, msg ) {
 
+            console.log(msg);
+            // <span class="plots-value">*</span>
+
+                $(".plots-value").html('Sua parcela mensal será entre R$ '+ data["teste"]+' e R$ '+ data["teste2"]+'');
                 // alert(msg);
                 // $("#ajaxResponse").append("<div>"+msg+"</div>");
             }
