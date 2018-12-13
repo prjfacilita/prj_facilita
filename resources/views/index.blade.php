@@ -558,7 +558,7 @@
 
         $.ajax({
             type: "POST",
-            url:  '{{'/api/simulador'}}',
+            url:  '{{'http://ec2-18-212-126-252.compute-1.amazonaws.com/prj_facilita/public//api/simulador'}}',
             data: {valorSolicitado: valorSolicitado, qteParcelas: qteParcelas, cpf:cpf, email:email, name:name},
             success: function( msg ) {
 
