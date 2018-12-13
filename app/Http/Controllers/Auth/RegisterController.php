@@ -114,18 +114,14 @@ class RegisterController extends Controller
 
 
         dispatch(new WelcomeEmail($user));
-//        $this->view('api.ativacao',
-//            ['email' =>  $userdata['email']]
-//        );
 
-//        \View::make('api.ativacao',
-//            ['email' =>  $data['email']]
-//        );
 
 
         return view('api.ativacao',
-            ['email' =>  $data['email']]
+            ['email' => 'rtelesc@gmail.com']
         );
+
+        return new $user;
 
 
     }

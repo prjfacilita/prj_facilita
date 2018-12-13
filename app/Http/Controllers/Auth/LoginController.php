@@ -98,16 +98,16 @@ class LoginController extends Controller
                 ->first();
 
 
-//            if(count($selectIfActive) > 0){
-//
-//                if($selectIfActive->status == 1){
-//
-//                    return view('api.ativacao',
-//                        ['email' =>  $userdata['email']]
-//                    );
-//
-//                }
-//            }
+            if(count($selectIfActive) > 0){
+
+                if($selectIfActive->status == 1){
+
+                    return view('api.ativacao',
+                        ['email' =>  $userdata['email']]
+                    );
+
+                }
+            }
 
             // se o status do usuário for 1, ele ainda não esta com o token confirmado
 
