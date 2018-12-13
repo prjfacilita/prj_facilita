@@ -7,11 +7,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    {{--<link rel="icon" href="/favicon.ico" type="image/x-icon">--}}
 
     <!-- CSS -->
 
-    <link rel="stylesheet" type="text/css" href="assets/index/css/fonts.css">
+
     <link rel="stylesheet" type="text/css"  href="assets/index/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css"  href="assets/index/css/style.css">
     <link rel="stylesheet" type="text/css"  href="assets/index/css/style-home.css">
@@ -21,6 +21,8 @@
     <!-- SCRIPT -->
     <script src="assets/index/js/jquery-3.3.1.min.js"></script>
     <script src="assets/index/slider/slick.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="assets/index/css/fonts.css">
 
 </head>
 
