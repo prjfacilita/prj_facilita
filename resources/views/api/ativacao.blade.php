@@ -202,7 +202,7 @@
     // $('#confirmation_code').mask("0000000", {placeholder: "__/__/____"});
 
 window.setTimeout( function(){
-    window.location = "/login";
+    window.location = "/prj_facilita/public/login";
 }, 300 );
 </script>
 </body>
