@@ -10,7 +10,7 @@
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css"  href="assets/cadastro/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"  href="{{asset('assets/cadastro/css/bootstrap.min.css')}}">
     <link rel="stylesheet" type="text/css"  href="assets/cadastro/css/style.css">
     <link rel="stylesheet" type="text/css"  href="assets/cadastro/css/font-awesome.min.css">
 </head>
