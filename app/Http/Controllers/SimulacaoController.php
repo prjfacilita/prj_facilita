@@ -82,7 +82,11 @@ class SimulacaoController extends Controller
 
 
 //        $teste = array ('retorno' => $retorno01, 'retorno2' => $retorno02);
-        return $retorno01->getBody(); // teste
+
+        $arr = json_decode($retorno01->getBody(), true);
+// Access values from the associative array
+//        echo $arr["Peter"];  // Output: 65
+        return $arr["valorSolicitado"]; // teste
 
     }
 
