@@ -113,7 +113,7 @@ class RegisterController extends Controller
 
 
 
-//        dispatch(new WelcomeEmail($user));
+        dispatch(new WelcomeEmail($user));
 
         return new $user;
 
