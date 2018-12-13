@@ -14,7 +14,7 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
 
-    RewriteBase /
+
 
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
