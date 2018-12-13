@@ -67,22 +67,22 @@ class SimulacaoController extends Controller
                   "tarifaCadastro" => '5.99']
             ]);
 
-        $retorno02 =  $client->request('POST', EmprestimoController::URL_ENDPOINT(). 'api/v1/ep/simuladores',
-            [
-                \GuzzleHttp\RequestOptions::JSON => ["valorSolicitado" => number_format($request->valorSolicitado, 2, '.', ''),
-                    "qteParcelas" => [
-                        $request->qteParcelas,
-                    ],
-                    "taxaJurosMensal" => '11.99',
-                    "dataPrimeiraParcela" =>  date('Y-m-d',strtotime("+30 days")) ,
-                    "tarifaCadastro" => '11.99']
-            ]);
+//        $retorno02 =  $client->request('POST', EmprestimoController::URL_ENDPOINT(). 'api/v1/ep/simuladores',
+//            [
+//                \GuzzleHttp\RequestOptions::JSON => ["valorSolicitado" => number_format($request->valorSolicitado, 2, '.', ''),
+//                    "qteParcelas" => [
+//                        $request->qteParcelas,
+//                    ],
+//                    "taxaJurosMensal" => '11.99',
+//                    "dataPrimeiraParcela" =>  date('Y-m-d',strtotime("+30 days")) ,
+//                    "tarifaCadastro" => '11.99']
+//            ]);
 
 //         . PHP_EOL;
 
 
-        $teste = array ('retorno' => $retorno01, 'retorno2' => $retorno02);
-        return $retorno02;
+//        $teste = array ('retorno' => $retorno01, 'retorno2' => $retorno02);
+        return $retorno01->getBody();
 
     }
 
