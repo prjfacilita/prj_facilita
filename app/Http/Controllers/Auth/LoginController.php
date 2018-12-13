@@ -206,7 +206,7 @@ class LoginController extends Controller
         //atualizar senha e autorizar acesso
 
 
-        return view('autb.cadastrar_senha',
+        return view('auth.cadastrar_senha',
             ['confirmation_code' => $selectIfActive->confirmation_code],
             ['email' => $selectIfActive->email]
         );
