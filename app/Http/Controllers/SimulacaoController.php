@@ -82,7 +82,7 @@ class SimulacaoController extends Controller
 
 
         $teste = array ('retorno' => $retorno01, 'retorno2' => $retorno02);
-        return $teste;
+        return $retorno02;
 
     }
 
