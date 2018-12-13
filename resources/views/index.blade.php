@@ -562,7 +562,7 @@
             data: {valorSolicitado: valorSolicitado, qteParcelas: qteParcelas, cpf:cpf, email:email, name:name},
             success: function( msg ) {
 
-                alert(msg);
+                // alert(msg);
                 // $("#ajaxResponse").append("<div>"+msg+"</div>");
             }
         // });
