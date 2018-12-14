@@ -53,7 +53,7 @@
                             <ul>
                                 <li><a href="#">Saiba mais</a></li>
                                 <li><a href="{{route('register')}}">Criar conta</a></li>
-                                <li class="nav-leave"><a href="#">sair</a></li>
+                                <li class="nav-leave"><a href="{{route('login')}}">Entrar</a></li>
                             </ul>
                         </nav>
                     </div>
