@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'driver' => env('MAIL_DRIVER', 'smtp'),
+    'driver' => env('MAIL_DRIVER', 'sendmail'),
 
     /*
     |--------------------------------------------------------------------------
@@ -29,7 +29,7 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+    'host' => 'email-ssl.com.br',
 
     /*
     |--------------------------------------------------------------------------
@@ -84,9 +84,15 @@ return [
     |
     */
 
-    'username' => env('MAIL_USERNAME'),
 
-    'password' => env('MAIL_PASSWORD'),
+
+//Senha:
+//IMAP: email-ssl.com.br (porta 993)
+//POP: email-ssl.com.br (porta 995)
+//SMTP: email-ssl.com.br (porta 465)
+    'username' =>'sistemafacilita@garagemi9lab.com.br',
+
+    'password' => 'GG@aragew3',
 
     /*
     |--------------------------------------------------------------------------
@@ -99,7 +105,7 @@ return [
     |
     */
 
-    'sendmail' => '/usr/sbin/sendmail -t',
+    'sendmail' => '/usr/sbin/sendmail -bs',
 
     /*
     |--------------------------------------------------------------------------
@@ -111,6 +117,7 @@ return [
     | of the emails. Or, you may simply stick with the Laravel defaults!
     |
     */
+
 
     'markdown' => [
         'theme' => 'default',
