@@ -14,14 +14,14 @@ class Simulacao {
         /*Criar váriaveis*/
     }
 
-    Simular() {
+    Simular () {
 
         //build button
         //prevbtn.draw();
 
         //button listener
         document.getElementById('simulation-value').addEventListener('click', function() {
-            this.simular();
+            this.calcular();
             console.log('pressed');
         }.bind(this));
 
