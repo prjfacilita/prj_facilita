@@ -20,10 +20,15 @@ class Simulacao {
         //prevbtn.draw();
 
         //button listener
-        document.getElementById('simulation-value').addEventListener('click', function() {
+        // document.getElementById('simulation-value').addEventListener('click', function() {
+        //
+        //     console.log('pressed');
+        // }.bind(this));
+
+        $(document).on('click','#simulation-value', function(){
+
             this.calcular();
-            console.log('pressed');
-        }.bind(this));
+        });
 
     }
     // prevbtn.draw(){
