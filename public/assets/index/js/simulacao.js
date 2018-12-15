@@ -9,7 +9,7 @@
         let value = 0;
         let qtdParcelas = 0;
 
-        $(document).on('click','#simulation-value', function(e){
+        $(document).on('click','.simulation-value', function(e){
 
             e.preventDefault();
 
