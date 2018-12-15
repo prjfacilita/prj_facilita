@@ -81,18 +81,6 @@ class RegisterController extends Controller
 
 
 
-
-         // gerar token
-
-//        $user = auth()->user();
-////        Mail::to($user)->send(new Login($user));
-//
-//        Mail::send('emails.confirmacao', ['user' => $user], function ($m) use ($user) {
-//            $m->from('rodrigo@apple.com', 'Facilita');
-//
-//            $m->to('rtelesc@gmail.com', $user->name)->subject($data['cpf']);
-//        });
-
         $rand = $this->generateRandomString(6);
 
 
@@ -113,7 +101,7 @@ class RegisterController extends Controller
 
 
 
-        dispatch(new WelcomeEmail($user));
+//        dispatch(new WelcomeEmail($user));
 
 
 

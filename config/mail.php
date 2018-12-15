@@ -55,10 +55,6 @@ return [
     |
     */
 
-//    'from' => [
-//        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-//        'name' => env('MAIL_FROM_NAME', 'Example'),
-//    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -84,21 +80,11 @@ return [
     |
     */
 
-
-
-//Senha:
-//IMAP: email-ssl.com.br (porta 993)
-//POP: email-ssl.com.br (porta 995)
-//SMTP: email-ssl.com.br (porta 465)
     'username' =>'rtelesc@gmail.com',
 
     'password' => 'Nanyeuteamo@@123',
 
 /*
- *
- * Mail::send('emails.confirmacao', ['title' => 'teste', 'rand' =>  'teste'], function ($message)
- * $message->from('rtelesc@gmail.com', 'Scotch.IO');
- * $message->to('rtelesc@gmail.com');                                                                             });
 
 |--------------------------------------------------------------------------
 | Sendmail System Path
