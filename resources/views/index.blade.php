@@ -12,17 +12,17 @@
     <!-- CSS -->
 
 
-    <link rel="stylesheet" type="text/css"  href="assets/index/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css"  href="assets/index/css/style.css">
-    <link rel="stylesheet" type="text/css"  href="assets/index/css/style-home.css">
-    <link rel="stylesheet" type="text/css"  href="assets/index/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css"  href="assets/index/slider/slick.css">
+    <link rel="stylesheet" type="text/css"  href="{{ asset('assets/index/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css"  href="{{ asset('assets/index/css/style.css') }}">
+    <link rel="stylesheet" type="text/css"  href="{{ asset('assets/index/css/style-home.css') }}">
+    <link rel="stylesheet" type="text/css"  href="{{ asset('assets/index/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" type="text/css"  href="{{ asset('assets/index/slider/slick.css') }}">
 
     <!-- SCRIPT -->
-    <script src="assets/index/js/jquery-3.3.1.min.js"></script>
-    <script src="assets/index/slider/slick.min.js"></script>
+    <script src="{{ asset('assets/index/js/jquery-3.3.1.min.js') }}"></script>
+    <script src="{{ asset('assets/index/slider/slick.min.js') }}"></script>
 
-    <link rel="stylesheet" type="text/css" href="assets/index/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/index/css/fonts.css') }}">
 
 </head>
 
@@ -44,7 +44,7 @@
             <div class="header-content">
 
                 <div class="col-sm-6">
-                    <a class="logomarca" href="#"><img src="assets/index/images/logo-facilita.png" alt="Logomarca Facilita" class="image-logomarca"/></a>
+                    <a class="logomarca" href="#"><img src="{{ asset('assets/index/images/logo-facilita.png') }}" alt="Logomarca Facilita" class="image-logomarca"/></a>
                 </div>
 
                 <div class="col-sm-6">

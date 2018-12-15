@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'driver' => env('MAIL_DRIVER', 'smtp'),
+    'driver' =>'smtp',
 
     /*
     |--------------------------------------------------------------------------
@@ -29,7 +29,7 @@ return [
     |
     */
 
-    'host' => 'email-ssl.com.br',
+    'host' => 'smtp.gmail.com',
 
     /*
     |--------------------------------------------------------------------------
@@ -42,7 +42,7 @@ return [
     |
     */
 
-    'port' => '465',
+    'port' => '587',
 
     /*
     |--------------------------------------------------------------------------
@@ -71,7 +71,7 @@ return [
     |
     */
 
-    'encryption' => env('MAIL_ENCRYPTION', 'tls'),
+    'encryption' => 'tls',
 
     /*
     |--------------------------------------------------------------------------
@@ -90,22 +90,27 @@ return [
 //IMAP: email-ssl.com.br (porta 993)
 //POP: email-ssl.com.br (porta 995)
 //SMTP: email-ssl.com.br (porta 465)
-    'username' =>'sistemafacilita@garagemi9lab.com.br',
+    'username' =>'rtelesc@gmail.com',
 
-    'password' => 'GG@aragew3',
+    'password' => 'Nanyeuteamo@@123',
 
-    /*
-    |--------------------------------------------------------------------------
-    | Sendmail System Path
-    |--------------------------------------------------------------------------
-    |
-    | When using the "sendmail" driver to send e-mails, we will need to know
-    | the path to where Sendmail lives on this server. A default path has
-    | been provided here, which will work well on most of your systems.
-    |
-    */
+/*
+ *
+ * Mail::send('emails.confirmacao', ['title' => 'teste', 'rand' =>  'teste'], function ($message)
+ * $message->from('rtelesc@gmail.com', 'Scotch.IO');
+ * $message->to('rtelesc@gmail.com');                                                                             });
 
-    'sendmail' => '/usr/sbin/sendmail -bs',
+|--------------------------------------------------------------------------
+| Sendmail System Path
+|--------------------------------------------------------------------------
+|
+| When using the "sendmail" driver to send e-mails, we will need to know
+| the path to where Sendmail lives on this server. A default path has
+| been provided here, which will work well on most of your systems.
+|
+*/
+
+    'sendmail' => '/usr/sbin/sendmail -t',
 
     /*
     |--------------------------------------------------------------------------
@@ -120,7 +125,7 @@ return [
 
 
     'markdown' => [
-        'theme' => 'default',
+        'theme' => 'facilita',
 
         'paths' => [
             resource_path('views/vendor/mail'),
