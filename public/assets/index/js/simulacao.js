@@ -44,6 +44,31 @@
 
             }
 
+            if(clicks == 2){
+
+                if ( ! $("input[name=\"simulation-plots\"]:checked").is(':checked') ){
+
+                    return false;
+                }
+
+                $(".simulation-box form.pt2").css('display','none'); // ocultar formulario
+                $(".simulation-box h2.pt2").css('display','none'); // ocultar h2
+                $(".simulation-box p.pt2").css('display','none');
+
+
+                $(".simulation-box form.pt3").css('display','block'); // ocultar formulario
+                $(".simulation-box p.pt3").css('display','block'); // ocultar h2
+                $(".simulation-box h2.pt3").css('display','block'); // ocultar h2
+
+                $(".simulation-box p.pt3").html('R$' + formatReal( value ));
+
+
+                qtdParcelas = document.querySelector('#pt2 input[name="simulation-plots"]:checked').value;
+
+                $("input[name='simulation-plots2'][value='"+qtdParcelas+"']").prop('checked', true);
+
+            }
+
 
 
         });
