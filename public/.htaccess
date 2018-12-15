@@ -5,7 +5,7 @@ Options -MultiViews
 
 
 
-  Header set Access-Control-Allow-Origin "*"
+#  Header set Access-Control-Allow-Origin "*"
 RewriteEngine On
 
 # Redirect Trailing Slashes...
