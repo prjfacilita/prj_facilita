@@ -24,14 +24,25 @@
             clicks += 1;
 
 
-            $(".simulation-box form.pt1").css('display','none'); // ocultar formulario 1
-            $(".simulation-box h2.pt1").css('display','none'); // ocultar h2
-            $(".simulation-box form.pt2").css('display','block'); // ocultar formulario
-            $(".simulation-box p.pt2").css('display','block'); // ocultar h2
-            $(".simulation-box h2.pt2").css('display','block'); // ocultar h2
-            $(".simulation-box p.pt2").html('R$ ' + formatReal( value ));
-            $('.banner__simulation').addClass('simulation-value-selected');
-            $('.banner__simulation').removeClass('simulation-value');
+            if(clicks == 1) {
+
+
+                if (document.querySelector('input[name="simulation-value"]:checked').value) {
+
+                    value = $('input[name="simulation-value"]:checked').attr("data-value");
+                    console.log(value);
+                }
+
+                $(".simulation-box form.pt1").css('display', 'none'); // ocultar formulario 1
+                $(".simulation-box h2.pt1").css('display', 'none'); // ocultar h2
+                $(".simulation-box form.pt2").css('display', 'block'); // ocultar formulario
+                $(".simulation-box p.pt2").css('display', 'block'); // ocultar h2
+                $(".simulation-box h2.pt2").css('display', 'block'); // ocultar h2
+                $(".simulation-box p.pt2").html('R$ ' + formatReal(value));
+                $('.banner__simulation').addClass('simulation-value-selected');
+                $('.banner__simulation').removeClass('simulation-value');
+
+            }
 
 
 
