@@ -43,7 +43,7 @@
 
 
 
-        $(document).on('click','.simulation-plots', function(e) {
+        $(document).on('click','.simulation-item', function(e) {
 
             e.preventDefault();
 
