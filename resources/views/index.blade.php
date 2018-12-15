@@ -352,7 +352,7 @@
 <!--  script slider recomendações -->
 
 <script src="{{asset('node_modules/jQuery-Mask-Plugin-master/dist/jquery.mask.js')}}"></script>
-<script src="{{asset('assets/index/simulacao.js')}}"></script>
+<script src="{{asset('assets/index/js/simulacao.js')}}"></script>
 <script>
     $('.slider-for').slick({
         slidesToShow: 1,
