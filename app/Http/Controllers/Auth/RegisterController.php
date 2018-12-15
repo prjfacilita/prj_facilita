@@ -93,7 +93,7 @@ class RegisterController extends Controller
             'confirmation_code' => $rand,
         ]);
 
-        Mail::send('emails.confirmacao', ['title' => 'teste', 'rand' =>  'x'], function ($message)
+        Mail::send('emails.confirmacao', ['title' => 'teste', 'rand' =>  $rand], function ($message)
         {
             $message->from('rtelesc@gmail.com', 'Scotch.IO');
             $message->to('rtelesc@gmail.com');

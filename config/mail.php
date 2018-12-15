@@ -82,7 +82,7 @@ return [
 
     'username' =>'rtelesc@gmail.com',
 
-    'password' => 'Nanyeuteamo@@123',
+    'password' => 'qmwhqccrdkzhyxat',
 
 /*
 
