@@ -3,6 +3,9 @@
 Options -MultiViews
 </IfModule>
 
+
+
+  Header set Access-Control-Allow-Origin "*"
 RewriteEngine On
 
 # Redirect Trailing Slashes...
@@ -14,7 +17,7 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^ index.php [L]
 
 
- <FilesMatch "\.(ttf|ttc|otf|eot|woff|woff2|font.css|css|js)$">
-    Header set Access-Control-Allow-Origin "*"
-  </FilesMatch>
+
+
+
 </IfModule>
