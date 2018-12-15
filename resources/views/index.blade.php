@@ -98,7 +98,7 @@
                             <input type="radio" name="simulation-value" id="simulation-value" data-value="2000000" value="20000.00" class="simulation-box__value" data-line="R$ 20.000,00">
                             <input type="text" name="simulation-other-value" placeholder="Outro valor" class="simulation-other-value">
 
-                            <div class="simulation-button"><input type="button" value="Simule agora" class="simulation-box__submit" /></div>
+                            {{--<div class="simulation-button"><input type="button" value="Simule agora" class="simulation-box__submit" /></div>--}}
                         </form>
 
 
@@ -116,7 +116,7 @@
                             <input type="radio" name="simulation-plots" value="06" class="simulation-item" data-line="06">
                             <input type="radio" name="simulation-plots" value="03" class="simulation-item" data-line="03">
 
-                            <div class="simulation-button"><input type="button" value="Simule agora" class="simulation-box__submit" /></div>
+                            {{--<div class="simulation-button"><input type="button" value="Simule agora" class="simulation-box__submit" /></div>--}}
                         </form>
 
 
@@ -151,7 +151,7 @@
                                 <option value="outros-motivos">Outros motivos</option>
                             </select>
 
-                            <div class="simulation-button"><input type="button" value="Continuar" class="simular_agora simulation-box__submit" /></div>
+                            {{--<div class="simulation-button"><input type="button" value="Continuar" class="simular_agora simulation-box__submit" /></div>--}}
                         </form>
 
                         {{--QUARTA PARTE DA SIMULAÇÃO--}}

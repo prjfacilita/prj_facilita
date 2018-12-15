@@ -5,44 +5,29 @@
 
 /*Click para simulação*/
 
+        let clicks = 0;
+        let value = 0;
+        let qtdParcelas = 0;
 
-class Simulacao {
+        $(document).on('click','#simulation-value', function(e){
 
-    constructor() {
+            e.preventDefault();
 
 
-        /*Criar váriaveis*/
-    }
+            /*Verificar se houve o click*/
 
-    Simular () {
+            if ( ! $("input[name=\"simulation-value\"]:checked").is(':checked') ){
 
-        //build button
-        //prevbtn.draw();
+                return false;
+            }
 
-        //button listener
-        // document.getElementById('simulation-value').addEventListener('click', function() {
-        //
-        //     console.log('pressed');
-        // }.bind(this));
+            clicks += 1;
 
-        $(document).on('click','#simulation-value', function(){
 
-            this.calcular();
+
         });
 
-    }
-    // prevbtn.draw(){
-    //console.log('prev btn')
-    //}
 
-    calcular() {
-        console.log('simulando..!');
-    }
-
-}
-
-var call = new Simulacao();
-call.Simular();
 
 
 
