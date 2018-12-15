@@ -36,10 +36,10 @@ class WelcomeEmail extends Mailable
     {
 
 
-     return   Mail::send('emails.created.welcome', ['title' => 'teste', 'rand' =>  'teste'], function ($message)
-        {
-            $message->from('no-reply@scotch.io', 'Scotch.IO');
-            $message->to('batman@batcave.io');
-        });
+//     return   Mail::send('emails.created.welcome', ['title' => 'teste', 'rand' =>  'teste'], function ($message)
+//        {
+//            $message->from('no-reply@scotch.io', 'Scotch.IO');
+//            $message->to('batman@batcave.io');
+//        });
     }
 }
