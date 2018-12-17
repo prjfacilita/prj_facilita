@@ -26,6 +26,9 @@
 
                     value = $('input[name="simulation-value"]:checked').attr("data-value");
                     console.log(value);
+                }else{
+
+                    return false;
                 }
 
                 $(".simulation-box form.pt1").css('display', 'none'); // ocultar formulario 1
