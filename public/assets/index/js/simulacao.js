@@ -85,7 +85,26 @@
 
 
         /*RETORNAR MASCARA DE MOEDA PARA INPUT OUTRO VALOR INDEX SIMULAÇÃO EMPRESTIMO*/
-        document.getElementById("simulation-other-value").addEventListener("keypress", formatReal);
+            $(document).ready(function(){
+                $('[id^=simulation-other-value]').keypress(validateNumber);
+
+               var valor =  $("#simulation-other-value").val();
+
+               $("#simulation-other-value").html('R$' + formatReal( valor ));
+            });
+
+
+            function validateNumber(event) {
+                var key = window.event ? event.keyCode : event.which;
+                if (event.keyCode === 8 || event.keyCode === 46) {
+                    return true;
+                } else if ( key < 48 || key > 57 ) {
+                    return false;
+                } else {
+                    return true;
+                }
+            };
+
 
 
 

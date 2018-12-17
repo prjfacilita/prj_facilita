@@ -96,12 +96,7 @@
                             <input type="radio" name="simulation-value" id="simulation-value" data-value="1000000" value="10000.00" class="simulation-box__value" data-line="R$ 10.000,00">
                             <input type="radio" name="simulation-value" id="simulation-value" data-value="1500000" value="15000.00" class="simulation-box__value" data-line="R$ 15.000,00">
                             <input type="radio" name="simulation-value" id="simulation-value" data-value="2000000" value="20000.00" class="simulation-box__value" data-line="R$ 20.000,00">
-                            <input type="text"  id="simulation-other-value" name="simulation-other-value" placeholder="Outro valor" class="simulation-other-value" onkeydown="return ( event.ctrlKey || event.altKey
-                                                                                                                                                || (47<event.keyCode && event.keyCode<58 && event.shiftKey==false)
-                                                                                                                                                || (95<event.keyCode && event.keyCode<106)
-                                                                                                                                                || (event.keyCode==8) || (event.keyCode==9)
-                                                                                                                                                || (event.keyCode>34 && event.keyCode<40)
-                                                                                                                                                || (event.keyCode==46) )">>
+                            <input type="text"  id="simulation-other-value" name="simulation-other-value" placeholder="Outro valor" class="simulation-other-value" >
 
                             {{--<div class="simulation-button"><input type="button" value="Simule agora" class="simulation-box__submit" /></div>--}}
                         </form>
