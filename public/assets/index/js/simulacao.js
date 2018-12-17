@@ -84,4 +84,9 @@
 
 
 
+        /*RETORNAR MASCARA DE MOEDA PARA INPUT OUTRO VALOR INDEX SIMULAÇÃO EMPRESTIMO*/
+        document.getElementById("simulation-other-value").addEventListener("keypress", formatReal);
+
+
+
 
