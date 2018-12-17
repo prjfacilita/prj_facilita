@@ -6,8 +6,8 @@
 /*Click para simulação*/
 
         // let clicks = 0;
-        let value = 0;
-        let qtdParcelas = 0;
+        var value = 0;
+        var qtdParcelas = 0;
 
         $(document).on('click','.simulation-value', function(e){
 
@@ -48,6 +48,7 @@
 
 
 
+        console.log(value);
         $(document).on('click','.simulation-item', function(e) {
 
             e.preventDefault();
@@ -56,16 +57,6 @@
 
                 return false;
             }
-
-            if (document.querySelector('input[name="simulation-value"]:checked').value) {
-
-                value = $('input[name="simulation-value"]:checked').attr("data-value");
-                console.log(value);
-            }else{
-
-                return false;
-            }
-
 
 
 
