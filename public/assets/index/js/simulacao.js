@@ -153,6 +153,9 @@
 
                 function CalcularParcelas(){
 
+
+
+
                 // <input type="text" name="simulation-name" placeholder="Nome completo" class="simulation-info"/>
                 //         <input type="text" name="simulation-cpf" id="simulation-cpf" placeholder="CPF" class="simulation-info"/>
                 //         <input type="email" name="simulation-email" placeholder="E-mail" class="simulation-info"/>
@@ -168,6 +171,8 @@
                 var cpf = $("input[name=simulation-cpf]").val();
                 var email = $("input[name=simulation-email]").val();
                 var name = $("input[name=simulation-name]").val();
+
+                TestaCPF(cpf);
 
                     $.ajax({
                         type: "POST",
@@ -190,3 +195,25 @@
 
 
 
+
+
+        function TestaCPF(strCPF) {
+            var Soma;
+            var Resto;
+            Soma = 0;
+            if (strCPF == "00000000000") return false;
+
+            for (i=1; i<=9; i++) Soma = Soma + parseInt(strCPF.substring(i-1, i)) * (11 - i);
+            Resto = (Soma * 10) % 11;
+
+            if ((Resto == 10) || (Resto == 11))  Resto = 0;
+            if (Resto != parseInt(strCPF.substring(9, 10)) ) return false;
+
+            Soma = 0;
+            for (i = 1; i <= 10; i++) Soma = Soma + parseInt(strCPF.substring(i-1, i)) * (12 - i);
+            Resto = (Soma * 10) % 11;
+
+            if ((Resto == 10) || (Resto == 11))  Resto = 0;
+            if (Resto != parseInt(strCPF.substring(10, 11) ) ) return false;
+            return true;
+        }
