@@ -351,7 +351,7 @@
 
 <!--  script slider recomendações -->
 
-<script src="{{asset('node_modules/jQuery-Mask-Plugin-master/dist/jquery.mask.js')}}"></script>
+<script src="{{asset('node_modules/jquery-mask-plugin/dist/jquery.mask.js')}}"></script>
 <script src="{{asset('assets/index/js/simulacao.js')}}"></script>
 
 <script src="{{asset('node_modules/inputmask/dist/inputmask/inputmask.js')}}"></script>
