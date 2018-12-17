@@ -326,14 +326,14 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <h5 class="modal-title" id="exampleModalLabel"><h2 style="display:none;" class="pt3">Valor selecionado</h2<p style="display:none;" id="pt3" class="pt3">R$5.000,00</p>></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <h2 style="display:none;" class="pt3">Valor selecionado</h2>
-                    <p style="display:none;" id="pt3" class="pt3">R$5.000,00</p>
+
+
                     <form style="display:none;" id="pt3" class="pt3" >
                         <span class="plots">Em quantas parcelas?</span>
                         <input type="radio" name="simulation-plots2" value="24" class="simulation-item" data-line="24" disabled>
@@ -365,8 +365,8 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    {{--<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>--}}
+                    <button type="button" class="btn btn-primary">Simular</button>
                 </div>
             </div>
         </div>
