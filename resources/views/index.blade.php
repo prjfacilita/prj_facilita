@@ -122,37 +122,7 @@
 
                         {{-- TERCEIRA PARTE DA SIMULAÇÃO --}}
 
-                        <h2 style="display:none;" class="pt3">Valor selecionado</h2>
-                        <p style="display:none;" id="pt3" class="pt3">R$5.000,00</p>
-                        <form style="display:none;" id="pt3" class="pt3" >
-                            <span class="plots">Em quantas parcelas?</span>
-                            <input type="radio" name="simulation-plots2" value="24" class="simulation-item" data-line="24" disabled>
-                            <input type="radio" name="simulation-plots2" value="20" class="simulation-item" data-line="20" disabled>
-                            <input type="radio" name="simulation-plots2" value="18" class="simulation-item" data-line="18" disabled>
-                            <input type="radio" name="simulation-plots2" value="12" class="simulation-item" data-line="12" disabled>
-                            <input type="radio" name="simulation-plots2" value="06" class="simulation-item" data-line="06" disabled>
-                            <input type="radio" name="simulation-plots2" value="03" class="simulation-item" data-line="03" disabled>
 
-                            <span class="plots-value">*</span>
-
-                            <input type="text" name="simulation-name" placeholder="Nome completo" class="simulation-info"/>
-                            <input type="text" name="simulation-cpf" id="simulation-cpf" placeholder="CPF" class="simulation-info"/>
-                            <input type="email" name="simulation-email" placeholder="E-mail" class="simulation-info"/>
-                            <select id="reason" class="simulation-info">
-                                <option disabled selected>Qual a finalidade?</option>
-                                <option value="renegociar-dividas">Renegóciar dívidas</option>
-                                <option value="investir-negocio">Investir no meu negócio</option>
-                                <option value="reformar">Reformar</option>
-                                <option value="comprar-veiculo">Comprar um veículo</option>
-                                <option value="quitar-debitos-veiculo">Quitar débitos do veículo</option>
-                                <option value="casamento">Casamento</option>
-                                <option value="ferias">Férias</option>
-                                <option value="mudanca-imovel">Mudança de imóvel</option>
-                                <option value="outros-motivos">Outros motivos</option>
-                            </select>
-
-                            {{--<div class="simulation-button"><input type="button" value="Continuar" class="simular_agora simulation-box__submit" /></div>--}}
-                        </form>
 
                         {{--QUARTA PARTE DA SIMULAÇÃO--}}
 
@@ -347,6 +317,57 @@
         </div>
     </footer>
 
+
+
+    <div class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h2 style="display:none;" class="pt3">Valor selecionado</h2>
+                    <p style="display:none;" id="pt3" class="pt3">R$5.000,00</p>
+                    <form style="display:none;" id="pt3" class="pt3" >
+                        <span class="plots">Em quantas parcelas?</span>
+                        <input type="radio" name="simulation-plots2" value="24" class="simulation-item" data-line="24" disabled>
+                        <input type="radio" name="simulation-plots2" value="20" class="simulation-item" data-line="20" disabled>
+                        <input type="radio" name="simulation-plots2" value="18" class="simulation-item" data-line="18" disabled>
+                        <input type="radio" name="simulation-plots2" value="12" class="simulation-item" data-line="12" disabled>
+                        <input type="radio" name="simulation-plots2" value="06" class="simulation-item" data-line="06" disabled>
+                        <input type="radio" name="simulation-plots2" value="03" class="simulation-item" data-line="03" disabled>
+
+                        <span class="plots-value">*</span>
+
+                        <input type="text" name="simulation-name" placeholder="Nome completo" class="simulation-info"/>
+                        <input type="text" name="simulation-cpf" id="simulation-cpf" placeholder="CPF" class="simulation-info"/>
+                        <input type="email" name="simulation-email" placeholder="E-mail" class="simulation-info"/>
+                        <select id="reason" class="simulation-info">
+                            <option disabled selected>Qual a finalidade?</option>
+                            <option value="renegociar-dividas">Renegóciar dívidas</option>
+                            <option value="investir-negocio">Investir no meu negócio</option>
+                            <option value="reformar">Reformar</option>
+                            <option value="comprar-veiculo">Comprar um veículo</option>
+                            <option value="quitar-debitos-veiculo">Quitar débitos do veículo</option>
+                            <option value="casamento">Casamento</option>
+                            <option value="ferias">Férias</option>
+                            <option value="mudanca-imovel">Mudança de imóvel</option>
+                            <option value="outros-motivos">Outros motivos</option>
+                        </select>
+
+                        {{--<div class="simulation-button"><input type="button" value="Continuar" class="simular_agora simulation-box__submit" /></div>--}}
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <!--  script slider recomendações -->
@@ -395,6 +416,7 @@
             }
         ]
     });
+
 
 
 

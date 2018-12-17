@@ -52,10 +52,14 @@
                 return false;
             }
 
+
+
+
             $(".simulation-box form.pt2").css('display','none'); // ocultar formulario
             $(".simulation-box h2.pt2").css('display','none'); // ocultar h2
             $(".simulation-box p.pt2").css('display','none');
 
+            /*Call modal*/
 
             $(".simulation-box form.pt3").css('display','block'); // ocultar formulario
             $(".simulation-box p.pt3").css('display','block'); // ocultar h2
