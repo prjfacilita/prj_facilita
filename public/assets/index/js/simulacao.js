@@ -231,8 +231,15 @@
             var email = $("input[name=simulation-email]").val();
             var name = $("input[name=simulation-name]").val();
 
-            TestaCPF(cpf);
+            var retornoCPF =  TestaCPF(cpf);
 
 
-            console.log(cpf);
+            if (retornoCPF == false){
+
+                alert('cpf incorreto');
+                return false;
+            }
+
+
+            // console.log(cpf);
         })
