@@ -92,11 +92,11 @@
                         <form class="pt1" id="part-1-simulation" id="pt1" name="part-1-simulation" >
 
                             {{--<a class="simulation-box__value">R$ 1.000,00</a>--}}
-                            <input type="radio" name="simulation-value" id="simulation-value" data-value="100000" value="1000.00" class="simulation-box__value" data-line="R$ 1.000,00">
-                            <input type="radio" name="simulation-value" id="simulation-value" data-value="500000" value="5000.00" class="simulation-box__value" data-line="R$ 5.000,00">
-                            <input type="radio" name="simulation-value" id="simulation-value" data-value="1000000" value="10000.00" class="simulation-box__value" data-line="R$ 10.000,00">
-                            <input type="radio" name="simulation-value" id="simulation-value" data-value="1500000" value="15000.00" class="simulation-box__value" data-line="R$ 15.000,00">
-                            <input type="radio" name="simulation-value" id="simulation-value" data-value="2000000" value="20000.00" class="simulation-box__value" data-line="R$ 20.000,00">
+                            <input type="radio" name="simulation-value" id="simulation-value" data-value="1000" value="1000.00" class="simulation-box__value" data-line="R$ 1.000,00">
+                            <input type="radio" name="simulation-value" id="simulation-value" data-value="5000" value="5000.00" class="simulation-box__value" data-line="R$ 5.000,00">
+                            <input type="radio" name="simulation-value" id="simulation-value" data-value="10000" value="10000.00" class="simulation-box__value" data-line="R$ 10.000,00">
+                            <input type="radio" name="simulation-value" id="simulation-value" data-value="15000" value="15000.00" class="simulation-box__value" data-line="R$ 15.000,00">
+                            <input type="radio" name="simulation-value" id="simulation-value" data-value="20000" value="20000.00" class="simulation-box__value" data-line="R$ 20.000,00">
                             <input type="text"  id="simulation-other-value" name="simulation-other-value" placeholder="Outro valor" class="simulation-other-value" >
 
                             {{--<div class="simulation-button"><input type="button" value="Simule agora" class="simulation-box__submit" /></div>--}}
