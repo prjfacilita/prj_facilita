@@ -21,6 +21,7 @@
     <!-- SCRIPT -->
     <script src="{{ asset('assets/index/js/jquery-3.3.1.min.js') }}"></script>
     <script src="{{ asset('assets/index/slider/slick.min.js') }}"></script>
+    <script src="{{ asset('assets/index/js/bootstrap.min.js') }}"></script>
 
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/index/css/fonts.css') }}">
 
