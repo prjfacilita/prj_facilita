@@ -193,7 +193,7 @@ $(document).on('click', '.simular_agora', function (e) {
         // $("#ajaxResponse").append("<div>"+msg+"</div>");
     }
     // });
-});
+    });
 
 });
 

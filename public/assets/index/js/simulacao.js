@@ -127,3 +127,44 @@
 
 
 
+
+$(document).on('click', '.simular_agora', function (e) {
+
+
+    // <input type="text" name="simulation-name" placeholder="Nome completo" class="simulation-info"/>
+    //         <input type="text" name="simulation-cpf" id="simulation-cpf" placeholder="CPF" class="simulation-info"/>
+    //         <input type="email" name="simulation-email" placeholder="E-mail" class="simulation-info"/>
+    //         <select id="reason" class="simulation-info">
+
+    // var input_1 =
+
+
+
+
+    var valorSolicitado = $("input[name=simulation-value]:checked").val();
+    var qteParcelas = $("input[name=simulation-plots]").val();
+    var cpf = $("input[name=simulation-cpf]").val();
+    var email = $("input[name=simulation-email]").val();
+    var name = $("input[name=simulation-name]").val();
+
+        $.ajax({
+            type: "POST",
+            url:  '{{http://ec2-18-212-126-252.compute-1.amazonaws.com/prj_facilita/public//api/simulador}}',
+            data: {valorSolicitado: valorSolicitado, qteParcelas: qteParcelas, cpf:cpf, email:email, name:name},
+        success: function( data, msg ) {
+
+            console.log(msg);
+            // <span class="plots-value">*</span>
+
+            $(".plots-value").html('Sua parcela mensal será entre R$ '+ data["teste"]+' e R$ '+ data["teste2"]+'');
+            // alert(msg);
+            // $("#ajaxResponse").append("<div>"+msg+"</div>");
+        }
+        // });
+    });
+
+    });
+
+
+
+

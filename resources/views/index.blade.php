@@ -368,7 +368,7 @@
                 </div>
                 <div class="modal-footer">
                     {{--<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>--}}
-                    <button type="button" class="btn btn-primary">Simular</button>
+                    <button type="button" class="btn btn-primary simular_agora">Simular</button>
                 </div>
             </div>
         </div>
