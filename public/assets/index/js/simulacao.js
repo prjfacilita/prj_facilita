@@ -38,9 +38,11 @@
                 $(".simulation-box h2.pt2").css('display', 'block'); // ocultar h2
                 $(".simulation-box p.pt2").html('R$ ' + formatReal(value));
 
-                alert(value);
+                // alert(value);
                 $('.banner__simulation').addClass('simulation-value-selected');
                 $('.banner__simulation').removeClass('simulation-value');
+
+                $(this).data('valor', value);
 
 
 
