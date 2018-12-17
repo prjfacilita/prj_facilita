@@ -32,7 +32,7 @@
                 }
 
 
-                $(document).data('simulacao', value);
+                $("body").data('simulacao', value);
 
                 $(".simulation-box form.pt1").css('display', 'none'); // ocultar formulario 1
                 $(".simulation-box h2.pt1").css('display', 'none'); // ocultar h2
@@ -81,7 +81,7 @@
             $("h2.pt3").css('display','block'); // ocultar h2
 
 
-            var value = $(document).data('simulacao');
+            var value = $("body").data('simulacao');
             $("p.pt3").html('R$' + formatReal( value ));
 
 
