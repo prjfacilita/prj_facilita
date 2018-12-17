@@ -336,7 +336,7 @@
 
                     <form style="display:none;" id="pt3" class="pt3" >
 
-                        <h2 style="display:none;" class="pt3">Valor selecionado</h2<p style="display:none;" id="pt3" class="pt3">R$5.000,00</p>
+                        <h2 style="display:none;" class="pt3">Valor selecionado</h2><p style="display:none;" id="pt3" class="pt3">R$5.000,00</p>
                         {{--<span class="plots">Em quantas parcelas?</span>--}}
                         <input style="display: none;" type="radio" name="simulation-plots2" value="24" class="simulation-item" data-line="24" disabled>
                         <input style="display: none;" type="radio" name="simulation-plots2" value="20" class="simulation-item" data-line="20" disabled>
