@@ -32,7 +32,7 @@
                 }
 
 
-                valueCorreto = document.querySelector('#pt1 input[name="simulation-value"]:checked').value;
+                valueCorreto = document.querySelector('input[name="simulation-value"]:checked').value;
 
                 $("body").data('simulacao', valueCorreto);
 
