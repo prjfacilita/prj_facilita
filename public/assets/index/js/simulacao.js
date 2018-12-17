@@ -63,11 +63,11 @@
 
             $('#exampleModal').modal('toggle');
 
-            $(".simulation-box form.pt3").css('display','block'); // ocultar formulario
-            $(".simulation-box p.pt3").css('display','block'); // ocultar h2
-            $(".simulation-box h2.pt3").css('display','block'); // ocultar h2
+            $("form.pt3").css('display','block'); // ocultar formulario
+            $("p.pt3").css('display','block'); // ocultar h2
+            $("h2.pt3").css('display','block'); // ocultar h2
 
-            $(".simulation-box p.pt3").html('R$' + formatReal( value ));
+            $("p.pt3").html('R$' + formatReal( value ));
 
 
             qtdParcelas = document.querySelector('#pt2 input[name="simulation-plots"]:checked').value;
