@@ -353,6 +353,16 @@
 
 <script src="{{asset('node_modules/jQuery-Mask-Plugin-master/dist/jquery.mask.js')}}"></script>
 <script src="{{asset('assets/index/js/simulacao.js')}}"></script>
+
+<script src="{{asset('node_modules/inputmask/dist/inputmask/inputmask.js')}}"></script>
+<script src="{{asset('node_modules/inputmask/dist/inputmask/inputmask.extensions.js')}}"></script>
+<script src="{{asset('node_modules/inputmask/dist/inputmask/inputmask.numeric.extensions.js')}}"></script>
+<script src="{{asset('node_modules/inputmask/dist/inputmask/inputmask.date.extensions.js')}}"></script>
+<script src="{{asset('node_modules/inputmask/dist/inputmask/jquery.inputmask.js')}}"></script>
+{{--<script src="{{asset('dist/inputmask/jquery.inputmask.js')}}"></script>--}}
+{{--<script src="{{asset('dist/inputmask/jquery.inputmask.js')}}"></script>--}}
+{{--<script src="{{asset('dist/inputmask/jquery.inputmask.js')}}"></script>--}}
+{{--<script src="{{asset('dist/inputmask/jquery.inputmask.js')}}"></script>--}}
 <script>
     $('.slider-for').slick({
         slidesToShow: 1,
