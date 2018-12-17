@@ -31,6 +31,9 @@
                     return false;
                 }
 
+
+                $(document).data('simulacao', value);
+
                 $(".simulation-box form.pt1").css('display', 'none'); // ocultar formulario 1
                 $(".simulation-box h2.pt1").css('display', 'none'); // ocultar h2
                 $(".simulation-box form.pt2").css('display', 'block'); // ocultar formulario
@@ -42,7 +45,7 @@
                 $('.banner__simulation').addClass('simulation-value-selected');
                 $('.banner__simulation').removeClass('simulation-value');
 
-                $(this).data('valor', value);
+                // $(".simulation-value").data('valor', value);
 
 
 
@@ -50,7 +53,7 @@
 
 
 
-        console.log(value);
+        // console.log(value);
         $(document).on('click','.simulation-item', function(e) {
 
             e.preventDefault();
@@ -69,7 +72,7 @@
 
             /*Call modal*/
 
-            alert(value);
+            // alert(value);
 
             $('#exampleModal').modal('toggle');
 
@@ -77,6 +80,8 @@
             $("p.pt3").css('display','block'); // ocultar h2
             $("h2.pt3").css('display','block'); // ocultar h2
 
+
+            var value = $(document).data('simulacao');
             $("p.pt3").html('R$' + formatReal( value ));
 
 
