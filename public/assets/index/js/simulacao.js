@@ -57,7 +57,11 @@
                 return false;
             }
 
-            if ( ! $("input[name=\"simulation-value\"]:checked").is(':checked') ){
+            if (document.querySelector('input[name="simulation-value"]:checked').value) {
+
+                value = $('input[name="simulation-value"]:checked').attr("data-value");
+                console.log(value);
+            }else{
 
                 return false;
             }
