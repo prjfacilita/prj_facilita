@@ -24,7 +24,7 @@
 
                 if (document.querySelector('input[name="simulation-value"]:checked').value) {
 
-                    value = $('input[name="simulation-value"]:checked').attr("data-value");
+                    value = document.querySelector('input[name="simulation-value"]:checked').value;
                     console.log(value);
                 }else{
 
