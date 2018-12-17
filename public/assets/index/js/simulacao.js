@@ -85,28 +85,28 @@
 
 
         /*RETORNAR MASCARA DE MOEDA PARA INPUT OUTRO VALOR INDEX SIMULAÇÃO EMPRESTIMO*/
+            // $(document).ready(function(){
+            //     $('[id^=simulation-other-value]').keypress(validateNumber);
+            //
+            //
+            // });
+            //
+            //
+            // function validateNumber(event) {
+            //     var key = window.event ? event.keyCode : event.which;
+            //     if (event.keyCode === 8 || event.keyCode === 46) {
+            //         return true;
+            //     } else if ( key < 48 || key > 57 ) {
+            //         return false;
+            //     } else {
+            //         return true;
+            //     }
+            // };
+
+
+
             $(document).ready(function(){
-                $('[id^=simulation-other-value]').keypress(validateNumber);
-
-
-            });
-
-
-            function validateNumber(event) {
-                var key = window.event ? event.keyCode : event.which;
-                if (event.keyCode === 8 || event.keyCode === 46) {
-                    return true;
-                } else if ( key < 48 || key > 57 ) {
-                    return false;
-                } else {
-                    return true;
-                }
-            };
-
-
-
-            $(document).ready(function(){
-                $("#money").inputmask('decimal', {
+                $("#simulation-other-value").inputmask('decimal', {
                     'alias': 'numeric',
                     'groupSeparator': ',',
                     'autoGroup': true,
