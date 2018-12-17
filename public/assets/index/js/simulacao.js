@@ -57,6 +57,12 @@
                 return false;
             }
 
+            if ( ! $("input[name=\"simulation-value\"]:checked").is(':checked') ){
+
+                return false;
+            }
+
+
 
 
 
@@ -65,6 +71,8 @@
             $(".simulation-box p.pt2").css('display','none');
 
             /*Call modal*/
+
+            alert(value);
 
             $('#exampleModal').modal('toggle');
 
