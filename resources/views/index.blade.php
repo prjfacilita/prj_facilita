@@ -336,7 +336,11 @@
 
                     <form style="display:none;" id="pt3" class="pt3" >
 
-                        <h2 style="display:none;" class="pt3">Valor selecionado</h2><p style="display:none;" id="pt3" class="pt3">R$5.000,00</p>
+                        <h2 style="display: block;" class="pt3 text-center">Valor selecionado</h2><p style="display: block;" id="pt3" class="pt3 text-center">R$1000.,00</p>
+
+                        <hr>
+
+
                         {{--<span class="plots">Em quantas parcelas?</span>--}}
                         <input style="display: none;" type="radio" name="simulation-plots2" value="24" class="simulation-item" data-line="24" disabled>
                         <input style="display: none;" type="radio" name="simulation-plots2" value="20" class="simulation-item" data-line="20" disabled>
@@ -368,7 +372,7 @@
                 </div>
                 <div class="modal-footer">
                     {{--<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>--}}
-                    <button type="button" class="btn btn-primary simular_agora">Simular</button>
+                    <button type="button" class="btn btn-success simular_agora">Simular</button>
                 </div>
             </div>
         </div>
