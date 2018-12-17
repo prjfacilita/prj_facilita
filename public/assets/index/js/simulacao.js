@@ -61,6 +61,8 @@
 
             /*Call modal*/
 
+            $('#exampleModal').modal('toggle');
+
             $(".simulation-box form.pt3").css('display','block'); // ocultar formulario
             $(".simulation-box p.pt3").css('display','block'); // ocultar h2
             $(".simulation-box h2.pt3").css('display','block'); // ocultar h2
