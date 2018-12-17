@@ -172,7 +172,7 @@
                 var email = $("input[name=simulation-email]").val();
                 var name = $("input[name=simulation-name]").val();
 
-                TestaCPF(cpf);
+                // TestaCPF(cpf);
 
                     $.ajax({
                         type: "POST",
@@ -217,3 +217,22 @@
             if (Resto != parseInt(strCPF.substring(10, 11) ) ) return false;
             return true;
         }
+
+
+
+        $(document).on('click','.simular_agora', function(e){
+
+
+            e.preventDefault();
+
+            var valorSolicitado = $("body").data('simulacao');
+            var qteParcelas = $("input[name=simulation-plots]").val();
+            var cpf = $("input[name=simulation-cpf]").val();
+            var email = $("input[name=simulation-email]").val();
+            var name = $("input[name=simulation-name]").val();
+
+            TestaCPF(cpf);
+
+
+            console.log(cpf);
+        })
