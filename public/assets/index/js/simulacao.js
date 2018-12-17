@@ -156,7 +156,7 @@ $(document).on('click', '.simular_agora', function (e) {
 
 
 
-    var valorSolicitado = $("input[name=simulation-value]:checked").val();
+    var valorSolicitado = $("body").data('simulacao');
     var qteParcelas = $("input[name=simulation-plots]").val();
     var cpf = $("input[name=simulation-cpf]").val();
     var email = $("input[name=simulation-email]").val();
