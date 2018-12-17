@@ -326,7 +326,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel"><h2 style="display:none;" class="pt3">Valor selecionado</h2<p style="display:none;" id="pt3" class="pt3">R$5.000,00</p>></h5>
+                    <h5 class="modal-title" id="exampleModalLabel"></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -335,13 +335,15 @@
 
 
                     <form style="display:none;" id="pt3" class="pt3" >
-                        <span class="plots">Em quantas parcelas?</span>
-                        <input type="radio" name="simulation-plots2" value="24" class="simulation-item" data-line="24" disabled>
-                        <input type="radio" name="simulation-plots2" value="20" class="simulation-item" data-line="20" disabled>
-                        <input type="radio" name="simulation-plots2" value="18" class="simulation-item" data-line="18" disabled>
-                        <input type="radio" name="simulation-plots2" value="12" class="simulation-item" data-line="12" disabled>
-                        <input type="radio" name="simulation-plots2" value="06" class="simulation-item" data-line="06" disabled>
-                        <input type="radio" name="simulation-plots2" value="03" class="simulation-item" data-line="03" disabled>
+
+                        <h2 style="display:none;" class="pt3">Valor selecionado</h2<p style="display:none;" id="pt3" class="pt3">R$5.000,00</p>
+                        {{--<span class="plots">Em quantas parcelas?</span>--}}
+                        {{--<input type="radio" name="simulation-plots2" value="24" class="simulation-item" data-line="24" disabled>--}}
+                        {{--<input type="radio" name="simulation-plots2" value="20" class="simulation-item" data-line="20" disabled>--}}
+                        {{--<input type="radio" name="simulation-plots2" value="18" class="simulation-item" data-line="18" disabled>--}}
+                        {{--<input type="radio" name="simulation-plots2" value="12" class="simulation-item" data-line="12" disabled>--}}
+                        {{--<input type="radio" name="simulation-plots2" value="06" class="simulation-item" data-line="06" disabled>--}}
+                        {{--<input type="radio" name="simulation-plots2" value="03" class="simulation-item" data-line="03" disabled>--}}
 
                         <span class="plots-value">*</span>
 
