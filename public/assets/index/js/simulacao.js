@@ -74,6 +74,7 @@
 
             // alert(value);
 
+            CalcularParcelas();
             $('#exampleModal').modal('toggle');
 
             $("form.pt3").css('display','block'); // ocultar formulario
@@ -81,8 +82,8 @@
             $("h2.pt3").css('display','block'); // ocultar h2
 
 
-            var value = $("body").data('simulacao');
-            $("p.pt3").html('R$' + formatReal( value ));
+            // var value = $("body").data('simulacao')
+            $("p.pt3").html('R$' + formatReal( $("body").data('simulacao') ));
 
 
             qtdParcelas = document.querySelector('#pt2 input[name="simulation-plots"]:checked').value;
@@ -143,8 +144,10 @@
 
 
 
-$(document).on('click', '.simular_agora', function (e) {
+// $(document).on('click', '.simular_agora', function (e) {
 
+
+    function CalcularParcelas(){
 
     // <input type="text" name="simulation-name" placeholder="Nome completo" class="simulation-info"/>
     //         <input type="text" name="simulation-cpf" id="simulation-cpf" placeholder="CPF" class="simulation-info"/>
@@ -178,7 +181,7 @@ $(document).on('click', '.simular_agora', function (e) {
         // });
     });
 
-    });
+    }
 
 
 
