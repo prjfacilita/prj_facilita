@@ -32,7 +32,9 @@
                 }
 
 
-                $("body").data('simulacao', value);
+                valueCorreto = document.querySelector('#pt1 input[name="simulation-value"]:checked').value;
+
+                $("body").data('simulacao', valueCorreto);
 
                 $(".simulation-box form.pt1").css('display', 'none'); // ocultar formulario 1
                 $(".simulation-box h2.pt1").css('display', 'none'); // ocultar h2
