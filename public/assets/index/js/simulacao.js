@@ -85,12 +85,10 @@
 
 
         /*RETORNAR MASCARA DE MOEDA PARA INPUT OUTRO VALOR INDEX SIMULAÇÃO EMPRESTIMO*/
-            $(document).onchange(function(){
+            $(document).ready(function(){
                 $('[id^=simulation-other-value]').keypress(validateNumber);
 
-               var valor =  $("#simulation-other-value").val();
 
-               $("#simulation-other-value").html('R$' + formatReal( valor ));
             });
 
 
