@@ -43,7 +43,7 @@ class RegisterController extends Controller
 
     public function PreCadastro(){
 
-        return Input::get('email');
+        return Input::get('simulation-email');
     }
 
     /**
