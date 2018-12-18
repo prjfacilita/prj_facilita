@@ -78,8 +78,8 @@ Route::group(['prefix' => 'api/'], function () {
 Route::post('pre_cadastro', function(){
 
 
-    $returnHTML = view('auth.register')->with('cpf', Input::get('equipment_url'))->render();
-    return response()->json(array('success' => true, 'html'=>$returnHTML));
+    return view('auth.register')->with('email', Input::get('email'));
+//    return response()->json(array('success' => true, 'html'=>$returnHTML));
 });
 
 //Route::post('login', 'Auth\LoginController@login');
