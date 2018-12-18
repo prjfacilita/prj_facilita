@@ -179,7 +179,7 @@
                         type: "POST",
 
                         url:  'http://ec2-18-212-126-252.compute-1.amazonaws.com/prj_facilita/public/api/simulador',
-                        data: {'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content'), valorSolicitado: valorSolicitado, qteParcelas: qteParcelas, cpf:cpf, email:email, name:name},
+                        data: {valorSolicitado: valorSolicitado, qteParcelas: qteParcelas, cpf:cpf, email:email, name:name},
                     success: function( data, msg ) {
 
                         console.log(msg);
