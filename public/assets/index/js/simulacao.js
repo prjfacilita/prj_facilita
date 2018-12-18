@@ -189,7 +189,7 @@
                         // $("#ajaxResponse").append("<div>"+msg+"</div>");
                     }
                     // });
-                });
+                    });
 
                 }
 
@@ -240,6 +240,19 @@
                 alert('cpf incorreto');
                 return false;
             }
+
+
+            $.ajax({
+                type: "POST",
+                url:  '{{route("pre_cadastro")}',
+                data: {cpf: cpf, email: email, finalidade:finalidade, nome:nome},
+                success: function( data, msg ) {
+
+                    console.log(msg);
+
+                }
+                // });
+            });
 
 
             // console.log(cpf);

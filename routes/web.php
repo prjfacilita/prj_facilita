@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Input;
+use Illuminate\Http\Request;
 
 Route::any('/', function () {
     return view('index');
@@ -71,5 +73,13 @@ Route::group(['prefix' => 'api/'], function () {
     Route::post('simulador', 'SimulacaoController@Simular');
 });
 
+
+
+Route::post('pre_cadastro', function(){
+
+
+    $returnHTML = view('auth.register')->with('cpf', Input::get('equipment_url'))->render();
+    return response()->json(array('success' => true, 'html'=>$returnHTML));
+});
 
 //Route::post('login', 'Auth\LoginController@login');
