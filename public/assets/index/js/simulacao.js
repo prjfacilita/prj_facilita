@@ -227,7 +227,7 @@
             e.preventDefault();
 
             var valorSolicitado = $("body").data('simulacao');
-            var qteParcelas = $("input[name=simulation-plots]").val();
+            var finalidade = $("input[name=finalidade]").val();
             var cpf = $("input[name=simulation-cpf]").val();
             var email = $("input[name=simulation-email]").val();
             var name = $("input[name=simulation-name]").val();
@@ -245,7 +245,7 @@
             $.ajax({
                 type: "POST",
                 url:  '{{route("pre_cadastro")}',
-                data: {cpf: cpf, email: email, finalidade:finalidade, nome:nome},
+                data: {cpf: cpf, email: email, finalidade:finalidade, nome:name},
                 success: function( data, msg ) {
 
                     console.log(msg);
