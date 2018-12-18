@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Support\Facades\Input;
-use Illuminate\Http\Request;
+//use \Illuminate\Support\Facades\Input;
+//use \Illuminate\Http\Request;
 
 Route::any('/', function () {
     return view('index');
