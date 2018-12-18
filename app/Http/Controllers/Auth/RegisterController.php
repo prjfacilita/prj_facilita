@@ -39,7 +39,7 @@ class RegisterController extends Controller
     }
 
 
-    public function PreCadastro(Request $request){
+    public function PreCadastro(){
 
         return 'merda';
     }
