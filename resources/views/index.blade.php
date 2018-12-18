@@ -334,7 +334,7 @@
                 <div class="modal-body">
 
 
-                    < style="display:none;" id="pt3" class="pt3" >
+                    <form style="display:none;" id="pt3" class="pt3" >
 
                         <meta name="csrf-token" content=" {{ csrf_field() }}"/>
                         <h2 style="display: block;" class="pt3 text-center">Valor selecionado</h2><p style="display: block;" id="pt3" class="pt3 text-center">R$1000.,00</p>
