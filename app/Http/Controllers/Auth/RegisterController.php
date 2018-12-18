@@ -14,6 +14,8 @@ use App\Mail\WelcomeEmail;
 
 use Illuminate\View\View;
 
+use Illuminate\Support\Facades\Input;
+
 
 class RegisterController extends Controller
 {
@@ -41,7 +43,7 @@ class RegisterController extends Controller
 
     public function PreCadastro(){
 
-        return 'merda';
+        return Input::get('email');
     }
 
     /**
