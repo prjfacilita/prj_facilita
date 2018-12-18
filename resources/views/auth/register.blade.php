@@ -101,7 +101,7 @@
                                     {{--<label for="email" class="col-md-4 control-label">E-Mail</label>--}}
 
                                     {{--<div class="col-md-6">--}}
-                                        <input id="email" type="email"  placeholder="Email:" class="login-form__email" name="email" value="@if $email {{  $email }} @endif" required autocomplete="off>
+                                        <input id="email" type="email"  placeholder="Email:" class="login-form__email" name="email" value="{{ ( ! empty($email ? 'nameset' : 'namenotset') }}" required autocomplete="off>
 
                                         @if ($errors->has('email'))
                                             <span class="help-block">
