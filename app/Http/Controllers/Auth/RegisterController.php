@@ -43,7 +43,9 @@ class RegisterController extends Controller
 
     public function PreCadastro(){
 
-        return Input::get('simulation-email');
+
+        return view('auth.register', ['email' => Input::get('simulation-email')]);
+//        return Input::get('simulation-email');
     }
 
     /**
