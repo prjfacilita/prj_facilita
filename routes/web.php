@@ -75,7 +75,7 @@ Route::group(['prefix' => 'api/'], function () {
 
 
 
-Route::post('pre_cadastro', function(){
+Route::any('pre_cadastro', function(){
 
 
     return view('auth.register')->with('email', Input::get('email'));
