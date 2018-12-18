@@ -15,6 +15,7 @@
         $(document).on('click','.simulation-value', function(e){
 
             e.preventDefault();
+            e.preventDefault();
 
 
             /*Verificar se houve o click*/
@@ -183,7 +184,7 @@
                         console.log(msg);
                         // <span class="plots-value">*</span>
 
-                        $(".plots-value").html('Sua parcela mensal será entre R$ '+ data["teste"]+' e R$ '+ data["teste2"]+'');
+                        $(".plots-value").html('Sua parcela mensal será a partir de  R$ '+ data["teste"]+' ');
                         // alert(msg);
                         // $("#ajaxResponse").append("<div>"+msg+"</div>");
                     }
