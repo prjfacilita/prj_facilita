@@ -99,7 +99,7 @@
 
                                 <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                                     {{--<label for="email" class="col-md-4 control-label">E-Mail</label>--}}
-
+                                    {{$email}}
                                     {{--<div class="col-md-6">--}}
                                         <input id="email" type="email"  placeholder="Email:" class="login-form__email" name="email" value="{{  ! empty($email) }}" required autocomplete="off>
 
