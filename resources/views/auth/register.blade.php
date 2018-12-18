@@ -87,7 +87,7 @@
                                     {{--<label for="nome" class="col-md-4 control-label">Nome:</label>--}}
 
                                     {{--<div class="col-md-6">--}}
-                                        <input id="nome" type="text" placeholder="Nome:" class="login-form__email" name="nome" value="{{ old('nome') }}" required autofocus autocomplete="off">
+                                        <input id="nome" type="text" placeholder="Nome:" class="login-form__email" name="nome" value="{{ $nome or "" }}" required autofocus autocomplete="off">
 
                                         @if ($errors->has('nome'))
                                             <span class="help-block">
@@ -99,7 +99,7 @@
 
                                 <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                                     {{--<label for="email" class="col-md-4 control-label">E-Mail</label>--}}
-                                    {{$email}}
+
                                     {{--<div class="col-md-6">--}}
                                         <input id="email" type="email"  placeholder="Email:" class="login-form__email" name="email" value="{{ $email or "" }}" required autocomplete="off>
 
@@ -115,7 +115,7 @@
                                     {{--<label for="cpf" class="col-md-4 control-label">Cpf</label>--}}
 
                                     {{--<div class="col-md-6">--}}
-                                        <input id="cpf" type="text" placeholder="CPF:" class="login-form__email" name="cpf" value="{{ old('cpf') }}" required autofocus autocomplete="off>
+                                        <input id="cpf" type="text" placeholder="CPF:" class="login-form__email" name="cpf" value="{{ $cpf or "" }}" required autofocus autocomplete="off>
 
                                         @if ($errors->has('cpf'))
                                             <span class="help-block'>
@@ -130,7 +130,7 @@
                                     {{--<label for="tel" class="col-md-4 control-label">Telefone</label>--}}
 
                                     {{--<div class="col-md-6">--}}
-                                        <input id="tel" type="text" placeholder="Tel:" class="login-form__email" name="tel" value="{{ old('tel') }}" required autofocus autocomplete="off>
+                                        <input id="tel" type="text" placeholder="Tel:" class="login-form__email" name="tel" value="" required autofocus autocomplete="off>
 
                                         @if ($errors->has('tel'))
                                             <span class="help-block">
