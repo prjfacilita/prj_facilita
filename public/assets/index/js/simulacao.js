@@ -238,7 +238,7 @@
             if (retornoCPF == false){
 
                 alert('cpf incorreto');
-                return false;
+                // return false;
             }
 
 
