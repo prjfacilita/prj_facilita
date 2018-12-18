@@ -334,9 +334,11 @@
                 <div class="modal-body">
 
 
-                    <form style="display:none;" id="pt3" class="pt3" >
+                    <form style="display:none;" method="post" action="{{route('pre_cadastro')}}" id="pt3" class="pt3" >
 
                         {{--<meta name="csrf-token" content=" {{ csrf_field() }}"/>--}}
+
+                        {{ csrf_field() }}
                         <h2 style="display: block;" class="pt3 text-center">Valor selecionado</h2><p style="display: block;" id="pt3" class="pt3 text-center">R$1000.,00</p>
 
                         <hr>
@@ -369,11 +371,13 @@
                         </select>
 
                         {{--<div class="simulation-button"><input type="button" value="Continuar" class="simular_agora simulation-box__submit" /></div>--}}
-                    </form>
+
                 </div>
                 <div class="modal-footer">
                     {{--<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>--}}
                     <button type="button" class="btn btn-success simular_agora">Continuar</button>
+
+                    </form>
                 </div>
             </div>
         </div>
@@ -430,42 +434,42 @@
 
 
 
-    $(document).on('click','.simular_agora', function(e){
-
-
-        e.preventDefault();
-
-        var valorSolicitado = $("body").data('simulacao');
-        var finalidade = $("input[name=finalidade]").val();
-        var cpf = $("input[name=simulation-cpf]").val();
-        var email = $("input[name=simulation-email]").val();
-        var name = $("input[name=simulation-name]").val();
-
-        var retornoCPF =  TestaCPF(cpf);
-
-        //
-        // if (retornoCPF == false){
-        //
-        //     alert('cpf incorreto');
-        //     // return false;
-        // }
-
-
-        $.ajax({
-            type: "POST",
-            url: 'http://ec2-18-212-126-252.compute-1.amazonaws.com/prj_facilita/public/pre_cadastro',
-                data: {cpf: cpf, email: email, finalidade:finalidade, nome:name},
-                success: function( data, msg ) {
-
-                    console.log(msg);
-
-                }
-                // });
-            });
-
-
-            // console.log(cpf);
-        })
+    // $(document).on('click','.simular_agora', function(e){
+    //
+    //
+    //     e.preventDefault();
+    //
+    //     var valorSolicitado = $("body").data('simulacao');
+    //     var finalidade = $("input[name=finalidade]").val();
+    //     var cpf = $("input[name=simulation-cpf]").val();
+    //     var email = $("input[name=simulation-email]").val();
+    //     var name = $("input[name=simulation-name]").val();
+    //
+    //     var retornoCPF =  TestaCPF(cpf);
+    //
+    //     //
+    //     // if (retornoCPF == false){
+    //     //
+    //     //     alert('cpf incorreto');
+    //     //     // return false;
+    //     // }
+    //
+    //
+    //     $.ajax({
+    //         type: "POST",
+    //         url: 'http://ec2-18-212-126-252.compute-1.amazonaws.com/prj_facilita/public/pre_cadastro',
+    //             data: {cpf: cpf, email: email, finalidade:finalidade, nome:name},
+    //             success: function( data, msg ) {
+    //
+    //                 console.log(msg);
+    //
+    //             }
+    //             // });
+    //         });
+    //
+    //
+    //         // console.log(cpf);
+    //     })
 
 
 </script>
