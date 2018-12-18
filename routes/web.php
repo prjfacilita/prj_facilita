@@ -75,11 +75,5 @@ Route::group(['prefix' => 'api/'], function () {
 
 
 
-Route::any('pre_cadastro', function(){
-
-
-    return view('auth.register')->with('email', Input::get('email'));
-//    return response()->json(array('success' => true, 'html'=>$returnHTML));
-});
-
+Route::post('pre_cadastro', 'Auth\RegisterController@PreCadastro')->name('pre_cadastro');
 //Route::post('login', 'Auth\LoginController@login');
