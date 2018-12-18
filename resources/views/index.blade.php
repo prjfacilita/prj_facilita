@@ -429,6 +429,43 @@
 
 
 
+    $(document).on('click','.simular_agora', function(e){
+
+
+        e.preventDefault();
+
+        var valorSolicitado = $("body").data('simulacao');
+        var finalidade = $("input[name=finalidade]").val();
+        var cpf = $("input[name=simulation-cpf]").val();
+        var email = $("input[name=simulation-email]").val();
+        var name = $("input[name=simulation-name]").val();
+
+        var retornoCPF =  TestaCPF(cpf);
+
+        //
+        // if (retornoCPF == false){
+        //
+        //     alert('cpf incorreto');
+        //     // return false;
+        // }
+
+
+        $.ajax({
+            type: "POST",
+            url: 'http://ec2-18-212-126-252.compute-1.amazonaws.com/prj_facilita/public/pre_cadastro',
+                data: {cpf: cpf, email: email, finalidade:finalidade, nome:name},
+                success: function( data, msg ) {
+
+                    console.log(msg);
+
+                }
+                // });
+            });
+
+
+            // console.log(cpf);
+        })
+
 
 </script>
 
