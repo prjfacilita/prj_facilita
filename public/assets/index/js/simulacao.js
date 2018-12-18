@@ -234,12 +234,12 @@
 
             var retornoCPF =  TestaCPF(cpf);
 
-
-            if (retornoCPF == false){
-
-                alert('cpf incorreto');
-                // return false;
-            }
+            //
+            // if (retornoCPF == false){
+            //
+            //     alert('cpf incorreto');
+            //     // return false;
+            // }
 
 
             $.ajax({
