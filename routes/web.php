@@ -78,3 +78,8 @@ Route::group(['prefix' => 'api/'], function () {
 Route::post('pre_cadastro', 'Auth\RegisterController@PreCadastro')->name('pre_cadastro');
 Route::post('pedido_emprestimo_parte01', 'EmprestimoController@EmprestimoDadosPessoais')->name('pedido_emprestimo_parte01');
 //Route::post('login', 'Auth\LoginController@login');
+
+//
+//Route::resource('resource-name','Controller', ['only' => ['index','store']]);
+
+Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
