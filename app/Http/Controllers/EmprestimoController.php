@@ -154,6 +154,11 @@ class EmprestimoController extends Controller
 
      *
      * */
+
+
+    public function EmprestimoDadosPessoais(Request $request){
+
+    }
     public function PedirEmprestimo(Request $request){
 
         /*Consultar API*/

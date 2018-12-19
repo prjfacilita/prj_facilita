@@ -153,7 +153,8 @@
                                         <div class="solicitation-register__form">
 
                                             <!-- inicio form -->
-                                            <form action="" method="post">
+                                            <form action="{{route('pedido_emprestimo_parte01')}}" method="post" >
+                                                {{ csrf_field() }}
                                                 <div class="col-sm-8">
                                                     <label>Nome: <input type="text" name="solicitation-name" class="solicitation-form__name solicitation-input"></label>
                                                 </div>
