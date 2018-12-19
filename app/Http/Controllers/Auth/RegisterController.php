@@ -14,6 +14,8 @@ use App\Mail\WelcomeEmail;
 
 use Illuminate\View\View;
 
+use App\PreCadastro;
+
 use Illuminate\Support\Facades\Input;
 
 
@@ -43,6 +45,39 @@ class RegisterController extends Controller
 
     public function PreCadastro(){
 
+
+        /*VERIFICAR NA TABELA pre_cadastro se já existe, se não existir cadastrar*/
+
+
+        $selectIfActive = DB::table('pre_cadastro')
+            ->where('email', '=',  Input::get('simulation-email'))
+            ->where('cpf', '=',  Input::get('simulation-cpf'))
+//                ->orderBy('quantity', 'asc')
+            ->first();
+
+
+        if(count($selectIfActive) > 0) {
+
+            //retornar erro pois já existe cadastrado email ou cpf
+
+
+            return false;
+
+        }
+
+
+
+        /// inserir na tabela
+        ///
+
+        $pre_cadastro_save = new PreCadastro();
+
+        $pre_cadastro_save->email = Input::get('simulation-email');
+        $pre_cadastro_save->nome_compl = Input::get('simulation-name');
+        $pre_cadastro_save->cpf = Input::get('simulation-cpf');
+        $pre_cadastro_save->finalidade = Input::get('finalidade');
+
+        $pre_cadastro_save->save();
 
         return view('auth.register',
                     ['email'        => Input::get('simulation-email'),
