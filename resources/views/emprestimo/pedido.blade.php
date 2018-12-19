@@ -41,6 +41,11 @@
                 <img src="assets/pedido/images/icon-user.png" alt="Ícone Usuário" class="icon-user-logged"/>
                 <p>Olá Maria, seja bem vinda!</p>
             </div>
+
+
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                {{ csrf_field() }}
+            </form>
         </div>
     </div>
 </header>
