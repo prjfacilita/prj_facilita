@@ -78,7 +78,7 @@ class RegisterController extends Controller
         $pre_cadastro_save->email = Input::get('simulation-email');
         $pre_cadastro_save->nome_compl = Input::get('simulation-name');
         $pre_cadastro_save->cpf = Input::get('simulation-cpf');
-        $pre_cadastro_save->finalidade = Input::get('finalidade')
+        $pre_cadastro_save->finalidade = Input::get('finalidade');
 
         $pre_cadastro_save->save();
 
