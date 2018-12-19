@@ -62,7 +62,9 @@ class RegisterController extends Controller
             //retornar erro pois já existe cadastrado email ou cpf
 
 
-            return 0;
+//            return 0;
+
+            return redirect()->intended('index');
 
         }
 
