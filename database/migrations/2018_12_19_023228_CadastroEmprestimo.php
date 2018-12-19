@@ -14,6 +14,8 @@ class CadastroEmprestimo extends Migration
     public function up()
     {
         //
+
+
     }
 
     /**

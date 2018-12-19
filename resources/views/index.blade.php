@@ -344,6 +344,7 @@
                         <hr>
 
 
+                        <input type="hidden" name="allow_register" value="1">
                         {{--<span class="plots">Em quantas parcelas?</span>--}}
                         <input style="display: none;" type="radio" name="simulation-plots2" value="24" class="simulation-item" data-line="24" disabled>
                         <input style="display: none;" type="radio" name="simulation-plots2" value="20" class="simulation-item" data-line="20" disabled>
