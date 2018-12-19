@@ -149,11 +149,14 @@ class RegisterController extends Controller
         ]);
 
 
+
+        $data['rand'] = $rand;
+
 //        Mail::send( 'email.welcome', $data, function( $message ) use ($data)
 
         Mail::send('emails.confirmacao',  $data, function( $message ) use ($data)
         {
-            $message->from('rtelesc@gmail.com', 'Facilita empretimos');
+            $message->from('rtelesc@gmail.com', 'Facilita empretimos', $data['rand']);
             $message->to($data['email']);
         });
 
