@@ -148,10 +148,10 @@ class RegisterController extends Controller
             'confirmation_code' => $rand,
         ]);
 
-        Mail::send('emails.confirmacao', ['title' => 'teste', 'rand' =>  $rand], function ($message)
+        Mail::send('emails.confirmacao', ['title' => 'teste', 'rand' =>  $rand], function ($message, $data)
         {
             $message->from('rtelesc@gmail.com', 'Facilita empretimos');
-            $message->to('rtelesc@gmail.com');
+            $message->to($data['email']);
         });
 
 
