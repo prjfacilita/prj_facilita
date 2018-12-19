@@ -112,7 +112,7 @@ class RegisterController extends Controller
 
         Mail::send('emails.confirmacao', ['title' => 'teste', 'rand' =>  $rand], function ($message)
         {
-            $message->from('rtelesc@gmail.com', 'Scotch.IO');
+            $message->from('rtelesc@gmail.com', 'Facilita empretimos');
             $message->to('rtelesc@gmail.com');
         });
 
