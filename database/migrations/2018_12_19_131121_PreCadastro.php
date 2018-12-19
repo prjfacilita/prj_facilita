@@ -27,7 +27,7 @@ class PreCadastro extends Migration
             $table->text('cpf');
             $table->text('nome_compl');
             $table->text('email');
-            $table->text('celular');
+            $table->text('celular')->default('0');
 //            $table->text('status');
             $table->text('finalidade');
 //            $table->timestamp('failed_at')->useCurrent();
