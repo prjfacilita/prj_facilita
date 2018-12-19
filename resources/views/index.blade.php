@@ -334,7 +334,7 @@
                 <div class="modal-body">
 
 
-                    <form style="display:none;" method="post" action="{{url('pre_cadastro')}}" id="pt3" class="pt3" >
+                    <form style="display:none;" method="post" action="{{route('pre_cadastro')}}" id="pt3" class="pt3" >
 
                         {{--<meta name="csrf-token" content=" {{ csrf_field() }}"/>--}}
 
