@@ -69,7 +69,7 @@ class SimulacaoController extends Controller
         $arr = json_decode($retorno01->getBody(), true);
 
 
-        $this->StoreSimulation($arr);
+//        $this->StoreSimulation($arr);
         return array("teste" => number_format($arr["retorno"]["planosPgamento"][0]["valorParcela"], 2, ',', '.')); // teste
 
     }
