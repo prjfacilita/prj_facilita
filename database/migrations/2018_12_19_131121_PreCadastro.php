@@ -21,6 +21,7 @@ class PreCadastro extends Migration
 //CELULAR
 //STATUS
 
+        Schema::dropIfExists('pre_cadastro');
         Schema::create('pre_cadastro', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->text('cpf');
