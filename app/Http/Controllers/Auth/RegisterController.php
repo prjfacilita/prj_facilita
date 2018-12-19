@@ -15,6 +15,7 @@ use App\Mail\WelcomeEmail;
 use Illuminate\View\View;
 
 use App\PreCadastro;
+use Illuminate\Support\Facades\DB;
 
 use Illuminate\Support\Facades\Input;
 
