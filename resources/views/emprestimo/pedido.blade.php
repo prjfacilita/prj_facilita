@@ -155,19 +155,33 @@
                                             <!-- inicio form -->
                                             <form action="{{route('pedido_emprestimo_parte01')}}" method="post" >
                                                 {{ csrf_field() }}
-                                                <div class="col-sm-8">
+                                                <div class="col-sm-10">
                                                     <label>Nome: <input type="text" name="solicitation-name" class="solicitation-form__name solicitation-input"></label>
                                                 </div>
 
-                                                <div class="col-sm-4">
+                                                <div class="col-sm-2">
                                                     <label>Nascimento: <input type="date" name="solicitation-birth" class="solicitation-form__birth solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-3">
-                                                    <label>RG: <input type="text" name="solicitation-id" class="solicitation-form__id solicitation-input"></label>
+                                                    <label>Nro. Documento: <input type="text" name="solicitation-id" class="solicitation-form__id solicitation-input"></label>
                                                 </div>
 
-                                                <div class="col-sm-3">
+                                                <div class="col-sm-4">
+                                                    <label>Tipo Documento:
+                                                        <select id="tipo-documento">
+                                                            <option disabled selected>Selecionar</option>
+                                                            <option value="rg">RG</option>
+                                                            <option value="cnh">CNH</option>
+                                                            <option value="passaporte">Passaporte</option>
+                                                            <option value="rne">RNE</option>
+                                                            <option value="carteira-funcional">Carteira funcional</option>
+                                                            <option value="carteira-de-classe">Carteira de classe</option>
+                                                        </select></label>
+                                                </div>
+
+
+                                                <div class="col-sm-2">
                                                     <label>Data de Emissão: <input type="date" name="solicitation-emission-id" class="solicitation-form__id solicitation-input"></label>
                                                 </div>
 
@@ -175,9 +189,40 @@
                                                     <label>Orgão Expedidor: <input type="text" name="solicitation-organ" class="solicitation-form__id solicitation-input"></label>
                                                 </div>
 
-                                                <div class="col-sm-3">
-                                                    <label>UF:
-                                                        <select id="uf">
+                                                <div class="col-sm-2">
+                                                    <label>Sexo:
+                                                        <select id="sexo">
+                                                            <option disabled selected>Selecionar</option>
+                                                            <option value="feminino">Feminino</option>
+                                                            <option value="masculino">Masculino</option>
+                                                        </select></label>
+                                                </div>
+
+                                                <div class="col-sm-2">
+                                                    <label>Estado Civil:
+                                                        <select id="estado-civil">
+                                                            <option disabled selected>Selecionar</option>
+                                                            <option value="casada">Casada</option>
+                                                            <option value="solteira">Solteira</option>
+                                                            <option value="divorciada">Divorciada</option>
+                                                            <option value="viuva">Viúva</option>
+                                                            <option value="uniao-estavel">União Estável</option>
+                                                        </select></label>
+                                                </div>
+
+
+
+                                                <div class="col-sm-4">
+                                                    <label>Nacionalidade: <input type="nacionalidade" name="solicitation-phone" class="solicitation-form__phone solicitation-input"></label>
+                                                </div>
+
+                                                <div class="col-sm-4">
+                                                    <label>Naturalidade: <input type="naturalidade" name="solicitation-phone" class="solicitation-form__phone solicitation-input"></label>
+                                                </div>
+
+                                                <div class="col-sm-2">
+                                                    <label>UF Nascimento:
+                                                        <select id="uf-nacimento">
                                                             <option disabled selected>Selecionar</option>
                                                             <option value="ac">AC</option>
                                                             <option value="al">AL</option>
@@ -209,48 +254,50 @@
                                                         </select></label>
                                                 </div>
 
+                                                <div class="col-sm-3">
+                                                    <label>Telefone: <input type="telefone" name="solicitation-phone" class="solicitation-form__phone solicitation-input"></label>
+                                                </div>
+
+                                                <div class="col-sm-3">
+                                                    <label>Celular: <input type="celular" name="solicitation-cellphone" class="solicitation-form__phone solicitation-input"></label>
+                                                </div>
+
                                                 <div class="col-sm-4">
-                                                    <label>Sexo:
-                                                        <select id="sexo">
+                                                    <label>Telefone de Recado e Contato: <input type="telefone-recado" name="solicitation-phone-message" class="solicitation-form__phone solicitation-input"></label>
+                                                </div>
+
+                                                <div class="col-sm-6">
+                                                    <label>Nome da Mãe<input type="text" name="nome-mae" class="solicitation-form__name solicitation-input"></label>
+                                                </div>
+
+                                                <div class="col-sm-6">
+                                                    <label>Nome Cônjuge<input type="text" name="nome-conjuge" class="solicitation-form__name solicitation-input"></label>
+                                                </div>
+
+                                                <div class="col-sm-4">
+                                                    <label>CPF Cônjuge<input type="text" name="cpf-conjuge" class="solicitation-form__name solicitation-input"></label>
+                                                </div>
+                                                <div class="col-sm-2">
+                                                    <label>Nascto Cônjuge: <input type="date" name="nascto-conjuge" class="solicitation-form__id solicitation-input"></label>
+                                                </div>
+                                                <div class="col-sm-2">
+                                                    <label>Sexo Cônjuge:
+                                                        <select id="sexo-conjuge">
                                                             <option disabled selected>Selecionar</option>
                                                             <option value="feminino">Feminino</option>
                                                             <option value="masculino">Masculino</option>
                                                         </select></label>
                                                 </div>
-
                                                 <div class="col-sm-4">
-                                                    <label>Estado Civil:
-                                                        <select id="estado-civil">
+                                                    <label>Publicamente Exposta?:
+                                                        <select id="publicamente-exposta">
                                                             <option disabled selected>Selecionar</option>
-                                                            <option value="casada">Casada</option>
-                                                            <option value="solteira">Solteira</option>
-                                                            <option value="divorciada">Divorciada</option>
-                                                            <option value="viuva">Viúva</option>
-                                                            <option value="uniao-estavel">União Estável</option>
+                                                            <option value="sim">Sim</option>
+                                                            <option value="nao">Não</option>
                                                         </select></label>
                                                 </div>
 
 
-
-                                                <div class="col-sm-4">
-                                                    <label>Nacionalidade: <input type="nacionalidade" name="solicitation-phone" class="solicitation-form__phone solicitation-input"></label>
-                                                </div>
-
-                                                <div class="col-sm-4">
-                                                    <label>Telefone: <input type="tel" name="solicitation-phone" class="solicitation-form__phone solicitation-input"></label>
-                                                </div>
-
-                                                <div class="col-sm-4">
-                                                    <label>Celular: <input type="tel" name="solicitation-cellphone" class="solicitation-form__phone solicitation-input"></label>
-                                                </div>
-
-                                                <div class="col-sm-4">
-                                                    <label>Telefone p/ Recado: <input type="tel" name="solicitation-phone-message" class="solicitation-form__phone solicitation-input"></label>
-                                                </div>
-
-                                                <div class="col-sm-8">
-                                                    <label>Nome da mãe<input type="text" name="solicitation-name-mother" class="solicitation-form__name solicitation-input"></label>
-                                                </div>
                                             </form>
                                             <!-- fim form -->
                                         </div>
@@ -311,9 +358,14 @@
                                                 <div class="col-sm-6">
                                                     <label>Profissão: <input type="text" name="profissao-emission-id" class="solicitation-form__id solicitation-input"></label>
                                                 </div>
-
                                                 <div class="col-sm-6">
                                                     <label>Cargo: <input type="text" name="cargo-emission-id" class="solicitation-form__id solicitation-input"></label>
+                                                </div>
+                                                <div class="col-sm-9">
+                                                    <label>Empresa: <input type="text" name="empresa" class="solicitation-form__id solicitation-input"></label>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <label>Data de Admissão: <input type="date" name="data-admissao" class="solicitation-form__id solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-8">
@@ -369,6 +421,20 @@
                                                             <option value="to">TO</option>
                                                         </select></label>
                                                 </div>
+
+                                                <div class="col-sm-7">
+                                                    <label>Complemento do Endereço Comercial: <input type="complemento_endereco_comercial" name="solicitation-phone" class="solicitation-form__phone solicitation-input"></label>
+                                                </div>
+
+                                                <div class="col-sm-3">
+                                                    <label>Telefone Comercial: <input type="telefone_comercial" name="solicitation-phone" class="solicitation-form__phone solicitation-input"></label>
+                                                </div>
+                                                <div class="col-sm-2">
+                                                    <label>Ramal: <input type="complemento_endereco_comercial" name="ramal" class="solicitation-form__phone solicitation-input"></label>
+                                                </div>
+
+
+
                                             </form>
                                             <!-- fim form -->
                                         </div>
@@ -496,14 +562,14 @@
 
                                 <div id="form-4" class="accordion-form collapse" data-parent="#accordion">
                                     <div class="card-body">
-                                        <h3>Dados bancários</h3>
+                                        <h3>Dados bancários e Referências Comerciais</h3>
                                         <div class="solicitation-register__form">
 
                                             <!-- inicio form -->
                                             <form action="" method="post">
 
-                                            <div class="col-sm-5">
-                                                    <label>Banco:
+                                            <div class="col-sm-3">
+                                                    <label>BANCO:
                                                         <select id="banco-id">
                                                             <option disabled selected>Selecionar</option>
                                                             <option value="654">654 Banco A.J.Renner S.A.</option>
@@ -681,14 +747,42 @@
                                                         </select></label>
                                                 </div>
 
+                                                <div class="col-sm-2">
+                                                    <label>AG. C/ DÍGITO: <input type="text" name="nro_agencia-name" class="solicitation-form__name solicitation-input"></label>
+                                                </div>
+
                                                 <div class="col-sm-3">
-                                                    <label>Nro. AGÊNCIA: <input type="text" name="nro_agencia-name" class="solicitation-form__name solicitation-input"></label>
+                                                    <label>CONTA C/ DÍGITO: <input type="text" name="nro_conta" class="solicitation-form__name solicitation-input"></label>
                                                 </div>
 
-                                                <div class="col-sm-4">
-                                                    <label>CONTA: <input type="text" name="conta-name" class="solicitation-form__name solicitation-input"></label>
+                                                <div class="col-sm-2">
+                                                    <label>CONTA TIPO:
+                                                        <select id="conta-tipo">
+                                                            <option disabled selected>Selecionar</option>
+                                                            <option value="corrente">Conta-Corrente</option>
+                                                            <option value="poupanca">Poupança</option>
+                                                        </select></label>
                                                 </div>
 
+                                                <div class="col-sm-2">
+                                                    <label>CONTA DESDE: <input type="date" name="conta-desde" class="solicitation-form__id solicitation-input"></label>
+                                                </div>
+
+                                                <div class="col-sm-7">
+                                                    <label>REFERÊNCIA PESSOAL - NOME: <input type="text" name="nome-referencia-pessoal" class="solicitation-form__name solicitation-input"></label>
+                                                </div>
+
+                                                <div class="col-sm-5">
+                                                    <label>CPF: <input type="text" name="cpf-referencia-pessoal" class="solicitation-form__name solicitation-input"></label>
+                                                </div>
+
+                                                <div class="col-sm-7">
+                                                    <label>GRAU DE RELACIONAMENTO: <input type="text" name="grau-relacionamento" class="solicitation-form__name solicitation-input"></label>
+                                                </div>
+
+                                                <div class="col-sm-5">
+                                                    <label>TELEFONE DE CONTATO: <input type="text" name="telefone-relacionamento" class="solicitation-form__name solicitation-input"></label>
+                                                </div>
 
                                             </form>
                                             <!-- fim form -->
