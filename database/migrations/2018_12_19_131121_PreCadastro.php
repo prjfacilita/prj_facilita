@@ -24,10 +24,10 @@ class PreCadastro extends Migration
         Schema::dropIfExists('pre_cadastro');
         Schema::create('pre_cadastro', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->text('cpf');
+            $table->string('cpf');
             $table->text('nome_compl');
-            $table->text('email');
-            $table->text('celular')->default('0');
+            $table->string('email');
+            $table->string('celular')->default('0');
 //            $table->text('status');
             $table->text('finalidade');
 //            $table->timestamp('failed_at')->useCurrent();
