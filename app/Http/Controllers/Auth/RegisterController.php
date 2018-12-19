@@ -71,14 +71,14 @@ class RegisterController extends Controller
         /// inserir na tabela
         ///
 
-        $pre_cadastro_save = new PreCadastro();
-
-        $pre_cadastro_save->email = Input::get('simulation-email');
-        $pre_cadastro_save->nome_compl = Input::get('simulation-name');
-        $pre_cadastro_save->cpf = Input::get('simulation-cpf');
-        $pre_cadastro_save->finalidade = Input::get('finalidade');
-
-        $pre_cadastro_save->save();
+//        $pre_cadastro_save = new PreCadastro();
+//
+//        $pre_cadastro_save->email = Input::get('simulation-email');
+//        $pre_cadastro_save->nome_compl = Input::get('simulation-name');
+//        $pre_cadastro_save->cpf = Input::get('simulation-cpf');
+//        $pre_cadastro_save->finalidade = Input::get('finalidade');
+//
+//        $pre_cadastro_save->save();
 
         return view('auth.register',
                     ['email'        => Input::get('simulation-email'),
