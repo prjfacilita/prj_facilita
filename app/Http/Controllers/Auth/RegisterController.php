@@ -62,7 +62,9 @@ class RegisterController extends Controller
             //retornar erro pois já existe cadastrado email ou cpf
 
 
-            return false;
+//            return 0;
+
+            return redirect()->intended('index');
 
         }
 
@@ -73,12 +75,12 @@ class RegisterController extends Controller
 
         $pre_cadastro_save = new PreCadastro();
 
-        $pre_cadastro_save->email = 'teles';
-        $pre_cadastro_save->nome_compl = 'rodrigo';
-        $pre_cadastro_save->cpf = '43805547838';
-        $pre_cadastro_save->finalidade ='teste';
+        $pre_cadastro_save->email = Input::get('simulation-email');
+        $pre_cadastro_save->nome_compl = Input::get('simulation-name');
+        $pre_cadastro_save->cpf = Input::get('simulation-cpf');
+        $pre_cadastro_save->finalidade = Input::get('finalidade');
 
-//        $pre_cadastro_save->save();
+        $pre_cadastro_save->save();
 
         return view('auth.register',
                     ['email'        => Input::get('simulation-email'),
@@ -146,10 +148,16 @@ class RegisterController extends Controller
             'confirmation_code' => $rand,
         ]);
 
-        Mail::send('emails.confirmacao', ['title' => 'teste', 'rand' =>  $rand], function ($message)
+
+
+        $data['rand'] = $rand;
+
+//        Mail::send( 'email.welcome', $data, function( $message ) use ($data)
+
+        Mail::send('emails.confirmacao',  $data, function( $message ) use ($data)
         {
-            $message->from('rtelesc@gmail.com', 'Facilita empretimos');
-            $message->to('rtelesc@gmail.com');
+            $message->from('rtelesc@gmail.com', 'Facilita empretimos', $data['rand']);
+            $message->to($data['email']);
         });
 
 
