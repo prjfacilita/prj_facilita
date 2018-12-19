@@ -78,7 +78,7 @@ class RegisterController extends Controller
         $pre_cadastro_save->cpf = '43805547838';
         $pre_cadastro_save->finalidade ='teste';
 
-        $pre_cadastro_save->save();
+//        $pre_cadastro_save->save();
 
         return view('auth.register',
                     ['email'        => Input::get('simulation-email'),
