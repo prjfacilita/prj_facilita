@@ -91,6 +91,12 @@ class SimulacaoController extends Controller
 
     }
 
+
+
+    public function StoreSimulation(){
+
+    }
+
     /**
      * Display a listing of the resource.
      *
