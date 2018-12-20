@@ -21,6 +21,7 @@ class CreateSimulacaoTable extends Migration
             $table->string('dataPrimeiraParcela');
             $table->string('tarifaCadastro');
             $table->string('ValorParcela');
+            $table->integer('user_id')->default(0);
             $table->timestamps();
         });
     }
