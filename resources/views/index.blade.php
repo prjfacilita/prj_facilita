@@ -295,7 +295,7 @@
                         </ul>
                  
 
-                        <a href="mailto:atendimento@facilitaapp.com.br?Subject=Atendimento%20site%Facilita" class="footer-email"> Fale conosco: atendimento@facilitaapp.com.br</a> 
+                        <a href="mailto:atendimento@facilitaapp.com.br?Subject=Atendimento%20site%20Facilita" class="footer-email"> Fale conosco: atendimento@facilitaapp.com.br</a> 
 
                         <div class="footer-social">
                             <a href="#" target="_blank"><img src="assets/index/images/svg/icone-facebook.svg"></a>
