@@ -70,8 +70,10 @@ class SimulacaoController extends Controller
         $arr = json_decode($retorno01->getBody(), true);
 
 
-        $this->StoreSimulation($arr, $request);
-        return array("teste" => number_format($arr["retorno"]["planosPgamento"][0]["valorParcela"], 2, ',', '.')); // teste
+        $insertedid = $this->StoreSimulation($arr, $request);
+
+
+        return array("lastInserId" => $insertedid, "teste" => number_format($arr["retorno"]["planosPgamento"][0]["valorParcela"], 2, ',', '.')); // teste
 
     }
 
@@ -100,6 +102,8 @@ class SimulacaoController extends Controller
         $simulacao->ValorParcela = $arr["retorno"]["planosPgamento"][0]['valorParcela'];
 //        $simulacao->finalidade = $arr['taxaJurosMensal'];
         $simulacao->save();
+
+        return $simulacao->id;
 
 
 
