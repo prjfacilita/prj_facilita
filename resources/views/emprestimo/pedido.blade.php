@@ -18,6 +18,7 @@
     <!-- SCRIPT -->
     <script src="assets/pedido/js/jquery-3.3.1.min.js"></script>
     <script src="assets/pedido/js/bootstrap.min.js"></script>
+    <script src="assets/pedido/js/emprestimo.js"></script>
 
 </head>
 
@@ -297,14 +298,14 @@
                                                         </select></label>
                                                 </div>
 
-                                                <div class="solicitation-register-btn">
-                                                    <button type="submit">Continuar</button>
-                                                </div>
+
                                             </form>
                                             <!-- fim form -->
                                         </div>
 
-
+                                        <div class="solicitation-register-btn">
+                                            <a href="">Continuar</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
