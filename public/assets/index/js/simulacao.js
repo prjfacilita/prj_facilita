@@ -188,7 +188,7 @@
                         $(".plots-value").html('Sua parcela mensal será a partir de  R$ '+ data["teste"]+' ');
 
                         alert(data['lastInserId']);
-                        $("input[name=simulacao_id]").value(data['lastInserId']);
+                        $("input[name=simulacao_id]").val(data['lastInserId']);
                         // alert(msg);
                         // $("#ajaxResponse").append("<div>"+msg+"</div>");
                     }
