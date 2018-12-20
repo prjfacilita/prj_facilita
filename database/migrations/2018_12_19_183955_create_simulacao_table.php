@@ -15,6 +15,11 @@ class CreateSimulacaoTable extends Migration
     {
         Schema::create('simulacao', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('taxaJurosMensal');
+            $table->string('valorSolicitado');
+            $table->string('qteParcelas');
+            $table->string('dataPrimeiraParcela');
+            $table->string('tarifaCadastro');
             $table->timestamps();
         });
     }

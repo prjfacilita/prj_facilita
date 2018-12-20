@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Simulacao;
 use Illuminate\Http\Request;
 use GuzzleHttp\Client;
 
@@ -79,6 +80,14 @@ class SimulacaoController extends Controller
     public function StoreSimulation($arr){
 
         /**armazenar simulação*/
+
+
+        $simulacao = new Simulacao();
+
+        $simulacao->email = Input::get('simulation-email');
+        $simulacao->nome_compl = Input::get('simulation-name');
+        $simulacao->cpf = Input::get('simulation-cpf');
+        $simulacao->finalidade = Input::get('finalidade');
 
 
 
