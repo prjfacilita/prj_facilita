@@ -1,1 +1,1 @@
-bem vindo filho do cão
+bem vindo

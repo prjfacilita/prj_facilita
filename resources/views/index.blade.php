@@ -74,10 +74,11 @@
 
                 <div class="col-sm-8 banner__text">
                     <div>
-                        <h1>Crédito para você superar os obstaculos do dia-a-dia!</h1>
+                        <h1>Crédito para você superar os obstáculos do dia-a-dia!</h1>
                         <p>Valores de 1 a 20 mil reais</p>
-                        <p>Taxas entre 3,99% a 12,49 ao mês</p>
                         <p>Prazo de 3 a 24 meses</p>
+                        <p>*Taxas a partir de 3,99% ao mês </p>
+                        
                     </div>
                 </div>
 
@@ -288,6 +289,7 @@
                         <p>Somos um correspondente bancário. A FACILITA é uma empresa fundada em 2016 em São Paulo com o objetivo de
                             proporcionar acesso a crédito pessoal,
                             serviços e informações online de forma fácil e descomplicada.
+                            * Taxas estipuladas conforme análise de crédito.
                         </p>
                     </div>
                     <div class="col-sm-6">
