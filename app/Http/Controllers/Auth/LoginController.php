@@ -248,7 +248,7 @@ class LoginController extends Controller
                     ->update(array('status' => 2,  'password' =>  Hash::make($request->senha)));
 
 
-                return redirect()->intended('home');
+                return redirect()->intended('pedido');
             }
 
 
