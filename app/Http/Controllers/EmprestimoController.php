@@ -165,10 +165,20 @@ class EmprestimoController extends Controller
 
         $this->ConfiguracoesAPI();
 
-//        SimulacaoController::
+        /*BUSCAR DADOS DA ULTIMA SIMULAÇÃO*/
 
-        //        echo session('token_key');
-        return view('emprestimo.pedido');
+
+        $userId = Auth::id();
+        $user = DB::table('simulacao')->where('user_id',  $userId)->last();
+        /**/
+        return view('emprestimo.pedido',
+            ['valor_solicitacao'        => $user->valorSolicitado ,
+                'data_solicitacao'          =>  $user->created_at,
+                'qtde_parcelas'           =>  $user->qteParcelas,
+                'finalidade'    =>  'teste',
+                'simulacao_id' => $user->id
+
+            ]);
 
     }
 

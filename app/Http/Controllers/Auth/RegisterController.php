@@ -92,7 +92,7 @@ class RegisterController extends Controller
                         'simulacao_id' => Input::get('simulacao_id')
 
                 ]);
-//        return Input::get('simulation-email');
+
     }
 
     /**

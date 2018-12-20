@@ -105,22 +105,22 @@
 
                 <div class="col-sm-3 solicitation-inf-area solicitation-date">
                     <p>Data da solicitação</p>
-                    <span>07/11/2018</span>
+                    <span>{{$data_solicitacao}}</span>
                 </div>
 
                 <div class="col-sm-3 solicitation-inf-area solicitation-value">
                     <p>Valor da solicitação</p>
-                    <span>R$ 2.000,00</span>
+                    <span>R$ {{$valor_solicitacao}}</span>
                 </div>
 
                 <div class="col-sm-3 solicitation-inf-area solicitation-payment">
                     <p>Pagamento em</p>
-                    <span>12 meses</span>
+                    <span>{{$qtde_parcelas}}</span>
                 </div>
 
                 <div class="col-sm-3 solicitation-inf-area solicitation-reason">
                     <p>Motivo</p>
-                    <span>Pagar cartão</span>
+                    <span>{{$finalidade}}</span>
 
                     <a href="#" class="solicitation-inf__alter">Alterar</a>
                 </div>
