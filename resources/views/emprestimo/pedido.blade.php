@@ -170,7 +170,7 @@
                                                 </div>
 
                                                 <div class="col-sm-3">
-                                                    <label>Nro. Documento: <input type="text" name="solicitation-id" class="solicitation-form__id solicitation-input"></label>
+                                                    <label>Nro. Documento: <input type="text" name="solicitation-doc" class="solicitation-form__id solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-4">
@@ -228,7 +228,7 @@
 
                                                 <div class="col-sm-2">
                                                     <label>UF Nascimento:
-                                                        <select id="uf-nacimento">
+                                                        <select id="uf-nacimento" name="uf-nacimento">
                                                             <option disabled selected>Selecionar</option>
                                                             <option value="ac">AC</option>
                                                             <option value="al">AL</option>
