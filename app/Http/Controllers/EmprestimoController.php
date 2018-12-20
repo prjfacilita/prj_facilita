@@ -13,6 +13,7 @@ use kamermans\OAuth2\OAuth2Middleware;
 use GuzzleHttp\HandlerStack;
 use kamermans\OAuth2\GrantType\NullGrantType;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 /*
  *
  * http://www.befirstcode.com/2017/03/integrate-swagger-in-laravel-project-l5.html
