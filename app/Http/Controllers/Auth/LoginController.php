@@ -43,7 +43,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/pedido';
+    protected $redirectTo = '/admin/home';
     /**
      * Create a new controller instance.
      *
