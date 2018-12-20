@@ -70,14 +70,14 @@ class SimulacaoController extends Controller
         $arr = json_decode($retorno01->getBody(), true);
 
 
-        $this->StoreSimulation($arr);
+        $this->StoreSimulation($arr, $request);
         return array("teste" => number_format($arr["retorno"]["planosPgamento"][0]["valorParcela"], 2, ',', '.')); // teste
 
     }
 
 
 
-    public function StoreSimulation($arr){
+    public function StoreSimulation($arr, $request){
 
         /**armazenar simulação*/
 
@@ -93,10 +93,11 @@ class SimulacaoController extends Controller
 //        $table->string('dataPrimeiraParcela');
 //        $table->string('tarifaCadastro');
         $simulacao->taxaJurosMensal = '3.99';
-        $simulacao->valorSolicitado = $arr['valorSolicitado'];
-        $simulacao->qteParcelas = $arr['qteParcelas'];
-        $simulacao->dataPrimeiraParcela = $arr['dataPrimeiraParcela'];
+        $simulacao->valorSolicitado = number_format($request->valorSolicitado, 2, '.', '');
+        $simulacao->qteParcelas = $request->qteParcelas;
+        $simulacao->dataPrimeiraParcela =  date('Y-m-d',strtotime("+30 days"));
         $simulacao->tarifaCadastro = '3.99';
+        $simulacao->ValorParcela = $arr["retorno"]["planosPgamento"][0]['valorParcela'];
 //        $simulacao->finalidade = $arr['taxaJurosMensal'];
         $simulacao->save();
 

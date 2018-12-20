@@ -20,6 +20,7 @@ class CreateSimulacaoTable extends Migration
             $table->string('qteParcelas');
             $table->string('dataPrimeiraParcela');
             $table->string('tarifaCadastro');
+            $table->string('ValorParcela');
             $table->timestamps();
         });
     }
