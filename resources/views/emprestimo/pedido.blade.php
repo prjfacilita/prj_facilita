@@ -297,14 +297,14 @@
                                                         </select></label>
                                                 </div>
 
-
+                                                <div class="solicitation-register-btn">
+                                                    <button type="submit">Continuar</button>
+                                                </div>
                                             </form>
                                             <!-- fim form -->
                                         </div>
 
-                                        <div class="solicitation-register-btn">
-                                            <a href="">Continuar</a>
-                                        </div>
+
                                     </div>
                                 </div>
                             </div>
