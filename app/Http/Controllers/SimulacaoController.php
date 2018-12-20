@@ -84,10 +84,19 @@ class SimulacaoController extends Controller
 
         $simulacao = new Simulacao();
 
-        $simulacao->email = Input::get('simulation-email');
-        $simulacao->nome_compl = Input::get('simulation-name');
-        $simulacao->cpf = Input::get('simulation-cpf');
-        $simulacao->finalidade = Input::get('finalidade');
+
+//        $table->string('taxaJurosMensal');
+//        $table->string('valorSolicitado');
+//        $table->string('qteParcelas');
+//        $table->string('dataPrimeiraParcela');
+//        $table->string('tarifaCadastro');
+        $simulacao->taxaJurosMensal = $arr['taxaJurosMensal'];
+        $simulacao->valorSolicitado = $arr['valorSolicitado'];
+        $simulacao->qteParcelas = $arr['qteParcelas'];
+        $simulacao->dataPrimeiraParcela = $arr['dataPrimeiraParcela'];
+        $simulacao->tarifaCadastro = $arr['tarifaCadastro'];
+//        $simulacao->finalidade = $arr['taxaJurosMensal'];
+        $simulacao->save();
 
 
 
