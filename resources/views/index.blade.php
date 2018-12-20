@@ -89,7 +89,7 @@
 
 
                         {{--<div class="part1">--}}
-                        <h2 class="pt1">Quanto você precisa</h2>
+                        <h2 class="pt1">Quanto você precisa?</h2>
                         <form class="pt1" id="part-1-simulation" id="pt1" name="part-1-simulation" >
 
                             {{--<a class="simulation-box__value">R$ 1.000,00</a>--}}
@@ -347,6 +347,7 @@
 
 
                         <input type="hidden" name="allow_register" value="1">
+                        <input type="hidden" name="simulacao_id" value="0">
                         {{--<span class="plots">Em quantas parcelas?</span>--}}
                         <input style="display: none;" type="radio" name="simulation-plots2" value="24" class="simulation-item" data-line="24" disabled>
                         <input style="display: none;" type="radio" name="simulation-plots2" value="20" class="simulation-item" data-line="20" disabled>
