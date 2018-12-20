@@ -18,6 +18,11 @@
     <!-- SCRIPT -->
     <script src="assets/pedido/js/jquery-3.3.1.min.js"></script>
     <script src="assets/pedido/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        var APP_URL = {!! json_encode(url('/')) !!}
+    </script>
+
     <script src="assets/pedido/js/emprestimo.js"></script>
 
 </head>
