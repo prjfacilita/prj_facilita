@@ -161,6 +161,7 @@ class SimulacaoController extends Controller
     public function edit($id)
     {
         //
+
     }
 
     /**

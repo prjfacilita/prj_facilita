@@ -48,6 +48,11 @@ trait RegistersUsers
 
         // $this->guard()->login($user);
 
+        /*pegar email */
+
+
+        /**///simulacao_id e editar
+
         return view('api.ativacao', ['name' =>  $request->email]);
     }
 

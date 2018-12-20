@@ -83,6 +83,7 @@
                                 {{ csrf_field() }}
 
 
+                                <input id="simulacao_id" name="simulacao_id" value="{{ $simulacao_id or "" }}" type="hidden">
                                 <div class="form-group{{ $errors->has('nome') ? ' has-error' : '' }}">
                                     {{--<label for="nome" class="col-md-4 control-label">Nome:</label>--}}
 
