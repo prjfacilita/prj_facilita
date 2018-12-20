@@ -110,13 +110,12 @@
                         <p style="display: none;" class="pt2"></p>
                         <form style="display: none;" id="pt2" class="pt2">
                             <span class="plots">Em quantas parcelas?</span>
-                            <input type="radio" name="simulation-plots" value="24" class="simulation-item" data-line="24">
-                            <input type="radio" name="simulation-plots" value="20" class="simulation-item" data-line="20">
-                            <input type="radio" name="simulation-plots" value="18" class="simulation-item" data-line="18">
-                            <input type="radio" name="simulation-plots" value="12" class="simulation-item" data-line="12">
-                            <input type="radio" name="simulation-plots" value="06" class="simulation-item" data-line="06">
                             <input type="radio" name="simulation-plots" value="03" class="simulation-item" data-line="03">
-
+                            <input type="radio" name="simulation-plots" value="06" class="simulation-item" data-line="06">
+                            <input type="radio" name="simulation-plots" value="12" class="simulation-item" data-line="12">
+                            <input type="radio" name="simulation-plots" value="18" class="simulation-item" data-line="18">
+                            <input type="radio" name="simulation-plots" value="20" class="simulation-item" data-line="20">
+                            <input type="radio" name="simulation-plots" value="24" class="simulation-item" data-line="24">
                             {{--<div class="simulation-button"><input type="button" value="Simule agora" class="simulation-box__submit" /></div>--}}
                         </form>
 
@@ -346,24 +345,24 @@
 
                         <input type="hidden" name="allow_register" value="1">
                         <input type="hidden" name="simulacao_id" value="0">
-                        {{--<span class="plots">Em quantas parcelas?</span>--}}
-                        <input style="display: none;" type="radio" name="simulation-plots2" value="24" class="simulation-item" data-line="24" disabled>
+                        {{--<span class="plots">Em quantas parcelas?x</span>--}}
+                        <input style="display: none;" type="radio" name="simulation-plots2" value="03" class="simulation-item" data-line="03" disabled>
                         <input style="display: none;" type="radio" name="simulation-plots2" value="20" class="simulation-item" data-line="20" disabled>
                         <input style="display: none;" type="radio" name="simulation-plots2" value="18" class="simulation-item" data-line="18" disabled>
                         <input style="display: none;" type="radio" name="simulation-plots2" value="12" class="simulation-item" data-line="12" disabled>
                         <input style="display: none;" type="radio" name="simulation-plots2" value="06" class="simulation-item" data-line="06" disabled>
                         <input style="display: none;" type="radio" name="simulation-plots2" value="03" class="simulation-item" data-line="03" disabled>
 
-                        <span class="plots-value">*</span>
+                        <span class="plots-value"></span>
 
                         <input type="text" name="simulation-name" placeholder="Nome completo" class="simulation-info"/>
                         <input type="text" name="simulation-cpf" id="simulation-cpf" placeholder="CPF" class="simulation-info"/>
                         <input type="email" name="simulation-email" placeholder="E-mail" class="simulation-info"/>
                         <select id="reason" name="finalidade" class="simulation-info">
                             <option disabled selected>Qual a finalidade?</option>
-                            <option value="renegociar-dividas">Renegóciar dívidas</option>
+                            <option value="renegociar-dividas">Renegociar dívidas</option>
                             <option value="investir-negocio">Investir no meu negócio</option>
-                            <option value="reformar">Reformar</option>
+                            <option value="reformar">Reformar imóvel</option>
                             <option value="comprar-veiculo">Comprar um veículo</option>
                             <option value="quitar-debitos-veiculo">Quitar débitos do veículo</option>
                             <option value="casamento">Casamento</option>
