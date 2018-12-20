@@ -82,6 +82,8 @@ class SimulacaoController extends Controller
         /**armazenar simulação*/
 
 
+        return $arr;
+
         $simulacao = new Simulacao();
 
 
@@ -90,11 +92,11 @@ class SimulacaoController extends Controller
 //        $table->string('qteParcelas');
 //        $table->string('dataPrimeiraParcela');
 //        $table->string('tarifaCadastro');
-        $simulacao->taxaJurosMensal = $arr['taxaJurosMensal'];
+        $simulacao->taxaJurosMensal = '3.99';
         $simulacao->valorSolicitado = $arr['valorSolicitado'];
         $simulacao->qteParcelas = $arr['qteParcelas'];
         $simulacao->dataPrimeiraParcela = $arr['dataPrimeiraParcela'];
-        $simulacao->tarifaCadastro = $arr['tarifaCadastro'];
+        $simulacao->tarifaCadastro = '3.99';
 //        $simulacao->finalidade = $arr['taxaJurosMensal'];
         $simulacao->save();
 
