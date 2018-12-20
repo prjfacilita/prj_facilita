@@ -59,7 +59,10 @@ trait RegistersUsers
             ->first();
 
 
-        return $getID->id;
+//        return $getID->id;
+
+        return $request->simulacao_id;
+
 
 
         // pegar o id do usuario e inserir na table simulacao_id
