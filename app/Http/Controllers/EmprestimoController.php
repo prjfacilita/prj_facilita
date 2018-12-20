@@ -160,6 +160,7 @@ class EmprestimoController extends Controller
 
     public function EmprestimoDadosPessoais(Request $request){
 
+        return $request;
     }
     public function PedirEmprestimo(Request $request){
 
