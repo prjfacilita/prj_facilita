@@ -171,7 +171,7 @@ class EmprestimoController extends Controller
 
 
         $userId = Auth::id();
-        $user = DB::table('simulacao')->where('user_id',  $userId)->last();
+        $user = DB::table('simulacao')->where('user_id',  $userId)->orderBy('created_at', 'DESC')->first();
         /**/
         return view('emprestimo.pedido',
             ['valor_solicitacao'        => $user->valorSolicitado ,
