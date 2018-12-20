@@ -75,9 +75,9 @@
                 <div class="col-sm-8 banner__text">
                     <div>
                         <h1>Crédito para você superar os obstáculos do dia-a-dia!</h1>
-                        <p>Valores de 1 a 20 mil reais</p>
-                        <p>Prazo de 3 a 24 meses</p>
-                        <p>*Taxas a partir de 3,99% ao mês </p>
+                        <p>Valores de 1000 a 20 mil reais;</p>
+                        <p>Prazo de 3 a 24 meses;</p>
+                        <p>*Taxas a partir de 3,99% ao mês. </p>
                         
                     </div>
                 </div>
@@ -98,17 +98,16 @@
                             <input type="radio" name="simulation-value" id="simulation-value" data-value="10000" value="10000.00" class="simulation-box__value" data-line="R$ 10.000,00">
                             <input type="radio" name="simulation-value" id="simulation-value" data-value="15000" value="15000.00" class="simulation-box__value" data-line="R$ 15.000,00">
                             <input type="radio" name="simulation-value" id="simulation-value" data-value="20000" value="20000.00" class="simulation-box__value" data-line="R$ 20.000,00">
+           
                             <input type="text"  id="simulation-other-value" name="simulation-other-value" placeholder="Outro valor" class="simulation-other-value" >
 
                             {{--<div class="simulation-button"><input type="button" value="Simule agora" class="simulation-box__submit" /></div>--}}
                         </form>
 
-
-
                         {{--SEGUNDA PARTE DA SIMULAÇÃO--}}
 
                         <h2 style="display: none;" class="pt2">Valor selecionado</h2>
-                        <p style="display: none;" class="pt2">R$5.000,00</p>
+                        <p style="display: none;" class="pt2"></p>
                         <form style="display: none;" id="pt2" class="pt2">
                             <span class="plots">Em quantas parcelas?</span>
                             <input type="radio" name="simulation-plots" value="24" class="simulation-item" data-line="24">
@@ -168,12 +167,12 @@
 
                 <div class="col-sm-3  phases-item">
                     <img src="assets/index/images/svg/icone-seta.svg">
-                    <p><span>1.</span> Você define o valor e a quantidade de parcelas do seu empréstimo pessoal online, a partir de 1.000 até 20.000 em até 24 parcelas.</p>
+                    <p><span>1.</span> Você define o valor e a quantidade de parcelas do seu empréstimo pessoal. Exemplo: R$ 20.000,00 em 24 parcelas.</p>
                 </div>
 
                 <div class="col-sm-3  phases-item">
                     <img src="assets/index/images/svg/icone-cadastro.svg">
-                    <p><span>2.</span> Envie seu dados cadastrais de forma segura e rápida.</p>
+                    <p><span>2.</span> Envie seus dados cadastrais de forma segura e rápida.</p>
                 </div>
 
                 <div class="col-sm-3  phases-item">
@@ -183,7 +182,7 @@
 
                 <div class="col-sm-3  phases-item">
                     <img src="assets/index/images/svg/icone-cifrao.svg">
-                    <p><span>4.</span> O dinheiro do seu crédito pessoal online é depositado diretamente na sua conta bancária em poucas horas após a aprovação.</p>
+                    <p><span>4.</span> Então, o seu dinheiro será creditado diretamente na sua conta bancária em poucas horas após a aprovação.</p>
                 </div>
 
             </div>
@@ -243,29 +242,25 @@
                         <img src="assets/index/images/selfie.jpg">
                         <img src="assets/index/images/selfie2.jpg">
                         <img src="assets/index/images/selfie3.jpg">
-                        <img src="assets/index/images/selfie.jpg">
+               
                     </div>
 
                     <div class="slider-for">
                         <div class="testimony-text">
-                            <h3>Victor Moraes</h3>
+                            <h3>Nathália</h3>
                             <p>Adorei e super-recomendo! Eu recebi o dinheiro na minha conta em questão de horas.</p>
                         </div>
 
                         <div class="testimony-text">
-                            <h3>Nome 2</h3>
-                            <p>Adorei e super-recomendo! Eu recebi o dinheiro na minha conta em questão de horas.</p>
+                            <h3>Victor</h3>
+                            <p>Realmente funciona. Foi rápido e sem burocracias. </p>
                         </div>
 
                         <div class="testimony-text">
-                            <h3>Nome 3</h3>
-                            <p>Adorei e super-recomendo! Eu recebi o dinheiro na minha conta em questão de horas.</p>
+                            <h3>Carla</h3>
+                            <p>Graças a Facilita, quitei minhas dívidas a uma taxa de juros muito baixa. Tudo de bom!!</p>
                         </div>
 
-                        <div class="testimony-text">
-                            <h3>Nome 4</h3>
-                            <p>Adorei e super-recomendo! Eu recebi o dinheiro na minha conta em questão de horas.</p>
-                        </div>
                     </div>
 
                 </div>
@@ -286,9 +281,9 @@
 
                 <div class="row">
                     <div class="col-sm-6">
-                        <p>Somos um correspondente bancário. A FACILITA é uma empresa fundada em 2016 em São Paulo com o objetivo de
+                        <p>Somos um correspondente bancário. A FACILITA foi fundada em 2016 em São Paulo com o objetivo de
                             proporcionar acesso a crédito pessoal,
-                            serviços e informações online de forma fácil e descomplicada.
+                            serviços e informações online de forma fácil e descomplicada. <p>
                             * Taxas estipuladas conforme análise de crédito.
                         </p>
                     </div>
@@ -298,7 +293,10 @@
                             <li><a href="">FAQ</a></li>
                             <li><a href="">Política de privacidade</a></li>
                         </ul>
-                        <a href="#" class="footer-email">atendimento@facilitaapp.com.br</a>
+                 
+
+                        <a href="mailto:atendimento@facilitaapp.com.br?Subject=Atendimento%20site%Facilita" class="footer-email"> Fale conosco: atendimento@facilitaapp.com.br</a> 
+
                         <div class="footer-social">
                             <a href="#" target="_blank"><img src="assets/index/images/svg/icone-facebook.svg"></a>
                             <a href="#" target="_blank"><img src="assets/index/images/svg/icone-instagram.svg"></a>
@@ -341,7 +339,7 @@
                         {{--<meta name="csrf-token" content=" {{ csrf_field() }}"/>--}}
 
                         {{ csrf_field() }}
-                        <h2 style="display: block;" class="pt3 text-center">Valor selecionado</h2><p style="display: block;" id="pt3" class="pt3 text-center">R$1000.,00</p>
+                        <h2 style="display: block;" class="pt3 text-center">Valor selecionado</h2><p style="display: block;" id="pt3" class="pt3 text-center">R$1000.00</p>
 
                         <hr>
 
