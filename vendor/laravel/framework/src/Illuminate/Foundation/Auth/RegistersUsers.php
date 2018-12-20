@@ -2,6 +2,7 @@
 
 namespace Illuminate\Foundation\Auth;
 
+use App\Simulacao;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Auth\Events\Registered;
@@ -59,14 +60,39 @@ trait RegistersUsers
             ->first();
 
 
-        return $getID->id;
+//        return $getID->id;
+
+//        return $request->simulacao_id;
+
+
+        try{
+            //Find the user object from model if it exists
+            $simulacao= Simulacao::findOrFail($request->simulacao_id);
+
+            //$request contain your post data sent from your edit from
+            //$user is an object which contains the column names of your table
+
+            //Set user object attributes
+            $simulacao->user_id =  $getID->id;
+
+
+            // Save/update user.
+            // This will will update your the row in ur db.
+            $simulacao->save();
+
+            return view('api.ativacao', ['name' =>  $request->email, 'params' => $request->all()]);
+        }
+        catch(ModelNotFoundException $err){
+            //Show error page
+        }
+
 
 
         // pegar o id do usuario e inserir na table simulacao_id
 
         /**///simulacao_id e editar
 
-        return view('api.ativacao', ['name' =>  $request->email, 'params' => $request->all()]);
+
     }
 
     /**
