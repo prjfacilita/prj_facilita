@@ -82,7 +82,7 @@ class SimulacaoController extends Controller
         /**armazenar simulação*/
 
 
-        return $arr;
+//        return $arr;
 
         $simulacao = new Simulacao();
 
