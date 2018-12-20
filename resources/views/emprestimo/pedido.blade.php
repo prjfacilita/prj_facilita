@@ -303,8 +303,8 @@
                                             <!-- fim form -->
                                         </div>
 
-                                        <div class="solicitation-register-btn">
-                                            <a href="">Continuar</a>
+                                        <div class="solicitation-register-btn step_01">
+                                            <a href="javascript:void(0);">Continuar</a>
                                         </div>
                                     </div>
                                 </div>
@@ -440,8 +440,8 @@
                                             <!-- fim form -->
                                         </div>
 
-                                        <div class="solicitation-register-btn">
-                                            <a href="">Continuar</a>
+                                        <div class="solicitation-register-btn step_02">
+                                            <a href="javascript:void(0);">Continuar</a>
                                         </div>
                                     </div>
                                 </div>
@@ -545,8 +545,8 @@
                                             <!-- fim form -->
                                         </div>
 
-                                        <div class="solicitation-register-btn">
-                                            <a href="">Continuar</a>
+                                        <div class="solicitation-register-btn step_03">
+                                            <a href="javascript:void(0);">Continuar</a>
                                         </div>
                                     </div>
                                 </div>
@@ -789,8 +789,8 @@
                                             <!-- fim form -->
                                         </div>
 
-                                        <div class="solicitation-register-btn">
-                                            <a href="">Continuar</a>
+                                        <div class="solicitation-register-btn step_04">
+                                            <a href="javascript:void(0);">Continuar</a>
                                         </div>
                                     </div>
                                 </div>
