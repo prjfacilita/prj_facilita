@@ -50,6 +50,17 @@ trait RegistersUsers
 
         /*pegar email */
 
+        $getID = DB::table('login')
+            ->where('email', '=',  $request->email)
+            ->where('cpf', '=',  $request->cpf)
+//                ->orderBy('quantity', 'asc')
+            ->first();
+
+
+        return $getID->id;
+
+
+        // pegar o id do usuario e inserir na table simulacao_id
 
         /**///simulacao_id e editar
 
