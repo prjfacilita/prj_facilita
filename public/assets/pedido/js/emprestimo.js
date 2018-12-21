@@ -34,6 +34,18 @@
             var sexo_conjuge = $("#form-1 input[name=sexo-conjuge]").val();
             var pb_exposta = $("#form-1 input[name=publicamente-exposta]").val();
 
+
+
+            axios.post(APP_URL + 'pedido_emprestimo_parte01', {
+                firstName: 'Fred',
+                lastName: 'Flintstone'
+            })
+                .then(function (response) {
+                    console.log(response);
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
             // uf-nacimento
 
 
