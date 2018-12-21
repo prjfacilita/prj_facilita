@@ -176,7 +176,7 @@ class EmprestimoController extends Controller
         }
 
         /*inputar no banco de dados*/
-        return $request->nome_solicitanteg;
+        return $request->nome_solicitante;
     }
     public function PedirEmprestimo(Request $request){
 
