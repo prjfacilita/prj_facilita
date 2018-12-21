@@ -15,6 +15,7 @@ use kamermans\OAuth2\GrantType\NullGrantType;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Session;
 /*
  *
  * http://www.befirstcode.com/2017/03/integrate-swagger-in-laravel-project-l5.html
@@ -164,7 +165,7 @@ class EmprestimoController extends Controller
 //        return $request;
 
         $validator = Validator::make($request->all(), [
-            'email' => 'required|max:30',
+            'nome_solicitante' => 'required|max:30',
 //            'name' => 'required|string|max:50',
 //            'password' => 'required'
         ]);
@@ -175,7 +176,7 @@ class EmprestimoController extends Controller
         }
 
         /*inputar no banco de dados*/
-        return $request->pb_exposta;
+        return $request->nome_solicitanteg;
     }
     public function PedirEmprestimo(Request $request){
 
