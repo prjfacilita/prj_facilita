@@ -91,7 +91,7 @@ trait RegistersUsers
 
 
 
-        return redirect()->intended('index');g
+        return redirect()->intended('index');
 //        return redirect()->back()->withInput();
         // pegar o id do usuario e inserir na table simulacao_id
 
