@@ -24,6 +24,21 @@
     </script>
 
     <script src="assets/pedido/js/emprestimo.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+
+    <script>
+        axios.post('/user', {
+            firstName: 'Fred',
+            lastName: 'Flintstone'
+        })
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    </script>
 
 </head>
 
@@ -175,7 +190,7 @@
 
                                                 <div class="col-sm-4">
                                                     <label>Tipo Documento:
-                                                        <select id="tipo-documento">
+                                                        <select name="tipo-documento" id="tipo-documento">
                                                             <option disabled selected>Selecionar</option>
                                                             <option value="rg">RG</option>
                                                             <option value="cnh">CNH</option>
@@ -197,7 +212,7 @@
 
                                                 <div class="col-sm-2">
                                                     <label>Sexo:
-                                                        <select id="sexo">
+                                                        <select name="sexo" id="sexo">
                                                             <option disabled selected>Selecionar</option>
                                                             <option value="feminino">Feminino</option>
                                                             <option value="masculino">Masculino</option>
@@ -206,7 +221,7 @@
 
                                                 <div class="col-sm-2">
                                                     <label>Estado Civil:
-                                                        <select id="estado-civil">
+                                                        <select name="estado-civil" id="estado-civil">
                                                             <option disabled selected>Selecionar</option>
                                                             <option value="casada">Casada</option>
                                                             <option value="solteira">Solteira</option>
@@ -219,11 +234,11 @@
 
 
                                                 <div class="col-sm-4">
-                                                    <label>Nacionalidade: <input type="nacionalidade" name="solicitation-phone" class="solicitation-form__phone solicitation-input"></label>
+                                                    <label>Nacionalidade: <input type="text" name="nacionalidade" class="solicitation-form__phone solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-4">
-                                                    <label>Naturalidade: <input type="naturalidade" name="solicitation-phone" class="solicitation-form__phone solicitation-input"></label>
+                                                    <label>Naturalidade: <input type="text" name="naturalidade" class="solicitation-form__phone solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-2">
@@ -261,15 +276,15 @@
                                                 </div>
 
                                                 <div class="col-sm-3">
-                                                    <label>Telefone: <input type="telefone" name="solicitation-phone" class="solicitation-form__phone solicitation-input"></label>
+                                                    <label>Telefone: <input type="text" name="telefone" class="solicitation-form__phone solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-3">
-                                                    <label>Celular: <input type="celular" name="solicitation-cellphone" class="solicitation-form__phone solicitation-input"></label>
+                                                    <label>Celular: <input type="text" name="celular" class="solicitation-form__phone solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-4">
-                                                    <label>Telefone de Recado e Contato: <input type="telefone-recado" name="solicitation-phone-message" class="solicitation-form__phone solicitation-input"></label>
+                                                    <label>Telefone de Recado e Contato: <input type="text" name="telefone-recado" class="solicitation-form__phone solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-6">
@@ -288,7 +303,7 @@
                                                 </div>
                                                 <div class="col-sm-2">
                                                     <label>Sexo Cônjuge:
-                                                        <select id="sexo-conjuge">
+                                                        <select name="sexo-conjuge" id="sexo-conjuge">
                                                             <option disabled selected>Selecionar</option>
                                                             <option value="feminino">Feminino</option>
                                                             <option value="masculino">Masculino</option>
@@ -296,7 +311,7 @@
                                                 </div>
                                                 <div class="col-sm-4">
                                                     <label>Publicamente Exposta?:
-                                                        <select id="publicamente-exposta">
+                                                        <select name="publicamente-exposta" id="publicamente-exposta">
                                                             <option disabled selected>Selecionar</option>
                                                             <option value="sim">Sim</option>
                                                             <option value="nao">Não</option>

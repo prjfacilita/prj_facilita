@@ -23,8 +23,18 @@
             var estado_civil = $("#form-1 input[name=estado-civil]").val();
             var nacionalidade = $("#form-1 input[name=nacionalidade]").val();
             var naturalidade = $("#form-1 input[name=naturalidade]").val();
+            var uf_nascimento = $("#form-1 input[name=uf-nascimento]").val();
+            var telefone = $("#form-1 input[name=telefone]").val();
+            var celular = $("#form-1 input[name=celular]").val();
+            var tel_recado = $("#form-1 input[name=telefone-recado]").val();
+            var nome_mae = $("#form-1 input[name=nome-mae]").val();
+            var nome_conjuge = $("#form-1 input[name=nome-conjuge]").val();
+            var cpf_conjuge = $("#form-1 input[name=cpf-conjuge]").val();
+            var nasto_conjuge = $("#form-1 input[name=nascto-conjuge]").val();
+            var sexo_conjuge = $("#form-1 input[name=sexo-conjuge]").val();
+            var pb_exposta = $("#form-1 input[name=publicamente-exposta]").val();
 
-            uf-nacimento
+            // uf-nacimento
 
 
             // estado_civil
