@@ -16,7 +16,7 @@
             var nome_solicitante = $("#form-1 input[name=solicitation-name]").val();
             var dtn_solicitante = $("#form-1 input[name=solicitation-birth]").val();
             var nro_documento = $("#form-1 input[name=solicitation-doc]").val();
-            var tp_documento = $("#form-1 input[name=tipo-documento]").val();
+            var tp_documento = $("#form-1 input[name=tipo-documento]:checked").val();
             var solicitation_emission_id = $("#form-1 input[name=solicitation-emission-id]").val();
             var solicitation_organ = $("#form-1 input[name=solicitation-organ]").val();
             var sexo = $("#form-1 input[name=sexo]").val();
