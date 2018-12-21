@@ -36,7 +36,7 @@
 
 
 
-            axios.post(APP_URL + 'pedido_emprestimo_parte01', {
+            axios.post(APP_URL + '/pedido_emprestimo_parte01', {
                 firstName: 'Fred',
                 lastName: 'Flintstone'
             })
