@@ -62,7 +62,9 @@ trait RegistersUsers
 
 //        return $getID->id;
 
-//        return $request->simulacao_id;
+//        return $request->simulacao_id
+//
+//porrag;
 
 
         try{
