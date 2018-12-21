@@ -49,7 +49,6 @@ trait RegistersUsers
 
         event(new Registered($user = $this->create($request->all())));
 
-        // $this->guard()->login($user);
 
         /*pegar email */
 
@@ -120,6 +119,5 @@ trait RegistersUsers
     protected function registered(Request $request, $user)
     {
         //
-        return 'ok';
     }
 }
