@@ -32,7 +32,7 @@
             var cpf_conjuge = $("#form-1 input[name=cpf-conjuge]").val();
             var nasto_conjuge = $("#form-1 input[name=nascto-conjuge]").val();
             var sexo_conjuge = $("#form-1 input[name=sexo-conjuge]").val();
-            var pb_exposta = $("#form-1 input[name=publicamente-exposta]").val();
+            var pb_exposta = $("#form-1 input[name=publicamente-exposta]:checked").val();
 
 
 
