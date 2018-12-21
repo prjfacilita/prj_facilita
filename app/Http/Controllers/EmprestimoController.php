@@ -14,6 +14,7 @@ use GuzzleHttp\HandlerStack;
 use kamermans\OAuth2\GrantType\NullGrantType;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Validator;
 /*
  *
  * http://www.befirstcode.com/2017/03/integrate-swagger-in-laravel-project-l5.html
@@ -161,6 +162,17 @@ class EmprestimoController extends Controller
     public function EmprestimoDadosPessoais(Request $request){
 
 //        return $request;
+
+        $validator = Validator::make($request->all(), [
+            'email' => 'required|max:30',
+//            'name' => 'required|string|max:50',
+//            'password' => 'required'
+        ]);
+
+        if ($validator->fails()) {
+            Session::flash('error', $validator->messages()->first());
+            return redirect()->back()->withInput();
+        }
 
         /*inputar no banco de dados*/
         return $request->pb_exposta;
