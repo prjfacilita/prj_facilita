@@ -168,7 +168,7 @@
                                             <form action="{{route('pedido_emprestimo_parte01')}}" method="post" >
                                                 {{ csrf_field() }}
                                                 <div class="col-sm-10">
-                                                    <label>Nome: <input type="text" name="solicitation-name" class="solicitation-form__name solicitation-input"></label>
+                                                    <label>Nome: <input type="text" name="solicitation-name" class="solicitation-form__name solicitation-input" onkeypress="return this.value.length<=10" ></label>
                                                 </div>
 
                                                 <div class="col-sm-2">

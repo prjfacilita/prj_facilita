@@ -162,6 +162,7 @@ class EmprestimoController extends Controller
 
 //        return $request;
 
+        /*inputar no banco de dados*/
         return $request->pb_exposta;
     }
     public function PedirEmprestimo(Request $request){
