@@ -90,6 +90,9 @@ trait RegistersUsers
 
 
 
+
+        return redirect()->intended('index');g
+//        return redirect()->back()->withInput();
         // pegar o id do usuario e inserir na table simulacao_id
 
         /**///simulacao_id e editar
