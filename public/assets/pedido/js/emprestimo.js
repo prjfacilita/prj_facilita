@@ -19,7 +19,7 @@
             var tp_documento = $('#tipo-documento').find(":selected").text();
             var solicitation_emission_id = $("#form-1 input[name=solicitation-emission-id]").val();
             var solicitation_organ = $("#form-1 input[name=solicitation-organ]").val();
-            var sexo = $("#form-1 input[name=sexo]").val();
+            var sexo = $('#sexo').find(":selected").text();;
             var estado_civil = $('#estado-civil').find(":selected").text();
             var nacionalidade = $("#form-1 input[name=nacionalidade]").val();
             var naturalidade = $("#form-1 input[name=naturalidade]").val();
