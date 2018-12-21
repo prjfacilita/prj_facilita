@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Session;
 use App\Emprestimo;
+
 /*
  *
  * http://www.befirstcode.com/2017/03/integrate-swagger-in-laravel-project-l5.html
@@ -178,6 +179,7 @@ class EmprestimoController extends Controller
 
         $dados_pessoais = new Emprestimo();
         $dados_pessoais->nome_completo      =   $request->nome_solicitante;
+        $dados_pessoais->email              =   Auth::user()->email;
         $dados_pessoais->save();
         /*inputar no banco de dados*/
 //        return $request->nome_solicitanteg;
