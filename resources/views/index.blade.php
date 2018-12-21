@@ -18,6 +18,11 @@
     <link rel="stylesheet" type="text/css"  href="{{ asset('assets/index/css/font-awesome.min.css') }}">
     <link rel="stylesheet" type="text/css"  href="{{ asset('assets/index/slider/slick.css') }}">
 
+
+    <script>
+        var APP_URL = {!! json_encode(url('/')) !!};
+    </script>
+
     <!-- SCRIPT -->
     <script src="{{ asset('assets/index/js/jquery-3.3.1.min.js') }}"></script>
     <script src="{{ asset('assets/index/slider/slick.min.js') }}"></script>
