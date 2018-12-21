@@ -73,6 +73,7 @@ class RegisterController extends Controller
         /// inserir na tabela
         ///
 
+        return Input::get('finalidade');
         $pre_cadastro_save = new PreCadastro();
 
         $pre_cadastro_save->email = Input::get('simulation-email');
