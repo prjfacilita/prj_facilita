@@ -16,7 +16,7 @@ class CadastroEmprestimo extends Migration
     public function up()
     {
         //4
-        Schema::dropIfExists('cadastro');
+//        Schema::dropIfExists('cadastro');
         Schema::create('cadastro', function (Blueprint $table) {
             /*CPF
 NOME_COMPL(30 Caract)
