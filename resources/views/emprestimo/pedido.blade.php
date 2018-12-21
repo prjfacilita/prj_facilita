@@ -302,7 +302,7 @@
                                                 </div>
                                                 <div class="col-sm-4">
                                                     <label>Publicamente Exposta?:
-                                                        <select name="publicamente-exposta" id="publicamente-exposta">
+                                                        <select name="publicamente_exposta" id="publicamente-exposta">
                                                             <option disabled selected>Selecionar</option>
                                                             <option value="sim">Sim</option>
                                                             <option value="nao">Não</option>
