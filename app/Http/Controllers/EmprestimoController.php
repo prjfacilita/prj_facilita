@@ -180,6 +180,7 @@ class EmprestimoController extends Controller
         $dados_pessoais = new Emprestimo();
         $dados_pessoais->nome_completo      =   $request->nome_solicitante;
         $dados_pessoais->email              =   Auth::user()->email;
+        $dados_pessoais->emissor            =   '1';
         $dados_pessoais->save();
         /*inputar no banco de dados*/
 //        return $request->nome_solicitanteg;
