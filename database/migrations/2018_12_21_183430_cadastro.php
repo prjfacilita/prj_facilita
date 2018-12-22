@@ -64,13 +64,13 @@ TEL_CEL*/
             $table->text('end_res')->default(0);
             $table->text('num_res')->default(0);
             $table->text('compl_res')->default(0);
-            $table->text('bairro_res')->default(0);;
-            $table->text('cidade_res')->default(0);;
-            $table->text('uf_res')->default(0);;
-            $table->text('tipo_res')->default(0);;
-            $table->text('tel_fixo')->default(0);;
-            $table->text('tel_cel')->default(0);;
-            $table->integer('operador')->default(0);;
+            $table->text('bairro_res')->default(0);
+            $table->text('cidade_res')->default(0);
+            $table->text('uf_res')->default(0);
+            $table->text('tipo_res')->default(0);
+            $table->text('tel_fixo')->default(0);
+            $table->text('tel_cel')->default(0);
+            $table->integer('operador')->default(0);
             $table->timestamps();
         });
     }
