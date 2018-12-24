@@ -71,6 +71,9 @@ TEL_CEL*/
             $table->string('tel_fixo')->default(0);
             $table->string('tel_cel')->default(0);
             $table->integer('operador')->default(0);
+
+            // criar estado_civil
+            //solicitation_emission_id criar data de emissão
             $table->timestamps();
         });
     }
