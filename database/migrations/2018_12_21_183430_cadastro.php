@@ -73,6 +73,35 @@ TEL_CEL*/
             $table->string('pb_exposta')->default(0);
             $table->integer('operador')->default(0);
 
+
+            /*SEGUNDA PARTE CADASTRO*/
+            $table->string('salario')->default(0);
+            $table->string('ocupacao')->default(0);
+            $table->string('escolaridade')->default(0);
+            $table->string('profissao')->default(0);
+            $table->string('cargo')->default(0);
+            $table->string('empresa')->default(0);
+            $table->string('data_admissao')->default(0);
+            $table->string('end_comercial')->default(0);
+            $table->string('end_comercial_nro')->default(0);
+            $table->string('end_comercial_cep')->default(0);
+            $table->string('bairro_comerc')->default(0);
+            $table->string('cidade_comerc')->default(0);
+            $table->string('uf_comerc')->default(0);
+            $table->string('compl_comerc')->default(0);
+            $table->string('tel_comerc')->default(0);
+            $table->string('ramal')->default(0);
+
+
+
+
+
+
+
+
+
+
+
             // criar estado_civil
             //solicitation_emission_id criar data de emissão
             $table->timestamps();

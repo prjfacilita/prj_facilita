@@ -818,5 +818,14 @@
     <!-- solicitation form-->
 
 </div>
+
+<script src="{{asset('node_modules/jquery-mask-plugin/dist/jquery.mask.js')}}"></script>
+{{--<script src="{{asset('assets/index/js/simulacao.js')}}"></script>--}}
+
+<script src="{{asset('node_modules/inputmask/dist/inputmask/inputmask.js')}}"></script>
+<script src="{{asset('node_modules/inputmask/dist/inputmask/inputmask.extensions.js')}}"></script>
+<script src="{{asset('node_modules/inputmask/dist/inputmask/inputmask.numeric.extensions.js')}}"></script>
+<script src="{{asset('node_modules/inputmask/dist/inputmask/inputmask.date.extensions.js')}}"></script>
+<script src="{{asset('node_modules/inputmask/dist/inputmask/jquery.inputmask.js')}}"></script>
 </body>
 </html>  

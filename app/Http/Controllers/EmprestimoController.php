@@ -190,10 +190,12 @@ class EmprestimoController extends Controller
         $dados_pessoais->tel_fixo           =   $request->telefone;
         $dados_pessoais->tel_cel            =   $request->celular;
         $dados_pessoais->nome_conj          =   $request->nome_conjuge;
-        $dados_pessoais->nome_conj          =   $request->cpf_conjuge;
+        $dados_pessoais->cpf_conj           =   $request->cpf_conjuge;
         $dados_pessoais->dt_nasc_conj       =   $request->nasto_conjuge;
         $dados_pessoais->sexo_conj          =   $request->sexo_conjuge;
         $dados_pessoais->pb_exposta         =   $request->pb_exposta;
+        $dados_pessoais->nome_mae           =   $request->nome_mae;
+
 
 //        $dados_pessoais->emissor            =   '1';
         $dados_pessoais->save();
