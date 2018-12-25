@@ -234,7 +234,7 @@
 
                                                 <div class="col-sm-2">
                                                     <label>UF Nascimento:
-                                                        <select id="uf-nacimento" name="uf-nacimento">
+                                                        <select id="uf-nascimento" name="uf-nascimento">
                                                             <option disabled selected>Selecionar</option>
                                                             <option value="ac">AC</option>
                                                             <option value="al">AL</option>
