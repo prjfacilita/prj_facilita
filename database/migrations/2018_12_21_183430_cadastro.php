@@ -70,6 +70,7 @@ TEL_CEL*/
             $table->string('tipo_res')->default(0);
             $table->string('tel_fixo')->default(0);
             $table->string('tel_cel')->default(0);
+            $table->string('pb_exposta')->default(0);
             $table->integer('operador')->default(0);
 
             // criar estado_civil
