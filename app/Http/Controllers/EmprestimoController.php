@@ -195,6 +195,7 @@ class EmprestimoController extends Controller
         $dados_pessoais->sexo_conj          =   $request->sexo_conjuge;
         $dados_pessoais->pb_exposta         =   $request->pb_exposta;
         $dados_pessoais->nome_mae           =   $request->nome_mae;
+        $dados_pessoais->emissor            =   $request->solicitation_organ;
 
 
 //        $dados_pessoais->emissor            =   '1';
