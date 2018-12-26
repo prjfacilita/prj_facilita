@@ -338,7 +338,7 @@
                                         <div class="solicitation-register__form">
 
     <!-- inicio form -->
-                                        <form action="{{route('pedido_emprestimo_parte01')}}" method="post" >
+                                        <form action="{{route('pedido_emprestimo_parte02')}}" method="post" >
 
                                             {{CSRF_FIELD()}}
                                                 <div class="col-sm-2">
