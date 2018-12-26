@@ -195,7 +195,7 @@
 
 
 
-            axios.post(APP_URL + '/pedido_emprestimo_parte02', {
+            axios.post(APP_URL + '/pedido_emprestimo_parte03', {
                 cep: cep,
                 endereco: endereco,
                 nro: nro,
