@@ -829,5 +829,9 @@
 <script src="{{asset('node_modules/inputmask/dist/inputmask/inputmask.numeric.extensions.js')}}"></script>
 <script src="{{asset('node_modules/inputmask/dist/inputmask/inputmask.date.extensions.js')}}"></script>
 <script src="{{asset('node_modules/inputmask/dist/inputmask/jquery.inputmask.js')}}"></script>
+
+<script>
+    $('.solicitation-form__phone').mask('(00) 0000-00000');
+</script>
 </body>
 </html>  

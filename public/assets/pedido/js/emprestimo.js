@@ -6,7 +6,7 @@
         var step = 0;
 
 
-        $('.solicitation-form__phone').mask('(00) 0000-0000');
+
 
         $(document).on('click','.step_01', function(){
 
