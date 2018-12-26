@@ -390,19 +390,19 @@
                                                 </div>
 
                                                 <div class="col-sm-2">
-                                                    <label>Nro: <input type="text" name="endereco_comercial_nro" class="form__phone solicitation-input"></label>
+                                                    <label>Nro: <input type="text" name="endereco_comercial_nro" class=" solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-2">
-                                                    <label>CEP: <input type="text" name="endereco_comercial_cep" class="solicitation-form__phone solicitation-input"></label>
+                                                    <label>CEP: <input type="text" name="endereco_comercial_cep" class="solicitation- solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-5">
-                                                    <label>Bairro: <input type="text" name="endereco_comercial_bairro" class="solicitation-form__phone solicitation-input"></label>
+                                                    <label>Bairro: <input type="text" name="endereco_comercial_bairro" class="solicitation- solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-5">
-                                                    <label>Cidade: <input type="text" name="endereco_comercial_cidade" class="solicitation-form__phone solicitation-input"></label>
+                                                    <label>Cidade: <input type="text" name="endereco_comercial_cidade" class="solicitation- solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-2">
@@ -440,14 +440,14 @@
                                                 </div>
 
                                                 <div class="col-sm-7">
-                                                    <label>Complemento do Endereço Comercial: <input type="text" name="complemento_endereco_comercial" class="solicitation-form__phone solicitation-input"></label>
+                                                    <label>Complemento do Endereço Comercial: <input type="text" name="complemento_endereco_comercial" class="solicitation- solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-3">
                                                     <label>Telefone Comercial: <input type="text" name="telefone_comercial" class="solicitation-form__phone solicitation-input"></label>
                                                 </div>
                                                 <div class="col-sm-2">
-                                                    <label>Ramal: <input type="text" name="ramal" class="solicitation-form__phone solicitation-input"></label>
+                                                    <label>Ramal: <input type="text" name="ramal" class="solicitation- solicitation-input"></label>
                                                 </div>
 
 
