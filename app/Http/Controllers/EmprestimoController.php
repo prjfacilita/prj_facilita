@@ -230,8 +230,8 @@ class EmprestimoController extends Controller
         $renda_ocupacao->empresa = $request->empresa;
         $renda_ocupacao->data_admissao = $request->data_admissao;
         $renda_ocupacao->end_comercial = $request->end_comercial;
-        $renda_ocupacao->end_comercial_nro = $request->end_comercial_nro;
-        $renda_ocupacao->end_comercial_cep = $request->end_comercial_cep;
+        $renda_ocupacao->end_comercial_nro = $request->end_com_nro;
+        $renda_ocupacao->end_comercial_cep = $request->endereco_comercial_cep;
         $renda_ocupacao->bairro_comerc = $request->bairro_comerc;
         $renda_ocupacao->cidade_comerc = $request->cidade_comerc;
         $renda_ocupacao->uf_comerc = $request->uf_comerc;
