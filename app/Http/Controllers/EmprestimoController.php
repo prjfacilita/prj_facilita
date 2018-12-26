@@ -265,7 +265,7 @@ class EmprestimoController extends Controller
 
 
         $validator = Validator::make($request->all(), [
-            'cep_res' => 'required|max:30',
+            'cep' => 'required|max:30',
 //            'name' => 'required|string|max:50',
 //            'password' => 'required'
         ]);
