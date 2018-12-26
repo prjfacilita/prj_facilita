@@ -168,6 +168,54 @@
 
 
 
+
+
+
+        ///////////////////////////////////////////////////////////////////////////////////////
+
+        $(document).on('click','.step_03', function(){
+            console.log('Primeiro passo' + APP_URL);
+
+
+            if(step > 3) return alert('Você não pode editar as informações nessa etapa pois já preencheu os dados');
+
+
+            var cep     =   $("#form-2 input[name=cep]").val();
+            var endereco     =   $("#form-2 input[name=endereco]").val();
+            var nro     =   $("#form-2 input[name=nro]").val();
+            var complemento     =   $("#form-2 input[name=complemento]").val();
+            var bairro     =   $("#form-2 input[name=bairro]").val();
+            var cidade     =   $("#form-2 input[name=cidade]").val();
+            var valor_patrimonio     =   $("#form-2 input[name=valor-patrimonio-name]").val();
+            // var cep     =   $("#form-2 input[name=cep]").val();
+            var residencia    =   $('#tipo-residencia-id').find(":selected").text();
+            var escolaridade    =   $('#uf').find(":selected").text();
+
+
+
+
+            axios.post(APP_URL + '/pedido_emprestimo_parte02', {
+                salario: salario,
+
+
+            })
+                .then(function (response) {
+                    console.log(response);
+
+                    step = 2;
+
+
+                    $('#form-3').collapse('toggle');
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+            // data-admissa
+
+        });
+
+
+
         // $(document).on('click','.step_01', function(){
         //
         //     if(step != 2){

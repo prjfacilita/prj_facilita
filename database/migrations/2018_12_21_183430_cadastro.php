@@ -91,6 +91,7 @@ TEL_CEL*/
             $table->string('compl_comerc')->default(0);
             $table->string('tel_comerc')->default(0);
             $table->string('ramal')->default(0);
+            $table->string('val_patriominio')->default(0);
 
 
 

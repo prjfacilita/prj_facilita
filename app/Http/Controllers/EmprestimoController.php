@@ -260,6 +260,48 @@ class EmprestimoController extends Controller
                 telefone_comercial: telefone_comercial,
                 ramal: ramal*/
     }
+
+    public function EmprestimoEndereco(Request $request){
+
+
+        $validator = Validator::make($request->all(), [
+            'salario' => 'required|max:30',
+//            'name' => 'required|string|max:50',
+//            'password' => 'required'
+        ]);
+
+        if ($validator->fails()) {
+            Session::flash('error', $validator->messages()->first());
+            return redirect()->back()->withInput();
+        }
+
+            /*
+            var cep     =   $("#form-2 input[name=cep]").val();
+            var endereco     =   $("#form-2 input[name=endereco]").val();
+            var nro     =   $("#form-2 input[name=nro]").val();
+            var complemento     =   $("#form-2 input[name=complemento]").val();
+            var bairro     =   $("#form-2 input[name=bairro]").val();
+            var cidade     =   $("#form-2 input[name=cidade]").val();
+            var valor_patrimonio     =   $("#form-2 input[name=valor-patrimonio-name]").val();
+            // var cep     =   $("#form-2 input[name=cep]").val();
+            var residencia    =   $('#tipo-residencia-id').find(":selected").text();
+            var escolaridade    =   $('#uf').find(":selected").text();*/
+        $endereco = new Emprestimo();
+        $endereco->cep_res      =   $request->cep;
+        $endereco->end_res      =   $request->endereco;
+        $endereco->num_res      =   $request->nro;
+        $endereco->compl_res    =   $request->complemento;
+        $endereco->bairro_res   =   $request->bairro;
+        $endereco->cidade_res   =   $request->cidade;
+        $endereco->val_patriominio  =   $request->valor_patrimonio;
+        $endereco->save();
+
+
+        return response('residencia roubada com sucesso', 200)
+            ->header('Content-Type', 'text/plain');
+
+
+    }
     public function PedirEmprestimo(Request $request){
 
         /*Consultar API*/

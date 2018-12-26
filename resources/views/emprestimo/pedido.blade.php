@@ -478,26 +478,28 @@
                                         <div class="solicitation-register__form">
 
     <!-- inicio form -->
-                            <form action="" method="post">
+                                            <form action="{{route('pedido_emprestimo_parte03')}}" method="post" >
+
+                                                {{ csrf_field() }}
 
                                                 <div class="col-sm-2">
-                                                    <label>CEP: <input type="cep" name="solicitation-phone-message" class="solicitation-form__phone solicitation-input"></label>
+                                                    <label>CEP: <input type="text" name="cep" class="solicitation- solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-8">
-                                                    <label>Endereço: <input type="endereco" name="solicitation-phone" class="solicitation-form__phone solicitation-input"></label>
+                                                    <label>Endereço: <input type="text" name="endereco" class="solicitation- solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-2">
-                                                    <label>Nro: <input type="nro" name="solicitation-cellphone" class="solicitation-form__phone solicitation-input"></label>
+                                                    <label>Nro: <input type="text" name="nro" class="solicitation- solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-6">
-                                                    <label>Complemento: <input type="complemento" name="solicitation-phone-message" class="solicitation-form__phone solicitation-input"></label>
+                                                    <label>Complemento: <input type="text" name="complemento" class="solicitation- solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-6">
-                                                    <label>Bairro: <input type="bairro" name="solicitation-phone-message" class="solicitation-form__phone solicitation-input"></label>
+                                                    <label>Bairro: <input type="text" name="bairro" class="solicitation- solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-4">
@@ -513,7 +515,7 @@
                                                 </div>
 
                                                 <div class="col-sm-6">
-                                                    <label>Cidade: <input type="cidade" name="solicitation-phone-message" class="solicitation-form__phone solicitation-input"></label>
+                                                    <label>Cidade: <input type="text" name="cidade" class="solicitation- solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-2">
