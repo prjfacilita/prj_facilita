@@ -200,6 +200,10 @@ class EmprestimoController extends Controller
 
 //        $dados_pessoais->emissor            =   '1';
         $dados_pessoais->save();
+
+
+        return response('Dados inseridos com sucesso', 200)
+            ->header('Content-Type', 'text/plain');
         /*inputar no banco de dados*/
 //        return $request->nome_solicitanteg;
     }
