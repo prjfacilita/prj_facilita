@@ -187,7 +187,7 @@
             var complemento     =   $("#form-3 input[name=complemento]").val();
             var bairro     =   $("#form-3 input[name=bairro]").val();
             var cidade     =   $("#form-3 input[name=cidade]").val();
-            var valor_patrimonio     =   $("#form-2 input[name=valor-patrimonio-name]").val();
+            var valor_patrimonio     =   $("#form-3 input[name=valor-patrimonio-name]").val();
             // var cep     =   $("#form-2 input[name=cep]").val();
             var residencia    =   $('#tipo-residencia-id').find(":selected").text();
             var escolaridade    =   $('#uf').find(":selected").text();
