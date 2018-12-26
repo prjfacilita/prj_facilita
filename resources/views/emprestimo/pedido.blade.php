@@ -345,7 +345,7 @@
 
                                                 <div class="col-sm-5">
                                                     <label>Ocupação:
-                                                        <select id="ocupacao-id">
+                                                        <select name="ocupacao" id="ocupacao-id">
                                                             <option disabled selected>Selecionar</option>
                                                             <option value="empregado_setor_privado">EMPREGADO SETOR PRIVADO</option>
                                                             <option value="empregado_setor_publico">EMPREGADO SETOR PÚBLICO</option>
@@ -437,14 +437,14 @@
                                                 </div>
 
                                                 <div class="col-sm-7">
-                                                    <label>Complemento do Endereço Comercial: <input type="complemento_endereco_comercial" name="solicitation-phone" class="solicitation-form__phone solicitation-input"></label>
+                                                    <label>Complemento do Endereço Comercial: <input type="text" name="complemento_endereco_comercial" class="solicitation-form__phone solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-3">
-                                                    <label>Telefone Comercial: <input type="telefone_comercial" name="solicitation-phone" class="solicitation-form__phone solicitation-input"></label>
+                                                    <label>Telefone Comercial: <input type="text" name="telefone_comercial" class="solicitation-form__phone solicitation-input"></label>
                                                 </div>
                                                 <div class="col-sm-2">
-                                                    <label>Ramal: <input type="complemento_endereco_comercial" name="ramal" class="solicitation-form__phone solicitation-input"></label>
+                                                    <label>Ramal: <input type="text" name="ramal" class="solicitation-form__phone solicitation-input"></label>
                                                 </div>
 
 
