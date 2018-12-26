@@ -211,7 +211,7 @@ class EmprestimoController extends Controller
 
     public function EmprestimoRenda(Request $request){
         $validator = Validator::make($request->all(), [
-            'nome_solicitante' => 'required|max:30',
+            'salario' => 'required|max:30',
 //            'name' => 'required|string|max:50',
 //            'password' => 'required'
         ]);
