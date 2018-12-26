@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css"  href="assets/pedido/css/style.css">
     <link rel="stylesheet" type="text/css"  href="assets/pedido/css/style-pedido-emprestimo.css">
     <link rel="stylesheet" type="text/css"  href="assets/pedido/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css"  href="assets/pedido/css/loading.css">
 
     <!-- SCRIPT -->
     <script src="assets/pedido/js/jquery-3.3.1.min.js"></script>
@@ -115,6 +116,7 @@
         <div class="container">
             <div class="row">
 
+                <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
                 <div class="col-sm-3 solicitation-inf-area solicitation-date">
                     <p>Data da solicitação</p>
                     <span>{{$data_solicitacao}}</span>
@@ -225,11 +227,11 @@
 
 
                                                 <div class="col-sm-4">
-                                                    <label>Nacionalidade: <input type="text" name="nacionalidade" class="solicitation-form__phone solicitation-input"></label>
+                                                    <label>Nacionalidade: <input type="text" name="nacionalidade" class=" solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-4">
-                                                    <label>Naturalidade: <input type="text" name="naturalidade" class="solicitation-form__phone solicitation-input"></label>
+                                                    <label>Naturalidade: <input type="text" name="naturalidade" class=" solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-2">

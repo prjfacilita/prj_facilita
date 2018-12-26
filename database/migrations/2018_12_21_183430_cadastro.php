@@ -53,7 +53,7 @@ TEL_CEL*/
             $table->string('uf_nasc')->default(0); // unidade federal de nascimento
             $table->string('tp_doc')->default(0); // tipo do documento
             $table->string('nr_doc')->default(0); // número do documento
-            $table->string('emissor'); // orgão emissor do documento
+            $table->string('emissor')->default(0); // orgão emissor do documento
             $table->string('nome_mae')->default(0); // nome completo da mãe
             $table->string('grau_instr')->default(0);
             $table->string('nome_conj')->default(0);
