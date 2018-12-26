@@ -386,23 +386,23 @@
                                                 </div>
 
                                                 <div class="col-sm-8">
-                                                    <label>Endereço Comercial: <input type="endereco_comercial" name="solicitation-phone" class="solicitation-form__phone solicitation-input"></label>
+                                                    <label>Endereço Comercial: <input type="text" name="endereco_comercial" class=" solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-2">
-                                                    <label>Nro: <input type="endereco_comercial_nro" name="solicitation-cellphone" class="solicitation-form__phone solicitation-input"></label>
+                                                    <label>Nro: <input type="text" name="endereco_comercial_nro" class="form__phone solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-2">
-                                                    <label>CEP: <input type="endereco_comercial_cep" name="solicitation-phone-message" class="solicitation-form__phone solicitation-input"></label>
+                                                    <label>CEP: <input type="text" name="endereco_comercial_cep" class="solicitation-form__phone solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-5">
-                                                    <label>Bairro: <input type="endereco_comercial_bairro" name="solicitation-phone-message" class="solicitation-form__phone solicitation-input"></label>
+                                                    <label>Bairro: <input type="text" name="endereco_comercial_bairro" class="solicitation-form__phone solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-5">
-                                                    <label>Cidade: <input type="endereco_comercial_cidade" name="solicitation-phone-message" class="solicitation-form__phone solicitation-input"></label>
+                                                    <label>Cidade: <input type="text" name="endereco_comercial_cidade" class="solicitation-form__phone solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-2">
