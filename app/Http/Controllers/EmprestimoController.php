@@ -207,6 +207,59 @@ class EmprestimoController extends Controller
         /*inputar no banco de dados*/
 //        return $request->nome_solicitanteg;
     }
+
+
+    public function EmprestimoRenda(Request $request){
+        $validator = Validator::make($request->all(), [
+            'nome_solicitante' => 'required|max:30',
+//            'name' => 'required|string|max:50',
+//            'password' => 'required'
+        ]);
+
+        if ($validator->fails()) {
+            Session::flash('error', $validator->messages()->first());
+            return redirect()->back()->withInput();
+        }
+
+        $renda_ocupacao = new Emprestimo();
+        $renda_ocupacao->salario = $request->salario;
+        $renda_ocupacao->ocupacao = $request->ocupacao;
+        $renda_ocupacao->escolaridade = $request->escolaridade;
+        $renda_ocupacao->profissao = $request->profissao;
+        $renda_ocupacao->cargo = $request->cargo;
+        $renda_ocupacao->empresa = $request->empresa;
+        $renda_ocupacao->data_admissao = $request->data_admissao;
+        $renda_ocupacao->end_comercial = $request->end_comercial;
+        $renda_ocupacao->end_comercial_nro = $request->end_comercial_nro;
+        $renda_ocupacao->end_comercial_cep = $request->end_comercial_cep;
+        $renda_ocupacao->bairro_comerc = $request->bairro_comerc;
+        $renda_ocupacao->cidade_comerc = $request->cidade_comerc;
+        $renda_ocupacao->uf_comerc = $request->uf_comerc;
+        $renda_ocupacao->compl_comerc = $request->compl_comerc;
+        $renda_ocupacao->tel_comerc = $request->tel_comerc;
+        $renda_ocupacao->ramal = $request->ramal;
+        $renda_ocupacao->save();
+
+        return response('Dados inseridos com sucesso', 200)
+            ->header('Content-Type', 'text/plain');
+
+        /* salario: salario,
+                ocupacao: ocupacao,
+                escolaridade: escolaridade,
+                profissao: profissao,
+                cargo: cargo,
+                empresa: empresa,
+                data_admissao: data_admissao,
+                end_comercial: end_comercial,
+                end_com_nro: end_com_nro,
+                endereco_comercial_cep: endereco_comercial_cep,
+                endereco_comercial_bairro: endereco_comercial_bairro,
+                endereco_comercial_cidade: endereco_comercial_cidade,
+                endereco_comercial_uf: endereco_comercial_uf,
+                complemento_endereco_comercial: complemento_endereco_comercial,
+                telefone_comercial: telefone_comercial,
+                ramal: ramal*/
+    }
     public function PedirEmprestimo(Request $request){
 
         /*Consultar API*/

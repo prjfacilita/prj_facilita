@@ -132,6 +132,36 @@
 
 
 
+            axios.post(APP_URL + '/pedido_emprestimo_parte02', {
+                salario: salario,
+                ocupacao: ocupacao,
+                escolaridade: escolaridade,
+                profissao: profissao,
+                cargo: cargo,
+                empresa: empresa,
+                data_admissao: data_admissao,
+                end_comercial: end_comercial,
+                end_com_nro: end_com_nro,
+                endereco_comercial_cep: endereco_comercial_cep,
+                endereco_comercial_bairro: endereco_comercial_bairro,
+                endereco_comercial_cidade: endereco_comercial_cidade,
+                endereco_comercial_uf: endereco_comercial_uf,
+                complemento_endereco_comercial: complemento_endereco_comercial,
+                telefone_comercial: telefone_comercial,
+                ramal: ramal
+
+            })
+                .then(function (response) {
+                    console.log(response);
+
+                    step = 2;
+
+
+                    $('#form-3').collapse('toggle');
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
             // data-admissa
 
         });

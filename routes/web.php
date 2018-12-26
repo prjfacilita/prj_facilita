@@ -80,6 +80,7 @@ Route::group(['prefix' => 'api/'], function () {
 
 Route::post('pre_cadastro', 'Auth\RegisterController@PreCadastro')->name('pre_cadastro');
 Route::post('pedido_emprestimo_parte01', 'EmprestimoController@EmprestimoDadosPessoais')->name('pedido_emprestimo_parte01');
+Route::post('pedido_emprestimo_parte02', 'EmprestimoController@EmprestimoRenda')->name('pedido_emprestimo_parte02');
 //Route::post('login', 'Auth\LoginController@login');
 
 //
