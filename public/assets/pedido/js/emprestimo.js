@@ -14,6 +14,8 @@
 
             console.log('Primeiro passo' + APP_URL);
 
+            if(step > 1) return alert('Você não pode editar as informações nessa etapa pois já preencheu os dados');
+
 
             var nome_solicitante = $("#form-1 input[name=solicitation-name]").val();
             var dtn_solicitante = $("#form-1 input[name=solicitation-birth]").val();
@@ -37,6 +39,9 @@
             var pb_exposta = $('#publicamente-exposta').find(":selected").text();
 
 
+
+
+            alert('Loading');
 
             axios.post(APP_URL + '/pedido_emprestimo_parte01', {
                 nome_solicitante: nome_solicitante,
@@ -63,6 +68,8 @@
             })
                 .then(function (response) {
                     console.log(response);
+
+                    step = 2;
                 })
                 .catch(function (error) {
                     console.log(error);
