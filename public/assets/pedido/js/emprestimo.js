@@ -171,6 +171,7 @@
 
 
 
+
         ///////////////////////////////////////////////////////////////////////////////////////
 
         $(document).on('click','.step_03', function(){
@@ -195,7 +196,15 @@
 
 
             axios.post(APP_URL + '/pedido_emprestimo_parte02', {
-                salario: salario,
+                cep: cep,
+                endereco: endereco,
+                nro: nro,
+                complemento: complemento,
+                bairro: bairro,
+                cidade: cidade,
+                valor_patrimonio: valor_patrimonio,
+                residencia: residencia,
+                escolaridade: escolaridade
 
 
             })
