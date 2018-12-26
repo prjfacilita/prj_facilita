@@ -340,8 +340,9 @@
     <!-- inicio form -->
                                         <form action="{{route('pedido_emprestimo_parte02')}}" method="post" >
 
-                                            {{CSRF_FIELD()}}
-                                                <div class="col-sm-2">
+                                            {{ csrf_field() }}
+
+                                            <div class="col-sm-2">
                                                     <label>Salário: <input type="text" name="salario-name" class="solicitation-form__name solicitation-input"></label>
                                                 </div>
 
