@@ -70,6 +70,9 @@
                     console.log(response);
 
                     step = 2;
+
+
+                    $('#form-2').collapse('toggle');
                 })
                 .catch(function (error) {
                     console.log(error);
@@ -99,6 +102,13 @@
             //     // });
             // });
 
+        });
+
+
+        $(document).on('click','.step_02', function(){
+            console.log('Primeiro passo' + APP_URL);
+
+            if(step > 2) return alert('Você não pode editar as informações nessa etapa pois já preencheu os dados');
         });
 
 
