@@ -232,11 +232,11 @@ class EmprestimoController extends Controller
         $renda_ocupacao->end_comercial = $request->end_comercial;
         $renda_ocupacao->end_comercial_nro = $request->end_com_nro;
         $renda_ocupacao->end_comercial_cep = $request->endereco_comercial_cep;
-        $renda_ocupacao->bairro_comerc = $request->bairro_comerc;
-        $renda_ocupacao->cidade_comerc = $request->cidade_comerc;
-        $renda_ocupacao->uf_comerc = $request->uf_comerc;
-        $renda_ocupacao->compl_comerc = $request->compl_comerc;
-        $renda_ocupacao->tel_comerc = $request->tel_comerc;
+        $renda_ocupacao->bairro_comerc = $request->endereco_comercial_bairro;
+        $renda_ocupacao->cidade_comerc = $request->endereco_comercial_cidade;
+        $renda_ocupacao->uf_comerc = $request->endereco_comercial_uf;
+        $renda_ocupacao->compl_comerc = $request->complemento_endereco_comercial;
+        $renda_ocupacao->tel_comerc = $request->telefone_comercial;
         $renda_ocupacao->ramal = $request->ramal;
         $renda_ocupacao->save();
 
