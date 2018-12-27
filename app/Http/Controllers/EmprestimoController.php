@@ -294,6 +294,8 @@ class EmprestimoController extends Controller
         $endereco->bairro_res   =   $request->bairro;
         $endereco->cidade_res   =   $request->cidade;
         $endereco->val_patriominio  =   $request->valor_patrimonio;
+        $endereco->tipo_res         =   $request->residencia;
+        $endereco->uf_res           =   $request->uf_id;
         $endereco->save();
 
 

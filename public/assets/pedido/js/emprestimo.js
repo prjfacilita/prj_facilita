@@ -190,7 +190,7 @@
             var valor_patrimonio     =   $("#form-3 input[name=valor-patrimonio-name]").val();
             // var cep     =   $("#form-2 input[name=cep]").val();
             var residencia    =   $('#tipo-residencia-id').find(":selected").text();
-            var escolaridade    =   $('#uf').find(":selected").text();
+            var uf_id    =   $('#uf').find(":selected").text();
 
 
 
@@ -204,7 +204,7 @@
                 cidade: cidade,
                 valor_patrimonio: valor_patrimonio,
                 residencia: residencia,
-                escolaridade: escolaridade
+                uf_id: uf_id
 
 
             })
