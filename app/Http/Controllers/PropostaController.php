@@ -179,51 +179,13 @@ class PropostaController extends Controller
   }
 }
 */
-
+        $updateBody['nomeMae'] = "nome mae";
         $retorno01  =  $client->request('PUT', EmprestimoController::URL_ENDPOINT(). '/api/v2/ep/propostas/055090000030/analisecadastral',
-           '{"nomeMae": "Maria da Silva",
-  "email": "email@email.com",
-  "estadoCivil": "SOLTEIRO",
-  "naturalidade": "São Paulo",
+            [
 
-   "valorPatrimonio":"5000",
-  "documentosPessoais": [
-    {
-      "numeroDocumento": 125478991,
-      "tipoDocumento": "RG"
-    }
-  ],
-  "endereco": {
-    "cep": 11740000,
-    "logradouro": "Rua Butantã",
-    "numero": 123,
-    "bairro": "Pinheiros",
-    "cidade": "Sao Paulo",
+                'body' => json_encode($updateBody, JSON_FORCE_OBJECT)
 
-    "complemento": "10o andar"
-  },
-"enderecoComercial": {
-    "cep": 11740000,
-    "logradouro": "Rua Butantã",
-    "numero": 123,
-    "bairro": "Pinheiros",
-    "cidade": "Sao Paulo",
-    "uf":"SP",
-
-    "complemento": "10o andar"
-  },
-  "telefones": [
-    {
-      "ddd": 11,
-      "numero": 985478547,
-      "tipoTelefone": "CELULAR",
-      "ramal": 444
-    }
-  ],
-  "renda": {
-
-    "tipoComprovanteRenda": "EXTRATO_FGTS"
-  }}');
+            ]);
 
 
         $arr = json_decode($retorno01->getBody());
