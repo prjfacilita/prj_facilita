@@ -180,6 +180,7 @@ class PropostaController extends Controller
 }
 */
         $updateBody['nomeMae'] = "nome mae";
+        $updateBody['email'] = "rtelesc@gmail.com";
         $updateBody['naturalidade'] = "Santista teste";
         $updateBody["valorPatrimonio"] = "2000.0";
 //        $updateBody["documentosPessoais"][["numeroDocumento"]]=  125478991;
