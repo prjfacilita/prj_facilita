@@ -201,11 +201,12 @@ class EmprestimoController extends Controller
 //        $dados_pessoais->emissor            =   '1';
         $dados_pessoais->save();
 
-        Session::put('dados_emprestimo',['id_cadastro',$dados_pessoais->id]);
+//        Session::put('dados_emprestimo',['id_cadastro',$dados_pessoais->id]);
         // return Session::get('dados_emprestimo.id_cadastro')
 
+        $request->session()->put('id_cadastro', $dados_pessoais->id);
 
-        return response('Dados inseridos com sucesso'. $dados_pessoais->id.'', 200)
+        return response('Dados inseridos com sucesso'. $request->session()->get('id_cadastro').'', 200)
             ->header('Content-Type', 'text/plain');
         /*inputar no banco de dados*/
 //        return $request->nome_solicitanteg;
@@ -226,8 +227,9 @@ class EmprestimoController extends Controller
 
         $renda_ocupacao = new Emprestimo();
 
+//        $value = $request->session()->get('id_cadastro');
         $renda_ocupacao->exists = true;
-        $renda_ocupacao->id = Session::get('dados_emprestimo.id_cadastro'); //already exists in database.
+        $renda_ocupacao->id = $request->session()->get('id_cadastro'); //already exists in database.
         $renda_ocupacao->salario = $request->salario;
         $renda_ocupacao->ocupacao = $request->ocupacao;
         $renda_ocupacao->escolaridade = $request->escolaridade;
