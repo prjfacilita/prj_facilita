@@ -182,7 +182,7 @@ class PropostaController extends Controller
 
         $retorno01  =  $client->request('PUT', EmprestimoController::URL_ENDPOINT(). '/api/v2/ep/propostas/055090000030/analisecadastral',
             [
-                \GuzzleHttp\RequestOptions::JSON => [
+                \GuzzleHttp\RequestOptions::JSON => ['body' => json_encode([
 //                    "qteParcelas" => [
 //                        $request->qteParcelas,
 //                    ],
@@ -194,13 +194,11 @@ class PropostaController extends Controller
 
                    "valorPatrimonio" => "5000",
 
-                    "documentosPessoais" => [ [
+                    "documentosPessoais" => [
                        "numeroDocumento" => "357327391",
                         "tipoDocumento" => "RG"
-
-                     ]
                     ],
-                    "endereco" => [ [
+                    "endereco" => [
                         "cep" => 11740000,
                         "logradouro" => "Rua Butantã",
                         "numero" => 123,
@@ -208,7 +206,6 @@ class PropostaController extends Controller
                         "cidade" => "Sao Paulo",
 
                         "complemento" => "10o andar"
-                    ]
                     ],
                      "enderecoComercial" => [
                          "cep" => 11740000,
@@ -218,24 +215,18 @@ class PropostaController extends Controller
                          "cidade" => "Sao Paulo",
 
                          "complemento" => "10o andar"
-                     ]
                      ],
-                     "telefones" => [[
+                     "telefones" => [
                          "ddd" => 11,
                           "numero" => 985478547,
                           "tipoTelefone" => "CELULAR",
                           "ramal" => 444
-
-                         ]
                      ],
                     "renda" => [
 
-                        [
-
                             "tipoComprovanteRenda" => "EXTRATO_FGTS"
-
                          ]
-                ]
+               ] ) ]
             ]);
 
 
