@@ -64,7 +64,7 @@ class PropostaController extends Controller
                     "cpf" => Auth::user()->cpf,
                     "dataNascimento" =>  $data->dt_nasc ,
                     "naturezaOcupacao" => $data->nat_ocup,
-                    "genero" => $data->sexo,
+                    "genero" => strtoupper($data->sexo),
                     "rendaMensal" => $data->salario,
                     "uf" => $data->uf_nasc
                 ]
