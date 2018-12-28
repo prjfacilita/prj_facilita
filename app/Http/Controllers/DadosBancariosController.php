@@ -29,8 +29,8 @@ class DadosBancariosController extends Controller
         $dados_bancarios->agencia = $request->nro_agencia;
         $dados_bancarios->dig_ag = substr($request->nro_agencia, -1);
         $dados_bancarios->conta = $request->nro_conta;
-        $dados_bancarios->tipo = 'conta corerete';
-        $dados_bancarios->conta_desde = '22-01-2005';
+        $dados_bancarios->tipo = $request->tipo_conta;
+        $dados_bancarios->conta_desde = $request->conta_desde;
         $dados_bancarios->id_cadastro = $id_cadastro;
         $dados_bancarios->save();
 
@@ -68,6 +68,9 @@ class DadosBancariosController extends Controller
         TIPO
         CONTA_DESDE
 */
+
+        $chamada_analise = new PropostaController();
+        $chamada_analise->AnaliseCadsatral($id_cadastro);
 
         return 'ok';
 

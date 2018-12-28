@@ -6,10 +6,13 @@ Fluxo do funcionamento do sistema
 Corrigir campo id para não inserir um novo cadastro no banco de dados -> ok
 
 criar controlador  Propostas para inserir a proposta -> ok
-adaptar controlador para salvar o retorno da proposta isnerida ->
-criar pacote para visualização em diagrama do banco de dados
-Criar insert dos dados_bancários
+adaptar controlador para salvar o retorno da proposta isnerida -> ok
 
+Criar insert dos dados_bancários -> ok
+
+Criar metódo de analise cadastral
+criar metódo de retorno da analise cadastral
+criar pacote para visualização em diagrama do banco de dados
 
 
 /*REPORTAR SOBRE A FALTA DO CAMPO DE DIGITO SEPARADO, vou ter que cortar a string*/

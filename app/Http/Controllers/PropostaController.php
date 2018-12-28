@@ -108,4 +108,137 @@ class PropostaController extends Controller
 
         return $arr;
     }
+
+
+    public function AnaliseCadsatral($id){
+
+
+        /*CONSULTAR DADOS*/
+
+
+        $data = DB::table('cadastro')->where('id',  $id)->first();
+
+        /*INSERIR PROPOSTA*/
+
+        $simulacao = new EmprestimoController();
+        $token = $simulacao->ConfiguracoesAPI();
+
+//        $token = session('token_key');
+
+        $client =   new Client([
+            'base_uri' => EmprestimoController::URL_TOKEN_API(),
+            'headers' => [
+                'Accept' => 'application/json',
+                'Authorization' => 'Bearer ' . $token,
+                'Content-Type' => 'application/json',
+            ],
+        ]);
+
+        /*"nomeMae": "Maria da Silva",
+  "email": "email@email.com",
+  "estadoCivil": "SOLTEIRO",
+  "naturalidade": "São Paulo",
+
+   "valorPatrimonio":"5000",
+  "documentosPessoais": [
+    {
+      "numeroDocumento": 125478991,
+      "tipoDocumento": "RG"
+    }
+  ],
+  "endereco": {
+    "cep": 11740000,
+    "logradouro": "Rua Butantã",
+    "numero": 123,
+    "bairro": "Pinheiros",
+    "cidade": "Sao Paulo",
+
+    "complemento": "10o andar"
+  },
+"enderecoComercial": {
+    "cep": 11740000,
+    "logradouro": "Rua Butantã",
+    "numero": 123,
+    "bairro": "Pinheiros",
+    "cidade": "Sao Paulo",
+    "uf":"SP",
+
+    "complemento": "10o andar"
+  },
+  "telefones": [
+    {
+      "ddd": 11,
+      "numero": 985478547,
+      "tipoTelefone": "CELULAR",
+      "ramal": 444
+    }
+  ],
+  "renda": {
+
+    "tipoComprovanteRenda": "EXTRATO_FGTS"
+  }
+}
+*/
+
+        $retorno01  =  $client->request('POST', EmprestimoController::URL_ENDPOINT(). '/api/v2/ep/propostas/055090000030/analisecadastral',
+            [
+                \GuzzleHttp\RequestOptions::JSON => [
+//                    "qteParcelas" => [
+//                        $request->qteParcelas,
+//                    ],
+                   // "numeroProposta" => "055090000030",
+                  "nomeMae" => "Maria da Silva",
+                  "email" => "email@email.com",
+                  "estadoCivil" => "SOLTEIRO",
+                  "naturalidade" => "São Paulo",
+
+                   "valorPatrimonio" => "5000",
+
+                    "documentosPessoais" => [
+                       "numeroDocumento" => "357327391",
+                        "tipoDocumento" => "RG"
+                    ],
+                    "endereco" => [
+                        "cep" => 11740000,
+                        "logradouro" => "Rua Butantã",
+                        "numero" => 123,
+                        "bairro" => "Pinheiros",
+                        "cidade" => "Sao Paulo",
+
+                        "complemento" => "10o andar"
+                    ],
+                     "enderecoComercial" => [
+                         "cep" => 11740000,
+                         "logradouro" => "Rua Butantã",
+                         "numero" => 123,
+                         "bairro" => "Pinheiros",
+                         "cidade" => "Sao Paulo",
+
+                         "complemento" => "10o andar"
+                     ],
+                     "telefones" => [
+                         "ddd" => 11,
+                          "numero" => 985478547,
+                          "tipoTelefone" => "CELULAR",
+                          "ramal" => 444
+                     ],
+                    "renda" => [
+
+                            "tipoComprovanteRenda" => "EXTRATO_FGTS"
+                         ]
+                ]
+            ]);
+
+
+        $arr = json_decode($retorno01->getBody());
+        /*CRIAR VÁRIAVEL NO SISTEMA PARA DEFINIR O ACESSO DIRETO PARA A PÁGINA DE STATUS*/
+
+        /*ENNVIAR EMAIL PARA CLIENTE INFORMANDO QUE ESTA EM ANÁLISE*/
+    }
+
+
+    public  function RetornoAnalise(){
+
+    }
+
 }
