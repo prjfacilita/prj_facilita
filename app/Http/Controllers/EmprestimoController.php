@@ -84,16 +84,12 @@ class EmprestimoController extends Controller
         /*Fazer consulta na api do banco cbss para retornar os dados do contrato e também limites*/
 //        $this->ConfiguracoesAPI();
 
-        if(Auth::user()->status_analise == 2){
-            // em análise
-
-            return view('emprestimo.status_analise');
-        }else{
+//      else{
 
 
             return view('emprestimo.pedido');
 
-        }
+//        }
     }
 
     /**
@@ -348,14 +344,23 @@ class EmprestimoController extends Controller
         $userId = Auth::id();
         $user = DB::table('simulacao')->where('user_id',  $userId)->orderBy('created_at', 'DESC')->first();
         /**/
-        return view('emprestimo.pedido',
-            ['valor_solicitacao'        => $user->valorSolicitado ,
-                'data_solicitacao'          =>  $user->created_at,
-                'qtde_parcelas'           =>  $user->qteParcelas,
-                'finalidade'    =>  'teste',
-                'simulacao_id' => $user->id
 
-            ]);
+        if(Auth::user()->status_analise == 2){
+            // em análise
+
+            return view('emprestimo.status_analise');
+        }else{
+
+            return view('emprestimo.pedido',
+                ['valor_solicitacao'        => $user->valorSolicitado ,
+                    'data_solicitacao'          =>  $user->created_at,
+                    'qtde_parcelas'           =>  $user->qteParcelas,
+                    'finalidade'    =>  'teste',
+                    'simulacao_id' => $user->id
+
+                ]);
+        }
+
 
     }
 
