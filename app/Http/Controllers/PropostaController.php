@@ -233,7 +233,7 @@ class PropostaController extends Controller
                     'json' =>[
                  ['body' =>  json_encode($data_json) ]
 //                 ]
-            ]);
+            ]]);
 
 
         $arr = json_decode($retorno01->getBody());
