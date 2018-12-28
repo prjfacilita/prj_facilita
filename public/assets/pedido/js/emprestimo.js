@@ -237,8 +237,8 @@
             var banco_id     =   $('#banco-id').find(":selected").text();
             var nro_agencia     =   $("#form-4 input[name=nro_agencia-name]").val();
             var nro_conta       =   $("#form-4 input[name=nro_conta]").val();
-            var tipo_conta      =   $("#form-4 input[name=conta-tipo]").val();
-            var conta_desde     =   $("#form-4 input[name=conta-desd]").val();
+            var tipo_conta      =   $('#conta-tipo').find(":selected").text();
+            var conta_desde     =   $("#form-4 input[name=conta-desde]").val();
             var nome_ref_pessoal    =   $("#form-4 input[name=nome-referencia-pessoal]").val();
             var cpf_ref_pessoal     =   $("#form-4 input[name=cpf-referencia-pessoal]").val();
             var grau_rel            =   $("#form-4 input[name=grau-relacionamento]").val();
