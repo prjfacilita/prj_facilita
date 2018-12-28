@@ -184,7 +184,7 @@ class PropostaController extends Controller
         $updateBody["valorPatrimonio"] = "2000.0";
         $updateBody["endereco"]["cep"] = "117300000";
         $updateBody["endereco"]["logradouro"] = "117300000";
-        $updateBody["endereco"]["numero"] = "117300000";
+        $updateBody["endereco"]["numero"] = "815";
         $updateBody["endereco"]["bairro"] = "117300000";
         $updateBody["endereco"]["cidade"] = "117300000";
         $updateBody["endereco"]["complemento"] = "117300000";
