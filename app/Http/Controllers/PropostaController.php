@@ -184,7 +184,7 @@ class PropostaController extends Controller
             [
 
                     'json' =>
-                 ['body' => [
+                 ['body' => [[
 //                    "qteParcelas" => [
 //                        $request->qteParcelas,
 //                    ],
@@ -228,7 +228,7 @@ class PropostaController extends Controller
 
                             "tipoComprovanteRenda" => "EXTRATO_FGTS"
                     ]]
-                  ]  ]
+                 ] ]  ]
             ]);
 
 
