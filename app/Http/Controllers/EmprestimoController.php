@@ -315,7 +315,7 @@ class EmprestimoController extends Controller
         $teste->InserirProposta($request->session()->get('id_cadastro'));
         /*CHAMAR CONTROLADOR PROPOSTA*/
 
-        return $teste;
+        return response()->json($teste);
 
 //        return response('residencia roubada com sucesso', 200)
 //            ->header('Content-Type', 'text/plain');
