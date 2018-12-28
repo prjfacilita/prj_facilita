@@ -67,6 +67,10 @@ class EmprestimoController extends Controller
     {
         $this->middleware('auth');
 
+        $this->ChecarAnalise();
+    }
+
+    public function ChecarAnalise(){
         if(Auth::user()->status_analise == 2){
             // em análise
 
