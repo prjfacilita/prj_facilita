@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
+    'App\\DadosBancarios' => $baseDir . '/app/DadosBancarios.php',
     'App\\Emprestimo' => $baseDir . '/app/Emprestimo.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\API\\UserController' => $baseDir . '/app/Http/Controllers/API/UserController.php',
@@ -141,6 +142,7 @@ return array(
     'Clockwork\\Support\\Vanilla\\Clockwork' => $vendorDir . '/itsgoingd/clockwork/Clockwork/Support/Vanilla/Clockwork.php',
     'Clockwork\\Web\\Web' => $vendorDir . '/itsgoingd/clockwork/Clockwork/Web/Web.php',
     'CreateCadastroTable' => $baseDir . '/database/migrations/2018_11_14_160452_create_cadastro_table.php',
+    'CreateDadosBancariosTable' => $baseDir . '/database/migrations/2018_12_27_130854_create_dados_bancarios_table.php',
     'CreateFailedJobsTable' => $baseDir . '/database/migrations/2018_11_29_130614_create_failed_jobs_table.php',
     'CreateJobsTable' => $baseDir . '/database/migrations/2018_11_29_123520_create_jobs_table.php',
     'CreateLoginTable' => $baseDir . '/database/migrations/2018_11_16_020013_create_login_table.php',

@@ -154,7 +154,7 @@
                 .then(function (response) {
                     console.log(response);
 
-                    step = 2;
+                    step = 3;
 
 
                     $('#form-3').collapse('toggle');
@@ -211,7 +211,7 @@
                 .then(function (response) {
                     console.log(response);
 
-                    step = 2;
+                    step = 4;
 
 
                     $('#form-3').collapse('toggle');
@@ -223,6 +223,58 @@
 
         });
 
+
+
+
+
+        $(document).on('click','.step_04', function(){
+            console.log('Primeiro passo' + APP_URL);
+
+
+            if(step > 4) return alert('Você não pode editar as informações nessa etapa pois já preencheu os dados');
+
+
+            var cep     =   $("#form-3 input[name=cep]").val();
+            var endereco     =   $("#form-3 input[name=endereco]").val();
+            var nro     =   $("#form-3 input[name=nro]").val();
+            var complemento     =   $("#form-3 input[name=complemento]").val();
+            var bairro     =   $("#form-3 input[name=bairro]").val();
+            var cidade     =   $("#form-3 input[name=cidade]").val();
+            var valor_patrimonio     =   $("#form-3 input[name=valor-patrimonio-name]").val();
+            // var cep     =   $("#form-2 input[name=cep]").val();
+            var residencia    =   $('#tipo-residencia-id').find(":selected").text();
+            var uf_id    =   $('#uf').find(":selected").text();
+
+
+
+
+            axios.post(APP_URL + '/pedido_emprestimo_parte03', {
+                cep: cep,
+                endereco: endereco,
+                nro: nro,
+                complemento: complemento,
+                bairro: bairro,
+                cidade: cidade,
+                valor_patrimonio: valor_patrimonio,
+                residencia: residencia,
+                uf_id: uf_id
+
+
+            })
+                .then(function (response) {
+                    console.log(response);
+
+                    step = 2;
+
+
+                    $('#form-3').collapse('toggle');
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+            // data-admissa
+
+        });
 
 
         // $(document).on('click','.step_01', function(){

@@ -433,6 +433,7 @@ class ComposerStaticInitcba2091fa4da6492fa300fcb69cd7494
 
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
+        'App\\DadosBancarios' => __DIR__ . '/../..' . '/app/DadosBancarios.php',
         'App\\Emprestimo' => __DIR__ . '/../..' . '/app/Emprestimo.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\API\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/API/UserController.php',
@@ -567,6 +568,7 @@ class ComposerStaticInitcba2091fa4da6492fa300fcb69cd7494
         'Clockwork\\Support\\Vanilla\\Clockwork' => __DIR__ . '/..' . '/itsgoingd/clockwork/Clockwork/Support/Vanilla/Clockwork.php',
         'Clockwork\\Web\\Web' => __DIR__ . '/..' . '/itsgoingd/clockwork/Clockwork/Web/Web.php',
         'CreateCadastroTable' => __DIR__ . '/../..' . '/database/migrations/2018_11_14_160452_create_cadastro_table.php',
+        'CreateDadosBancariosTable' => __DIR__ . '/../..' . '/database/migrations/2018_12_27_130854_create_dados_bancarios_table.php',
         'CreateFailedJobsTable' => __DIR__ . '/../..' . '/database/migrations/2018_11_29_130614_create_failed_jobs_table.php',
         'CreateJobsTable' => __DIR__ . '/../..' . '/database/migrations/2018_11_29_123520_create_jobs_table.php',
         'CreateLoginTable' => __DIR__ . '/../..' . '/database/migrations/2018_11_16_020013_create_login_table.php',
