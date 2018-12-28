@@ -68,12 +68,12 @@ class PropostaController extends Controller
   "naturezaOcupacao" => "ASSALARIADO",
   "genero" => "MASCULINO",
   "rendaMensal" => 2500,
-  "uf" => "SP"
+  "uf"=> "SP"
                 ]
             ]);
 
 
-        $arr = json_decode($retorno01);
+        $arr = json_decode($retorno01->getBody());
 
 
         return $arr;
