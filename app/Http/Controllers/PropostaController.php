@@ -189,8 +189,8 @@ class PropostaController extends Controller
 //                        $request->qteParcelas,
 //                    ],
                    // "numeroProposta" => "055090000030",
-                  "nomeMae" => "Maria_da_Silva",
-                  "email" => "email@email.com",
+                  "nomeMae" => "MARIA DA SILVA",
+                  "email" => "rtelesc@gmail.com",
                   "estadoCivil" => "SOLTEIRO",
                   "naturalidade" => "Brasileiro",
 
