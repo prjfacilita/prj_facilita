@@ -182,12 +182,30 @@ class PropostaController extends Controller
         $updateBody['nomeMae'] = "nome mae";
         $updateBody['naturalidade'] = "Santista teste";
         $updateBody["valorPatrimonio"] = "2000.0";
+
         $updateBody["endereco"]["cep"] = "117300000";
         $updateBody["endereco"]["logradouro"] = "117300000";
         $updateBody["endereco"]["numero"] = "815";
         $updateBody["endereco"]["bairro"] = "117300000";
         $updateBody["endereco"]["cidade"] = "117300000";
         $updateBody["endereco"]["complemento"] = "117300000";
+
+        $updateBody["enderecoComercial"]["cep"] = "117300000";
+        $updateBody["enderecoComercial"]["logradouro"] = "117300000";
+        $updateBody["enderecoComercial"]["numero"] = "815";
+        $updateBody["enderecoComercial"]["bairro"] = "117300000";
+        $updateBody["enderecoComercial"]["cidade"] = "117300000";
+        $updateBody["enderecoComercial"]["complemento"] = "117300000";
+
+        $updateBody["documentosPessoais"]["numeroDocumento"]  =  "357327391";
+        $updateBody["documentosPessoais"]["tipoDocumento"] =  "RG";
+
+        $updateBody["telefones"]["ddd"] = 11;
+        $updateBody["telefones"]["numero"] = "985478547";
+        $updateBody["telefones"]["tipoTelefone"] = "CELULAR";
+        $updateBody["telefones"]["ramal"] = 444;
+
+
         $retorno01  =  $client->request('PUT', EmprestimoController::URL_ENDPOINT(). '/api/v2/ep/propostas/055090000030/analisecadastral',
             [
 
