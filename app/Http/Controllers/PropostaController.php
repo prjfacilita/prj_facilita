@@ -186,11 +186,11 @@ class PropostaController extends Controller
 //        $updateBody["documentosPessoais"][["numeroDocumento"]]=  125478991;
         $updateBody["documentosPessoais"] = [ 'numeroDocumento' => '125478991', 'tipoDocumento' => 'RG'];
         $updateBody["endereco"]["cep"] = "117300000";
-        $updateBody["endereco"]["logradouro"] = "117300000";
+        $updateBody["endereco"]["logradouro"] = "rua teste";
         $updateBody["endereco"]["numero"] = "815";
-        $updateBody["endereco"]["bairro"] = "117300000";
-        $updateBody["endereco"]["cidade"] = "117300000";
-        $updateBody["endereco"]["complemento"] = "117300000";
+        $updateBody["endereco"]["bairro"] = "valongo";
+        $updateBody["endereco"]["cidade"] = "santos";
+        $updateBody["endereco"]["complemento"] = "casa";
 
         $retorno01  =  $client->request('PUT', EmprestimoController::URL_ENDPOINT(). '/api/v2/ep/propostas/055090000030/analisecadastral',
             [
