@@ -24,6 +24,7 @@ class CreateLoginTable extends Migration
             $table->string('confirmation_code')->nullable();
             $table->rememberToken();
             $table->integer('termos_contrato')->default('1');
+            $table->integer('status_analise')->default(0);
             $table->timestamps();
         });
     }
