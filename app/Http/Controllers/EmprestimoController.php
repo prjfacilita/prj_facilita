@@ -224,7 +224,10 @@ class EmprestimoController extends Controller
             return redirect()->back()->withInput();
         }
 
-        $renda_ocupacao = new Emprestimo(Session::get('dados_emprestimo.id_cadastro'));
+        $renda_ocupacao = new Emprestimo();
+
+        $renda_ocupacao->exists = true;
+        $renda_ocupacao->id = Session::get('dados_emprestimo.id_cadastro'); //already exists in database.
         $renda_ocupacao->salario = $request->salario;
         $renda_ocupacao->ocupacao = $request->ocupacao;
         $renda_ocupacao->escolaridade = $request->escolaridade;
