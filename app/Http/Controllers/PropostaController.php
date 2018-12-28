@@ -164,7 +164,7 @@ class PropostaController extends Controller
             $status_anliase->save();
 //            echo $response;
 
-            return view('emprestimo.status_analise');
+
 
         }
         /*CRIAR VÁRIAVEL NO SISTEMA PARA DEFINIR O ACESSO DIRETO PARA A PÁGINA DE STATUS*/

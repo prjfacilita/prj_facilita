@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Session;
 use GuzzleHttp\Client;
 use App\DadosBancarios;
+use Illuminate\View\View;
 
 
 class DadosBancariosController extends Controller
@@ -72,7 +73,7 @@ class DadosBancariosController extends Controller
         $chamada_analise = new PropostaController();
         $chamada_analise->AnaliseCadsatral($id_cadastro);
 
-        return 'ok';
+        return view('emprestimo.status_analise');
 
     }
 }
