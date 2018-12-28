@@ -67,16 +67,10 @@ class EmprestimoController extends Controller
     {
         $this->middleware('auth');
 
-        $this->ChecarAnalise();
+//        $this->ChecarAnalise();
     }
 
-    public function ChecarAnalise(){
-        if(Auth::user()->status_analise == 2){
-            // em análise
 
-            return view('emprestimo.status_analise');
-        }
-    }
 
     /**
      * Display a listing of the resource.
@@ -89,7 +83,17 @@ class EmprestimoController extends Controller
 
         /*Fazer consulta na api do banco cbss para retornar os dados do contrato e também limites*/
 //        $this->ConfiguracoesAPI();
-        return view('emprestimo.pedido');
+
+        if(Auth::user()->status_analise == 2){
+            // em análise
+
+            return view('emprestimo.status_analise');
+        }else{
+
+
+            return view('emprestimo.pedido');
+
+        }
     }
 
     /**
