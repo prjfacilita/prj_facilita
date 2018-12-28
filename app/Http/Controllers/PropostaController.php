@@ -54,8 +54,8 @@ class PropostaController extends Controller
 
 
         $data = DB::table('cadastro')->where('id',  $id)->first();
-
-        $cpf = str_replace( ',','.','-',   Auth::user()->cpf);
+        $pontos = array(',','.','-');
+        $cpf = str_replace( $pontos,   "",  Auth::user()->cpf);
 
         $retorno01  =  $client->request('POST', EmprestimoController::URL_ENDPOINT(). '/api/v1/ep/propostas',
             [
