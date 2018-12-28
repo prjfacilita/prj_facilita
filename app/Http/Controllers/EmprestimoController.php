@@ -311,9 +311,12 @@ class EmprestimoController extends Controller
         $endereco->uf_res           =   $request->uf_id;
         $endereco->save();
 
+        $teste = new PropostaController();
+        $teste->InserirProposta($request->session()->get('id_cadastro'));
+        /*CHAMAR CONTROLADOR PROPOSTA*/
 
-        return response('residencia roubada com sucesso', 200)
-            ->header('Content-Type', 'text/plain');
+//        return response('residencia roubada com sucesso', 200)
+//            ->header('Content-Type', 'text/plain');
 
 
     }

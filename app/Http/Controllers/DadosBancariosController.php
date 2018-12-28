@@ -18,6 +18,18 @@ class DadosBancariosController extends Controller
 
     public function  InserirDadosBacnarios(Request $request){
 
+        /*CONTA
+
+        NR_PEDIDO
+        CPF
+        BANCO
+        AGENCIA
+        DIG_AG
+        CONTA
+        DIG_CONTA
+        TIPO
+        CONTA_DESDE
+*/
 
         return $request;
 
