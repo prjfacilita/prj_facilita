@@ -248,6 +248,8 @@ class EmprestimoController extends Controller
         $renda_ocupacao->ramal = $request->ramal;
         $renda_ocupacao->save();
 
+
+        $request->session()->put('id_cadastro', $request->session()->get('id_cadastro'));
         return response('Dados inseridos com sucesso', 200)
             ->header('Content-Type', 'text/plain');
 
@@ -270,6 +272,7 @@ class EmprestimoController extends Controller
     }
 
     public function EmprestimoEndereco(Request $request){
+
 
 
         $validator = Validator::make($request->all(), [
@@ -295,6 +298,8 @@ class EmprestimoController extends Controller
             var residencia    =   $('#tipo-residencia-id').find(":selected").text();
             var escolaridade    =   $('#uf').find(":selected").text();*/
         $endereco = new Emprestimo();
+        $endereco->exists = true;
+        $endereco->id = $request->session()->get('id_cadastro'); //already exists in database.
         $endereco->cep_res      =   $request->cep;
         $endereco->end_res      =   $request->endereco;
         $endereco->num_res      =   $request->nro;
