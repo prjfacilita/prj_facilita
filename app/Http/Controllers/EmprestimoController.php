@@ -205,7 +205,7 @@ class EmprestimoController extends Controller
         // return Session::get('dados_emprestimo.id_cadastro')
 
 
-        return response('Dados inseridos com sucesso'. Session::get('dados_emprestimo.id_cadastro').'', 200)
+        return response('Dados inseridos com sucesso'. $dados_pessoais->id].'', 200)
             ->header('Content-Type', 'text/plain');
         /*inputar no banco de dados*/
 //        return $request->nome_solicitanteg;
