@@ -196,10 +196,10 @@ class PropostaController extends Controller
 
                    "valorPatrimonio" => "5000",
 
-                    "documentosPessoais" => [
+                    "documentosPessoais" => [[
                        "numeroDocumento" => "357327391",
                         "tipoDocumento" => "RG"
-                    ],
+                    ] ],
                     "endereco" => [
                         "cep" => 11740000,
                         "logradouro" => "Rua Butantã",
