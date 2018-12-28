@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\DadosBancarios;
+use App\Login;
 use Illuminate\Http\Request;
 use Illuminate\Database;
 use Illuminate\Support\Facades\Session;
@@ -155,6 +156,12 @@ class PropostaController extends Controller
         if ($err) {
             echo "cURL Error #:" . $err;
         } else {
+
+            $status_anliase = new Login();
+            $status_anliase->exists = true;
+            $status_anliase->id = Auth::user()->id;
+            $status_anliase->status_analise = 2;
+            $status_anliase->save();
             echo $response;
         }
         /*CRIAR VÁRIAVEL NO SISTEMA PARA DEFINIR O ACESSO DIRETO PARA A PÁGINA DE STATUS*/

@@ -66,6 +66,12 @@ class EmprestimoController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+
+        if(Auth::user()->status_analise == 2){
+            // em análise
+
+            return view('emprestimo.status_analise');
+        }
     }
 
     /**
