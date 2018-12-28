@@ -234,30 +234,31 @@
             if(step > 4) return alert('Você não pode editar as informações nessa etapa pois já preencheu os dados');
 
 
-            var cep     =   $("#form-3 input[name=cep]").val();
-            var endereco     =   $("#form-3 input[name=endereco]").val();
-            var nro     =   $("#form-3 input[name=nro]").val();
-            var complemento     =   $("#form-3 input[name=complemento]").val();
-            var bairro     =   $("#form-3 input[name=bairro]").val();
-            var cidade     =   $("#form-3 input[name=cidade]").val();
-            var valor_patrimonio     =   $("#form-3 input[name=valor-patrimonio-name]").val();
-            // var cep     =   $("#form-2 input[name=cep]").val();
-            var residencia    =   $('#tipo-residencia-id').find(":selected").text();
-            var uf_id    =   $('#uf').find(":selected").text();
+            var banco_id     =   $('#banco-id').find(":selected").text();
+            var nro_agencia     =   $("#form-4 input[name=nro_agencia-name]").val();
+            var nro_conta       =   $("#form-4 input[name=nro_conta]").val();
+            var tipo_conta      =   $("#form-4 input[name=conta-tipo]").val();
+            var conta_desde     =   $("#form4 input[name=conta-desd]").val();
+            var nome_ref_pessoal    =   $("#form4 input[name=nome-referencia-pessoal]").val();
+            var cpf_ref_pessoal     =   $("#form4 input[name=cpf-referencia-pessoal]").val();
+            var grau_rel            =   $("#form4 input[name=grau-relacionamento]").val();
+            var tel_relacionamento  =   $("#form4 input[name=grau-relacionamento]").val();
 
 
 
 
-            axios.post(APP_URL + '/pedido_emprestimo_parte03', {
-                cep: cep,
-                endereco: endereco,
-                nro: nro,
-                complemento: complemento,
-                bairro: bairro,
-                cidade: cidade,
-                valor_patrimonio: valor_patrimonio,
-                residencia: residencia,
-                uf_id: uf_id
+            axios.post(APP_URL + '/pedido_emprestimo_parte04', {
+                banco_id: banco_id,
+                nro_agencia: nro_agencia,
+                nro_conta:nro_conta,
+                tipo_conta: tipo_conta,
+                conta_desde: conta_desde,
+                nome_ref_pessoal: nome_ref_pessoal,
+                cpf_ref_pessoal: cpf_ref_pessoal,
+                grau_rel: grau_rel,
+                tel_relacionamento: tel_relacionamento
+
+
 
 
             })
