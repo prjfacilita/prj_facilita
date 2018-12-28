@@ -182,7 +182,7 @@ class PropostaController extends Controller
 
         $retorno01  =  $client->request('PUT', EmprestimoController::URL_ENDPOINT(). '/api/v2/ep/propostas/055090000030/analisecadastral',
             [
-                \GuzzleHttp\RequestOptions::JSON => [ [
+                \GuzzleHttp\RequestOptions::JSON => ['body' => [
 //                    "qteParcelas" => [
 //                        $request->qteParcelas,
 //                    ],
@@ -190,7 +190,7 @@ class PropostaController extends Controller
                   "nomeMae" => "Maria da Silva",
                   "email" => "email@email.com",
                   "estadoCivil" => "SOLTEIRO",
-                  "naturalidade" => "São Paulo",
+                  "naturalidade" => "Sãoaulo",
 
                    "valorPatrimonio" => "5000",
 
