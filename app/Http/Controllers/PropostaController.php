@@ -184,7 +184,7 @@ class PropostaController extends Controller
         $updateBody['naturalidade'] = "Santista teste";
         $updateBody["valorPatrimonio"] = "2000.0";
 //        $updateBody["documentosPessoais"][["numeroDocumento"]]=  125478991;
-        $updateBody["documentosPessoais"][0] = [ 'numeroDocumento' => '125478991', 'tipoDocumento' => 'RG'];
+        $updateBody["documentosPessoais"] = [ 'numeroDocumento' => '125478991', 'tipoDocumento' => 'RG'];
         $updateBody["endereco"]["cep"] = "117300000";
         $updateBody["endereco"]["logradouro"] = "117300000";
         $updateBody["endereco"]["numero"] = "815";
@@ -203,7 +203,7 @@ class PropostaController extends Controller
             ]);
 
 
-        return json_encode($updateBody, JSON_FORCE_OBJECT);
+//        return json_encode($updateBody, JSON_FORCE_OBJECT);
 
         $arr = json_decode($retorno01->getBody());
         /*CRIAR VÁRIAVEL NO SISTEMA PARA DEFINIR O ACESSO DIRETO PARA A PÁGINA DE STATUS*/
