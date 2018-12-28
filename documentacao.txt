@@ -3,12 +3,22 @@ Fluxo do funcionamento do sistema
 
 ** Falta
 
-Corrigir campo id para não inserir um novo cadastro no banco de dados
+Corrigir campo id para não inserir um novo cadastro no banco de dados -> ok
+
+criar controlador  Propostas para inserir a proposta -> ok
+adaptar controlador para salvar o retorno da proposta isnerida ->
+criar pacote para visualização em diagrama do banco de dados
 Criar insert dos dados_bancários
-criar controlador  Propostas para inserir a proposta
+
+
+
+/*REPORTAR SOBRE A FALTA DO CAMPO DE DIGITO SEPARADO, vou ter que cortar a string*/
+
+
+numero pedido  = numero proposta
 
 Metódos
-InserirProposta()
+InserirProposta() - > ok;
 AnaliseCadsatral()
 RetornoAnalise()
 
