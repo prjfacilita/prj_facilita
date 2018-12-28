@@ -183,14 +183,7 @@ class PropostaController extends Controller
         $updateBody['naturalidade'] = "Santista teste";
         $updateBody["valorPatrimonio"] = "2000.0";
 //        $updateBody["documentosPessoais"][["numeroDocumento"]]=  125478991;
-        $updateBody["documentosPessoais"] =
-  array (
-      0 =>
-          array (
-              'numeroDocumento' => 125478991,
-              'tipoDocumento' => 'RG',
-          ),
-  );
+        $updateBody["documentosPessoais"][0] = [ 'numeroDocumento' => '125478991', 'tipoDocumento' => 'RG'];
         $updateBody["endereco"]["cep"] = "117300000";
         $updateBody["endereco"]["logradouro"] = "117300000";
         $updateBody["endereco"]["numero"] = "815";
