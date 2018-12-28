@@ -179,56 +179,60 @@ class PropostaController extends Controller
   }
 }
 */
-
+        $data_json = array (
+            'nomeMae' => 'Maria da Silva',
+            'email' => 'email@email.com',
+            'estadoCivil' => 'SOLTEIRO',
+            'naturalidade' => 'São Paulo',
+            'valorPatrimonio' => '5000',
+            'documentosPessoais' =>
+                array (
+                    0 =>
+                        array (
+                            'numeroDocumento' => 125478991,
+                            'tipoDocumento' => 'RG',
+                        ),
+                ),
+            'endereco' =>
+                array (
+                    'cep' => 11740000,
+                    'logradouro' => 'Rua Butantã',
+                    'numero' => 123,
+                    'bairro' => 'Pinheiros',
+                    'cidade' => 'Sao Paulo',
+                    'complemento' => '10o andar',
+                ),
+            'enderecoComercial' =>
+                array (
+                    'cep' => 11740000,
+                    'logradouro' => 'Rua Butantã',
+                    'numero' => 123,
+                    'bairro' => 'Pinheiros',
+                    'cidade' => 'Sao Paulo',
+                    'uf' => 'SP',
+                    'complemento' => '10o andar',
+                ),
+            'telefones' =>
+                array (
+                    0 =>
+                        array (
+                            'ddd' => 11,
+                            'numero' => 985478547,
+                            'tipoTelefone' => 'CELULAR',
+                            'ramal' => 444,
+                        ),
+                ),
+            'renda' =>
+                array (
+                    'tipoComprovanteRenda' => 'EXTRATO_FGTS',
+                ),
+        );
         $retorno01  =  $client->request('PUT', EmprestimoController::URL_ENDPOINT(). '/api/v2/ep/propostas/055090000030/analisecadastral',
             [
 
                     'json' =>[
-                 ['body' => [[
-//                    "qteParcelas" => [
-//                        $request->qteParcelas,
-//                    ],
-                   // "numeroProposta" => "055090000030",
-                  "nomeMae" => "MARIA DA SILVA",
-                  "email" => "rtelesc@gmail.com",
-                  "estadoCivil" => "SOLTEIRO",
-                  "naturalidade" => "Brasileiro",
-
-                   "valorPatrimonio" => "5000",
-
-                    "documentosPessoais" => [[
-                       "numeroDocumento" => "357327391",
-                        "tipoDocumento" => "RG"
-                    ] ],
-                    "endereco" => [[
-                        "cep" => 11740000,
-                        "logradouro" => "Rua Butantã",
-                        "numero" => 123,
-                        "bairro" => "Pinheiros",
-                        "cidade" => "Sao Paulo",
-
-                        "complemento" => "10o andar"
-                    ]],
-                     "enderecoComercial" => [[
-                         "cep" => 11740000,
-                         "logradouro" => "Rua Butantã",
-                         "numero" => 123,
-                         "bairro" => "Pinheiros",
-                         "cidade" => "Sao Paulo",
-
-                         "complemento" => "10o andar"
-                     ] ],
-                     "telefones" => [[
-                         "ddd" => 11,
-                          "numero" => 985478547,
-                          "tipoTelefone" => "CELULAR",
-                          "ramal" => 444
-                     ]],
-                    "renda" => [[
-
-                            "tipoComprovanteRenda" => "EXTRATO_FGTS"
-                    ]]
-                 ] ]  ]]
+                 ['body' =>  json_encode($data_json) ]
+//                 ]
             ]);
 
 
