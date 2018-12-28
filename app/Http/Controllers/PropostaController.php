@@ -61,7 +61,7 @@ class PropostaController extends Controller
 //                    "qteParcelas" => [
 //                        $request->qteParcelas,
 //                    ],
-                    "cpf" => Auth::user()->cpf,
+                    "cpf" => str_replace( ',','.','-',   Auth::user()->cpf),
                     "dataNascimento" =>  $data->dt_nasc ,
                     "naturezaOcupacao" => $data->nat_ocup,
                     "genero" => strtoupper($data->sexo),
