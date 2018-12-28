@@ -73,7 +73,7 @@ class PropostaController extends Controller
             ]);
 
 
-        $arr = json_decode($retorno01->getBody());
+        $arr = json_decode($retorno01);
 
 
         return $arr;
