@@ -82,7 +82,7 @@ Route::post('pre_cadastro', 'Auth\RegisterController@PreCadastro')->name('pre_ca
 Route::post('pedido_emprestimo_parte01', 'EmprestimoController@EmprestimoDadosPessoais')->name('pedido_emprestimo_parte01');
 Route::post('pedido_emprestimo_parte02', 'EmprestimoController@EmprestimoRenda')->name('pedido_emprestimo_parte02');
 Route::post('pedido_emprestimo_parte03', 'EmprestimoController@EmprestimoEndereco')->name('pedido_emprestimo_parte03');
-Route::post('pedido_emprestimo_parte04', 'DadosBancarios@InserirDadosBacnarios')->name('pedido_emprestimo_parte04');
+Route::post('pedido_emprestimo_parte04', 'DadosBancariosController@InserirDadosBacnarios')->name('pedido_emprestimo_parte04');
 //Route::post('login', 'Auth\LoginController@login');
 
 //
