@@ -125,7 +125,7 @@ class PropostaController extends Controller
 
 //        $token = session('token_key');
 
-        <?php
+
 
 $curl = curl_init();
 
