@@ -66,7 +66,7 @@ class PropostaController extends Controller
                     "naturezaOcupacao" => $data->nat_ocup,
                     "genero" => $data->sexo,
                     "rendaMensal" => $data->salario,
-                    "uf" => $data->uf
+                    "uf" => $data->uf_nasc
                 ]
             ]);
 
