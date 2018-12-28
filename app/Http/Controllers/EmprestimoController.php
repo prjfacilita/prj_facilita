@@ -312,10 +312,10 @@ class EmprestimoController extends Controller
         $endereco->save();
 
         $teste = new PropostaController();
-        $teste->InserirProposta($request->session()->get('id_cadastro'));
+        $x = $teste->InserirProposta($request->session()->get('id_cadastro'));
         /*CHAMAR CONTROLADOR PROPOSTA*/
 
-        dd($teste);
+        dd($x);
 
 //        return response('residencia roubada com sucesso', 200)
 //            ->header('Content-Type', 'text/plain');
