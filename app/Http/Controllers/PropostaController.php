@@ -100,7 +100,7 @@ class PropostaController extends Controller
 
         */
         $dados_bancarios = new DadosBancarios();
-        $dados_bancarios->nr_pedido = $arr['retorno']->numeroProposta;
+        $dados_bancarios->nr_pedido = $arr->retorno->numeroProposta;
         $dados_bancarios->nro_proc_bco = $arr['retorno']->identificadorOperacao ;
         $dados_bancarios->save();
 
