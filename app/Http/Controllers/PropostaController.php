@@ -126,7 +126,7 @@ class PropostaController extends Controller
 
 //        $token = session('token_key');
 
-        <?php
+
 
 $request = new HttpRequest();
 $request->setUrl('https://c2gvw4lxh9.execute-api.sa-east-1.amazonaws.com/hmg/api/v2/ep/propostas/055090000030/analisecadastral');
