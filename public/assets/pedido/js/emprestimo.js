@@ -238,11 +238,11 @@
             var nro_agencia     =   $("#form-4 input[name=nro_agencia-name]").val();
             var nro_conta       =   $("#form-4 input[name=nro_conta]").val();
             var tipo_conta      =   $("#form-4 input[name=conta-tipo]").val();
-            var conta_desde     =   $("#form4 input[name=conta-desd]").val();
-            var nome_ref_pessoal    =   $("#form4 input[name=nome-referencia-pessoal]").val();
-            var cpf_ref_pessoal     =   $("#form4 input[name=cpf-referencia-pessoal]").val();
-            var grau_rel            =   $("#form4 input[name=grau-relacionamento]").val();
-            var tel_relacionamento  =   $("#form4 input[name=grau-relacionamento]").val();
+            var conta_desde     =   $("#form-4 input[name=conta-desd]").val();
+            var nome_ref_pessoal    =   $("#form-4 input[name=nome-referencia-pessoal]").val();
+            var cpf_ref_pessoal     =   $("#form-4 input[name=cpf-referencia-pessoal]").val();
+            var grau_rel            =   $("#form-4 input[name=grau-relacionamento]").val();
+            var tel_relacionamento  =   $("#form-4 input[name=telefone-relacionamentoo]").val();
 
 
 
