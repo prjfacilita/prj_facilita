@@ -180,6 +180,8 @@ class PropostaController extends Controller
 }
 */
         $updateBody['nomeMae'] = "nome mae";
+        $updateBody['naturalidade'] = "Santista teste";
+        $updateBody["valorPatrimonio"] = "2000.0";
         $retorno01  =  $client->request('PUT', EmprestimoController::URL_ENDPOINT(). '/api/v2/ep/propostas/055090000030/analisecadastral',
             [
 
