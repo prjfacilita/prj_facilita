@@ -13,6 +13,7 @@ use GuzzleHttp\Client;
 use Illuminate\Support\Facades\DB;
 //use App\Http\Controllers\EmprestimoController
 use App\Http\Controllers\DadosBancariosController;
+use HttpRequest;
 class PropostaController extends Controller
 {
     //
@@ -125,79 +126,20 @@ class PropostaController extends Controller
 
 //        $token = session('token_key');
 
-        $client =   new Client([
-            'base_uri' => EmprestimoController::URL_TOKEN_API(),
-            'headers' => [
-                'Accept' => 'application/json',
-                'Authorization' => 'Bearer ' . $token,
-                'Content-Type' => 'application/json',
-            ],
-        ]);
+        <?php
 
-        /*"nomeMae": "Maria da Silva",
-  "email": "email@email.com",
-  "estadoCivil": "SOLTEIRO",
-  "naturalidade": "São Paulo",
+$request = new HttpRequest();
+$request->setUrl('https://c2gvw4lxh9.execute-api.sa-east-1.amazonaws.com/hmg/api/v2/ep/propostas/055090000030/analisecadastral');
+$request->setMethod(HTTP_METH_PUT);
 
-   "valorPatrimonio":"5000",
-  "documentosPessoais": [
-    {
-      "numeroDocumento": 125478991,
-      "tipoDocumento": "RG"
-    }
-  ],
-  "endereco": {
-    "cep": 11740000,
-    "logradouro": "Rua Butantã",
-    "numero": 123,
-    "bairro": "Pinheiros",
-    "cidade": "Sao Paulo",
+$request->setHeaders(array(
+    'Postman-Token' => '125eb395-03b5-403f-98ce-3a1f2fbd034d',
+    'cache-control' => 'no-cache',
+    'Authorization' => 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Im9uRXlwQllvVWY1QnFjYXFMOHRtWEZrQTRxcyJ9.eyJhdWQiOiJtaWNyb3NvZnQ6aWRlbnRpdHlzZXJ2ZXI6NzIxYzQwNzUtMmM2Zi00MWRkLWI2MDktM2Q3YzVhYWJiN2ZkIiwiaXNzIjoiaHR0cDovL2ZzLmNic3NkaWdpdGFsLmNvbS5ici9hZGZzL3NlcnZpY2VzL3RydXN0IiwiaWF0IjoxNTQ1OTkzMjM2LCJleHAiOjE1NDU5OTY4MzYsImNsaWVudF9hcHAiOiJGYWNpbGl0YSBFUCIsImNsaWVudF9jb21wYW55IjoiRmFjaWxpdGEiLCJhcHB0eXBlIjoiQ29uZmlkZW50aWFsIiwiYXBwaWQiOiI3MjFjNDA3NS0yYzZmLTQxZGQtYjYwOS0zZDdjNWFhYmI3ZmQiLCJhdXRobWV0aG9kIjoiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2F1dGhlbnRpY2F0aW9ubWV0aG9kL3Bhc3N3b3JkIiwiYXV0aF90aW1lIjoiMjAxOC0xMi0yOFQxMDozMzo1Ni4zMTlaIiwidmVyIjoiMS4wIn0.pQb7knwSbUnik8lgQAFeS1g47WQaiSjMlwqEo_2Ali1OXcxfmQqsHqdLdnk8xtJ9gNPApEmV4aURC38fWZoisgPyjSGPLIHQuy4_XSe-1EggAgnDRaLz76Pd_-2gaBLdgPejOToBB-iwYyyYCseOgqTYKDMGEnaIpKcOAdI4A1YTOxmVlo-F_EUOhm91RL_M4SJ-4Qfa4kbauFimwAFQL4Vdy3ST14iaLFvlgj-WaioLr0Xvxb7wUVHAm4ffXwJLIGbmemEUgU3qhO7XKUAjQ_oLAoUX_AT93-9cc7k332AqnXCTlOksQkqSIDf8c6W1L2dGj23jSKQzOe7EG6AQzA',
+    'Content-Type' => 'application/json'
+));
 
-    "complemento": "10o andar"
-  },
-"enderecoComercial": {
-    "cep": 11740000,
-    "logradouro": "Rua Butantã",
-    "numero": 123,
-    "bairro": "Pinheiros",
-    "cidade": "Sao Paulo",
-    "uf":"SP",
-
-    "complemento": "10o andar"
-  },
-  "telefones": [
-    {
-      "ddd": 11,
-      "numero": 985478547,
-      "tipoTelefone": "CELULAR",
-      "ramal": 444
-    }
-  ],
-  "renda": {
-
-    "tipoComprovanteRenda": "EXTRATO_FGTS"
-  }
-}
-*/
-        $updateBody['nomeMae'] = "nome mae";
-        $updateBody['email'] = "rtelesc@gmail.com";
-        $updateBody['naturalidade'] = "Santista teste";
-        $updateBody["valorPatrimonio"] = "2000.0";
-//        $updateBody["documentosPessoais"][["numeroDocumento"]]=  125478991;
-        $updateBody["documentosPessoais"] = [ 'numeroDocumento' => '125478991', 'tipoDocumento' => 'RG'];
-        $updateBody["endereco"]["cep"] = "117300000";
-        $updateBody["endereco"]["logradouro"] = "rua teste";
-        $updateBody["endereco"]["numero"] = "815";
-        $updateBody["endereco"]["bairro"] = "valongo";
-        $updateBody["endereco"]["cidade"] = "santos";
-        $updateBody["endereco"]["complemento"] = "casa";
-
-        $retorno01  =  $client->request('PUT', EmprestimoController::URL_ENDPOINT(). '/api/v2/ep/propostas/055090000030/analisecadastral',
-            [
-
-                'json' => [
-
-             '{
+$request->setBody('{
     "nomeMae": "Maria da Silva",
     "email": "email@email.com",
     "estadoCivil": "SOLTEIRO",
@@ -237,16 +179,15 @@ class PropostaController extends Controller
     "renda": {
         "tipoComprovanteRenda": "EXTRATO_FGTS"
     }
-}'
-]
+}');
 
+try {
+    $response = $request->send();
 
-            ]);
-
-
-//        return json_encode($updateBody, JSON_FORCE_OBJECT);
-
-        $arr = json_decode($retorno01->getBody());
+    echo $response->getBody();
+} catch (HttpException $ex) {
+    echo $ex;
+}
         /*CRIAR VÁRIAVEL NO SISTEMA PARA DEFINIR O ACESSO DIRETO PARA A PÁGINA DE STATUS*/
 
         /*ENNVIAR EMAIL PARA CLIENTE INFORMANDO QUE ESTA EM ANÁLISE*/
