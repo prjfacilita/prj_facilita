@@ -162,7 +162,10 @@ class PropostaController extends Controller
             $status_anliase->id = Auth::user()->id;
             $status_anliase->status_analise = 2;
             $status_anliase->save();
-            echo $response;
+//            echo $response;
+
+            return view('emprestimo.status_analise');
+
         }
         /*CRIAR VÁRIAVEL NO SISTEMA PARA DEFINIR O ACESSO DIRETO PARA A PÁGINA DE STATUS*/
 
