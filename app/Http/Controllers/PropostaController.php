@@ -55,13 +55,15 @@ class PropostaController extends Controller
 
         $data = DB::table('cadastro')->where('id',  $id)->first();
 
+        $cpf = str_replace( ',','.','-',   Auth::user()->cpf);
+
         $retorno01  =  $client->request('POST', EmprestimoController::URL_ENDPOINT(). '/api/v1/ep/propostas',
             [
                 \GuzzleHttp\RequestOptions::JSON => ["nome" => $data->nome_completo,
 //                    "qteParcelas" => [
 //                        $request->qteParcelas,
 //                    ],
-                    "cpf" => str_replace( ',','.','-',   Auth::user()->cpf),
+                    "cpf" => $cpf,
                     "dataNascimento" =>  $data->dt_nasc ,
                     "naturezaOcupacao" => $data->nat_ocup,
                     "genero" => strtoupper($data->sexo),
