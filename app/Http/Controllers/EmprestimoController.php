@@ -201,6 +201,9 @@ class EmprestimoController extends Controller
 //        $dados_pessoais->emissor            =   '1';
         $dados_pessoais->save();
 
+        Session::put('dados_emprestimo',['id_cadastro',$dados_pessoais->id]);
+        // return Session::get('dados_emprestimo.id_cadastro')
+
 
         return response('Dados inseridos com sucesso', 200)
             ->header('Content-Type', 'text/plain');
@@ -221,7 +224,7 @@ class EmprestimoController extends Controller
             return redirect()->back()->withInput();
         }
 
-        $renda_ocupacao = new Emprestimo();
+        $renda_ocupacao = new Emprestimo(Session::get('dados_emprestimo.id_cadastro'));
         $renda_ocupacao->salario = $request->salario;
         $renda_ocupacao->ocupacao = $request->ocupacao;
         $renda_ocupacao->escolaridade = $request->escolaridade;

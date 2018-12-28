@@ -1,0 +1,140 @@
+Fluxo do funcionamento do sistema
+
+
+** Falta
+
+Corrigir campo id para não inserir um novo cadastro no banco de dados
+Criar insert dos dados_bancários
+criar controlador  Propostas para inserir a proposta
+
+Metódos
+InserirProposta()
+AnaliseCadsatral()
+RetornoAnalise()
+
+
+
+
+Fluxo de chamada da API
+
+/api/v1/ep/propostas
+
+
+Insere nova proposta -> campos
+{
+  "nome": "João da Silva",
+  "cpf": "03552031383",
+  "dataNascimento": "1980-05-12",
+  "naturezaOcupacao": "ASSALARIADO",
+  "genero": "MASCULINO",
+  "rendaMensal": 2500,
+  "uf": "SP"
+}
+
+
+{
+  "retorno": {
+    "identificadorOperacao": "fdafed1c-eac7-4acd-be71-c6fc21814608",
+    "numeroProposta": "055090000015"
+  },
+  "alertas": [],
+  "erros": []
+}
+
+
+
+
+
+
+
+
+/******************************************* ANALSIE CADASTRAL PARTE 1
+{
+
+Request
+"nomeMae": "Maria da Silva",
+  "email": "email@email.com",
+  "estadoCivil": "SOLTEIRO",
+  "naturalidade": "São Paulo",
+
+   "valorPatrimonio":"5000",
+  "documentosPessoais": [
+    {
+      "numeroDocumento": 125478991,
+      "tipoDocumento": "RG"
+    }
+  ],
+  "endereco": {
+    "cep": 11740000,
+    "logradouro": "Rua Butantã",
+    "numero": 123,
+    "bairro": "Pinheiros",
+    "cidade": "Sao Paulo",
+
+    "complemento": "10o andar"
+  },
+"enderecoComercial": {
+    "cep": 11740000,
+    "logradouro": "Rua Butantã",
+    "numero": 123,
+    "bairro": "Pinheiros",
+    "cidade": "Sao Paulo",
+    "uf":"SP",
+
+    "complemento": "10o andar"
+  },
+  "telefones": [
+    {
+      "ddd": 11,
+      "numero": 985478547,
+      "tipoTelefone": "CELULAR",
+      "ramal": 444
+    }
+  ],
+  "renda": {
+
+    "tipoComprovanteRenda": "EXTRATO_FGTS"
+  }
+}
+
+
+
+
+response
+{
+  "retorno": {
+    "identificadorOperacao": "c8626979-c42f-49cc-bed7-f62e3cf0a22b"
+  },
+  "alertas": [],
+  "erros": []
+}
+
+
+
+////////////////////////////////////////////////////////* PARTE 3 ANALISE
+
+/api/v1/ep/propostas/status
+055090000015
+{
+  "retorno": {
+    "listaSituacaoPropostas": [
+      {
+        "numeroProposta": "055090000015",
+        "statusProposta": "REPROVADA",
+        "dataStatusProposta": "2018-12-28T04:18:02.836",
+        "ultimaOperacao": {
+          "identificadorOperacao": "c8626979-c42f-49cc-bed7-f62e3cf0a22b",
+          "codStatusOperacao": "CONCLUIDA",
+          "dataInicio": "2018-12-28T04:16:56.298",
+          "dataTermino": "2018-12-28T04:18:02.83",
+          "codFaseAnaliseCredito": "ANALISE_CADASTRAL",
+          "codMotivoRecusa": null
+        },
+        "listaPendenciasDocumentos": [],
+        "listaPendenciasDigitacao": []
+      }
+    ]
+  },
+  "alertas": [],
+  "erros": []
+}
