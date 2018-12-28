@@ -197,7 +197,47 @@ class PropostaController extends Controller
 
                 'json' => [
 
-                'body' => json_encode($updateBody, JSON_FORCE_OBJECT)
+                'body' => '{
+    "nomeMae": "Maria da Silva",
+    "email": "email@email.com",
+    "estadoCivil": "SOLTEIRO",
+    "naturalidade": "São Paulo",
+    "valorPatrimonio": "5000",
+    "documentosPessoais": [
+        {
+            "numeroDocumento": 125478991,
+            "tipoDocumento": "RG"
+        }
+    ],
+    "endereco": {
+        "cep": 11740000,
+        "logradouro": "Rua Butantã",
+        "numero": 123,
+        "bairro": "Pinheiros",
+        "cidade": "Sao Paulo",
+        "complemento": "10o andar"
+    },
+    "enderecoComercial": {
+        "cep": 11740000,
+        "logradouro": "Rua Butantã",
+        "numero": 123,
+        "bairro": "Pinheiros",
+        "cidade": "Sao Paulo",
+        "uf": "SP",
+        "complemento": "10o andar"
+    },
+    "telefones": [
+        {
+            "ddd": 11,
+            "numero": 985478547,
+            "tipoTelefone": "CELULAR",
+            "ramal": 444
+        }
+    ],
+    "renda": {
+        "tipoComprovanteRenda": "EXTRATO_FGTS"
+    }
+}'
 
                 ]
 
