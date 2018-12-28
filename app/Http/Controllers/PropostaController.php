@@ -59,16 +59,16 @@ class PropostaController extends Controller
 
         $retorno01  =  $client->request('POST', EmprestimoController::URL_ENDPOINT(). '/api/v1/ep/propostas',
             [
-                \GuzzleHttp\RequestOptions::JSON => ["nome" => $data->nome_completo,
+                \GuzzleHttp\RequestOptions::JSON => ["nome" => "João da Silva",
 //                    "qteParcelas" => [
 //                        $request->qteParcelas,
 //                    ],
-                    "cpf" => $cpf,
-                    "dataNascimento" =>  $data->dt_nasc ,
-                    "naturezaOcupacao" => $data->nat_ocup,
-                    "genero" => strtoupper($data->sexo),
-                    "rendaMensal" => $data->salario,
-                    "uf" => $data->uf_nasc
+                    "cpf" => "03552031383",
+                    "dataNascimento" => "1980-05-12",
+  "naturezaOcupacao" => "ASSALARIADO",
+  "genero" => "MASCULINO",
+  "rendaMensal" => 2500,
+  "uf" => "SP"
                 ]
             ]);
 
