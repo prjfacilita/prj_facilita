@@ -18,7 +18,7 @@ class DadosBancariosController extends Controller
 
     public function  InserirDadosBacnarios(Request $request){
 
-        $id_exists = $request->session()->get('id_dados_bancarios');
+        $id_exists = session()->get('id_dados_bancarios');
         $id_cadastro = $request->session()->get('id_cadastro');
 
         $dados_bancarios = new DadosBancarios();

@@ -26,7 +26,7 @@ class PropostaController extends Controller
     }
 
 
-    public function InserirProposta(Request $request, $id){
+    public function InserirProposta($id){
 
 
         $simulacao = new EmprestimoController();
@@ -104,7 +104,7 @@ class PropostaController extends Controller
         $dados_bancarios->nro_proc_bco = $arr['retorno']->identificadorOperacao ;
         $dados_bancarios->save();
 
-        $request->session()->put('id_dados_bancarios', $dados_bancarios->id);
+        session()->put('id_dados_bancarios', $dados_bancarios->id);
 
         return $arr;
     }
