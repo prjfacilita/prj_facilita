@@ -224,10 +224,10 @@ class PropostaController extends Controller
                           "tipoTelefone" => "CELULAR",
                           "ramal" => 444
                      ],
-                    "renda" => [
+                    "renda" => [[
 
                             "tipoComprovanteRenda" => "EXTRATO_FGTS"
-                         ]
+                    ]]
                  ] ]  ]
             ]);
 
