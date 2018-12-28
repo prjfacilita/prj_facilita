@@ -30,7 +30,7 @@ class DadosBancariosController extends Controller
         $dados_bancarios->dig_ag = substr($request->nro_agencia, -1);
         $dados_bancarios->conta = '4508';
         $dados_bancarios->tipo = 'corrente conta';
-        $dados_bancarios->conta_desde = $request->conta_desde;
+        $dados_bancarios->conta_desde = '22-01-2005';
         $dados_bancarios->id_cadastro = $id_cadastro;
         $dados_bancarios->save();
 
