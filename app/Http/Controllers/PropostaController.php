@@ -195,9 +195,9 @@ class PropostaController extends Controller
         $retorno01  =  $client->request('PUT', EmprestimoController::URL_ENDPOINT(). '/api/v2/ep/propostas/055090000030/analisecadastral',
             [
 
-//                'json' => [
+                'json' => [
 
-                'body' => '{
+             '{
     "nomeMae": "Maria da Silva",
     "email": "email@email.com",
     "estadoCivil": "SOLTEIRO",
@@ -238,7 +238,7 @@ class PropostaController extends Controller
         "tipoComprovanteRenda": "EXTRATO_FGTS"
     }
 }'
-
+]
 
 
             ]);
