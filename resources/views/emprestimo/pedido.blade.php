@@ -171,9 +171,6 @@
                                                 {{ csrf_field() }}
                                                 <div class="col-sm-10">
                                                     <label>Nome: <input type="text" id="solicitation_name" name="solicitation-name" class="solicitation-form__name solicitation-input" onkeypress="return this.value.length<=30" ></label>
-                                                    <div class="valid-feedback">
-                                                        Looks good!
-                                                    </div>
                                                 </div>
 
                                                 <div class="col-sm-2">
@@ -315,6 +312,7 @@
                                                 </div>
 
 
+                                                <button class="solicitation-register-btn" type="submit">Submit form</button>
                                             </form>
                                             <!-- fim form -->
                                         </div>

@@ -1,8 +1,6 @@
 /*JS EMPRESTIMO*/
 
 
-
-
         (function() {
             'use strict';
             window.addEventListener('load', function() {
@@ -10,7 +8,7 @@
                 var forms = document.getElementsByClassName('pedido_emprestimo_parte01');
                 // Loop over them and prevent submission
                 var validation = Array.prototype.filter.call(forms, function(form) {
-                    form.addEventListener('.step_01', function(event) {
+                    form.addEventListener('submit', function(event) {
                         if (form.checkValidity() === false) {
                             event.preventDefault();
                             event.stopPropagation();
@@ -21,12 +19,14 @@
             }, false);
         })();
 
+
+
         var step = 0;
 
 
 
 
-        $(document).on('click','.step_011', function(){
+        $(document).on('click','.step_01', function(){
 
             /**PRIMEIRO FORMULARIO*/
 
