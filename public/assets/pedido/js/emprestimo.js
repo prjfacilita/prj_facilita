@@ -62,6 +62,7 @@
             if(nasto_conjuge === ""){console.log('error');return false;}
             if(sexo_conjuge === ""){console.log('error');return false;}
             if(pb_exposta === ""){console.log('error');return false;}
+
             // if(nome_conjuge === ""){console.log('error');return false;}
 
             // alert('Loading');
