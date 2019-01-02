@@ -42,6 +42,27 @@
             var pb_exposta = $('#publicamente-exposta').find(":selected").text();
 
 
+            if(nome_solicitante === ""){console.log('error');return false;}
+            if(dtn_solicitante === ""){console.log('error');return false;}
+            if(nro_documento === ""){console.log('error');return false;}
+            if(tp_documento === ""){console.log('error');return false;}
+            if(solicitation_emission_id === ""){console.log('error');return false;}
+            if(solicitation_organ === ""){console.log('error');return false;}
+            if(sexo === ""){console.log('error');return false;}
+            if(estado_civil === ""){console.log('error');return false;}
+            if(nacionalidade === ""){console.log('error');return false;}
+            if(uf_nascimento === ""){console.log('error');return false;}
+            if(naturalidade === ""){console.log('error');return false;}
+            if(telefone === ""){console.log('error');return false;}
+            if(celular === ""){console.log('error');return false;}
+            if(tel_recado === ""){console.log('error');return false;}
+            if(nome_mae === ""){console.log('error');return false;}
+            if(nome_conjuge === ""){console.log('error');return false;}
+            if(cpf_conjuge === ""){console.log('error');return false;}
+            if(nasto_conjuge === ""){console.log('error');return false;}
+            if(sexo_conjuge === ""){console.log('error');return false;}
+            if(pb_exposta === ""){console.log('error');return false;}
+            // if(nome_conjuge === ""){console.log('error');return false;}
 
             // alert('Loading');
 
