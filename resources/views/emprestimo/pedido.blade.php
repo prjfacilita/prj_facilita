@@ -183,7 +183,7 @@
 
                                                 <div class="col-sm-4">
                                                     <label>Tipo Documento:
-                                                        <select name="tipo-documento" id="tipo-documento">
+                                                        <select name="tipo-documento" id="tipo-documento" required>
                                                             <option disabled selected>Selecionar</option>
                                                             <option value="rg">RG</option>
                                                             <option value="cnh">CNH</option>
@@ -196,16 +196,16 @@
 
 
                                                 <div class="col-sm-2">
-                                                    <label>Data de Emissão: <input type="date" name="solicitation-emission-id" class="solicitation-form__id solicitation-input"></label>
+                                                    <label>Data de Emissão: <input required type="date" name="solicitation-emission-id" class="solicitation-form__id solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-3">
-                                                    <label>Orgão Expedidor: <input type="text" name="solicitation-organ" class="solicitation-form__id solicitation-input"></label>
+                                                    <label>Orgão Expedidor: <input required type="text" name="solicitation-organ" class="solicitation-form__id solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-2">
                                                     <label>Sexo:
-                                                        <select name="sexo" id="sexo">
+                                                        <select required name="sexo" id="sexo">
                                                             <option disabled selected>Selecionar</option>
                                                             <option value="feminino">Feminino</option>
                                                             <option value="masculino">Masculino</option>
@@ -214,7 +214,7 @@
 
                                                 <div class="col-sm-2">
                                                     <label>Estado Civil:
-                                                        <select name="estado-civil" id="estado-civil">
+                                                        <select required name="estado-civil" id="estado-civil">
                                                             <option disabled selected>Selecionar</option>
                                                             <option value="casada">Casada</option>
                                                             <option value="solteira">Solteira</option>
@@ -227,16 +227,16 @@
 
 
                                                 <div class="col-sm-4">
-                                                    <label>Nacionalidade: <input type="text" name="nacionalidade" class=" solicitation-input"></label>
+                                                    <label>Nacionalidade: <input required type="text" name="nacionalidade" class=" solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-4">
-                                                    <label>Naturalidade: <input type="text" name="naturalidade" class=" solicitation-input"></label>
+                                                    <label>Naturalidade: <input required type="text" name="naturalidade" class=" solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-2">
                                                     <label>UF Nascimento:
-                                                        <select id="uf-nascimento" name="uf-nascimento">
+                                                        <select id="uf-nascimento" required name="uf-nascimento">
                                                             <option disabled selected>Selecionar</option>
                                                             <option value="ac">AC</option>
                                                             <option value="al">AL</option>
@@ -269,34 +269,34 @@
                                                 </div>
 
                                                 <div class="col-sm-3">
-                                                    <label>Telefone: <input type="text" name="telefone" class="solicitation-form__phone solicitation-input"></label>
+                                                    <label>Telefone: <input required type="text" name="telefone" class="solicitation-form__phone solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-3">
-                                                    <label>Celular: <input type="text" name="celular" class="solicitation-form__phone solicitation-input"></label>
+                                                    <label>Celular: <input required type="text" name="celular" class="solicitation-form__phone solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-4">
-                                                    <label>Telefone de Recado e Contato: <input type="text" name="telefone-recado" class="solicitation-form__phone solicitation-input"></label>
+                                                    <label>Telefone de Recado e Contato: <input required type="text" name="telefone-recado" class="solicitation-form__phone solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-6">
-                                                    <label>Nome da Mãe<input type="text" name="nome-mae" class="solicitation-form__name solicitation-input"></label>
+                                                    <label>Nome da Mãe<input required type="text" name="nome-mae" class="solicitation-form__name solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-6">
-                                                    <label>Nome Cônjuge<input type="text" name="nome-conjuge" class="solicitation-form__name solicitation-input"></label>
+                                                    <label>Nome Cônjuge<input required type="text" name="nome-conjuge" class="solicitation-form__name solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-4">
-                                                    <label>CPF Cônjuge<input type="text" name="cpf-conjuge" class="solicitation-form__name solicitation-input"></label>
+                                                    <label>CPF Cônjuge<input required type="text" name="cpf-conjuge" class="solicitation-form__name solicitation-input"></label>
                                                 </div>
                                                 <div class="col-sm-2">
                                                     <label>Nascto Cônjuge: <input type="date" name="nascto-conjuge" class="solicitation-form__id solicitation-input"></label>
                                                 </div>
                                                 <div class="col-sm-2">
                                                     <label>Sexo Cônjuge:
-                                                        <select name="sexo-conjuge" id="sexo-conjuge">
+                                                        <select required name="sexo-conjuge" id="sexo-conjuge">
                                                             <option disabled selected>Selecionar</option>
                                                             <option value="feminino">Feminino</option>
                                                             <option value="masculino">Masculino</option>
@@ -304,7 +304,7 @@
                                                 </div>
                                                 <div class="col-sm-4">
                                                     <label>Publicamente Exposta?:
-                                                        <select name="publicamente-gexposta" id="publicamente-exposta">
+                                                        <select required name="publicamente-gexposta" id="publicamente-exposta">
                                                             <option disabled selected>Selecionar</option>
                                                             <option value="sim">Sim</option>
                                                             <option value="nao">Não</option>
