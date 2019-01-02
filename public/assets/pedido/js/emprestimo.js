@@ -10,7 +10,7 @@
                 var forms = document.getElementsByClassName('pedido_emprestimo_parte01');
                 // Loop over them and prevent submission
                 var validation = Array.prototype.filter.call(forms, function(form) {
-                    form.addEventListener('submit', function(event) {
+                    form.addEventListener('.step_01', function(event) {
                         if (form.checkValidity() === false) {
                             event.preventDefault();
                             event.stopPropagation();
@@ -26,7 +26,7 @@
 
 
 
-        $(document).on('click','.step_01', function(){
+        $(document).on('click','.step_011', function(){
 
             /**PRIMEIRO FORMULARIO*/
 
