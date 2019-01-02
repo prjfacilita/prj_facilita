@@ -360,10 +360,10 @@
 
                         <span class="plots-value"></span>
 
-                        <input type="text" name="simulation-name" placeholder="Nome completo" class="simulation-info"/>
-                        <input type="text" name="simulation-cpf" id="simulation-cpf" placeholder="CPF" class="simulation-info"/>
-                        <input type="email" name="simulation-email" placeholder="E-mail" class="simulation-info"/>
-                        <select id="reason" name="finalidade" class="simulation-info">
+                        <input type="text" name="simulation-name" placeholder="Nome completo" class="simulation-info" required/>
+                        <input type="text" name="simulation-cpf" id="simulation-cpf" placeholder="CPF" class="simulation-info" required/>
+                        <input type="email" name="simulation-email" placeholder="E-mail" class="simulation-info" required/>
+                        <select id="reason" name="finalidade" class="simulation-info" required>
                             <option disabled selected>Qual a finalidade?</option>
                             <option value="renegociar-dividas">Renegociar dívidas</option>
                             <option value="investir-negocio">Investir no meu negócio</option>
