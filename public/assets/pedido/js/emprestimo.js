@@ -41,21 +41,13 @@
             var sexo_conjuge = $('#sexo-conjuge').find(":selected").text();
             var pb_exposta = $('#publicamente-exposta').find(":selected").text();
 
-            if (nome_solicitante  === '') {
-                alert('O nome não pode ser nulo');
+
+
+            if($("#pedido_emprestimo_parte01").valid() == false){
+
+                Console.log('por favor, preencha todos os campos');
                 return false;
             }
-
-            if (dtn_solicitante  === '') {
-                alert('O nome não pode ser nulo');
-                return false;
-            }
-
-            if (nro_documento  === '') {
-                alert('O nome não pode ser nulo');
-                return false;
-            }
-
 
             // alert('Loading');
 
