@@ -23,9 +23,7 @@
                         //
                         // The value of `this` inside the `normalizer` is the corresponding
                         // DOMElement. In this example, `this` references the `username` element.
-                        normalizer: function(value) {
-                            return $.trim(value);
-                        }
+
                     }
                 },
 
