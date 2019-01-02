@@ -43,12 +43,6 @@
 
 
 
-            if($("#pedido_emprestimo_parte01").valid() == false){
-
-                Console.log('por favor, preencha todos os campos');
-                return false;
-            }
-
             // alert('Loading');
 
             axios.post(APP_URL + '/pedido_emprestimo_parte01', {
