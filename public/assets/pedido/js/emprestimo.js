@@ -13,22 +13,6 @@
         $(document).on('click','.step_01', function(){
 
 
-            $('#pedido_emprestimo_parte01').validate({
-
-                rules: {
-                    'solicitation-name': {
-                        required: true,
-                        // Using the normalizer to trim the value of the element
-                        // before validating it.
-                        //
-                        // The value of `this` inside the `normalizer` is the corresponding
-                        // DOMElement. In this example, `this` references the `username` element.
-
-                    }
-                },
-
-
-            });
             /**PRIMEIRO FORMULARIO*/
 
             console.log('Primeiro passo' + APP_URL);
