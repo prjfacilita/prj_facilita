@@ -167,7 +167,7 @@
                                         <div class="solicitation-register__form">
 
                                             <!-- inicio form -->
-                                            <form action="{{route('pedido_emprestimo_parte01')}}" class="pedido_emprestimo_parte01" method="post" >
+                                            <form action="{{route('pedido_emprestimo_parte01')}}" class="pedido_emprestimo_parte01" id="pedido_emprestimo_parte01" method="post" >
                                                 {{ csrf_field() }}
                                                 <div class="col-sm-10">
                                                     <label>Nome: <input type="text" id="solicitation_name" name="solicitation-name" class="solicitation-form__name solicitation-input" onkeypress="return this.value.length<=30" ></label>
@@ -312,7 +312,7 @@
                                                 </div>
 
 
-                                                <button class="solicitation-register-btn" type="submit">Submit form</button>
+
                                             </form>
                                             <!-- fim form -->
                                         </div>

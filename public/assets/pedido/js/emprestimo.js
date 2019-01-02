@@ -1,23 +1,7 @@
 /*JS EMPRESTIMO*/
 
 
-        (function() {
-            'use strict';
-            window.addEventListener('load', function() {
-                // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                var forms = document.getElementsByClassName('pedido_emprestimo_parte01');
-                // Loop over them and prevent submission
-                var validation = Array.prototype.filter.call(forms, function(form) {
-                    form.addEventListener('submit', function(event) {
-                        if (form.checkValidity() === false) {
-                            event.preventDefault();
-                            event.stopPropagation();
-                        }
-                        form.classList.add('was-validated');
-                    }, false);
-                });
-            }, false);
-        })();
+
 
 
 
@@ -57,7 +41,17 @@
             var pb_exposta = $('#publicamente-exposta').find(":selected").text();
 
             if (nome_solicitante  === '') {
-                alert('Text-field is empty.');
+                alert('O nome não pode ser nulo');
+                return false;
+            }
+
+            if (dtn_solicitante  === '') {
+                alert('O nome não pode ser nulo');
+                return false;
+            }
+
+            if (nro_documento  === '') {
+                alert('O nome não pode ser nulo');
                 return false;
             }
 
