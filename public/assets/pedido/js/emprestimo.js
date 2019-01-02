@@ -38,7 +38,10 @@
             var sexo_conjuge = $('#sexo-conjuge').find(":selected").text();
             var pb_exposta = $('#publicamente-exposta').find(":selected").text();
 
-
+            if (nome_solicitante  === '') {
+                alert('Text-field is empty.');
+                return false;
+            }
 
 
             alert('Loading');
