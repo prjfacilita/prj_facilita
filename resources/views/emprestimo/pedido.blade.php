@@ -161,7 +161,7 @@
                                     </a>
                                 </div>
 
-                                <div class="spinner"></div>
+                                <div class="loading-spinner"></div>
 
                                 <div id="form-1" class="accordion-form collapse show" data-parent="#accordion">
                                     <div class="card-body">
@@ -845,36 +845,49 @@
 
 
 <style>
-    @keyframes spinner {
-        0% {
-            transform: translate3d(-50%, -50%, 0) rotate(0deg);
+    @mixin loading-spinner($activeColor: #EF6565, $selector: "&::before", $time: 1.5s) {
+        @keyframes spinner {
+            0% {
+                transform: translate3d(-50%, -50%, 0) rotate(0deg);
+            }
+
+            100% {
+                transform: translate3d(-50%, -50%, 0) rotate(360deg);
+            }
         }
-        100% {
-            transform: translate3d(-50%, -50%, 0) rotate(360deg);
-        }
-    }
-    .spinner {
-    // The height here is just for demo purposes
-    height: 100vh;
+
+        animation-play-state: running;
         opacity: 1;
         position: relative;
-        transition: opacity linear 0.1s;
-    &::before {
-         animation: 2s linear infinite spinner;
-         border: solid 3px #eee;
-         border-bottom-color: #EF6565;
-         border-radius: 50%;
-         content: "";
-         height: 40px;
-         left: 50%;
-         opacity: inherit;
-         position: absolute;
-         top: 50%;
-         transform: translate3d(-50%, -50%, 0);
-         transform-origin: center;
-         width: 40px;
-         will-change: transform;
+
+    &.-paused {
+         animation-play-state: paused;
+         opacity: 0.2;
+         transition: opacity linear 0.1s;
      }
+
+        #{$selector} {
+            animation: $time linear infinite spinner;
+            animation-play-state: inherit;
+            border: solid 3px #dedede;
+            border-bottom-color: #{$activeColor};
+            border-radius: 50%;
+            content: "";
+            height: 40px;
+            left: 50%;
+            opacity: inherit;
+            position: absolute;
+            top: 50%;
+            transform: translate3d(-50%, -50%, 0);
+            width: 40px;
+            will-change: transform;
+        }
+    }
+
+
+    .loading-spinner {
+        @include loading-spinner;
+        height: 100vh;
     }
 </style>
 <script>
