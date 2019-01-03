@@ -76,7 +76,7 @@
                 <div class="col-12">
                     <div class="user-name">
                         <img src="assets/analise/images/icon-user.png" alt="Ícone Usuário" class="icon-user"/>
-                        <p>Maria da silva</p>
+                        <p>{{Auth::user()->email}}</p>
                     </div>
                 </div>
             </div>
@@ -97,7 +97,7 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row mt-5">
                 <div class="col-12">
                     {{--<div class="request-denied-motive">--}}
                         {{--<h2>Entenda porque</h2>--}}
