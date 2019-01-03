@@ -230,7 +230,7 @@
 
             $(".loading").css('display', 'block');
 
-            wait(5000);  //5 seconds in milliseconds
+            delay(5000);
 
             axios.post(APP_URL + '/pedido_emprestimo_parte01', {
                 nome_solicitante: nome_solicitante,
