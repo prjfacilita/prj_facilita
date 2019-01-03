@@ -12,9 +12,9 @@
     <!-- CSS -->
     <link rel="stylesheet" type="text/css"  href="assets/analise/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css"  href="assets/analise/css/style.css">
-    <link rel="stylesheet" type="text/css"  href="assets/analise/css/style-pedido-emprestimo.css">
+    {{--<link rel="stylesheet" type="text/css"  href="assets/analise/css/style-pedido-emprestimo.css">--}}
     <link rel="stylesheet" type="text/css"  href="assets/analise/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css"  href="assets/analise/css/loading.css">
+    {{--<link rel="stylesheet" type="text/css"  href="assets/analise/css/loading.css">--}}
     <link rel="stylesheet" type="text/css"  href="assets/analise/css/style-emprestimo-negado.css">
 
     <!-- SCRIPT -->
@@ -45,8 +45,8 @@
             <div class="header-content">
                 <a class="logomarca" href="#"><img src="assets/analise/images/logo-facilita.png" alt="Logomarca Facilita" class="image-logomarca"/></a>
                 <div class="user-logged">
-                    <img src="assets/analise/images/icon-user.png" alt="Ícone Usuário" class="icon-user-logged"/>
-                    <p>Olá Maria, pedido em andamento!</p>
+                    {{--<img src="assets/analise/images/icon-user.png" alt="Ícone Usuário" class="icon-user-logged"/>--}}
+                    {{--<p>Olá Maria, pedido em andamento!</p>--}}
                 </div>
                 <div class="nav">
                     <nav>
