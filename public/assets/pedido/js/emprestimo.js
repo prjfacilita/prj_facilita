@@ -594,33 +594,153 @@
             var uf_id    =   $('#uf').find(":selected").text();
 
 
+            if(cep === ""){
+                console.log('error');
 
-
-            axios.post(APP_URL + '/pedido_emprestimo_parte03', {
-                cep: cep,
-                endereco: endereco,
-                nro: nro,
-                complemento: complemento,
-                bairro: bairro,
-                cidade: cidade,
-                valor_patrimonio: valor_patrimonio,
-                residencia: residencia,
-                uf_id: uf_id
-
-
-            })
-                .then(function (response) {
-                    console.log(response);
-
-                    step = 4;
-
-
-                    $('#form-3').collapse('toggle');
-                })
-                .catch(function (error) {
-                    console.log(error);
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, informe o seu cep '
+                },{
+                    type: 'danger'
                 });
-            // data-admissa
+
+                return false;
+            }
+            if(endereco === ""){
+                console.log('error');
+
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, informe o seu cep '
+                },{
+                    type: 'danger'
+                });
+
+                return false;
+            }
+            if(nro === ""){
+                console.log('error');
+
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, informe o seu cep '
+                },{
+                    type: 'danger'
+                });
+
+                return false;
+            }
+            if(complemento === ""){
+                console.log('error');
+
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, informe o seu cep '
+                },{
+                    type: 'danger'
+                });
+
+                return false;
+            }
+            if(bairro === ""){
+                console.log('error');
+
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, informe o seu cep '
+                },{
+                    type: 'danger'
+                });
+
+                return false;
+            }
+            if(cidade === ""){
+                console.log('error');
+
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, informe o seu cep '
+                },{
+                    type: 'danger'
+                });
+
+                return false;
+            }
+            if(valor_patrimonio === ""){
+                console.log('error');
+
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, informe o seu cep '
+                },{
+                    type: 'danger'
+                });
+
+                return false;
+            }
+            if(residencia === ""){
+                console.log('error');
+
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, informe o seu cep '
+                },{
+                    type: 'danger'
+                });
+
+                return false;
+            }
+            if(uf_id === ""){
+                console.log('error');
+
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, informe o seu cep '
+                },{
+                    type: 'danger'
+                });
+
+                return false;
+            }
+
+
+
+            $(".loading").css('display', 'block');
+
+            setTimeout(function() {
+
+
+                axios.post(APP_URL + '/pedido_emprestimo_parte03', {
+                    cep: cep,
+                    endereco: endereco,
+                    nro: nro,
+                    complemento: complemento,
+                    bairro: bairro,
+                    cidade: cidade,
+                    valor_patrimonio: valor_patrimonio,
+                    residencia: residencia,
+                    uf_id: uf_id
+
+
+                })
+                    .then(function (response) {
+                        console.log(response);
+
+                        step = 4;
+
+
+                        $('#form-4').collapse('toggle');
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+
+                $(".loading").css('display', 'none');
+
+
+                // data-admissa
+
+            }, 3000);
 
         });
 
@@ -646,35 +766,147 @@
             var tel_relacionamento  =   $("#form-4 input[name=telefone-relacionamentoo]").val();
 
 
+            if(banco_id === ""){
+                console.log('error');
 
-
-            axios.post(APP_URL + '/pedido_emprestimo_parte04', {
-                banco_id: banco_id,
-                nro_agencia: nro_agencia,
-                nro_conta:nro_conta,
-                tipo_conta: tipo_conta,
-                conta_desde: conta_desde,
-                nome_ref_pessoal: nome_ref_pessoal,
-                cpf_ref_pessoal: cpf_ref_pessoal,
-                grau_rel: grau_rel,
-                tel_relacionamento: tel_relacionamento
-
-
-
-
-            })
-                .then(function (response) {
-                    console.log(response);
-
-                    step = 2;
-
-
-                    $('#form-3').collapse('toggle');
-                })
-                .catch(function (error) {
-                    console.log(error);
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, informe o banco'
+                },{
+                    type: 'danger'
                 });
-            // data-admissa
+
+                return false;
+            }
+            if(nro_agencia === ""){
+                console.log('error');
+
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, informe o numero da agência'
+                },{
+                    type: 'danger'
+                });
+
+                return false;
+            }
+            if(nro_conta === ""){
+                console.log('error');
+
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, informe o numero da sua conta'
+                },{
+                    type: 'danger'
+                });
+
+                return false;
+            }
+            if(tipo_conta === ""){
+                console.log('error');
+
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, informe o tipo da conta'
+                },{
+                    type: 'danger'
+                });
+
+                return false;
+            }
+            if(conta_desde === ""){
+                console.log('error');
+
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, informe quando você abriu a conta'
+                },{
+                    type: 'danger'
+                });
+
+                return false;
+            }
+            if(nome_ref_pessoal === ""){
+                console.log('error');
+
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, informe uma referencia pessoal'
+                },{
+                    type: 'danger'
+                });
+
+                return false;
+            }
+            if(cpf_ref_pessoal === ""){
+                console.log('error');
+
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, informe uma referencia pessoal'
+                },{
+                    type: 'danger'
+                });
+
+                return false;
+            }
+            if(grau_rel === ""){
+                console.log('error');
+
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, informe uma referencia pessoal'
+                },{
+                    type: 'danger'
+                });
+
+                return false;
+            }
+            if(tel_relacionamento === ""){
+                console.log('error');
+
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, informe uma referencia pessoal'
+                },{
+                    type: 'danger'
+                });
+
+                return false;
+            }
+
+
+            $(".loading").css('display', 'block');
+
+            setTimeout(function() {
+
+                axios.post(APP_URL + '/pedido_emprestimo_parte04', {
+                    banco_id: banco_id,
+                    nro_agencia: nro_agencia,
+                    nro_conta: nro_conta,
+                    tipo_conta: tipo_conta,
+                    conta_desde: conta_desde,
+                    nome_ref_pessoal: nome_ref_pessoal,
+                    cpf_ref_pessoal: cpf_ref_pessoal,
+                    grau_rel: grau_rel,
+                    tel_relacionamento: tel_relacionamento
+
+
+                })
+                    .then(function (response) {
+                        console.log(response);
+
+                        step = 5;
+
+
+                        $('#form-4').collapse('toggle');
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+                // data-admissa
+
+            }, 3000);
 
         });
 
