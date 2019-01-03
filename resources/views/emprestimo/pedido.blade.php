@@ -161,7 +161,7 @@
                                     </a>
                                 </div>
 
-                                <div class="loading">Loading&#8230;</div>
+                                <div class="loading">Validando dados, aguarde!&#8230;</div>
 
                                 <div id="form-1" class="accordion-form collapse show" data-parent="#accordion">
                                     <div class="card-body">
@@ -857,6 +857,7 @@
         left: 0;
         bottom: 0;
         right: 0;
+        display: none;
     }
 
     /* Transparent Overlay */

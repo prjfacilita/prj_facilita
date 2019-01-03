@@ -226,7 +226,7 @@
 
             // alert('Loading');
 
-
+            $(".loading").css('display', 'block');
 
             axios.post(APP_URL + '/pedido_emprestimo_parte01', {
                 nome_solicitante: nome_solicitante,
@@ -267,6 +267,8 @@
 
             // estado_civil
 
+
+            $(".loading").css('display', 'none');
 
 
             /*PEGAR DADOS E ENVIAR PARA O BACK-END LARAVEL*/
