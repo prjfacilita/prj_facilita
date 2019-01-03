@@ -230,42 +230,47 @@
 
             $(".loading").css('display', 'block');
 
-            delay(5000);
+            setTimeout(function(){
 
-            axios.post(APP_URL + '/pedido_emprestimo_parte01', {
-                nome_solicitante: nome_solicitante,
-                dtn_solicitante: dtn_solicitante,
-                nro_documento: nro_documento,
-                tp_documento: tp_documento,
-                solicitation_emission_id: solicitation_emission_id,
-                solicitation_organ: solicitation_organ,
-                sexo: sexo,
-                estado_civil: estado_civil,
-                nacionalidade: nacionalidade,
-                naturalidade: naturalidade,
-                uf_nascimento: uf_nascimento,
-                telefone: telefone,
-                celular: celular,
-                tel_recado: tel_recado,
-                nome_mae: nome_mae,
-                nome_conjuge: nome_conjuge,
-                cpf_conjuge: cpf_conjuge,
-                nasto_conjuge: nasto_conjuge,
-                sexo_conjuge: sexo_conjuge,
-                pb_exposta: pb_exposta
+                axios.post(APP_URL + '/pedido_emprestimo_parte01', {
+                    nome_solicitante: nome_solicitante,
+                    dtn_solicitante: dtn_solicitante,
+                    nro_documento: nro_documento,
+                    tp_documento: tp_documento,
+                    solicitation_emission_id: solicitation_emission_id,
+                    solicitation_organ: solicitation_organ,
+                    sexo: sexo,
+                    estado_civil: estado_civil,
+                    nacionalidade: nacionalidade,
+                    naturalidade: naturalidade,
+                    uf_nascimento: uf_nascimento,
+                    telefone: telefone,
+                    celular: celular,
+                    tel_recado: tel_recado,
+                    nome_mae: nome_mae,
+                    nome_conjuge: nome_conjuge,
+                    cpf_conjuge: cpf_conjuge,
+                    nasto_conjuge: nasto_conjuge,
+                    sexo_conjuge: sexo_conjuge,
+                    pb_exposta: pb_exposta
 
-            })
-                .then(function (response) {
-                    console.log(response);
-
-                    step = 2;
-
-
-                    $('#form-2').collapse('toggle');
                 })
-                .catch(function (error) {
-                    console.log(error);
-                });
+                    .then(function (response) {
+                        console.log(response);
+
+                        step = 2;
+
+
+                        $('#form-2').collapse('toggle');
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+
+            },5000);
+            // delay(5000);
+
+
             // uf-nacimento
 
 
