@@ -217,7 +217,7 @@
                                                     <label>Estado Civil:
                                                         <select required name="estado-civil" id="estado-civil">
                                                             <option disabled selected>Selecionar</option>
-                                                            <option value="casado">Casada</option>
+                                                            <option value="casado">Casado</option>
                                                             <option value="solteiro">Solteiro</option>
                                                             <option value="divorciado">Divorciado</option>
                                                             <option value="viuvo">Viúvo</option>

@@ -18,6 +18,7 @@
 
             console.log('Primeiro passo' + APP_URL);
 
+
             if(step > 1) return alert('Você não pode editar as informações nessa etapa pois já preencheu os dados');
 
 
@@ -228,6 +229,8 @@
             // alert('Loading');
 
             $(".loading").css('display', 'block');
+
+            wait(5000);  //5 seconds in milliseconds
 
             axios.post(APP_URL + '/pedido_emprestimo_parte01', {
                 nome_solicitante: nome_solicitante,
