@@ -843,7 +843,9 @@
 <script src="{{asset('js/bootstrap-notify.js')}}"></script>
 <script src="assets/pedido/js/emprestimo.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
+<scrtip>
+    $('#form-1 input[name=cpf-conjuge]').mask('000.000.000-00', {reverse: true});
+</scrtip>
 <style>
     /* Absolute Center Spinner */
     .loading {
