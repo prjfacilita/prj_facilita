@@ -839,6 +839,7 @@
 <script src="{{asset('node_modules/inputmask/dist/inputmask/inputmask.date.extensions.js')}}"></script>
 <script src="{{asset('node_modules/inputmask/dist/inputmask/jquery.inputmask.js')}}"></script>
 <script src="{{asset('node_modules/jquery-validation/dist/jquery.validate.js')}}"></script>
+<script src="{{asset('js/bootstrap-notify.js')}}"></script>
 
 
 <script>
