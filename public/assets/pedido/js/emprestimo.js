@@ -735,6 +735,7 @@
                         console.log(error);
                     });
 
+
                 $(".loading").css('display', 'none');
 
 
@@ -905,6 +906,8 @@
                         console.log(error);
                     });
                 // data-admissa
+
+                $(".loading").css('display', 'none');
 
             }, 3000);
 

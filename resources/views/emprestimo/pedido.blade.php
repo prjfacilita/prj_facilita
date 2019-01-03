@@ -160,7 +160,7 @@
                                     </a>
                                 </div>
 
-                                <div class="loading">Validando dados, aguarde!&#8230;</div>
+                                {{--<div class="loading">Validando dados, aguarde!&#8230;</div>--}}
 
                                 <div id="form-1" class="accordion-form collapse show" data-parent="#accordion">
                                     <div class="card-body">
