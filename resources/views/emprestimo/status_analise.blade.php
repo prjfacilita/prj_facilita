@@ -43,9 +43,9 @@
     <div class="container">
         <div class="row">
             <div class="header-content">
-                <a class="logomarca" href="#"><img src="assets/images/logo-facilita.png" alt="Logomarca Facilita" class="image-logomarca"/></a>
+                <a class="logomarca" href="#"><img src="assets/analise/images/logo-facilita.png" alt="Logomarca Facilita" class="image-logomarca"/></a>
                 <div class="user-logged">
-                    <img src="assets/images/icon-user.png" alt="Ícone Usuário" class="icon-user-logged"/>
+                    <img src="assets/analise/images/icon-user.png" alt="Ícone Usuário" class="icon-user-logged"/>
                     <p>Olá Maria, pedido em andamento!</p>
                 </div>
                 <div class="nav">
@@ -75,7 +75,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="user-name">
-                        <img src="assets/images/icon-user.png" alt="Ícone Usuário" class="icon-user"/>
+                        <img src="assets/analise/images/icon-user.png" alt="Ícone Usuário" class="icon-user"/>
                         <p>Maria da silva</p>
                     </div>
                 </div>
@@ -164,7 +164,7 @@
 
                 <div class="row">
                     <div class="col-12 footer-logo">
-                        <a class="logomarca" href="#"><img src="assets/pedido/images/logo-facilita.png" alt="Logomarca Facilita" class="image-logomarca"/></a>
+                        <a class="logomarca" href="#"><img src="assets/analise/images/logo-facilita.png" alt="Logomarca Facilita" class="image-logomarca"/></a>
                     </div>
                 </div>
 
@@ -183,9 +183,9 @@
                         </ul>
                         <a href="#" class="footer-email">atendimento@facilitaapp.com.br</a>
                         <div class="footer-social">
-                            <a href="#" target="_blank"><img src="assets/images/svg/icone-facebook.svg"></a>
-                            <a href="#" target="_blank"><img src="assets/images/svg/icone-instagram.svg"></a>
-                            <a href="#" target="_blank"><img src="assets/images/svg/icone-linkedin.svg"></a>
+                            <a href="#" target="_blank"><img src="assets/analise/images/svg/icone-facebook.svg"></a>
+                            <a href="#" target="_blank"><img src="assets/analise/images/svg/icone-instagram.svg"></a>
+                            <a href="#" target="_blank"><img src="assets/analise/images/svg/icone-linkedin.svg"></a>
                         </div>
                     </div>
                 </div>
