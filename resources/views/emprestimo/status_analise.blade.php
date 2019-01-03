@@ -10,15 +10,16 @@
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css"  href="assets/pedido/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css"  href="assets/pedido/css/style.css">
-    <link rel="stylesheet" type="text/css"  href="assets/pedido/css/style-pedido-emprestimo.css">
-    <link rel="stylesheet" type="text/css"  href="assets/pedido/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css"  href="assets/pedido/css/loading.css">
+    <link rel="stylesheet" type="text/css"  href="assets/analise/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"  href="assets/analise/css/style.css">
+    <link rel="stylesheet" type="text/css"  href="assets/analise/css/style-pedido-emprestimo.css">
+    <link rel="stylesheet" type="text/css"  href="assets/analise/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css"  href="assets/analise/css/loading.css">
+    <link rel="stylesheet" type="text/css"  href="assets/analise/css/style-emprestimo-negado.css">
 
     <!-- SCRIPT -->
-    <script src="assets/pedido/js/jquery-3.3.1.min.js"></script>
-    <script src="assets/pedido/js/bootstrap.min.js"></script>
+    <script src="assets/analise/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/analise/js/bootstrap.min.js"></script>
 
     <script type="text/javascript">
         var APP_URL = {!! json_encode(url('/')) !!}

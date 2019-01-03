@@ -1,0 +1,404 @@
+/****
+    STYLE PÁGINA HOME
+    
+    Cor principal: color: #1D8841;
+****/
+#banner{
+    margin-top: -125px;
+    padding-top: 125px;
+	display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+	height: 800px;
+	background: url(../images/banner-home.jpg) top center no-repeat;
+    background-size: cover;
+}
+    #banner h1,
+    #banner p{
+        color: #ffffff;
+    }
+    #banner h1{
+        padding-bottom: 60px;
+        font-size: 32px;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 40px;
+    }
+    #banner p{
+        font-size: 20px;
+        line-height: 25px;
+    }
+		#banner p i{
+			padding-right: 10px;
+			vertical-align: unset;
+			font-size: 31px;
+			color: #fff;
+		}
+    @media only screen and (max-width: 768px){
+        #home{
+            background: rgb(29, 170, 117);
+        }
+        #banner{
+            margin-top: 0;
+            padding: 30px;
+            height: auto;
+        }
+        #banner h1{
+            padding-bottom: 20px;
+            font-size: 20px;
+            line-height: 30px;
+            text-align: center;
+        }
+        #banner p{
+            font-size: 15px;
+            text-align: center;
+        }
+        .banner__simulation{
+            margin-top: 30px;
+        }
+    }
+
+/**** BOX SIMULAÇÃO ****/
+.banner__simulation{
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    padding: 20px;
+    background: #fff;
+    border-radius: 18px;
+}
+    .banner__simulation h2{
+        padding-bottom: 20px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+        color: #1D8841;
+    }
+	.simulation-box form{
+		clear: both;
+		display: inline-block;
+	}
+    .simulation-box__day,
+	.simulation-box__value,
+	.simulation-item{
+        float: left;
+        padding: 10px;
+        width: calc(100%/3);
+
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        -o-appearance: none;
+        outline: none;
+        content: none;
+    }
+        .simulation-box__day:before,
+		.simulation-item:before,
+		.simulation-box__value:before{
+            display: flex;
+            display: -webkit-flex;
+            align-items: center;
+            -webkit-align-items: center;
+            justify-content: center;
+            -webkit-justify-content: center;
+            margin: 10px auto;
+            width: 60px;
+            height: 45px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            content: attr(data-line);
+            border: 2px solid #1D8841;
+            border-radius: 15px;
+            color: #1D8841;   
+        }
+        .simulation-box__day:checked:before,
+        .simulation-box__day:hover:before,
+		.simulation-box__value:checked:before,
+		.simulation-box__value:hover:before,
+		.simulation-item:checked:before,
+		.simulation-item:hover:before,
+		.simulation-item.selected:before{
+            color: #ffffff;
+            background: #1D8841;
+        }
+    .simulation-other-day{
+        float: left;
+        padding: 10px;
+        margin: 20px 30px 10px;
+        width: auto;
+        border: 2px solid #1D8841;
+        border-radius: 15px;
+        color: #1D8841;   
+    }
+        .simulation-other-day label{
+            display: block;
+            font-size: 13px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .simulation-other-day input{
+            padding: 10px 0px 0 0;
+            width: 100%;
+            color: #1D8841;
+            font-size: 11px;
+        }
+	.simulation-button{
+		clear: both;
+		display: block;
+		float: left;
+		margin: 10px 0 0 0;
+		width: 100%;
+		text-align: center;
+	}
+		
+    .simulation-box__submit{
+        display: inline-block;
+        padding: 12px 25px;
+        font-size: 15px;
+        font-weight: bold;
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 21px;
+        box-shadow: 7px 7px 6px rgba(0, 0, 0, 0.16);
+        -webkit-box-shadow: 7px 7px 6px rgba(0, 0, 0, 0.16);
+        -moz-box-shadow: 7px 7px 6px rgba(0, 0, 0, 0.16);
+        background: #1D8841;
+		cursor: pointer;
+    }    
+
+    /*** modal com formulario de simulação ***/
+    .banner__simulation-modal{
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        padding-top: calc(20%/2);
+        z-index: 5555;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.61);
+    }
+        .banner__simulation-modal .banner__simulation{
+            margin: 0 auto;
+            width: 350px;
+        }
+
+    .simulation-account,
+    .simulation-create-account{
+        display: block;
+        clear: both;
+        padding: 20px 0 0 0;
+        width: 100%;
+        font-size: 10px;
+        text-align: center;
+        color: #1D8841;
+    }
+        .simulation-account a{
+            font-weight: bold;
+        }
+        .simulation-account a,
+        .simulation-create-account a{
+            text-decoration: underline;
+            color: #1D8841;
+        }
+
+    .simulation-alert{
+        display: block;
+        margin-top: 20px;
+        clear: both;
+        text-align: center;
+        font-size: 10px;
+        color: #8A8686;
+    }    
+        .simulation-alert a{
+            font-weight: bold;
+            text-decoration: underline;
+            color: #8A8686;
+        }
+
+
+        
+	/*** simulação selecionar o valor desejado ***/
+	    .simulation-box__value{
+			margin: 10px 30px;
+			width: calc(100%/3);
+		}
+			.simulation-box__value:before{   
+				width: 150px;
+				height: 50px;
+			}
+		.simulation-other-value{
+			margin: 20px 0px 10px 30px;
+			padding: 10px;
+			text-transform: uppercase;
+			font-size: 12px;
+			font-weight: bold;
+			width: 148px;
+			height: 50px;
+			color: #1D8841;
+			border: 2px solid #1D8841;
+			border-radius: 15px;	
+		}	
+			
+	/*** simulação selecionar as parcelas ***/
+	.simulation-value-selected h2{
+		padding-bottom: 10px;
+	}
+	.simulation-value-selected .simulation-box p{
+		text-align: center;
+		font-weight: bold;
+		color: #1D8841 !important;
+	}
+	.simulation-value-selected span.plots{
+		float: left;
+		clear: both;
+		display: block;
+		padding: 10px 30px;
+		width: 100%;
+		text-align: center;
+		font-size: 15px;
+		color: #1D8841;
+	}
+	
+	/*** simulação valor selecionado + formulario de dados do usuarip ***/
+	.simulation-value-selected span.plots-value{
+		display: block;
+		padding: 20px 0;
+		clear: both;
+		font-size: 15px;
+        line-height: 1.5;
+		text-align: center;
+		color: #AEAEAE;
+    }
+    .simulation-info{
+        display: block;
+        padding: 10px;
+        margin-bottom: 5px;
+        width: 100%;
+        font-size: 11px;
+        color: #707070;
+        border-bottom: 1px solid #707070;  
+        background: #fff; 
+    }
+    input.simulation-info{
+        padding: 10px 13px;
+    }
+
+    @media only screen and (max-width: 768px){
+        .simulation-box__day, .simulation-item{
+            margin: 0;
+            width: calc(100%/2);
+        }
+        .simulation-box__value,
+        .simulation-other-value,
+        .simulation-box__value:before{
+            margin: 5px 0;
+            width: 100%;
+        }
+        .simulation-other-day{
+            margin: 20px 0;
+            width: 100%;
+        }
+    }
+			
+
+/*** padrão ***/
+#phases h2,
+#benefits h2,
+#testimony h2{
+    padding-bottom: 20px;
+    line-height: 1.5;
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+    @media only screen and (max-width: 768px){
+        #phases h2,
+        #benefits h2,
+        #testimony h2{
+            font-size: 25px;
+        }
+    }
+.phases-item img,
+#benefits img{
+    margin-bottom: 20px;
+    height: 130px;
+}
+.phases-item p,
+.benefits-item p{
+    line-height: 1.3;
+}
+
+
+/*** como funciona ***/
+#phases{
+    padding: 50px 0;
+}
+    .phases-item{
+        padding: 20px;
+        text-align: center;
+    } 
+        .phases-item p > span{
+            font-weight: bold;
+        }
+
+/*** vantagens ***/
+#benefits{
+    padding: 50px 0 20px 0;
+    background: #067010;
+}          
+    #benefits h2{
+        color: #fff;
+    }
+    .benefits-item{
+        padding: 30px;
+        text-align: center;
+        color: #ffffff;
+    }
+        .benefits-item h3{
+            padding-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+/*** depoimentos ***/
+#testimony{
+    padding: 50px 0;
+}
+    #testimony h2{
+        color: #1EC857;
+    }
+   
+    .testimony-images{
+        margin: 0 auto;
+        width: 80%;
+    }
+        .testimony-images img{
+            padding: 40px;
+            -webkit-filter: opacity(72%);
+            filter: opacity(72%);
+            border-radius: 50%;
+        }
+        .slick-current img{
+            -webkit-filter: opacity(100%);
+            filter: opacity(100%);
+        }
+
+    .testimony-text{
+        text-align: center;
+        color: #585B59;
+    }    
+        .testimony-text h3{
+            padding-bottom: 20px;
+            font-size: 30px;
+            font-style: italic;
+            font-weight: bold;
+        }
+ 
