@@ -267,7 +267,9 @@
                         console.log(error);
                     });
 
-            },5000);
+                $(".loading").css('display', 'none');
+
+            },3000);
             // delay(5000);
 
 
@@ -277,7 +279,7 @@
             // estado_civil
 
 
-            $(".loading").css('display', 'none');
+
 
 
             /*PEGAR DADOS E ENVIAR PARA O BACK-END LARAVEL*/
@@ -302,7 +304,7 @@
 
 
         $(document).on('click','.step_02', function(){
-            console.log('Primeiro passo' + APP_URL);
+            console.log('segundo passo' + APP_URL);
 
 
             if(step > 2) return alert('Você não pode editar as informações nessa etapa pois já preencheu os dados');
@@ -326,38 +328,241 @@
             var ramal    =  $("#form-2 input[name=ramal]").val();
 
 
+            if(salario === ""){
+                console.log('error');
 
-
-            axios.post(APP_URL + '/pedido_emprestimo_parte02', {
-                salario: salario,
-                ocupacao: ocupacao,
-                escolaridade: escolaridade,
-                profissao: profissao,
-                cargo: cargo,
-                empresa: empresa,
-                data_admissao: data_admissao,
-                end_comercial: end_comercial,
-                end_com_nro: end_com_nro,
-                endereco_comercial_cep: endereco_comercial_cep,
-                endereco_comercial_bairro: endereco_comercial_bairro,
-                endereco_comercial_cidade: endereco_comercial_cidade,
-                endereco_comercial_uf: endereco_comercial_uf,
-                complemento_endereco_comercial: complemento_endereco_comercial,
-                telefone_comercial: telefone_comercial,
-                ramal: ramal
-
-            })
-                .then(function (response) {
-                    console.log(response);
-
-                    step = 3;
-
-
-                    $('#form-3').collapse('toggle');
-                })
-                .catch(function (error) {
-                    console.log(error);
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, informe seu salário'
+                },{
+                    type: 'danger'
                 });
+
+                return false;
+            }
+
+            if(ocupacao === ""){
+                console.log('error');
+
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, informe sua ocupação'
+                },{
+                    type: 'danger'
+                });
+
+                return false;
+            }
+            if(escolaridade === ""){
+                console.log('error');
+
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, informe sua escolaridade'
+                },{
+                    type: 'danger'
+                });
+
+                return false;
+            }
+            if(profissao === ""){
+                console.log('error');
+
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, informe sua profissao'
+                },{
+                    type: 'danger'
+                });
+
+                return false;
+            }
+            if(cargo === ""){
+                console.log('error');
+
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, informe seu cargo'
+                },{
+                    type: 'danger'
+                });
+
+                return false;
+            }
+            if(empresa === ""){
+                console.log('error');
+
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, informe sua empresa'
+                },{
+                    type: 'danger'
+                });
+
+                return false;
+            }
+            if(data_admissao === ""){
+                console.log('error');
+
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, informe sua data de admissão'
+                },{
+                    type: 'danger'
+                });
+
+                return false;
+            }
+            if(end_comercial === ""){
+                console.log('error');
+
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, informe o seu endereço comercial'
+                },{
+                    type: 'danger'
+                });
+
+                return false;
+            }
+            if(end_com_nro === ""){
+                console.log('error');
+
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, informe o seu endereço comercial com número'
+                },{
+                    type: 'danger'
+                });
+
+                return false;
+            }
+            if(endereco_comercial_cep === ""){
+                console.log('error');
+
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, informe o cep do seu endereço comercial '
+                },{
+                    type: 'danger'
+                });
+
+                return false;
+            }
+            if(endereco_comercial_bairro === ""){
+                console.log('error');
+
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, informe o seu bairro '
+                },{
+                    type: 'danger'
+                });
+
+                return false;
+            }
+            if(endereco_comercial_cidade === ""){
+                console.log('error');
+
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, informe a sua cidade '
+                },{
+                    type: 'danger'
+                });
+
+                return false;
+            }
+            if(endereco_comercial_uf === ""){
+                console.log('error');
+
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, informe a sua unidade federal '
+                },{
+                    type: 'danger'
+                });
+
+                return false;
+            }
+            if(complemento_endereco_comercial === ""){
+                console.log('error');
+
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, informe o  complemento do seu endereço comercial '
+                },{
+                    type: 'danger'
+                });
+
+                return false;
+            }
+            if(telefone_comercial === ""){
+                console.log('error');
+
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, informe o   seu telefone comercial '
+                },{
+                    type: 'danger'
+                });
+
+                return false;
+            }
+            if(ramal === ""){
+                console.log('error');
+
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, informe o  ramal '
+                },{
+                    type: 'danger'
+                });
+
+                return false;
+            }
+
+
+            $(".loading").css('display', 'block');
+
+            setTimeout(function() {
+
+
+                axios.post(APP_URL + '/pedido_emprestimo_parte02', {
+                    salario: salario,
+                    ocupacao: ocupacao,
+                    escolaridade: escolaridade,
+                    profissao: profissao,
+                    cargo: cargo,
+                    empresa: empresa,
+                    data_admissao: data_admissao,
+                    end_comercial: end_comercial,
+                    end_com_nro: end_com_nro,
+                    endereco_comercial_cep: endereco_comercial_cep,
+                    endereco_comercial_bairro: endereco_comercial_bairro,
+                    endereco_comercial_cidade: endereco_comercial_cidade,
+                    endereco_comercial_uf: endereco_comercial_uf,
+                    complemento_endereco_comercial: complemento_endereco_comercial,
+                    telefone_comercial: telefone_comercial,
+                    ramal: ramal
+
+                })
+                    .then(function (response) {
+                        console.log(response);
+
+                        step = 3;
+
+
+                        $('#form-3').collapse('toggle');
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+
+
+                $(".loading").css('display', 'none');
+
+            }, 3000);
             // data-admissa
 
         });
