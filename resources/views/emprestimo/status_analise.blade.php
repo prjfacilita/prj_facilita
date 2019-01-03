@@ -91,68 +91,68 @@
             <div class="row">
                 <div class="col-12">
                     <div class="request-denied-message">
-                        <p>Infelizmente não conseguimos realizar seu pedido de empréstimo dessa vez.</p>
-                        <p>Lembramos que a Facilita não solicita nenhum valor antecipado, portanto, desconfie de ofertas desse tipo, mesmo que sejam feitas em nome da Facilita.</p>
+                        <p>Aguarde enquanto nossos especialistas análisam seu pedido de emprestimo</p>
+                        {{--<p>Lembramos que a Facilita não solicita nenhum valor antecipado, portanto, desconfie de ofertas desse tipo, mesmo que sejam feitas em nome da Facilita.</p>--}}
                     </div>
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-12">
-                    <div class="request-denied-motive">
-                        <h2>Entenda porque</h2>
+            {{--<div class="row">--}}
+                {{--<div class="col-12">--}}
+                    {{--<div class="request-denied-motive">--}}
+                        {{--<h2>Entenda porque</h2>--}}
 
-                        <!-- acordions   -->
-                        <div id="accordion">
-                            <!-- acordion 1 -->
-                            <div class="card">
-                                <div>
-                                    <a class="card-link collapsed" data-toggle="collapse" href="#div-1">Histórico de pagamento</a>
-                                </div>
+                        {{--<!-- acordions   -->--}}
+                        {{--<div id="accordion">--}}
+                            {{--<!-- acordion 1 -->--}}
+                            {{--<div class="card">--}}
+                                {{--<div>--}}
+                                    {{--<a class="card-link collapsed" data-toggle="collapse" href="#div-1">Histórico de pagamento</a>--}}
+                                {{--</div>--}}
 
-                                <div id="div-1" class="accordion-form collapse" data-parent="#accordion">
-                                    <div class="card-body">
-                                        <p>Pagar as suas dívidas em dia é necessário para garantir que voçê tenha uma boa linha de crédito. Por isso,
-                                            não estar negativado é muito importante.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- acordion 2 -->
-                            <div class="card">
-                                <div>
-                                    <a class="card-link collapsed" data-toggle="collapse" href="#div-2">Renda mensal</a>
-                                </div>
+                                {{--<div id="div-1" class="accordion-form collapse" data-parent="#accordion">--}}
+                                    {{--<div class="card-body">--}}
+                                        {{--<p>Pagar as suas dívidas em dia é necessário para garantir que voçê tenha uma boa linha de crédito. Por isso,--}}
+                                            {{--não estar negativado é muito importante.--}}
+                                        {{--</p>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                            {{--<!-- acordion 2 -->--}}
+                            {{--<div class="card">--}}
+                                {{--<div>--}}
+                                    {{--<a class="card-link collapsed" data-toggle="collapse" href="#div-2">Renda mensal</a>--}}
+                                {{--</div>--}}
 
-                                <div id="div-2" class="accordion-form collapse" data-parent="#accordion">
-                                    <div class="card-body">
-                                        <p>Um empréstimo deve ser planejado de acordo com seus ganhos e despesas. Comprometer mais do que 30% da sua renda com o valor
-                                            das parcelas do seu empréstimo não é saudável e pode se tornar um problema a mais na hora de quitar as suas dívidas.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- acordion 3 -->
-                            <div class="card">
-                                <div>
-                                    <a class="card-link collapsed" data-toggle="collapse" href="#div-3">dados de cadastro</a>
-                                </div>
+                                {{--<div id="div-2" class="accordion-form collapse" data-parent="#accordion">--}}
+                                    {{--<div class="card-body">--}}
+                                        {{--<p>Um empréstimo deve ser planejado de acordo com seus ganhos e despesas. Comprometer mais do que 30% da sua renda com o valor--}}
+                                            {{--das parcelas do seu empréstimo não é saudável e pode se tornar um problema a mais na hora de quitar as suas dívidas.--}}
+                                        {{--</p>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                            {{--<!-- acordion 3 -->--}}
+                            {{--<div class="card">--}}
+                                {{--<div>--}}
+                                    {{--<a class="card-link collapsed" data-toggle="collapse" href="#div-3">dados de cadastro</a>--}}
+                                {{--</div>--}}
 
-                                <div id="div-3" class="accordion-form collapse" data-parent="#accordion">
-                                    <div class="card-body">
-                                        <p>A Facilita precisa dos seus dados para garantir segurança ao seu pedido e conhecer mais sobre você.
-                                            Por isso, é fundamental que eles estejam corretos.</p>
-                                    </div>
-                                </div>
-                            </div>
+                                {{--<div id="div-3" class="accordion-form collapse" data-parent="#accordion">--}}
+                                    {{--<div class="card-body">--}}
+                                        {{--<p>A Facilita precisa dos seus dados para garantir segurança ao seu pedido e conhecer mais sobre você.--}}
+                                            {{--Por isso, é fundamental que eles estejam corretos.</p>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
 
 
-                        </div>
-                        <!-- fim acordions -->
+                        {{--</div>--}}
+                        {{--<!-- fim acordions -->--}}
 
-                    </div>
-                </div>
-            </div>
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
 
         </div>
     </section>
