@@ -226,6 +226,8 @@
 
             // alert('Loading');
 
+
+
             axios.post(APP_URL + '/pedido_emprestimo_parte01', {
                 nome_solicitante: nome_solicitante,
                 dtn_solicitante: dtn_solicitante,
