@@ -830,8 +830,7 @@
     <!-- solicitation form-->
 
 </div>
-<script src="assets/pedido/js/emprestimo.js"></script>
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
 <script src="{{asset('node_modules/jquery-mask-plugin/dist/jquery.mask.js')}}"></script>
 {{--<script src="{{asset('assets/index/js/simulacao.js')}}"></script>--}}
 
@@ -842,7 +841,8 @@
 <script src="{{asset('node_modules/inputmask/dist/inputmask/jquery.inputmask.js')}}"></script>
 <script src="{{asset('node_modules/jquery-validation/dist/jquery.validate.js')}}"></script>
 <script src="{{asset('js/bootstrap-notify.js')}}"></script>
-
+<script src="assets/pedido/js/emprestimo.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 <style>
     /* Absolute Center Spinner */
