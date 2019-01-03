@@ -327,7 +327,7 @@ class EmprestimoController extends Controller
 
 
 
-        return response('residencia roubada com sucesso', 200)
+        return response('concluido com sucesso', 200)
             ->header('Content-Type', 'text/plain');
 
 
