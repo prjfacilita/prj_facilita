@@ -42,26 +42,185 @@
             var pb_exposta = $('#publicamente-exposta').find(":selected").text();
 
 
-            if(nome_solicitante === ""){console.log('error');return false;}
-            if(dtn_solicitante === ""){console.log('error');return false;}
-            if(nro_documento === ""){console.log('error');return false;}
-            if(tp_documento === ""){console.log('error');return false;}
-            if(solicitation_emission_id === ""){console.log('error');return false;}
-            if(solicitation_organ === ""){console.log('error');return false;}
-            if(sexo === ""){console.log('error');return false;}
-            if(estado_civil === ""){console.log('error');return false;}
-            if(nacionalidade === ""){console.log('error');return false;}
-            if(uf_nascimento === ""){console.log('error');return false;}
-            if(naturalidade === ""){console.log('error');return false;}
-            if(telefone === ""){console.log('error');return false;}
-            if(celular === ""){console.log('error');return false;}
-            if(tel_recado === ""){console.log('error');return false;}
-            if(nome_mae === ""){console.log('error');return false;}
-            if(nome_conjuge === ""){console.log('error');return false;}
-            if(cpf_conjuge === ""){console.log('error');return false;}
-            if(nasto_conjuge === ""){console.log('error');return false;}
-            if(sexo_conjuge === ""){console.log('error');return false;}
-            if(pb_exposta === ""){console.log('error');return false;}
+            if(nome_solicitante === ""){console.log('error');
+
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, insira seu nome com no máximo 30 caractéres'
+                },{
+                    type: 'danger'
+                });
+
+            return false;}
+            if(dtn_solicitante === ""){console.log('error');
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, sua data de nascimento'
+                },{
+                    type: 'danger'
+                });
+            return false;}
+            if(nro_documento === ""){console.log('error');
+
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, insira o número do seu documento'
+                },{
+                    type: 'danger'
+                });
+            return false;}
+            if(tp_documento === ""){console.log('error');
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, insira o tipo do documento'
+                },{
+                    type: 'danger'
+                });
+            return false;}
+            if(solicitation_emission_id === ""){console.log('error');
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, insira o emissor do seu documento'
+                },{
+                    type: 'danger'
+                });
+            return false;}
+            if(solicitation_organ === ""){console.log('error');
+
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor,insira o emissor do seu documento'
+                },{
+                    type: 'danger'
+                });
+            return false;}
+            if(sexo === ""){console.log('error');
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, insira seu sexo'
+                },{
+                    type: 'danger'
+                });
+
+            return false;}
+            if(estado_civil === ""){console.log('error');
+
+
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, insira o seu estado civil'
+                },{
+                    type: 'danger'
+                });
+            return false;}
+            if(nacionalidade === ""){console.log('error');
+
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, insira sua nacionalidade'
+                },{
+                    type: 'danger'
+                });
+            return false;}
+            if(uf_nascimento === ""){console.log('error');
+
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, insira a UF de onde você nasceu'
+                },{
+                    type: 'danger'
+                });
+
+            return false;}
+            if(naturalidade === ""){console.log('error');
+
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, insira sua naturalidade'
+                },{
+                    type: 'danger'
+                });
+            return false;}
+            if(telefone === ""){console.log('error');
+
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, insira seu telefone'
+                },{
+                    type: 'danger'
+                });
+            return false;}
+            if(celular === ""){console.log('error');
+
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, insira seu celular'
+                },{
+                    type: 'danger'
+                });
+            return false;}
+            if(tel_recado === ""){console.log('error');
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, insira seu telefone de recado'
+                },{
+                    type: 'danger'
+                });
+            return false;}
+            if(nome_mae === ""){console.log('error');
+
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, insira  o nome da sua mãe com até 35 caractéres'
+                },{
+                    type: 'danger'
+                });
+            return false;}
+            if(nome_conjuge === ""){console.log('error');
+
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, insira o nome do seu conjuge'
+                },{
+                    type: 'danger'
+                });
+            return false;}
+            if(cpf_conjuge === ""){console.log('error');
+
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, insira o cpf do seu conjuge'
+                },{
+                    type: 'danger'
+                });
+            return false;}
+            if(nasto_conjuge === ""){console.log('error');
+
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, insira a data de nascimento do seu conjuge'
+                },{
+                    type: 'danger'
+                });
+            return false;}
+            if(sexo_conjuge === ""){console.log('error');
+
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, insira  o sexo do seu conjuge'
+                },{
+                    type: 'danger'
+                });
+            return false;}
+            if(pb_exposta === ""){console.log('error');
+
+                $.notify({
+                    title: '<strong>Erro!</strong>',
+                    message: 'Por favor, responda se você é uma pessoa publicamente exposta'
+                },{
+                    type: 'danger'
+                });
+            return false;}
 
             // if(nome_conjuge === ""){console.log('error');return false;}
 
