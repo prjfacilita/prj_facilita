@@ -97,8 +97,8 @@
                 </div>
             </div>
 
-            {{--<div class="row">--}}
-                {{--<div class="col-12">--}}
+            <div class="row">
+                <div class="col-12">
                     {{--<div class="request-denied-motive">--}}
                         {{--<h2>Entenda porque</h2>--}}
 
@@ -148,11 +148,11 @@
 
 
                         {{--</div>--}}
-                        {{--<!-- fim acordions -->--}}
+                        <!-- fim acordions -->
 
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
+                    </div>
+                </div>
+            </div>
 
         </div>
     </section>
