@@ -217,10 +217,10 @@
                                                     <label>Estado Civil:
                                                         <select required name="estado-civil" id="estado-civil">
                                                             <option disabled selected>Selecionar</option>
-                                                            <option value="casada">Casada</option>
-                                                            <option value="solteira">Solteira</option>
-                                                            <option value="divorciada">Divorciada</option>
-                                                            <option value="viuva">Viúva</option>
+                                                            <option value="casado">Casada</option>
+                                                            <option value="solteiro">Solteiro</option>
+                                                            <option value="divorciado">Divorciado</option>
+                                                            <option value="viuvo">Viúvo</option>
                                                             <option value="uniao-estavel">União Estável</option>
                                                         </select></label>
                                                 </div>
@@ -282,11 +282,11 @@
                                                 </div>
 
                                                 <div class="col-sm-6">
-                                                    <label>Nome da Mãe<input required type="text" name="nome-mae" class="solicitation-form__name solicitation-input"></label>
+                                                    <label>Nome da Mãe<input required onkeypress="return this.value.length<=35 " type="text" name="nome-mae" class="solicitation-form__name solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-6">
-                                                    <label>Nome Cônjuge<input required type="text" name="nome-conjuge" class="solicitation-form__name solicitation-input"></label>
+                                                    <label>Nome Cônjuge<input required onkeypress="return this.value.length<=35 " type="text" name="nome-conjuge" class="solicitation-form__name solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-4">
