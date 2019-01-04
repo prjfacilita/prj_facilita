@@ -365,7 +365,7 @@
                         <input type="email" name="simulation-email" placeholder="E-mail" class="simulation-info" required/>
                         <select id="reason" name="finalidade" class="simulation-info" required>
                             <option disabled>Qual a finalidade?</option>
-                            <option value="renegociar-dividas">Renegociar dívidas</option>
+                            <option value="renegociar_dividas">Renegociar dívidas</option>
                             <option value="investir-negocio">Investir no meu negócio</option>
                             <option value="reformar">Reformar imóvel</option>
                             <option value="comprar-veiculo">Comprar um veículo</option>

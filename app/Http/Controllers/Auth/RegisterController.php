@@ -4,16 +4,13 @@ namespace App\Http\Controllers\Auth;
 
 
 use App\Http\Controllers\Controller;
-//use http\Env\Request;
-
-use Illuminate\Support\Facades\Request;
+use http\Env\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use App\Login;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\WelcomeEmail;
-//use http\Env\Request;
 
 use Illuminate\View\View;
 
@@ -47,13 +44,13 @@ class RegisterController extends Controller
     }
 
 
-    public function PreCadastro(Request $request){
+    public function PreCadastro(){
 
 
         /*VERIFICAR NA TABELA pre_cadastro se já existe, se não existir cadastrar*/
 
 
-        $finalidade =  (string) $request->finalidade;
+        $finalidade =  (string) Input::get('finalidade');
 
         print_r($finalidade);
 
