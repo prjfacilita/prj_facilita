@@ -156,7 +156,7 @@ class PropostaController extends Controller
 
 //        print_r($response);
 
-        return $response;
+        return $response->retorno;
 
     }
 
