@@ -384,8 +384,28 @@ class EmprestimoController extends Controller
             $teste = new PropostaController();
             $retorno =  $teste->StatusPreAnalise(1);
 
-            print_r($retorno);
-            return view('emprestimo.status_analise');
+//            print_r($retorno);
+
+
+            if($retorno == "REALIZANDO_ANALISE_PREVIA"){
+
+                return view('emprestimo.status_analise');
+
+            }
+            if($retorno == "ANALISE_PREVIA_CONCLUIDA"){
+
+
+                return view('emprestimo.status_analise');
+
+
+            }
+
+            if($retorno == "REPROVADA"){
+
+                return \view('emprestimo.status_reprovada');
+            }
+
+
         }else{
 
             return view('emprestimo.pedido',
