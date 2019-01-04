@@ -25,8 +25,11 @@ class DadosBancariosController extends Controller
 
         $data               = DB::table('cadastro')->where('email',  Auth::user()->email)->first();
 
+        $id = $data->id;
 
-        $data_bancarios     = DB::table('dados_bancarios')->where('id_cadastro', $data->id)->first();
+
+
+        $data_bancarios     = DB::table('dados_bancarios')->where('id_cadastro', $id)->first();
 
 
         print_r($data_bancarios->id);
