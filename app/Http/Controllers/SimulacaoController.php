@@ -148,7 +148,7 @@ class SimulacaoController extends Controller
         $pre_cadastro_save->email = $request->simulation_email;
         $pre_cadastro_save->nome_compl = $request->simulation_name;
         $pre_cadastro_save->cpf = $request->simulation_cpf;
-        $pre_cadastro_save->finalidade = $request->finalidade;
+        $pre_cadastro_save->finalidade = (string) $request->finalidade;
 
         $pre_cadastro_save->save();
 
