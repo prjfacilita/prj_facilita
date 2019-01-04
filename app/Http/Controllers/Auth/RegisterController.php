@@ -44,13 +44,13 @@ class RegisterController extends Controller
     }
 
 
-    public function PreCadastro(){
+    public function PreCadastro(Request $request){
 
 
         /*VERIFICAR NA TABELA pre_cadastro se já existe, se não existir cadastrar*/
 
 
-        $finalidade =  (string) Input::get('finalidade');
+        $finalidade =  (string) $request->finalidade;
 
         print_r($finalidade);
 
