@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+USE Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+
 
 class HomeController extends Controller
 {
@@ -14,6 +17,7 @@ class HomeController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        DB::table('sessions')->where('user_id', Auth::user()->id)->delete();
     }
 
     /**
@@ -23,6 +27,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+
         return view('home');
     }
 }
