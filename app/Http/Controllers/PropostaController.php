@@ -156,7 +156,7 @@ class PropostaController extends Controller
 
 //        print_r($response);
 
-        return $response['retorno'];
+        return $response['retorno']['listaSituacaoPropostas'][0];
 
     }
 
