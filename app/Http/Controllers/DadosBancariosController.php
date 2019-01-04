@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Emprestimo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -42,9 +43,15 @@ class DadosBancariosController extends Controller
             $dados_bancarios->tipo = $request->tipo_conta;
             $dados_bancarios->conta_desde = $request->conta_desde;
 //            $dados_bancarios->id_cadastro = $data->id;
-            $dados_bancarios->status_cadastro = 4;
+//            $dados_bancarios->status_cadastro = 4;
             $dados_bancarios->save();
 
+
+            $dados_emprestimo = new Emprestimo();
+            $dados_bancarios->exists = true;
+            $dados_bancarios->id_cadastro = 4;
+            $dados_bancarios->id = $data->id;
+            $dados_bancarios->save();
 
             /*CONTA
 
@@ -81,7 +88,7 @@ class DadosBancariosController extends Controller
     */
 
             $chamada_analise = new PropostaController();
-            $chamada_analise->AnaliseCadsatral($id_cadastro);
+            $chamada_analise->AnaliseCadsatral($data->id);
 
             return view('emprestimo.status_analise');
         }
