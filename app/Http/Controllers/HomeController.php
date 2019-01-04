@@ -17,7 +17,7 @@ class HomeController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
-        DB::table('sessions')->where('user_id', Auth::user()->id)->delete();
+//        DB::table('sessions')->where('user_id', Auth::user()->id)->delete();
     }
 
     /**
