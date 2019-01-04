@@ -154,6 +154,14 @@ class SimulacaoController extends Controller
 
 
 
+        /*Salvar finalidade na simulação, cpf, etc*/
+
+        $simulacao_dados = new Simulacao();
+        $simulacao_dados->exists = true;
+        $simulacao_dados->email = $request->simulation_email;
+        $simulacao_dados->cpf = $request->simulation_cpf;
+        $simulacao_dados->finalidade = $request->finalidade;
+
 //        print_r((string) $request->finaalidade);
 
 
