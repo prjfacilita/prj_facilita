@@ -44,62 +44,7 @@ class RegisterController extends Controller
     }
 
 
-    public function PreCadastro(){
 
-
-        /*VERIFICAR NA TABELA pre_cadastro se já existe, se não existir cadastrar*/
-
-
-        $finalidade =  (string) Input::get('finalidade');
-
-        print_r($finalidade);
-
-        return false;
-        $selectIfActive = DB::table('pre_cadastro')
-            ->where('email', '=',  Input::get('simulation-email'))
-            ->where('cpf', '=',  Input::get('simulation-cpf'))
-//                ->orderBy('quantity', 'asc')
-            ->first();
-
-
-        if(count($selectIfActive) > 0) {
-
-            //retornar erro pois já existe cadastrado email ou cpf
-
-
-//            return 0;
-
-            return redirect()->intended('index');
-
-        }
-
-
-
-        /// inserir na tabela
-        ///
-
-//        return Input::get('finalidade');
-        $pre_cadastro_save = new PreCadastro();
-
-        $pre_cadastro_save->email = Input::get('simulation-email');
-        $pre_cadastro_save->nome_compl = Input::get('simulation-name');
-        $pre_cadastro_save->cpf = Input::get('simulation-cpf');
-        $pre_cadastro_save->finalidade = Input::get('finalidade');
-
-        $pre_cadastro_save->save();
-
-
-
-        return view('auth.register',
-                        ['email'        => Input::get('simulation-email'),
-                        'nome'          => Input::get('simulation-name'),
-                        'cpf'           => Input::get('simulation-cpf'),
-                        'finalidade'    => Input::get('finalidade'),
-                        'simulacao_id' => Input::get('simulacao_id')
-
-                ]);
-
-    }
 
     /**
      * Get a validator for an incoming registration request.

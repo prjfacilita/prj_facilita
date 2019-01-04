@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Simulacao;
 use Illuminate\Http\Request;
 use GuzzleHttp\Client;
+use App\PreCadastro;
+use Illuminate\Support\Facades\DB;
 
 class SimulacaoController extends Controller
 {
@@ -107,6 +109,59 @@ class SimulacaoController extends Controller
         return $simulacao->id;
 
 
+
+    }
+
+
+    public function PreCadastro(Request $request){
+
+
+        /*VERIFICAR NA TABELA pre_cadastro se já existe, se não existir cadastrar*/
+
+
+        $selectIfActive = DB::table('pre_cadastro')
+            ->where('email', '=',  $request->simulation_email)
+            ->where('cpf', '=',  $request->simulation_cpf)
+//                ->orderBy('quantity', 'asc')
+            ->first();
+
+
+        if(count($selectIfActive) > 0) {
+
+            //retornar erro pois já existe cadastrado email ou cpf
+
+
+//            return 0;
+
+            return redirect()->intended('index');
+
+        }
+
+
+
+        /// inserir na tabela
+        ///
+
+//        return Input::get('finalidade');
+        $pre_cadastro_save = new PreCadastro();
+
+        $pre_cadastro_save->email = $request->simulation_email;
+        $pre_cadastro_save->nome_compl = $request->simulation_name;
+        $pre_cadastro_save->cpf = $request->simulation_cpf;
+        $pre_cadastro_save->finalidade = $request->finalidade;
+
+        $pre_cadastro_save->save();
+
+
+
+        return view('auth.register',
+            ['email'        => $request->simulation_email,
+                'nome'          => $request->simulation_name,
+                'cpf'           =>$request->simulation_cpf,
+                'finalidade'    => $request->finalidade,
+                'simulacao_id' => $request->simulacao_id
+
+            ]);
 
     }
 
