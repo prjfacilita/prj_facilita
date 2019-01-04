@@ -92,7 +92,7 @@ TEL_CEL*/
             $table->string('tel_comerc')->default(0);
             $table->string('ramal')->default(0);
             $table->string('val_patriominio')->default(0);
-            $table->string('status_cadas2tro')->default(0);
+            $table->string('status_cadastro')->default(0);
 
 
 
