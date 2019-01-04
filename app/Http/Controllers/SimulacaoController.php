@@ -100,7 +100,7 @@ class SimulacaoController extends Controller
         $simulacao->dataPrimeiraParcela =  date('Y-m-d',strtotime("+30 days"));
         $simulacao->tarifaCadastro = '3.99';
         $simulacao->ValorParcela = $arr["retorno"]["planosPgamento"][0]['valorParcela'];
-        $simulacao->finalidade = $request->finalidade;
+//        $simulacao->finalidade = ;
 //        $simulacao->finalidade = $arr['taxaJurosMensal'];
         $simulacao->save();
 
