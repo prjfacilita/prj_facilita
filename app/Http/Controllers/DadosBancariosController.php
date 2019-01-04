@@ -28,7 +28,7 @@ class DadosBancariosController extends Controller
         $id = $data->id;
 
 
-        echo 'teste'.$id;
+        echo 'teste'.$id.'</br>';
 
 //        print_r($id);
 
