@@ -406,7 +406,7 @@ class EmprestimoController extends Controller
 
             if($retorno == "REPROVADA"){
 
-                return view('emprestimo.status_reprovada');
+//                return view('emprestimo.status_reprovada');
             }
 
 
