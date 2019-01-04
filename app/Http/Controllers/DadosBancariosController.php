@@ -98,7 +98,7 @@ class DadosBancariosController extends Controller
     */
 
             $chamada_analise = new PropostaController();
-            $chamada_analise->AnaliseCadsatral($data->id);
+            $chamada_analise->StatusPreAnalise($data->id);
 
             return view('emprestimo.status_analise');
         }

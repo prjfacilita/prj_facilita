@@ -114,6 +114,49 @@ class PropostaController extends Controller
     }
 
 
+
+    public function StatusPreAnalise($id){
+
+        $data_cadastro = DB::table('cadastro')->where('id',  $id)->first();
+        $data_banco = DB::table('dados_bancarios')->where('id_cadastro',  $id)->first();
+
+        $simulacao = new EmprestimoController();
+        $token = $simulacao->ConfiguracoesAPI();
+
+//        $token = session('token_key');
+
+
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+            CURLOPT_URL => "https://c2gvw4lxh9.execute-api.sa-east-1.amazonaws.com/hmg/api/v1/ep/status/".$data_banco->nr_pedido."",
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => "",
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 30,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => "GET",
+//            CURLOPT_POSTFIELDS => "{\n    \"nomeMae\": \"".$data_cadastro->nome_mae."\",\n    \"email\": \"".Auth::user()->email."\",\n    \"estadoCivil\": \"SOLTEIRO\",\n    \"naturalidade\": \"São Paulo\",\n    \"valorPatrimonio\": \"5000\",\n    \"documentosPessoais\": [\n        {\n            \"numeroDocumento\": 125478991,\n            \"tipoDocumento\": \"RG\"\n        }\n    ],\n    \"endereco\": {\n        \"cep\": 11740000,\n        \"logradouro\": \"Rua Butantã\",\n        \"numero\": 123,\n        \"bairro\": \"Pinheiros\",\n        \"cidade\": \"Sao Paulo\",\n        \"complemento\": \"10o andar\"\n    },\n    \"enderecoComercial\": {\n        \"cep\": 11740000,\n        \"logradouro\": \"Rua Butantã\",\n        \"numero\": 123,\n        \"bairro\": \"Pinheiros\",\n        \"cidade\": \"Sao Paulo\",\n        \"uf\": \"SP\",\n        \"complemento\": \"10o andar\"\n    },\n    \"telefones\": [\n        {\n            \"ddd\": 11,\n            \"numero\": 985478547,\n            \"tipoTelefone\": \"CELULAR\",\n            \"ramal\": 444\n        }\n    ],\n    \"renda\": {\n        \"tipoComprovanteRenda\": \"EXTRATO_FGTS\"\n    }\n}",
+            CURLOPT_HTTPHEADER => array(
+                "Authorization: Bearer ".$token."",
+                "Content-Type: application/json",
+//                "Postman-Token: 06ec2ce6-7d28-4a29-9f61-957d375a0f04",
+                "cache-control: no-cache"
+            ),
+        ));
+
+        $response = curl_exec($curl);
+        $err = curl_error($curl);
+
+        curl_close($curl);
+
+
+//        print_r($response);
+
+        return $response;
+    }
+
+
     public function AnaliseCadsatral($id){
 
 
@@ -165,6 +208,10 @@ class PropostaController extends Controller
             $status_anliase->id = Auth::user()->id;
             $status_anliase->status_analise = 2;
             $status_anliase->save();
+
+
+            return response('concluido com sucesso', 200)
+                ->header('Content-Type', 'text/plain');
 //            echo $response;
 
 

@@ -909,6 +909,8 @@
 
                 $(".loading").css('display', 'none');
 
+                location.reload();
+
             }, 3000);
 
         });

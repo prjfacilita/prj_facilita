@@ -381,6 +381,10 @@ class EmprestimoController extends Controller
         if(Auth::user()->status_analise == 2){
             // em análise
 
+            $teste = new PropostaController();
+            $retorno =  $teste->StatusPreAnalise(1);
+
+            print_r($retorno);
             return view('emprestimo.status_analise');
         }else{
 
