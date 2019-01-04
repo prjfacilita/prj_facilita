@@ -416,7 +416,7 @@ class EmprestimoController extends Controller
                 ['valor_solicitacao'        => $user->valorSolicitado ,
                     'data_solicitacao'          =>  $user->created_at,
                     'qtde_parcelas'           =>  $user->qteParcelas,
-                    'finalidade'    =>  'teste',
+                    'finalidade'    =>   $user->finalidade,
                     'simulacao_id' => $user->id
 
                 ]);
