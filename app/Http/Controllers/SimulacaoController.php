@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use GuzzleHttp\Client;
 use App\PreCadastro;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class SimulacaoController extends Controller
 {
