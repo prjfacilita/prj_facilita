@@ -33,7 +33,7 @@
             <a class="logomarca" href="#"><img src="{{asset('/assets/cadastro/images/logo-facilita.png')}}" alt="Logomarca Facilita" class="image-logomarca"/></a>
             <div class="user-logged">
                 <img src="{{asset('/assets/cadastro/images/icon-user.png')}}" alt="Ícone Usuário" class="icon-user-logged"/>
-                <p>Olá Maria, seja bem vinda!</p>
+                {{--<p>Olá Maria, seja bem vinda!</p>--}}
             </div>
         </div>
     </div>
@@ -76,7 +76,7 @@
                                     <p>A facilita crédito pessoal irá consultar seu histórico de crédito e seus dados pessoais. isso é importante para confirmarmos a sua identidade e avaliarmos corretamente o seu crédito.</p>
                                     <a href="#" target="_blank" class="terms__link-process">saiba mais sobre o processo de avaliação de crédito.</a>
 
-                                    <input type="checkbox" name="accept-terms" value="accept" />
+                                    <input type="checkbox" name="accept-terms" value="accept" required/>
                                     <a href="#" target="_blank" class="terms__accept">Aceito os termos de cadastro</a>
                                 </div>
 
