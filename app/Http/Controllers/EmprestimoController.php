@@ -174,7 +174,10 @@ class EmprestimoController extends Controller
 
     public function EmprestimoDadosPessoais(Request $request){
 
+        /*Verificar se cliente já fez alguma proposta e excluir do cadastro e se possuir excluir*/
 //        return $request;
+
+
 
         $validator = Validator::make($request->all(), [
             'nome_solicitante' => 'required|max:30',
@@ -206,6 +209,8 @@ class EmprestimoController extends Controller
         $dados_pessoais->pb_exposta         =   $request->pb_exposta;
         $dados_pessoais->nome_mae           =   $request->nome_mae;
         $dados_pessoais->emissor            =   $request->solicitation_organ;
+        $dados_pessoais->status_cadastro          =   1; // status do passo a passo cadastro;
+
 
 
 //        $dados_pessoais->emissor            =   '1';
@@ -235,33 +240,54 @@ class EmprestimoController extends Controller
             return redirect()->back()->withInput();
         }
 
-        $renda_ocupacao = new Emprestimo();
+
+        /*buscar no sistema se existe a falta da segunda parte no cadastro*/
+
+
+        $data = DB::table('cadastro')->where('email',  Auth::user()->email)->first();
+
+        if($data->status_cadastro == 1){
+
+
+
+            $renda_ocupacao = new Emprestimo();
 
 //        $value = $request->session()->get('id_cadastro');
-        $renda_ocupacao->exists = true;
-        $renda_ocupacao->id = $request->session()->get('id_cadastro'); //already exists in database.
-        $renda_ocupacao->salario = $request->salario;
-        $renda_ocupacao->ocupacao = $request->ocupacao;
-        $renda_ocupacao->escolaridade = $request->escolaridade;
-        $renda_ocupacao->profissao = $request->profissao;
-        $renda_ocupacao->cargo = $request->cargo;
-        $renda_ocupacao->empresa = $request->empresa;
-        $renda_ocupacao->data_admissao = $request->data_admissao;
-        $renda_ocupacao->end_comercial = $request->end_comercial;
-        $renda_ocupacao->end_comercial_nro = $request->end_com_nro;
-        $renda_ocupacao->end_comercial_cep = $request->endereco_comercial_cep;
-        $renda_ocupacao->bairro_comerc = $request->endereco_comercial_bairro;
-        $renda_ocupacao->cidade_comerc = $request->endereco_comercial_cidade;
-        $renda_ocupacao->uf_comerc = $request->endereco_comercial_uf;
-        $renda_ocupacao->compl_comerc = $request->complemento_endereco_comercial;
-        $renda_ocupacao->tel_comerc = $request->telefone_comercial;
-        $renda_ocupacao->ramal = $request->ramal;
-        $renda_ocupacao->save();
+            $renda_ocupacao->exists = true;
+            $renda_ocupacao->id = $data->id; //already exists in database.
+            $renda_ocupacao->salario = $request->salario;
+            $renda_ocupacao->ocupacao = $request->ocupacao;
+            $renda_ocupacao->escolaridade = $request->escolaridade;
+            $renda_ocupacao->profissao = $request->profissao;
+            $renda_ocupacao->cargo = $request->cargo;
+            $renda_ocupacao->empresa = $request->empresa;
+            $renda_ocupacao->data_admissao = $request->data_admissao;
+            $renda_ocupacao->end_comercial = $request->end_comercial;
+            $renda_ocupacao->end_comercial_nro = $request->end_com_nro;
+            $renda_ocupacao->end_comercial_cep = $request->endereco_comercial_cep;
+            $renda_ocupacao->bairro_comerc = $request->endereco_comercial_bairro;
+            $renda_ocupacao->cidade_comerc = $request->endereco_comercial_cidade;
+            $renda_ocupacao->uf_comerc = $request->endereco_comercial_uf;
+            $renda_ocupacao->compl_comerc = $request->complemento_endereco_comercial;
+            $renda_ocupacao->tel_comerc = $request->telefone_comercial;
+            $renda_ocupacao->ramal = $request->ramal;
+            $renda_ocupacao->status_cadastro = 2;
+
+            $renda_ocupacao->save();
 
 
-        $request->session()->put('id_cadastro', $request->session()->get('id_cadastro'));
-        return response('Dados inseridos com sucesso', 200)
-            ->header('Content-Type', 'text/plain');
+            $request->session()->put('id_cadastro', $request->session()->get('id_cadastro'));
+            return response('Dados inseridos com sucesso', 200)
+                ->header('Content-Type', 'text/plain');
+
+
+
+        }
+
+
+
+
+
 
         /* salario: salario,
                 ocupacao: ocupacao,
@@ -307,28 +333,35 @@ class EmprestimoController extends Controller
             // var cep     =   $("#form-2 input[name=cep]").val();
             var residencia    =   $('#tipo-residencia-id').find(":selected").text();
             var escolaridade    =   $('#uf').find(":selected").text();*/
-        $endereco = new Emprestimo();
-        $endereco->exists = true;
-        $endereco->id = $request->session()->get('id_cadastro'); //already exists in database.
-        $endereco->cep_res      =   $request->cep;
-        $endereco->end_res      =   $request->endereco;
-        $endereco->num_res      =   $request->nro;
-        $endereco->compl_res    =   $request->complemento;
-        $endereco->bairro_res   =   $request->bairro;
-        $endereco->cidade_res   =   $request->cidade;
-        $endereco->val_patriominio  =   $request->valor_patrimonio;
-        $endereco->tipo_res         =   $request->residencia;
-        $endereco->uf_res           =   $request->uf_id;
-        $endereco->save();
-
-        $teste = new PropostaController();
-        $retorno_dados = $teste->InserirProposta($request->session()->get('id_cadastro'));
-        /*CHAMAR CONTROLADOR PROPOSTA*/
 
 
+        $data = DB::table('cadastro')->where('email',  Auth::user()->email)->first();
 
-        return response('concluido com sucesso', 200)
-            ->header('Content-Type', 'text/plain');
+        if($data->status_cadastro == 2) {
+            $endereco = new Emprestimo();
+            $endereco->exists = true;
+            $endereco->id = $data->id; //already exists in database.
+            $endereco->cep_res = $request->cep;
+            $endereco->end_res = $request->endereco;
+            $endereco->num_res = $request->nro;
+            $endereco->compl_res = $request->complemento;
+            $endereco->bairro_res = $request->bairro;
+            $endereco->cidade_res = $request->cidade;
+            $endereco->val_patriominio = $request->valor_patrimonio;
+            $endereco->tipo_res = $request->residencia;
+            $endereco->uf_res = $request->uf_id;
+            $endereco->status_cadastro = 3;
+            $endereco->save();
+
+            $teste = new PropostaController();
+            $retorno_dados = $teste->InserirProposta($data->id);
+            /*CHAMAR CONTROLADOR PROPOSTA*/
+
+
+            return response('concluido com sucesso', 200)
+                ->header('Content-Type', 'text/plain');
+
+        }
 
 
     }
