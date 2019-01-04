@@ -412,11 +412,17 @@ class EmprestimoController extends Controller
 
         }else{
 
+            $get_finalidade = DB::table('pre_cadastro')
+            ->where('email', '=',  Auth::user()->email)
+////            ->where('cpf', '=',  $request->simulation_cpf)
+////                ->orderBy('quantity', 'asc')
+            ->first();
+
             return view('emprestimo.pedido',
                 ['valor_solicitacao'        => $user->valorSolicitado ,
                     'data_solicitacao'          =>  $user->created_at,
                     'qtde_parcelas'           =>  $user->qteParcelas,
-                    'finalidade'    =>   $user->finalidade,
+                    'finalidade'    =>   $get_finalidade->finalidade,
                     'simulacao_id' => $user->id
 
                 ]);
