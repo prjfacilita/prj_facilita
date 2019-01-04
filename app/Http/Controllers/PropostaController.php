@@ -103,6 +103,7 @@ class PropostaController extends Controller
         $dados_bancarios = new DadosBancarios();
         $dados_bancarios->nr_pedido = $arr->retorno->numeroProposta;
         $dados_bancarios->nro_proc_bco = $arr->retorno->identificadorOperacao;
+        $dados_bancarios->id_cadastro = $data->id;
         $dados_bancarios->save();
 
 //        session()->put('id_dados_bancarios', $dados_bancarios->id);

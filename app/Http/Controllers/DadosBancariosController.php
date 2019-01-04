@@ -20,8 +20,8 @@ class DadosBancariosController extends Controller
     public function  InserirDadosBacnarios(Request $request){
 
 
-        $data = DB::table('cadastro')->where('email',  Auth::user()->email)->first();
-        $data_bancarios = DB::table('dados_bancarios')->where('id_cadastro', $data->id)->first();
+        $data               = DB::table('cadastro')->where('email',  Auth::user()->email)->first();
+        $data_bancarios     = DB::table('dados_bancarios')->where('id_cadastro', $data->id)->first();
 
 
         print_r($data_bancarios->id);
@@ -41,7 +41,7 @@ class DadosBancariosController extends Controller
             $dados_bancarios->conta = $request->nro_conta;
             $dados_bancarios->tipo = $request->tipo_conta;
             $dados_bancarios->conta_desde = $request->conta_desde;
-            $dados_bancarios->id_cadastro = $data->id;
+//            $dados_bancarios->id_cadastro = $data->id;
             $dados_bancarios->status_cadastro = 4;
             $dados_bancarios->save();
 
