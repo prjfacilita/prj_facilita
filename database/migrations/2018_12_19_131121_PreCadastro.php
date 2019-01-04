@@ -30,6 +30,8 @@ class PreCadastro extends Migration
             $table->string('celular')->default('0');
 //            $table->text('status');
             $table->text('finalidade');
+            $table->timestamps();
+
 //            $table->timestamp('failed_at')->useCurrent();
         });
     }
