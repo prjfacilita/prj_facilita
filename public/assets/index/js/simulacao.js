@@ -169,9 +169,9 @@
 
                 var valorSolicitado = $("body").data('simulacao');
                 var qteParcelas = $("input[name=simulation-plots]").val();
-                var cpf = $("input[name=simulation-cpf]").val();
-                var email = $("input[name=simulation-email]").val();
-                var name = $("input[name=simulation-name]").val();
+                var cpf = $("input[name=simulation_cpf]").val();
+                var email = $("input[name=simulation_email]").val();
+                var name = $("input[name=simulation_name]").val();
 
                 // TestaCPF(cpf);
 
