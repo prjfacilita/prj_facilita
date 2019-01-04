@@ -115,7 +115,7 @@
         <div class="container">
             <div class="row">
 
-                <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                {{--<div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>--}}
                 <div class="col-sm-3 solicitation-inf-area solicitation-date">
                     <p>Data da solicitação</p>
                     <span>{{$data_solicitacao}}</span>
@@ -161,7 +161,7 @@
                                 </div>
 
                                 <div class="loading">Validando dados, aguarde!&#8230;</div>
-g
+
                                 <div id="form-1" class="accordion-form collapse show" data-parent="#accordion">
                                     <div class="card-body">
                                         <h3>Dados Pessoais</h3>
