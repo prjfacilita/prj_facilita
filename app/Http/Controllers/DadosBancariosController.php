@@ -22,7 +22,10 @@ class DadosBancariosController extends Controller
 
     public function  InserirDadosBacnarios(Request $request){
 
+        $data_bancarios     = DB::table('dados_bancarios')->where('id_cadastro', '1')->first();
 
+
+        echo $data_bancarios->id;
         $data               = DB::table('cadastro')->where('email',  Auth::user()->email)->first();
 
         $id = $data->id;
@@ -32,7 +35,6 @@ class DadosBancariosController extends Controller
 
 //        print_r($id);
 
-        $data_bancarios     = DB::table('dados_bancarios')->where('id_cadastro', $id)->first();
 
 
         print_r($data_bancarios->id);
