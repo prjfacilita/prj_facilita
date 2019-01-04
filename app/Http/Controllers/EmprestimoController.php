@@ -376,13 +376,17 @@ class EmprestimoController extends Controller
 
         $userId = Auth::id();
         $user = DB::table('simulacao')->where('user_id',  $userId)->orderBy('created_at', 'DESC')->first();
+
+
+        $data_status_pre_analise = DB::table('cadastro')->where('email',  Auth::user()->email)->first();
+
         /**/
 
         if(Auth::user()->status_analise == 2){
             // em análise
 
             $teste = new PropostaController();
-            $retorno =  $teste->StatusPreAnalise(1);
+            $retorno =  $teste->StatusPreAnalise($data_status_pre_analise->id);
 
 //            print_r($retorno);
 
