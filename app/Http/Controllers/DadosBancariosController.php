@@ -11,6 +11,8 @@ use Illuminate\Support\Facades\Session;
 use GuzzleHttp\Client;
 use App\DadosBancarios;
 use Illuminate\View\View;
+//use App\Emprestimo;
+
 
 
 class DadosBancariosController extends Controller
@@ -22,6 +24,8 @@ class DadosBancariosController extends Controller
 
 
         $data               = DB::table('cadastro')->where('email',  Auth::user()->email)->first();
+
+
         $data_bancarios     = DB::table('dados_bancarios')->where('id_cadastro', $data->id)->first();
 
 
