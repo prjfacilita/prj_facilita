@@ -23,6 +23,9 @@ class DadosBancariosController extends Controller
         $data = DB::table('cadastro')->where('email',  Auth::user()->email)->first();
         $data_bancarios = DB::table('dados_bancarios')->where('id_cadastro', $data->id)->first();
 
+
+        print_r($data_bancarios->id);
+
         if($data->status_cadastro == 3) {
 
 //            $id_exists = session()->get('id_dados_bancarios');
