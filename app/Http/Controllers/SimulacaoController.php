@@ -154,7 +154,7 @@ class SimulacaoController extends Controller
 
 
 
-        print_r($request->finaalidade);
+        print_r(__toString($request->finaalidade));
 
 
         return false;
