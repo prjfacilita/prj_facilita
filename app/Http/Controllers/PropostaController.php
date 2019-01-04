@@ -175,10 +175,10 @@ class PropostaController extends Controller
 //        $token = session('token_key');
 
 
-        $curl = curl_init();
+        $curl = curl_init();g
 
         curl_setopt_array($curl, array(
-            CURLOPT_URL => "https://c2gvw4lxh9.execute-api.sa-east-1.amazonaws.com/hmg/api/v2/ep/propostas/".$data_banco->nr_pedido."/analisecadastral",
+            CURLOPT_URL => "https://c2gvw4lxh9.execute-api.sa-east-1.amazonaws.com/hmg/api/v1/ep/propostas/status/".$data_banco->nr_pedido."/analisecadastral",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
             CURLOPT_MAXREDIRS => 10,
