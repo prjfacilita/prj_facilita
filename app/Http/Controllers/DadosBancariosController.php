@@ -21,15 +21,16 @@ class DadosBancariosController extends Controller
 
 
         $data = DB::table('cadastro')->where('email',  Auth::user()->email)->first();
+        $data_bancarios = DB::table('dados_bancarios')->where('id_cadastro', $data->id)->first();
 
         if($data->status_cadastro == 3) {
 
-            $id_exists = session()->get('id_dados_bancarios');
+//            $id_exists = session()->get('id_dados_bancarios');
 //            $id_cadastro = $request->session()->get('id_cadastro');
 
             $dados_bancarios = new DadosBancarios();
             $dados_bancarios->exists = true;
-            $dados_bancarios->id = $id_exists;
+            $dados_bancarios->id = $data_bancarios->id;
             $dados_bancarios->cpf = Auth::user()->cpf;
             $dados_bancarios->banco = $request->banco_id;
             $dados_bancarios->agencia = $request->nro_agencia;
