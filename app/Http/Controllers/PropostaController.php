@@ -108,6 +108,12 @@ class PropostaController extends Controller
         $dados_bancarios->id_cadastro = $id;
         $dados_bancarios->save();
 
+
+        $status_anliase = new Login();
+        $status_anliase->exists = true;
+        $status_anliase->id = Auth::user()->id;
+        $status_anliase->status_analise = 2;
+        $status_anliase->save();
 //        session()->put('id_dados_bancarios', $dados_bancarios->id);
 
         return $arr;
@@ -207,11 +213,7 @@ class PropostaController extends Controller
             echo "cURL Error #:" . $err;
         } else {
 
-            $status_anliase = new Login();
-            $status_anliase->exists = true;
-            $status_anliase->id = Auth::user()->id;
-            $status_anliase->status_analise = 2;
-            $status_anliase->save();
+
 
 
             return response('concluido com sucesso', 200)
