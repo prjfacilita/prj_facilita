@@ -28,8 +28,9 @@ class DadosBancariosController extends Controller
         $id = $data->id;
 
 
+        echo 'teste'.$id;
 
-        print_r($id);
+//        print_r($id);
 
         $data_bancarios     = DB::table('dados_bancarios')->where('id_cadastro', $id)->first();
 
