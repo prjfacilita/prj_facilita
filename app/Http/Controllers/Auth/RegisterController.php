@@ -50,8 +50,9 @@ class RegisterController extends Controller
         /*VERIFICAR NA TABELA pre_cadastro se já existe, se não existir cadastrar*/
 
 
-        print_r(Input::get('finalidade'));
+        $finalidade =  (string) Input::get('finalidade');
 
+        print_r($finalidade);
 
         return false;
         $selectIfActive = DB::table('pre_cadastro')
