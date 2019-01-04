@@ -391,23 +391,23 @@ class EmprestimoController extends Controller
 //            print_r($retorno);
 
 
-            if($retorno == "REALIZANDO_ANALISE_PREVIA"){
+//            if($retorno == "REALIZANDO_ANALISE_PREVIA"){
 
                 return view('emprestimo.status_analise');
-
-            }
-            if($retorno == "ANALISE_PREVIA_CONCLUIDA"){
-
-
-                return view('emprestimo.status_analise');
-
-
-            }
-
-            if($retorno == "REPROVADA"){
-
-//                return view('emprestimo.status_reprovada');
-            }
+//
+//            }
+//            if($retorno == "ANALISE_PREVIA_CONCLUIDA"){
+//
+//
+//                return view('emprestimo.status_analise');
+//
+//
+//            }
+//
+//            if($retorno == "REPROVADA"){
+//
+////                return view('emprestimo.status_reprovada');
+//            }
 
 
         }else{
