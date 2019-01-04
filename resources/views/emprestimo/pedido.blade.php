@@ -118,7 +118,7 @@
                 {{--<div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>--}}
                 <div class="col-sm-3 solicitation-inf-area solicitation-date">
                     <p>Data da solicitação</p>
-                    <span>{{$data_solicitacao}}</span>
+                    <span>{{ \Carbon\Carbon::parse($data_solicitacao)->format('d/m/Y')}}</span>
                 </div>
 
                 <div class="col-sm-3 solicitation-inf-area solicitation-value">
