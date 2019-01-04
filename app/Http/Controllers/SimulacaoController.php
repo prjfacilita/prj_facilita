@@ -154,16 +154,16 @@ class SimulacaoController extends Controller
 
 
 
-        print_r((string) $request->finaalidade);
+//        print_r((string) $request->finaalidade);
 
 
-        return false;
+//        return false;
 
         return view('auth.register',
             ['email'        => $request->simulation_email,
                 'nome'          => $request->simulation_name,
                 'cpf'           =>$request->simulation_cpf,
-                'finalidade'    => $request->finalidade,
+                'finalidade'    => (string)  $request->finalidade,
                 'simulacao_id' => $request->simulacao_id
 
             ]);
