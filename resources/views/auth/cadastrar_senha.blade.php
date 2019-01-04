@@ -61,14 +61,14 @@
 
                                 <div class="register__password">
                                     <label>Senha:</label>
-                                    <input type="password" name="senha" id="senha" placeholder="Criar senha" class="register__input__password" />
+                                    <input type="password" name="senha" id="senha" placeholder="Criar senha" class="register__input__password" required />
                                     @if ($errors->has('senha'))
                                         <span class="help-block">
                                         <strong>{{ $errors->first('senha') }}</strong>
                                     </span>
                                     @endif
 
-                                    <input  id="confirm-password" type="password" name="confirm_password" placeholder="Confirmar senha" class="register__input__password" />
+                                    <input  id="confirm-password" type="password" name="confirm_password" placeholder="Confirmar senha" class="register__input__password" required/>
                                     <p>A senha deverá ter no mínimo 8 caracteres com letras e números.</p>
                                 </div>
 
