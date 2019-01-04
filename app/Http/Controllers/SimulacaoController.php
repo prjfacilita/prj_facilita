@@ -153,21 +153,21 @@ class SimulacaoController extends Controller
 
         $pre_cadastro_save->save();
 
-
-        $get_id_simulacao = DB::table('simulacao')
-            ->where('user_id', '=',  Auth::user()->id)
-//            ->where('cpf', '=',  $request->simulation_cpf)
-//                ->orderBy('quantity', 'asc')
-            ->first();
+//
+//        $get_id_simulacao = DB::table('simulacao')
+//            ->where('user_id', '=',  Auth::user()->id)
+////            ->where('cpf', '=',  $request->simulation_cpf)
+////                ->orderBy('quantity', 'asc')
+//            ->first();
 
         /*Salvar finalidade na simulação, cpf, etc*/
 
-        $simulacao_dados = new Simulacao();
-        $simulacao_dados->exists = true;
-        $simulacao_dados->id = $get_id_simulacao->id;
-        $simulacao_dados->email = $request->simulation_email;
-        $simulacao_dados->cpf = $request->simulation_cpf;
-        $simulacao_dados->finalidade = $request->finalidade;
+//        $simulacao_dados = new Simulacao();
+//        $simulacao_dados->exists = true;
+//        $simulacao_dados->id = $get_id_simulacao->id;
+//        $simulacao_dados->email = $request->simulation_email;
+//        $simulacao_dados->cpf = $request->simulation_cpf;
+//        $simulacao_dados->finalidade = $request->finalidade;
 
 //        print_r((string) $request->finaalidade);
 
