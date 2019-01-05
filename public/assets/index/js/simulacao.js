@@ -12,6 +12,19 @@
             ///validar cpf
             $('#simulation-cpf').mask('000.000.000-00', {reverse: true});
 
+            $("#simulation-other-value").maskMoney({prefix:'R$ ', allowNegative: true, thousands:'.', decimal:',', affixesStay: false});
+
+
+            /*
+
+
+             formatar no formato real
+
+            var valor = 16.00;
+            var texto = valor.toLocaleString("pt-BR", { style: "currency" , currency:"BRL"});
+
+            console.log(texto);
+             Executar*/
 
             $( "#simulation-other-value" ).change(function(e) {
                 // alert( "Handler for .change() called." );
@@ -26,6 +39,7 @@
 
                     return false;
                 }
+
 
 
                 console.log(value);
@@ -163,18 +177,18 @@
 
 
 
-            // $(document).ready(function(){
-            //     $("#simulation-other-value").inputmask('decimal', {
-            //         'alias': 'numeric',
-            //         'groupSeparator': '',
-            //         'autoGroup': true,
-            //         'digits': 2,
-            //         'radixPoint': ".",
-            //         'digitsOptional': false,
-            //         'allowMinus': false,
-            //         'prefix': 'R$ ',
-            //         'placeholder': ''
-            //     })});
+            $(document).ready(function(){
+                $("#simulation-other-value").inputmask('decimal', {
+                    'alias': 'numeric',
+                    'groupSeparator': '',
+                    'autoGroup': true,
+                    'digits': 2,
+                    'radixPoint': ".",
+                    'digitsOptional': false,
+                    'allowMinus': false,
+                    // 'prefix': 'R$ ',
+                    'placeholder': ''
+                })});
 
 
 

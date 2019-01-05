@@ -401,6 +401,7 @@
 <script src="{{asset('node_modules/inputmask/dist/inputmask/inputmask.numeric.extensions.js')}}"></script>
 <script src="{{asset('node_modules/inputmask/dist/inputmask/inputmask.date.extensions.js')}}"></script>
 <script src="{{asset('node_modules/inputmask/dist/inputmask/jquery.inputmask.js')}}"></script>
+<script src="{{asset('js/plentz-jquery-maskmoney-cdbeeac/dist/jquery.maskMoney.js')}}"></script>
 {{--<script src="{{asset('dist/inputmask/jquery.inputmask.js')}}"></script>--}}
 {{--<script src="{{asset('dist/inputmask/jquery.inputmask.js')}}"></script>--}}
 {{--<script src="{{asset('dist/inputmask/jquery.inputmask.js')}}"></script>--}}
