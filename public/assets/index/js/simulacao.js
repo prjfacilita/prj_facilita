@@ -29,7 +29,7 @@
 
 
                 console.log(value);
-                valueCorreto = numberToReal(document.querySelector('input[name="simulation-value"]').value);
+                valueCorreto = document.querySelector('input[name="simulation-value"]').value;
 
 
 
@@ -163,7 +163,7 @@
             $(document).ready(function(){
                 $("#simulation-other-value").inputmask('decimal', {
                     'alias': 'numeric',
-                    'groupSeparator': ',',
+                    'groupSeparator': '',
                     'autoGroup': true,
                     'digits': 2,
                     'radixPoint': ".",
