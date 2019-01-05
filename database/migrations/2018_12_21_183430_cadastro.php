@@ -72,6 +72,8 @@ TEL_CEL*/
             $table->string('tel_cel')->default(0);
             $table->string('pb_exposta')->default(0);
             $table->integer('operador')->default(0);
+            $table->string('estado_civil')->default(0);
+
 
 
             /*SEGUNDA PARTE CADASTRO*/

@@ -215,13 +215,13 @@
 
                                                 <div class="col-sm-2">
                                                     <label>Estado Civil:
-                                                        <select required name="estado-civil" id="estado-civil">
+                                                        <select required name="estado_civil" id="estado_civil">
                                                             <option disabled selected>Selecionar</option>
-                                                            <option value="casado">Casado</option>
-                                                            <option value="solteiro">Solteiro</option>
-                                                            <option value="divorciado">Divorciado</option>
-                                                            <option value="viuvo">Viúvo</option>
-                                                            <option value="uniao-estavel">União Estável</option>
+                                                            <option value="CASADO">Casado</option>
+                                                            <option value="SOLTEIRO">Solteiro</option>
+                                                            <option value="DIVORCIADO">Divorciado</option>
+                                                            <option value="VIUVO">Viúvo</option>
+                                                            <option value="UNIAO_ESTAVEL">União Estável</option>
                                                         </select></label>
                                                 </div>
 
