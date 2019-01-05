@@ -43,7 +43,8 @@
 
 
                 console.log(value);
-                valueCorreto = document.querySelector('input[name="simulation-other-value"]').value.replace(",", "");
+                valueCorreto = document.querySelector('input[name="simulation-other-value"]').value.replace(".", "");
+                valueCorreto = document.querySelector('input[name="simulation-other-value"]').value.replace(",", ".");
 
 
 
