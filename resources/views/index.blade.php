@@ -104,7 +104,7 @@
                             <input type="radio" name="simulation-value" id="simulation-value" data-value="15000" value="15000.00" class="simulation-box__value" data-line="R$ 15.000,00">
                             <input type="radio" name="simulation-value" id="simulation-value" data-value="20000" value="20000.00" class="simulation-box__value" data-line="R$ 20.000,00">
            
-                            <input type="text"  id="simulation-other-value" name="simulation-other-value" placeholder="Outro valor" class="simulation-other-value" >
+                            <input type="radio"  id="simulation-other-value" name="simulation-other-value" placeholder="Outro valor" class="simulation-other-value" >
 
                             {{--<div class="simulation-button"><input type="button" value="Simule agora" class="simulation-box__submit" /></div>--}}
                         </form>
