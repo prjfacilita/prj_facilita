@@ -27,7 +27,11 @@
                     return false;
                 }
 
-                valueCorreto = document.querySelector('input[name="simulation-value"]').value;
+
+                console.log(value);
+                valueCorreto = numberToReal(document.querySelector('input[name="simulation-value"]').value);
+
+
 
 
                 /*salva em váriavel global o valor*/
@@ -207,4 +211,11 @@
                     location.reload();
                 });
 
+
+
+                function numberToReal(numero) {
+                    var numero = numero.toFixed(2).split('.');
+                    numero[0] = "R$ " + numero[0].split(/(?=(?:...)*$)/).join('.');
+                    return numero.join(',');
+                }
 
