@@ -356,7 +356,7 @@
                         <input style="display: none;" type="radio" name="simulation-plots2" value="18" class="simulation-item" data-line="18" disabled>
                         <input style="display: none;" type="radio" name="simulation-plots2" value="12" class="simulation-item" data-line="12" disabled>
                         <input style="display: none;" type="radio" name="simulation-plots2" value="06" class="simulation-item" data-line="06" disabled>
-                        <input style="display: none;" type="radio" name="simulation-plots2" value="03" class="simulation-item" data-line="03" disabled>
+                        {{--<input style="display: none;" type="radio" name="simulation-plots2" value="03" class="simulation-item" data-line="03" disabled>--}}
 
                         <span class="plots-value"></span>
 

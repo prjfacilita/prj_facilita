@@ -134,6 +134,9 @@
                 }
 
 
+                console.log();
+
+
 
 
                 $(".simulation-box form.pt2").css('display','none'); // ocultar formulario
@@ -198,7 +201,7 @@
 
 
                 var valorSolicitado = $("body").data('simulacao');
-                var qteParcelas = $("input[name=simulation-plots]").val();
+                var qteParcelas = document.querySelector('#pt2 input[name="simulation-plots"]:checked').value;
 
 
                     $.ajax({
