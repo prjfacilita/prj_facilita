@@ -17,22 +17,17 @@
                 // alert( "Handler for .change() called." );
                 e.preventDefault();
 
-                if ( ! $("input[name=\"simulation-other-value\"]:checked").is(':checked') ){
 
-                    return false;
-                }
+                if (document.querySelector('input[name="simulation-other-value"]').value) {
 
-
-                if (document.querySelector('input[name="simulation-other-value"]:checked').value) {
-
-                    value = document.querySelector('input[name="simulation-other-value"]:checked').value;
+                    value = document.querySelector('input[name="simulation-other-value"]').value;
 
                 }else{
 
                     return false;
                 }
 
-                valueCorreto = document.querySelector('input[name="simulation-value"]:checked').value;
+                valueCorreto = document.querySelector('input[name="simulation-value"]').value;
 
 
                 /*salva em váriavel global o valor*/
