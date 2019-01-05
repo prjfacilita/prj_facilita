@@ -105,16 +105,16 @@
                 });
 
             return false;}
-            if(estado_civil === ""){console.log('error');
-
-
-                $.notify({
-                    title: '<strong>Erro!</strong>',
-                    message: 'Por favor, insira o seu estado civil'
-                },{
-                    type: 'danger'
-                });
-            return false;}
+            // if(estado_civil === ""){console.log('error');
+            //
+            //
+            //     $.notify({
+            //         title: '<strong>Erro!</strong>',
+            //         message: 'Por favor, insira o seu estado civil'
+            //     },{
+            //         type: 'danger'
+            //     });
+            // return false;}
             if(nacionalidade === ""){console.log('error');
 
                 $.notify({
