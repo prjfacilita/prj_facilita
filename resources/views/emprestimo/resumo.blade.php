@@ -227,7 +227,7 @@
                                             <div class="order-item order__box order-item-divisoy">
                                                 <div>
                                                     <p>Primeira parcela</p>
-                                                    <span>{{strtotime('d', $dataPrimeiraParcela)}} DEZ</span>
+                                                    <span>{{ $dataPrimeiraParcela}} DEZ</span>
                                                     <span>2018</span>
                                                 </div>
                                             </div>
