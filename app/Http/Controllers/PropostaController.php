@@ -80,7 +80,7 @@ class PropostaController extends Controller
         $get_Access_token->ConfiguracoesAPI();
 
 
-        $this->token = $get_Access_token;
+        $this->token = (string) $get_Access_token;
 
 
     }
