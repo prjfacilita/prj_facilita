@@ -320,6 +320,8 @@ class PropostaController extends Controller
 
             $data = DB::table('dados_bancarios')->where('cpf',  Auth::user()->cpf)->first();
 
+            $data_pre_cadastro = DB::table('pre_cadastro')->where('cpf', Auth::user()->cpf)->first();
+
 
             $curl = curl_init();
 
@@ -371,7 +373,8 @@ class PropostaController extends Controller
                         'valorParcela' => $response['retorno']['especificacaoFinanceira']['valorParcela'],
                         'dataPrimeiraParcela' => $response['retorno']['especificacaoFinanceira']['dataPrimeiraParcela'],
                         'quantidadeParcelas' => $response['retorno']['especificacaoFinanceira']['quantidadeParcelas'],
-                        'valorTC' => $response['retorno']['especificacaoFinanceira']['valorTC']
+                        'valorTC' => $response['retorno']['especificacaoFinanceira']['valorTC'],
+                        'motivo_solicitacao' => $data_pre_cadastro->finalidade
                     ]
                 );
 
