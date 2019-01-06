@@ -359,7 +359,7 @@ class PropostaController extends Controller
 //                return $response;
 
 
-                return view('emprestimo.resumo')->with(
+                return view('emprestimo.resumo',
                     'valorPrincipal', $response['retorno']['especificacaoFinanceira']['valorPrincipal'],
                     'iof', $response['retorno']['especificacaoFinanceira']['iof'],
                     'cet', $response['retorno']['especificacaoFinanceira']['cet'],
