@@ -374,6 +374,15 @@ class EmprestimoController extends Controller
 //
             }
 
+
+            if($retorno == "ANALISE_PREVIA_CONCLUIDA"){
+
+                /*Chamar api de analise cadastral*/
+                return view('emprestimo.status_analise');
+
+
+            }
+
             if ($retorno == "ANALISE_CADASTRAL_CONCLUIDA") {
 //
 //
