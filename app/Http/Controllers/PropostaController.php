@@ -19,6 +19,52 @@ class PropostaController extends Controller
     //
 
 
+    /*
+     *
+     * Fluxo api banco
+     *
+     * ->
+            /api/v1/ep/propostas
+
+       ->
+
+            /api/v1/ep/status
+     *
+     * Números propostas
+     *
+     * Aprovada -> 055090000002
+     * Realizando analise previa ->
+     *
+     * Pode ser solicitado para enviar os documentos para continuar a proposta para reprovada ou aprovada
+     *
+     * Reprovada ->
+     * Análise Prévia Concluida ->
+     *
+     *
+     *
+     *
+     *
+     *
+     * Proposta Aprovada
+     *
+     *  "codFaseAnaliseCredito": "FORMALIZACAO_PROPOSTA",
+     *
+     *
+     *  -> Buscar documentos para formalização da proposta
+     *
+     * /api/v1/ep/propostas/{numeroProposta}/documentosformalizacao
+     *
+     *
+     * Formaliza a proposta
+     *
+     * /api/v1/ep/propostas/{numeroProposta}/formalizacao
+     *
+     *
+     * Após completar a proposta vem os contratos
+     *
+     * */
+
+
     public function __construct()
     {
 
@@ -162,7 +208,7 @@ class PropostaController extends Controller
 
 //        print_r($response);
 
-        return $response['retorno']['listaSituacaoPropostas'][0]['statusProposta'];
+        return $response;
 
     }
 
