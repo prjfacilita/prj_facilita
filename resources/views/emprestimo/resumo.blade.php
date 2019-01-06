@@ -107,7 +107,7 @@
 
                 <div class="solicitation-inf-area solicitation-date">
                     <p>Data da solicitação</p>
-                    <span>07/11/2018</span>
+                    <span>{{$dataSolicitacao}}</span>
                 </div>
 
                 <div class="solicitation-inf-area solicitation-date">

@@ -374,7 +374,8 @@ class PropostaController extends Controller
                         'dataPrimeiraParcela' => $response['retorno']['especificacaoFinanceira']['dataPrimeiraParcela'],
                         'quantidadeParcelas' => $response['retorno']['especificacaoFinanceira']['quantidadeParcelas'],
                         'valorTC' => $response['retorno']['especificacaoFinanceira']['valorTC'],
-                        'motivo_solicitacao' => $data_pre_cadastro->finalidade
+                        'motivo_solicitacao' => $data_pre_cadastro->finalidade,
+                        'dataSolicitacao' => $response['retorno']['dataStatusProposta']
                     ]
                 );
 
