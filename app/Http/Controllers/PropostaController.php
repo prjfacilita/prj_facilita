@@ -203,13 +203,19 @@ class PropostaController extends Controller
         curl_close($curl);
 
 
-        $response = json_decode($response, true);
+        if ($err) {
+            echo "cURL Error #:" . $err;
+        } else {
+
+
+            $response = json_decode($response, true);
 
 
 //        print_r($response);
 
-        return $response;
+            return $response['retorno']['listaSituacaoPropostas'][0]['statusProposta'];
 
+        }
     }
 
 
