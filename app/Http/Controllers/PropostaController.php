@@ -360,7 +360,14 @@ class PropostaController extends Controller
 
 
                 return view('emprestimo.resumo')->with(
-                    'valor_a_ser_depositado', $response['retorno']['especificacaoFinanceira']['valorPrincipal']
+                    'valorPrincipal', $response['retorno']['especificacaoFinanceira']['valorPrincipal'],
+                    'iof', $response['retorno']['especificacaoFinanceira']['iof'],
+                    'cet', $response['retorno']['especificacaoFinanceira']['cet'],
+                    'taxaJuros', $response['retorno']['especificacaoFinanceira']['taxaJuros'],
+                    'taxaJurosAno', $response['retorno']['especificacaoFinanceira']['taxaJurosAno'],
+                    'valorFinanciado', $response['retorno']['especificacaoFinanceira']['valorFinanciado'],
+                    'valorParcela', $response['retorno']['especificacaoFinanceira']['valorParcela'],
+                    'dataPrimeiraParcela', $response['retorno']['especificacaoFinanceira']['dataPrimeiraParcela']
                 );
 
             }
