@@ -78,14 +78,19 @@ class PropostaController extends Controller
 
         $get_Access_token = new EmprestimoController();
         $get_Access_token->ConfiguracoesAPI();
+
+
+        $this->token = $get_Access_token;
+
+
     }
 
 
     public function InserirProposta($id){
 
 
-        $simulacao = new EmprestimoController();
-        $token = $simulacao->ConfiguracoesAPI();
+//        $simulacao = new EmprestimoController();
+//        $token = $simulacao->ConfiguracoesAPI();
 
 //        $token = session('token_key');
 
@@ -93,7 +98,7 @@ class PropostaController extends Controller
             'base_uri' => EmprestimoController::URL_TOKEN_API(),
             'headers' => [
                 'Accept' => 'application/json',
-                'Authorization' => 'Bearer ' . $token,
+                'Authorization' => 'Bearer ' . $this->token,
                 'Content-Type' => 'application/json',
             ],
         ]);
@@ -180,8 +185,7 @@ class PropostaController extends Controller
         $data_cadastro = DB::table('cadastro')->where('id',  $id)->first();
         $data_banco = DB::table('dados_bancarios')->where('id_cadastro',  $id)->first();
 
-        $simulacao = new EmprestimoController();
-        $token = $simulacao->ConfiguracoesAPI();
+
 
 //        $token = session('token_key');
 
@@ -198,7 +202,7 @@ class PropostaController extends Controller
             CURLOPT_CUSTOMREQUEST => "GET",
 //            CURLOPT_POSTFIELDS => "{\n    \"nomeMae\": \"".$data_cadastro->nome_mae."\",\n    \"email\": \"".Auth::user()->email."\",\n    \"estadoCivil\": \"SOLTEIRO\",\n    \"naturalidade\": \"São Paulo\",\n    \"valorPatrimonio\": \"5000\",\n    \"documentosPessoais\": [\n        {\n            \"numeroDocumento\": 125478991,\n            \"tipoDocumento\": \"RG\"\n        }\n    ],\n    \"endereco\": {\n        \"cep\": 11740000,\n        \"logradouro\": \"Rua Butantã\",\n        \"numero\": 123,\n        \"bairro\": \"Pinheiros\",\n        \"cidade\": \"Sao Paulo\",\n        \"complemento\": \"10o andar\"\n    },\n    \"enderecoComercial\": {\n        \"cep\": 11740000,\n        \"logradouro\": \"Rua Butantã\",\n        \"numero\": 123,\n        \"bairro\": \"Pinheiros\",\n        \"cidade\": \"Sao Paulo\",\n        \"uf\": \"SP\",\n        \"complemento\": \"10o andar\"\n    },\n    \"telefones\": [\n        {\n            \"ddd\": 11,\n            \"numero\": 985478547,\n            \"tipoTelefone\": \"CELULAR\",\n            \"ramal\": 444\n        }\n    ],\n    \"renda\": {\n        \"tipoComprovanteRenda\": \"EXTRATO_FGTS\"\n    }\n}",
             CURLOPT_HTTPHEADER => array(
-                "Authorization: Bearer ".$token."",
+                "Authorization: Bearer ".$this->token."",
                 "Content-Type: application/json",
 //                "Postman-Token: 06ec2ce6-7d28-4a29-9f61-957d375a0f04",
                 "cache-control: no-cache"
@@ -239,8 +243,6 @@ class PropostaController extends Controller
 
         /*INSERIR PROPOSTA*/
 
-        $simulacao = new EmprestimoController();
-        $token = $simulacao->ConfiguracoesAPI();
 
 //        $token = session('token_key');
 
@@ -257,7 +259,7 @@ class PropostaController extends Controller
             CURLOPT_CUSTOMREQUEST => "PUT",
         CURLOPT_POSTFIELDS => "{\n    \"nomeMae\": \"".$data_cadastro->nome_mae."\",\n    \"email\": \"".Auth::user()->email."\",\n    \"estadoCivil\": \"".$data_cadastro->estado_civil."\",\n    \"naturalidade\": \"$data_cadastro->nacionalidade\",\n    \"valorPatrimonio\": \"".$data_cadastro->val_patriominio."\",\n    \"documentosPessoais\": [\n        {\n            \"numeroDocumento\": ".$data_cadastro->nr_doc.",\n            \"tipoDocumento\": \"".$data_cadastro->tp_doc."\"\n        }\n    ],\n    \"endereco\": {\n        \"cep\": 11740000,\n        \"logradouro\": \"Rua Butantã\",\n        \"numero\": 123,\n        \"bairro\": \"Pinheiros\",\n        \"cidade\": \"Sao Paulo\",\n        \"complemento\": \"10o andar\"\n    },\n    \"enderecoComercial\": {\n        \"cep\": 11740000,\n        \"logradouro\": \"Rua Butantã\",\n        \"numero\": 123,\n        \"bairro\": \"Pinheiros\",\n        \"cidade\": \"Sao Paulo\",\n        \"uf\": \"SP\",\n        \"complemento\": \"10o andar\"\n    },\n    \"telefones\": [\n        {\n            \"ddd\": 11,\n            \"numero\": 985478547,\n            \"tipoTelefone\": \"CELULAR\",\n            \"ramal\": 444\n        }\n    ],\n    \"renda\": {\n        \"tipoComprovanteRenda\": \"EXTRATO_FGTS\"\n    }\n}",
             CURLOPT_HTTPHEADER => array(
-                "Authorization: Bearer ".$token."",
+                "Authorization: Bearer ".$this->token."",
                 "Content-Type: application/json",
 //                "Postman-Token: 06ec2ce6-7d28-4a29-9f61-957d375a0f04",
                 "cache-control: no-cache"
@@ -290,6 +292,55 @@ class PropostaController extends Controller
 
 
     public  function RetornoAnalise(){
+
+    }
+
+    public function ANALISE_CADASTRAL_CONCLUIDA(){
+
+        /*Buscar proposta completa*/
+
+
+        $data = DB::table('cadastro')->where('email',  Auth::user()->email)->first();
+
+
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+            CURLOPT_URL => "https://c2gvw4lxh9.execute-api.sa-east-1.amazonaws.com/hmg/api/v1/ep/propostas/status?numerosPropostas=".$data->nr_pedido."",
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => "",
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 30,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => "GET",
+//            CURLOPT_POSTFIELDS => "{\n    \"nomeMae\": \"".$data_cadastro->nome_mae."\",\n    \"email\": \"".Auth::user()->email."\",\n    \"estadoCivil\": \"SOLTEIRO\",\n    \"naturalidade\": \"São Paulo\",\n    \"valorPatrimonio\": \"5000\",\n    \"documentosPessoais\": [\n        {\n            \"numeroDocumento\": 125478991,\n            \"tipoDocumento\": \"RG\"\n        }\n    ],\n    \"endereco\": {\n        \"cep\": 11740000,\n        \"logradouro\": \"Rua Butantã\",\n        \"numero\": 123,\n        \"bairro\": \"Pinheiros\",\n        \"cidade\": \"Sao Paulo\",\n        \"complemento\": \"10o andar\"\n    },\n    \"enderecoComercial\": {\n        \"cep\": 11740000,\n        \"logradouro\": \"Rua Butantã\",\n        \"numero\": 123,\n        \"bairro\": \"Pinheiros\",\n        \"cidade\": \"Sao Paulo\",\n        \"uf\": \"SP\",\n        \"complemento\": \"10o andar\"\n    },\n    \"telefones\": [\n        {\n            \"ddd\": 11,\n            \"numero\": 985478547,\n            \"tipoTelefone\": \"CELULAR\",\n            \"ramal\": 444\n        }\n    ],\n    \"renda\": {\n        \"tipoComprovanteRenda\": \"EXTRATO_FGTS\"\n    }\n}",
+            CURLOPT_HTTPHEADER => array(
+                "Authorization: Bearer ".$this->token."",
+                "Content-Type: application/json",
+//                "Postman-Token: 06ec2ce6-7d28-4a29-9f61-957d375a0f04",
+                "cache-control: no-cache"
+            ),
+        ));
+
+        $response = curl_exec($curl);
+        $err = curl_error($curl);
+
+        curl_close($curl);
+
+
+        if ($err) {
+            echo "cURL Error #:" . $err;
+        } else {
+
+
+            $response = json_decode($response, true);
+
+
+//        print_r($response);
+
+            return $response;
+
+        }
 
     }
 

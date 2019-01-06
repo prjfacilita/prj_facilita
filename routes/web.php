@@ -93,3 +93,5 @@ Route::post('pedido_emprestimo_parte04', 'DadosBancariosController@InserirDadosB
 //Route::resource('resource-name','Controller', ['only' => ['index','store']]);
 
 Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+
+Route::get('resumo', [ 'as' => 'resumo', 'uses' => 'PropostaController@ANALISE_CADASTRAL_CONCLUIDA']);
