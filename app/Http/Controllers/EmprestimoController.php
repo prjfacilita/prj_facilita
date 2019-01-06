@@ -383,38 +383,42 @@ class EmprestimoController extends Controller
 
         /**/
 
-        if(Auth::user()->status_analise == 2){
+        if(Auth::user()->status_analise == 2) {
             // em análise
 
             $teste = new PropostaController();
-            $retorno =  $teste->StatusPreAnalise($data_status_pre_analise->id);
+            $retorno = $teste->StatusPreAnalise($data_status_pre_analise->id);
 
 //            print_r($retorno);
 
 
-            if($retorno == "REALIZANDO_ANALISE_PREVIA"){
+            if ($retorno == "REALIZANDO_ANALISE_PREVIA") {
 
                 return view('emprestimo.status_analise');
 //
             }
-            if($retorno == "ANALISE_CADASTRAL_CONCLUIDA"){
+            if ($retorno == "ANALISE_CADASTRAL_CONCLUIDA") {
 //
 //
 //                return view('emprestimo.status_analise');
-                redirect()->route('home');
+                redirect()->route('/resumo');
 
 //
 //
             }
 //
-            if($retorno == "REPROVADA"){
+            if ($retorno == "REPROVADA") {
 //
                 return view('emprestimo.status_reprovada');
             }
 
-            if($retorno == "APROVADA"){
+            if ($retorno == "APROVADA") {
+
+                redirect()->route('/resumo');
 
             }
+
+
 
 
         }else{
