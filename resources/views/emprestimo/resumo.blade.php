@@ -243,7 +243,7 @@
                                                 <div>
                                                     <p>Última parcela</p>
                                                     <span>{{date('d', strtotime("+".($quantidadeParcelas - 1)." months", strtotime($dataPrimeiraParcela)))}}  {{ date('F', strtotime(str_replace('-','/', date('n', strtotime("+".($quantidadeParcelas - 1)." months", strtotime($dataPrimeiraParcela))))))}}</span>
-                                                    <span>2019</span>
+                                                    <span>{{ date('Y', strtotime(str_replace('-','/', date('Y-m-d', strtotime("+".($quantidadeParcelas - 1)." months", strtotime($dataPrimeiraParcela))))))}}</span>
                                                 </div>
                                             </div>
                                         </div>
