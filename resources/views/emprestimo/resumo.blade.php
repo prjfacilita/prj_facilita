@@ -182,7 +182,7 @@
                                             <div class="order-item order__box">
                                                 <div>
                                                     <p>Valor do empréstimo</p>
-                                                    <span>R$ {{$valorFinanciado}}</span>
+                                                    <span>R$ </span>
                                                 </div>
                                             </div>
                                         </div>
