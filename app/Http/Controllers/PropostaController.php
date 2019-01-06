@@ -37,6 +37,17 @@ class PropostaController extends Controller
      *
      * ANALISE_CADASTRAL_CONCLUIDA = 055090000040
      *
+     *   -> Chamar api especificação financeira
+     *      -> PUT METHOD
+     *      /api/v1/ep/propostas/{numeroProposta}/especificacaofinanceira/055090000040
+     *
+     *
+     *   -> Chamar api pendência documentos
+     *
+     *      /api/v1/ep/propostas/pendencias/
+     *
+     *   -> Chamar view pendências
+     *
      *
      *
      * REPROVADA ->retorna view reprovada
@@ -342,7 +353,10 @@ class PropostaController extends Controller
 
     //        print_r($response);
 
-                return $response;
+//                return $response;
+
+
+                return view('emprestimo.resumo');
 
             }
 
