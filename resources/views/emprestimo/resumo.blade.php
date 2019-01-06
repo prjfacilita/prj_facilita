@@ -228,7 +228,7 @@
                                                 <div>
                                                     <p>Primeira parcela</p>
                                                     <span>{{ date('d', strtotime(str_replace('-','/', $dataPrimeiraParcela)))}} {{ date('F', strtotime(str_replace('-','/', $dataPrimeiraParcela)))}}</span>
-                                                    <span>2018</span>
+                                                    <span>{{ date('Y', strtotime(str_replace('-','/', $dataPrimeiraParcela)))}}</span>
                                                 </div>
                                             </div>
 
