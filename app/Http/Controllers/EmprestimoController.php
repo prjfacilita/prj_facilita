@@ -400,7 +400,9 @@ class EmprestimoController extends Controller
             if($retorno == "ANALISE_CADASTRAL_CONCLUIDA"){
 //
 //
-                return view('emprestimo.status_analise');
+//                return view('emprestimo.status_analise');
+                return view('emprestimo.resumo');
+
 //
 //
             }
@@ -408,6 +410,10 @@ class EmprestimoController extends Controller
             if($retorno == "REPROVADA"){
 //
                 return view('emprestimo.status_reprovada');
+            }
+
+            if($retorno == "APROVADA"){
+
             }
 
 

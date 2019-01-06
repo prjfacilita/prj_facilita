@@ -1,0 +1,120 @@
+/************************************************************************************************************
+* 
+*
+	STYLE PAGINA LOGIN
+************************************************************************************************************/
+
+/*****************
+    -- Adiciona background na tag body estando na página de login 
+******************/
+#login{
+    background: url(../images/bg-login.jpg) top center no-repeat;
+    background-size: cover;
+}
+    #login header{
+        background-image: none;
+    }
+/*****************/    
+.login-area{
+    float: left;
+    width: 100%;
+}
+    .login-form{
+        float: left;
+        margin: 30px 0;
+        padding: 50px;
+        width: 100%;
+        background: #fff;
+        border-radius: 25px;
+    }
+        .login-area h2{
+            font-size: 50px;
+            text-transform: uppercase;
+            font-weight: bold;
+            line-height: 60px;
+        }
+        .login-area h3{
+            font-size: 36px;
+            line-height: 42px;
+        }
+        .login-area h2,
+        .login-area h3{
+            padding-bottom: 10px;
+            text-align: center;
+            color: #ffffff;
+        }
+		.login-form form{
+			position: relative;
+		}
+        .password-reveal{
+            position: absolute;
+            right: 0;
+            top: calc(100%/2.2);
+            font-size: 25px;
+            color: #958F8F;
+        }
+        .login-form input:not([type=submit]){
+            padding: 35px 10px;
+            margin-bottom: 15px;
+            width: 100%;
+            font-size: 28px;
+            color: #958F8F;
+            border-bottom: 1px solid #707070;
+        }
+        .login-form input:not([type=submit]):focus{
+            border-color: #1EC857;
+        }
+        .login-form-action{
+            display: flex;
+            display: -webkit-flex;
+            align-items: center;
+            -webkit-align-items: center;
+            justify-content: space-between;
+            -webkit-justify-content: space-between;
+            padding: 25px 0;
+        }
+            .login-form__recover-password{
+                float: left;
+                font-size: 22px;
+                text-decoration: underline;
+                color: #958F8F;
+            }
+            .login-form__submit{
+                width: 243.81px;
+                height: 72.58px;
+                font-size: 30px;
+                text-transform: uppercase;
+                cursor: pointer;
+                border-radius: 32px;
+                box-shadow: 7px 7px 6px rgba(0, 0, 0, 0.16);
+                    -webkit-box-shadow: 7px 7px 6px rgba(0, 0, 0, 0.16);
+                    -moz-box-shadow: 7px 7px 6px rgba(0, 0, 0, 0.16);       
+                background: #1D8841;
+                color: #fff;    
+            }
+    .login-area__register{
+        float: left;
+        margin-bottom: 30px;
+        width: 100%;
+        text-align: center;
+        font-weight: bold;
+        text-decoration: underline;
+        font-size: 20px;
+        color: #ffffff;
+    }
+/*****************
+    -- ajustes para mobile
+******************/   
+    @media only screen and (max-width: 768px){
+        .login-form{
+            padding: 50px 20px;
+        }
+            .login-form-action{
+                display: block;
+            }
+            .login-form__submit{
+                margin-top: 20px;
+                width: 100%;
+            }
+    }
+    

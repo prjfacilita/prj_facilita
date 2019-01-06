@@ -32,13 +32,21 @@ class PropostaController extends Controller
      *
      * Números propostas
      *
-     * Aprovada -> 055090000002
-     * Realizando analise previa ->
      *
-     * Pode ser solicitado para enviar os documentos para continuar a proposta para reprovada ou aprovada
+     * REALIZANDO_ANALISE_PREVIA; (Demora alguns minutos para retornar)
      *
-     * Reprovada ->
-     * Análise Prévia Concluida ->
+     * ANALISE_CADASTRAL_CONCLUIDA = 055090000040
+     *
+     * REPROVADA ->retorna view reprovada
+     *
+     * APROVADA -> 055090000002 (Formalizar Contrato)
+     *
+     *
+     *
+     *
+     *
+     *
+     *
      *
      *
      *
