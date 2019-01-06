@@ -37,6 +37,8 @@ class PropostaController extends Controller
      *
      * ANALISE_CADASTRAL_CONCLUIDA = 055090000040
      *
+     *
+     *
      * REPROVADA ->retorna view reprovada
      *
      * APROVADA -> 055090000002 (Formalizar Contrato)
@@ -308,7 +310,7 @@ class PropostaController extends Controller
             $curl = curl_init();
 
             curl_setopt_array($curl, array(
-                CURLOPT_URL => "https://c2gvw4lxh9.execute-api.sa-east-1.amazonaws.com/hmg/api/v1/ep/propostas/status?numerosPropostas=".$data->nr_pedido."",
+                CURLOPT_URL => "https://c2gvw4lxh9.execute-api.sa-east-1.amazonaws.com/hmg/api/v1/ep/propostas?numerosPropostas=".$data->nr_pedido."",
                 CURLOPT_RETURNTRANSFER => true,
                 CURLOPT_ENCODING => "",
                 CURLOPT_MAXREDIRS => 10,
