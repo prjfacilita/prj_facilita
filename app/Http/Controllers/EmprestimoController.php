@@ -417,7 +417,7 @@ class EmprestimoController extends Controller
 
             if ($retorno == "APROVADA") {
 
-                return view('emprestimo.resumo');
+                return 'testeg';
 
             }
 
