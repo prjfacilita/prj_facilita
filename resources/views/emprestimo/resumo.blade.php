@@ -191,7 +191,7 @@
                                             <div class="order-item-main order__box">
                                                 <div>
                                                     <p>Sua avaliação de crédito</p>
-                                                    <span>E2</span>
+                                                    <span> NÃO VEM NA PROPOSTA -> E2</span>
                                                 </div>
                                             </div>
 
@@ -210,8 +210,8 @@
                                                     <p>CET</p>
                                                 </div>
                                                 <div class="order__box-divisoy">
-                                                    <span>104,56% A.A.</span>
-                                                    <span>6,15% A.M.</span>
+                                                    <span>NÃO VEM NA PROPOSTA -> 104,56% A.A.</span>
+                                                    <span>{{$cet}}% A.M.</span>
                                                 </div>
                                             </div>
                                         </div>
