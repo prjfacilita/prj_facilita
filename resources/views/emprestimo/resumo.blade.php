@@ -168,7 +168,7 @@
                                             <div class="order-item order__box">
                                                 <div>
                                                     <p>Taxa de serviço</p>
-                                                    <span>R$ 269,43</span>
+                                                    <span>R$ {{$valorTC}}</span>
                                                 </div>
                                             </div>
 

@@ -370,7 +370,8 @@ class PropostaController extends Controller
                         'valorFinanciado' => $response['retorno']['especificacaoFinanceira']['valorFinanciado'],
                         'valorParcela' => $response['retorno']['especificacaoFinanceira']['valorParcela'],
                         'dataPrimeiraParcela' => $response['retorno']['especificacaoFinanceira']['dataPrimeiraParcela'],
-                        'quantidadeParcelas' => $response['retorno']['especificacaoFinanceira']['quantidadeParcelas']
+                        'quantidadeParcelas' => $response['retorno']['especificacaoFinanceira']['quantidadeParcelas'],
+                        'valorTC' => $response['retorno']['especificacaoFinanceira']['valorTC']
                     ]
                 );
 
