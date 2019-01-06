@@ -91,6 +91,9 @@ class PropostaController extends Controller
 
             $get_Access_token = new EmprestimoController();
             $get_Access_token->ConfiguracoesAPI();
+
+            $this->middleware('auth');
+
         }
 
 
@@ -356,7 +359,11 @@ class PropostaController extends Controller
 //                return $response;
 
 
-                return view('emprestimo.resumo');
+                return view('emprestimo.resumo')->with(
+                    'valor_a_ser_depositado', $response['retorno'][0]['especificacaoFinanceira']['2000'],
+                    '','',
+                    '',''
+                );
 
             }
 

@@ -161,7 +161,7 @@
                                             <div class="order-item-main order__box">
                                                 <div>
                                                     <p>Valor a ser depositado na conta</p>
-                                                    <span>R$ 5.000,00</span>
+                                                    <span>R$ {{$valor_a_ser_depositado}}</span>
                                                 </div>
                                             </div>
 
