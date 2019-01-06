@@ -401,7 +401,7 @@ class EmprestimoController extends Controller
 //
 //
 //                return view('emprestimo.status_analise');
-                return view('emprestimo.resumo');
+                redirect()->route('home');
 
 //
 //

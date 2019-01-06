@@ -10,8 +10,15 @@ Route::any('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
 Route::any('/index', function () {
     return view('index');
+});
+
+Route::any('/resumo', function (){
+
+    return view('emprestimo.resumo');
 });
 
 ////Route::get('/atv', function(){
