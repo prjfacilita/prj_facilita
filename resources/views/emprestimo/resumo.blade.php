@@ -227,7 +227,7 @@
                                             <div class="order-item order__box order-item-divisoy">
                                                 <div>
                                                     <p>Primeira parcela</p>
-                                                    <span>{{ date('d', strtotime(str_replace('-','/', $dataPrimeiraParcela)))}} DEZ</span>
+                                                    <span>{{ date('d', strtotime(str_replace('-','/', $dataPrimeiraParcela)))}} {{date('F', mktime(0, 0, 0,date('n', strtotime(str_replace('-','/', $dataPrimeiraParcela))) , 10))}} // March</span>
                                                     <span>2018</span>
                                                 </div>
                                             </div>
