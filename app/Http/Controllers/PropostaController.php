@@ -35,11 +35,15 @@ class PropostaController extends Controller
      *
      * REALIZANDO_ANALISE_PREVIA; (Demora alguns minutos para retornar)
      *
+     *  CHAMAR API V2 PARA ANALISE CADASTRAL
+     *
      * ANALISE_CADASTRAL_CONCLUIDA = 055090000040
      *
      *   -> Chamar api especificação financeira
      *      -> PUT METHOD
      *      /api/v1/ep/propostas/{numeroProposta}/especificacaofinanceira/055090000040
+     *
+     *    Chamar API para retorno da proposta completa e mostrar resumo
      *
      *
      *   -> Chamar api pendência documentos
@@ -253,7 +257,7 @@ class PropostaController extends Controller
             $data_banco = DB::table('dados_bancarios')->where('id_cadastro',  $id)->first();
 
 
-            /*INSERIR PROPOSTA*/
+            /*REALIZAR ANALISE CADASTRAL*/
 
             $simulacao = new EmprestimoController();
             $token = $simulacao->ConfiguracoesAPI();
@@ -313,6 +317,8 @@ class PropostaController extends Controller
 
             /*Buscar proposta completa*/
 
+
+            /**/
 
             $simulacao = new EmprestimoController();
             $token = $simulacao->ConfiguracoesAPI();
