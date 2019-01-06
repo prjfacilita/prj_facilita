@@ -365,7 +365,7 @@ class PropostaController extends Controller
                     'cet', $response['retorno']['especificacaoFinanceira']['cet'],
                     'taxaJuros', $response['retorno']['especificacaoFinanceira']['taxaJuros'],
                     'taxaJurosAno', $response['retorno']['especificacaoFinanceira']['taxaJurosAno'],
-                    'valorFinancixado', $response['retorno']['especificacaoFinanceira']['valorFinanciado'],
+                    'valorFinanciado', $response['retorno']['especificacaoFinanceira']['valorFinanciado'],
                     'valorParcela', $response['retorno']['especificacaoFinanceira']['valorParcela'],
                     'dataPrimeiraParcela', $response['retorno']['especificacaoFinanceira']['dataPrimeiraParcela']
                 );
