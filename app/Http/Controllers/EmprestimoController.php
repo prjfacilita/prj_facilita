@@ -401,7 +401,10 @@ class EmprestimoController extends Controller
 //
 //
 //                return view('emprestimo.status_analise');
-                redirect()->route('/resumo');
+//                redirect()->route('/resumo');
+
+
+                return view('emprestimo.resumo');
 
 //
 //
@@ -414,7 +417,7 @@ class EmprestimoController extends Controller
 
             if ($retorno == "APROVADA") {
 
-                redirect()->route('/resumo');
+                return view('emprestimo.resumo');
 
             }
 

@@ -16,10 +16,7 @@ Route::any('/index', function () {
     return view('index');
 });
 
-Route::any('/resumo', function (){
 
-    return view('emprestimo.resumo');
-});
 
 ////Route::get('/atv', function(){
 //
