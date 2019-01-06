@@ -302,7 +302,7 @@ class PropostaController extends Controller
             $token = $simulacao->ConfiguracoesAPI();
 
 
-            $data = DB::table('cadastro')->where('email',  Auth::user()->email)->first();
+            $data = DB::table('dados_bancarios')->where('cpf',  Auth::user()->cpf)->first();
 
 
             $curl = curl_init();
