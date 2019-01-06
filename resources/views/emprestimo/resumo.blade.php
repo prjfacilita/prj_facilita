@@ -175,7 +175,7 @@
                                             <div class="order-item order__box">
                                                 <div>
                                                     <p>IOF</p>
-                                                    <span>R$ 119,19</span>
+                                                    <span>R$ {{$iof}}</span>
                                                 </div>
                                             </div>
 
@@ -200,8 +200,8 @@
                                                     <p>Sua taxa de juros</p>
                                                 </div>
                                                 <div class="order__box-divisoy">
-                                                    <span>73,73% A.A.</span>
-                                                    <span>4,80% A.M.</span>
+                                                    <span>{{$taxaJurosAno}}% A.A.</span>
+                                                    <span>{{$taxaJuros}}% A.M.</span>
                                                 </div>
                                             </div>
 
@@ -220,21 +220,21 @@
                                             <div class="order-item-main order__box">
                                                 <div>
                                                     <p>Valor da parcela</p>
-                                                    <span>R$ {{$valorParcela}} / 12</span>
+                                                    <span>R$ {{$valorParcela}} / {{$quantidadeParcelas}}</span>
                                                 </div>
                                             </div>
 
                                             <div class="order-item order__box order-item-divisoy">
                                                 <div>
                                                     <p>Primeira parcela</p>
-                                                    <span>3 DEZ</span>
+                                                    <span>{{strtotime('d', $dataPrimeiraParcela)}} DEZ</span>
                                                     <span>2018</span>
                                                 </div>
                                             </div>
 
                                             <div class="order-item order__box order-plots">
                                                 <div>
-                                                    <p>12</p>
+                                                    <p>{{$quantidadeParcelas}}</p>
                                                     <span>Parcelas</span>
                                                 </div>
                                             </div>

@@ -360,14 +360,18 @@ class PropostaController extends Controller
 
 
                 return view('emprestimo.resumo',
-                    ['valorPrincipal' => $response['retorno']['especificacaoFinanceira']['valorPrincipal'],
-                    'iof' => $response['retorno']['especificacaoFinanceira']['iof'],
-                    'cet'=> $response['retorno']['especificacaoFinanceira']['cet'],
-                    'taxaJuros' => $response['retorno']['especificacaoFinanceira']['taxaJuros'],
-                    'taxaJurosAno' => $response['retorno']['especificacaoFinanceira']['taxaJurosAno'],
-                    'valorFinanciado' => $response['retorno']['especificacaoFinanceira']['valorFinanciado'],
-                    'valorParcela' => $response['retorno']['especificacaoFinanceira']['valorParcela'],
-                    'dataPrimeiraParcela' => $response['retorno']['especificacaoFinanceira']['dataPrimeiraParcela']]
+                    [
+
+                        'valorPrincipal' => $response['retorno']['especificacaoFinanceira']['valorPrincipal'],
+                        'iof' => $response['retorno']['especificacaoFinanceira']['iof'],
+                        'cet'=> $response['retorno']['especificacaoFinanceira']['cet'],
+                        'taxaJuros' => $response['retorno']['especificacaoFinanceira']['taxaJuros'],
+                        'taxaJurosAno' => $response['retorno']['especificacaoFinanceira']['taxaJurosAno'],
+                        'valorFinanciado' => $response['retorno']['especificacaoFinanceira']['valorFinanciado'],
+                        'valorParcela' => $response['retorno']['especificacaoFinanceira']['valorParcela'],
+                        'dataPrimeiraParcela' => $response['retorno']['especificacaoFinanceira']['dataPrimeiraParcela'],
+                        'quantidadeParcelas' => $response['retorno']['especificaoFinanceiro']['quantidadeParcelas']
+                    ]
                 );
 
             }
