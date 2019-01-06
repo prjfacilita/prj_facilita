@@ -242,7 +242,7 @@
                                             <div class="order-item order__box">
                                                 <div>
                                                     <p>Última parcela</p>
-                                                    <span>4 NOV</span>
+                                                    <span>{{date('d', strtotime("+".($quantidadeParcelas - 1)." months", strtotime($dataPrimeiraParcela)))}} NOV</span>
                                                     <span>2019</span>
                                                 </div>
                                             </div>
