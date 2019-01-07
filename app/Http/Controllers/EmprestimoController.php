@@ -339,7 +339,8 @@ class EmprestimoController extends Controller
 
         if(Auth::user()->status_analise == 3){
 
-           redirect('pendencias');
+            $call = new PropostaController();
+            return  $call->ANALISE_CADASTRAL_CONCLUIDA_STEP_DOCUMENTOS();
         }
 
 
