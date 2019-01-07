@@ -326,66 +326,11 @@ class EmprestimoController extends Controller
         /**/
 
         if(Auth::user()->status_analise == 2) {
-            // em análise
-
-            $teste = new PropostaController();
-            $retorno = $teste->StatusPreAnalise($data_status_pre_analise->id);
-
-            if ($retorno == "REALIZANDO_ANALISE_PREVIA") {
-
-
-                $call = new PropostaController();
-                $call->ConsultarStatusProposta();
-
-                /*O sistema pode demorar um pouco para realizar aa analise previa e retornar ANALISE_PREVIA_CONCLUIDA onde será preciso mandar para Avaiação de crédito V2*/
-
-//
-            }
-
-
-            if($retorno == "ANALISE_PREVIA_CONCLUIDA"){
-
-
-                $call = new PropostaController();
-                $call->ConsultarStatusProposta();
 
 
 
-            }
-
-            if ($retorno == "ANALISE_CADASTRAL_CONCLUIDA") {
-//
-//
-
-                return redirect('/resumo');
-
-//
-//
-            }
-//
-            if ($retorno == "REPROVADA") {
-//
-                $call = new PropostaController();
-                $call->ConsultarStatusProposta();
-            }
-
-            if ($retorno == "APROVADA") {
-
-                $call = new PropostaController();
-                $call->ConsultarStatusProposta();
-
-            }
-
-
-            if($retorno == "EXPIRADA"){
-
-
-                $call = new PropostaController();
-                $call->ConsultarStatusProposta();
-            }
-
-
-
+            $call = new PropostaController();
+            $call->ConsultarStatusProposta();
 
         }else{
 
