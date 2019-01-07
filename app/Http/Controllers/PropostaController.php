@@ -325,6 +325,8 @@ class PropostaController extends Controller
             //        $token = session('token_key');
 
 
+            return $data_cadastro->id;
+
             $curl = curl_init();
 
             curl_setopt_array($curl, array(
