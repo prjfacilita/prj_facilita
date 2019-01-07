@@ -384,8 +384,10 @@ class PropostaController extends Controller
 //                    $this->ANALISE_PREVIA_CONCLUIDA();
 
 //                    return view('emprestimo.status_analise');
-                    $call = new PropostaController();
-                    $call->ANALISE_PREVIA_CONCLUIDA();
+//                    $call = new PropostaController();
+//                    $call->ANALISE_PREVIA_CONCLUIDA();
+
+                    $this->AnalisePreviaConcluida();
                 }
 
 
@@ -417,7 +419,7 @@ class PropostaController extends Controller
 
         /*Metódo para ANALISE_PREVIA_CONCLUID*/
 
-        public function ANALISE_PREVIA_CONCLUIDA(){
+        public function AnalisePreviaConcluida(){
 
             return 'teste';
             return view('emprestimo.status_analise');
