@@ -545,7 +545,18 @@ class PropostaController extends Controller
                 CURLOPT_TIMEOUT => 30,
                 CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
                 CURLOPT_CUSTOMREQUEST => "PUT",
-                            CURLOPT_POSTFIELDS => "{\n    \"dataPrimeiraParcela\":  \"2019-02-08\",\n    \"valorPrincipal\": \"2000\",\n    \"quantidadeParcelas\": \"12\",\n    \"dadosBancarios\": [\n        {\n            \"tipoConta\": \"CONTA_CORRENTE_INDIVIDUAL\",\n            \"codigoBanco\": \"341\",\n   \"numeroConta\": \"12345\",\n \"numeroAgencia\": \"111\",\n  \"digitoConta\": \"01\",\n         }\n    ],\n    }\n}",
+                            CURLOPT_POSTFIELDS => "{
+  \"dataPrimeiraParcela\": \"2019-02-08\",
+  \"valorPrincipal\": 2000,
+  \"quantidadeParcelas\": 12,
+  \"dadosBancarios\": {
+    \"tipoConta\": \"CONTA_CORRENTE_INDIVIDUAL\",
+    \"codigoBanco\": 341,
+    \"numeroAgencia\": 111,
+    \"numeroConta\": 12345,
+    \"digitoConta\": \"01\"
+  }
+}",
                 CURLOPT_HTTPHEADER => array(
                     "Authorization: Bearer ".$token."",
                     "Content-Type: application/json",
