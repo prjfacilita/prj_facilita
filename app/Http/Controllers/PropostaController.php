@@ -529,11 +529,51 @@ class PropostaController extends Controller
 
         public function InserirEspecificacaoFinanceira(){
 
+            $simulacao = new EmprestimoController();
+            $token = $simulacao->ConfiguracoesAPI();
+            $curl = curl_init();
+
+            $data = DB::table('dados_bancarios')->where('cpf',  Auth::user()->cpf)->first();
+
+            $data_pre_cadastro = DB::table('pre_cadastro')->where('cpf', Auth::user()->cpf)->first();
+
+            curl_setopt_array($curl, array(
+                CURLOPT_URL => "https://c2gvw4lxh9.execute-api.sa-east-1.amazonaws.com/hmg/api/v1/ep/propostas/".$data->nr_pedido."/especificacaofinanceira",
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_ENCODING => "",
+                CURLOPT_MAXREDIRS => 10,
+                CURLOPT_TIMEOUT => 30,
+                CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                CURLOPT_CUSTOMREQUEST => "PUT",
+                            CURLOPT_POSTFIELDS => "{\n    \"dataPrimeiraParcela\":  \"2019-02-08\",\n    \"valorPrincipal\": \"2000\",\n    \"quantidadeParcelas\": \"12\",\n    \"dadosBancarios\": [\n        {\n            \"tipoConta\": \"CONTA_CORRENTE_INDIVIDUAL\",\n            \"codigoBanco\": \"341\",\n   \"numeroConta\": \"12345\",\n \"numeroAgencia\": \"111\",\n  \"digitoConta\": \"01\",\n         }\n    ],\n    }\n}",
+                CURLOPT_HTTPHEADER => array(
+                    "Authorization: Bearer ".$token."",
+                    "Content-Type: application/json",
+                    //                "Postman-Token: 06ec2ce6-7d28-4a29-9f61-957d375a0f04",
+                    "cache-control: no-cache"
+                ),
+            ));
+
+            $response = curl_exec($curl);
+            $err = curl_error($curl);
+
+            curl_close($curl);
+
+
+            if ($err) {
+                echo "cURL Error #:" . $err;
+            } else {
+
+                echo 'teste';
+            }
         }
 
         /*Metódo para proposta REPROVADA*/
 
         public function REPROVADA(){
+
+
+            /*Enviar email*/
 
             return view('emprestimo.status_reprovada');
         }

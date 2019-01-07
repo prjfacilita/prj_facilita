@@ -64,16 +64,15 @@ Insere nova proposta -> campos
 /******************************************* ANALSIE CADASTRAL PARTE 1
 {
 
-Request
-"nomeMae": "Maria da Silva",
-  "email": "email@email.com",
+"nomeMae": "Ani Cristine Silva Teles Correia",
+  "email": "rtelesc@gmail.com",
   "estadoCivil": "SOLTEIRO",
   "naturalidade": "São Paulo",
 
    "valorPatrimonio":"5000",
   "documentosPessoais": [
     {
-      "numeroDocumento": 125478991,
+      "numeroDocumento": 357327391,
       "tipoDocumento": "RG"
     }
   ],
