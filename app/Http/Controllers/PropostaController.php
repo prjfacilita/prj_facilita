@@ -317,9 +317,9 @@ class PropostaController extends Controller
             /*Consultar api e direcionar para metódo*/
 
 
-            return 'teste';
-            $data_cadastro = DB::table('cadastro')->where('id',  $id)->first();
-            $data_banco = DB::table('dados_bancarios')->where('id_cadastro',  $id)->first();
+//            return 'teste';
+            $data_cadastro = DB::table('cadastro')->where('email',  Auth::user()->email)->first();
+            $data_banco = DB::table('dados_bancarios')->where('id_cadastro',  $data_cadastro->id)->first();
 
             $simulacao = new EmprestimoController();
             $token = $simulacao->ConfiguracoesAPI();
