@@ -337,6 +337,12 @@ class EmprestimoController extends Controller
         }
 
 
+        if(Auth::user()->status_analise == 3){
+
+           redirect('pendencias');
+        }
+
+
         else{
 
             $get_finalidade = DB::table('pre_cadastro')
