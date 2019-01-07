@@ -456,7 +456,7 @@ class PropostaController extends Controller
             $token = $simulacao->ConfiguracoesAPI();
 
 
-           return  $this->InserirEspecificacaoFinanceira();
+             $this->InserirEspecificacaoFinanceira();
 
 
             $data = DB::table('dados_bancarios')->where('cpf',  Auth::user()->cpf)->first();
