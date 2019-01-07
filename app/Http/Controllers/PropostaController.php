@@ -249,14 +249,14 @@ class PropostaController extends Controller
         }
 
 
-        public function AnaliseCadsatral($id){
+        public function AnaliseCadastral(){
 
 
             /*CONSULTAR DADOS*/
 
 
-            $data_cadastro = DB::table('cadastro')->where('id',  $id)->first();
-            $data_banco = DB::table('dados_bancarios')->where('id_cadastro',  $id)->first();
+            $data_cadastro = DB::table('cadastro')->where('email',  Auth::user()->email)->first();
+            $data_banco = DB::table('dados_bancarios')->where('id_cadastro',  $data_cadastro->id)->first();
 
 
             /*REALIZAR ANALISE CADASTRAL*/
@@ -416,8 +416,11 @@ class PropostaController extends Controller
 
         public function ANALISE_PREVIA_CONCLUIDA(){
 
-//            return 'teste';
-            return view('emprestimo.status_analise');
+            /*Chamar API Para realizar analise cadastral*/
+
+
+            $callback = $this->AnaliseCadastral();
+            return view('emprestimo.status_analise', ['status' => $callback]);
         }
 
 
