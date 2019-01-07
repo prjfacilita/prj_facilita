@@ -358,6 +358,8 @@ class PropostaController extends Controller
                 $response = json_decode($response, true);
 
 
+
+                return $response;
                 //        print_r($response);
 
                 $retorno =  $response['retorno']['listaSituacaoPropostas'][0]['statusProposta'];
