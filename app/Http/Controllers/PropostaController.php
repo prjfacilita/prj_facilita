@@ -372,7 +372,7 @@ class PropostaController extends Controller
                 $retorno =  $response['retorno']['listaSituacaoPropostas'][0]['statusProposta'];
 
 
-                return $retorno;
+//                return $retorno;
 
                 if($retorno == "REALIZANDO_ANALISE_PREVIA"){
 
