@@ -456,7 +456,7 @@ class PropostaController extends Controller
             $token = $simulacao->ConfiguracoesAPI();
 
 
-            $this->InserirEspecificacaoFinanceira();
+           return  $this->InserirEspecificacaoFinanceira();
 
 
             $data = DB::table('dados_bancarios')->where('cpf',  Auth::user()->cpf)->first();
@@ -564,7 +564,7 @@ class PropostaController extends Controller
                 echo "cURL Error #:" . $err;
             } else {
 
-                echo 'teste';
+                return $response;
             }
         }
 
