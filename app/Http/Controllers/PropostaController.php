@@ -458,11 +458,7 @@ class PropostaController extends Controller
 
             if(Auth::user()->status_analise == 3){
 
-
-                return $this->ANALISE_CADASTRAL_CONCLUIDA_STEP_DOCUMENTOS();
-
-
-
+                return redirect('pendencias');
             }
 
 
