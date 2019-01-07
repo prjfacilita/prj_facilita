@@ -383,11 +383,14 @@ class PropostaController extends Controller
 
 //                    $this->ANALISE_PREVIA_CONCLUIDA();
 
-                    return view('emprestimo.status_analise');
+//                    return view('emprestimo.status_analise');
+                    $call = new PropostaController();
+                    $call->REALIZANDO_ANALISE_PREVIA();
                 }
 
 
                 if($retorno == "REALIZANDO_ANALISE_CADASTRAL"){
+
 
                     $this->REALIZANDO_ANALISE_CADASTRAL();
                 }
