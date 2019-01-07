@@ -312,6 +312,11 @@ class PropostaController extends Controller
 
 
 
+        public function teste(){
+
+            return 'aeho';
+        }
+
         public function  ConsultarStatusProposta(){
 
             /*Consultar api e direcionar para metódo*/
