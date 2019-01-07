@@ -535,7 +535,7 @@ class PropostaController extends Controller
 
         public function REPROVADA(){
 
-            return view('emprestimo.reprovada');
+            return view('emprestimo.status_reprovadag');
         }
 
 
