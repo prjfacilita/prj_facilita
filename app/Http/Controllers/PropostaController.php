@@ -320,13 +320,16 @@ class PropostaController extends Controller
 //            return 'teste';
             $data_cadastro = DB::table('cadastro')->where('email',  Auth::user()->email)->first();
 
-            return $data_cadastro->id;
+//            return $data_cadastro->id;
             $data_banco = DB::table('dados_bancarios')->where('id_cadastro',  $data_cadastro->id)->first();
 
             $simulacao = new EmprestimoController();
             $token = $simulacao->ConfiguracoesAPI();
 
             //        $token = session('token_key');
+
+
+            return $data_banco->nr_pedido;
 
 
             $curl = curl_init();
