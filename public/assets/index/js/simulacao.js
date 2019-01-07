@@ -56,13 +56,15 @@
                 $("body").data('simulacao', valueCorreto);
 
 
+                valor_formatado = value.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+
                 $(".simulation-box form.pt1").css('display', 'none'); // ocultar formulario 1
                 $(".simulation-box h2.pt1").css('display', 'none'); // ocultar h2
                 $(".simulation-box form.pt2").css('display', 'block'); // ocultar formulario
                 $(".simulation-box p.pt2").css('display', 'block'); // ocultar h2
                 $(".simulation-box h2.pt2").css('display', 'block'); // ocultar h2
 
-                $(".simulation-box p.pt2").html('R$ ' + value.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}));
+                $(".simulation-box p.pt2").html('R$ ' + valor_formatado);
 
                 $('.banner__simulation').addClass('simulation-value-selected');
                 $('.banner__simulation').removeClass('simulation-value');
@@ -102,13 +104,16 @@
 
                     $("body").data('simulacao', valueCorreto);
 
+
+                    valor_formatado = value.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+
                     $(".simulation-box form.pt1").css('display', 'none'); // ocultar formulario 1
                     $(".simulation-box h2.pt1").css('display', 'none'); // ocultar h2
                     $(".simulation-box form.pt2").css('display', 'block'); // ocultar formulario
                     $(".simulation-box p.pt2").css('display', 'block'); // ocultar h2
                     $(".simulation-box h2.pt2").css('display', 'block'); // ocultar h2
 
-                    $(".simulation-box p.pt2").html('R$ ' + value.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}));
+                    $(".simulation-box p.pt2").html('R$ ' + valor_formatado);
 
                     $('.banner__simulation').addClass('simulation-value-selected');
                     $('.banner__simulation').removeClass('simulation-value');
