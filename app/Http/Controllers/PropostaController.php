@@ -408,6 +408,7 @@ class PropostaController extends Controller
 
         public function ANALISE_PREVIA_CONCLUIDA(){
 
+            return 'teste';
             return view('emprestimo.status_analise');
         }
 
