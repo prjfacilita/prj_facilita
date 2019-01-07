@@ -1,0 +1,139 @@
+/************************************************************************************************************
+* 
+*
+ STYLE PAGINA CADASTRO
+************************************************************************************************************/
+.register__area{
+    padding: 30px 0;
+    text-align: center;
+}
+    .register__token{
+        font-size: 23px;
+        text-transform: uppercase;
+        color: #958F8F;
+    }
+    .register__form{
+        padding: 30px 0;
+        width: 100%;
+    }
+        .register__password{
+            margin: 0 auto;
+            width: 700px;
+        }
+        @media only screen and (max-width: 768px){
+            .register__password{
+                width: 100%;
+            }
+        }
+        .register__form h3{
+            font-size: 50px;
+            line-height: 60px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #1EC857;
+        }
+        .register__form form{
+            float: left;
+            padding: 30px;
+            width: 100%;
+        }
+            .register__form label{
+                display: block;
+                text-align: left;
+                font-size: 20px;
+                color: #958F8F;
+            }
+            .register__input__password{
+                padding: 10px;
+                margin: 20px 20px 0 0;
+                width: 325px;
+                height: 66px;
+                font-style: italic;
+                border-radius: 12px;
+                border: 1px solid #707070;
+            }
+            @media only screen and (max-width: 768px){
+                .register__input__password{
+                    width: 100%;
+                }
+            }
+            .register__input__password:focus{
+                border-color: #1EC857;
+            }
+            .register__password p{
+                padding: 40px 0;
+                clear: both;
+                text-transform: uppercase;
+                font-size: 17px;
+                font-style: italic;
+                color: #958F8F;
+            }
+    .register__terms{
+        margin-top: 40px;
+        font-style: italic;
+    } 
+        .register__terms p,
+        .terms__link-process{
+            display: block;
+            font-size: 17px;
+            text-transform: uppercase;
+            line-height: 21px;
+        }
+        .register__terms p{
+            color: #575656;
+        }
+        .register__terms a{
+            text-decoration: underline;
+            text-transform: uppercase;
+        }
+        .terms__link-process{
+            padding: 10px 0 20px 0;
+            color: #1EC857;
+        }
+        .terms__accept{
+            font-size: 13px;
+            color: #777575;
+            text-transform: uppercase;
+        }
+        .register__terms input[type=checkbox]{
+            -moz-appearance:none;
+            -webkit-appearance:none;
+            -o-appearance:none;
+            outline: none;
+            content: none;	
+        }
+        .register__terms input[type=checkbox]:before{
+            display: block;
+            width: 20px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "FontAwesome";
+            content: "\f00c";
+            color: transparent;
+            border: 2px solid #91DC5A;
+        }
+        .register__terms input[type=checkbox]:checked:before{
+            color: #91DC5A;
+        }
+    .register__password__submit{
+        margin: 20px 0 0 0;
+        padding: 15px 35px 15px 15px;
+        width: 245px;
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+        cursor: pointer;
+        border-radius: 21px;
+        box-shadow: 7px 7px 6px rgba(0, 0, 0, 0.16);
+        -webkit-box-shadow: 7px 7px 6px rgba(0, 0, 0, 0.16);
+        -moz-box-shadow: 7px 7px 6px rgba(0, 0, 0, 0.16);
+        background: #1D8841;
+        color: #fff;   
+    }
+    .submit__icon{
+        position: relative;
+        left: -45px;
+        top: 4px;
+        font-size: 28px !important;
+        color: #fff;
+    }

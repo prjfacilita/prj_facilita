@@ -602,7 +602,7 @@ class PropostaController extends Controller
         public function ANALISE_CADASTRAL_CONCLUIDA_STEP_DOCUMENTOS(){
 
 
-            return 'teste';
+            return view('emprestimo.pendencias');
 
         }
 

@@ -1,0 +1,652 @@
+/************************************************************************************************************
+* 
+*
+	PAGINA PEDIDO DE EMPRESTIMO 
+		1 - Header de navegação
+************************************************************************************************************/
+.solicitation-header{
+    background: #E2E0E0;
+}
+    .solicitation-header__area{
+        padding: 40px 0;
+    }
+    @media only screen and (max-width: 768px){
+        .solicitation-header__area{
+            padding: 10px 0;
+			flex: 0 0 100%;
+			max-width: 100%;
+        }
+    }
+    .solicitation-header__area,
+    .solicitation-header__area > div{
+        display: flex;
+        display: -webkit-flex;
+        align-items: center;
+        -webkit-align-items: center;
+        justify-content: center;
+        -webkit-justify-content: center;
+    }
+        .solicitation-header__area span{
+			position: relative;
+            padding: 5px 10px;
+            text-align: center;
+            font-size: 28px;
+            border-radius: 50%;
+            color: #118742;
+            border: 1px solid #118742;
+        }
+        .solicitation-header__active span{
+            color: #ffffff;
+            background: #118742;
+			font-weight: bold;
+        } 
+		.solicitation-header__checked span{
+            color: transparent;
+            background: #118742;
+			font-weight: bold;
+        }	
+			.solicitation-header__checked span:before{
+				font-family: "FontAwesome";
+				content: "\f00c";
+				position: absolute;
+				left: 0;
+				right: 0;
+				font-size: 25px;
+				color: #fff;
+			}
+        .solicitation-header__area h2{
+            margin-left: 10px;
+            font-size: 18px;
+            color: #118742;
+        }
+        .solicitation-header__active h2,
+		.solicitation-header__checked h2{
+            font-weight: bold;
+        }
+
+.solicitation-inf{
+    margin: 20px 0;
+}
+    .solicitation-inf .row{
+        padding: 20px 0;
+        border: 1px solid #1EC857;
+    }
+        .solicitation-inf-area{
+            margin: 10px 0;
+        }
+        .solicitation-inf-area p{
+            font-size: 15px;
+            font-weight: bold;
+            color: #958F8F;
+        }
+        .solicitation-inf-area span{
+            display: block;
+            float: left;
+            clear: both;
+            padding-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #433F3F;
+        }
+        .solicitation-inf__alter{
+            float: right;
+            padding: 5px;
+            font-size: 18px;
+            color: #1EC857;
+            border: 1px solid #1EC857;
+        }
+        .solicitation-inf__alter:hover{
+            text-decoration: none;
+            color: #ffffff;
+            background: #1EC857;
+        }
+     
+/*** modificações para header da página de pedido enviado ***/
+.solicitation-sent .solicitation-inf-area{
+    padding: 20px;
+    margin: 0;
+    width: calc(100%/6);
+}
+
+.solicitation-sent .solicitation-inf-area:last-child{
+    width: calc(100%/3);
+}
+
+    @media only screen and (max-width: 994px){
+        .solicitation-inf-area{
+            width: 100% !important;
+        }
+    }
+/************************************************************************************************************
+* 
+*
+	PAGINA PEDIDO DE EMPRESTIMO 
+		1.1 - Form dados pessoais
+************************************************************************************************************/        
+
+.solicitation-accordion-form{
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid transparent;
+}  
+    .solicitation-accordion-form .card-link{
+        font-size: 16px;
+        text-transform: uppercase;
+        color: #1EC857;
+    }   
+
+.card-body{
+	padding: 0;
+}
+.solicitation-register__area{
+    margin-bottom: 20px;
+    border: 1px solid #1EC857;
+}
+.solicitation-register__form label{
+    margin: 10px 0;
+    width: 100%;
+}
+    .solicitation-register__form label > input,
+    .solicitation-register__form label > select{
+        padding: 8px;
+        margin-top: 5px;
+        width: 100%;
+        height: 50px;
+        color: #000;
+        background: #C2BFBF;
+    }
+    ::-webkit-inner-spin-button{
+        display: none;
+        -webkit-appearance: none;
+    }
+    .solicitation-register__area h3{
+        padding: 0 0 30px 0;
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #1EC857;
+    }
+    .solicitation-register__form{
+        float: left;
+        display: block;
+        padding: 20px;
+        margin-bottom: 20px;
+        width: 100%;
+        border: 1px solid #1EC857;
+    }
+        .solicitation-register__form form > div{
+            float: left;
+            min-height: 80px;
+        }
+    .solicitation-register-btn{
+        float: left;
+        margin: 20px 0;
+        width: 100%;
+        text-align: right;
+    }    
+        .solicitation-register-btn a{
+            padding: 15px 25px;
+            font-size: 15px;
+            font-weight: bold;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 21px;
+            box-shadow: 7px 7px 6px rgba(0, 0, 0, 0.16);
+            -webkit-box-shadow: 7px 7px 6px rgba(0, 0, 0, 0.16);
+            -moz-box-shadow: 7px 7px 6px rgba(0, 0, 0, 0.16);
+            background: #1D8841;
+        }
+            .solicitation-register-btn a:hover{
+                background: #24b756;
+            }
+
+
+/************************************************************************************************************
+* 
+*
+	PAGINA PEDIDO DE EMPRESTIMO 
+		1.2 - Resumo do pedido
+************************************************************************************************************/
+#order .card-link{
+    display: none;
+}
+.order{
+    float: left;
+    margin-bottom: 30px;  
+}
+.order .order-item-main{
+    padding: 20px;
+    width: 30%;
+    color: #ffffff;
+    background: #1EC857;
+}
+.order .order-item{
+    padding: 22px 0;
+    margin: 0 10px 0 0;
+    width: 22.4%;
+    color: #666;
+    border: 1px solid #1EC857;
+}
+.order__box{
+    float: left;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    -webkit-justify-content: center;
+    text-align: center;
+    height: 105px;
+}
+    .order__box p{
+        padding-bottom: 10px;
+        font-size: 11px;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+    .order .order-item p{
+        color: #000;
+    }
+    .order__box span{
+        font-weight: bold;
+        font-size: 14px;
+    }
+    .order-item-main span{
+        font-size: 22px;
+    }
+
+.order-evaluation .order-item{
+    width: 34%;
+}
+
+.order-item-divisoy{
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
+}
+    .order__box-divisoy{
+        float: left;
+        padding: 20px;
+        width: 50%;
+    }
+    .order__box-divisoy span{
+        display: block;
+        padding: 4px 0;
+    }
+
+.order-plots p{
+    font-size: 33px;
+    color: #666 !important;
+}    
+.order-plots span{
+    text-transform: uppercase;
+    color: #666;
+}
+.order-alert{
+    clear: both;
+    padding-bottom: 20px;
+    font-size: 13px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #666;
+}
+.order-alert-alter{
+    font-size: 9px;
+}
+    @media only screen and (max-width: 994px){
+        .order .order-item,
+        .order .order-item-main{
+            width: 100%;
+        }
+    }
+    @media only screen and (min-width: 995px) and (max-width: 1199px){
+        .order .order-item{
+            width: 22%;
+        }
+        .order-evaluation .order-item {
+            width: 33.3%;
+        }
+    }
+
+/************************************************************************************************************
+* 
+*
+	PAGINA PEDIDO DE EMPRESTIMO 
+		1.3 - Envie seus documentos
+************************************************************************************************************/   
+.order-dispatched{
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    padding: 40px 20px;
+    margin: 20px 0;
+    color: #ffff;
+    background: #1EC857;
+}    
+    .order-dispatched h2{
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+    }   
+    .order-dispatched p{
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+    .order-dispatched span{
+        display: block;
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 1.5;
+    }
+    
+/*** acordions ***/
+.acordion-order-dispatched{
+    clear: both;
+    display: block;
+    float: left;
+    margin: 20px 0;
+    width: 100%;
+    border: none;
+}
+.acordion-order-dispatched > div:first-child{
+    float: left;
+    width: 100%;
+}
+.acordion-order-dispatched > div:first-child a{
+    position: relative;
+    display: block;
+    padding: 50px 20px;
+    width: 100%;
+}
+.acordion-order-dispatched > div:first-child > a.collapsed{
+    background: #C2BFBF;
+}
+.order-summary > div:first-child > a.collapse,
+.acordion-order-dispatched > div:first-child > a{
+    background: #067010;
+}
+    .acordion-order-dispatched > div:first-child > a:after {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        position: absolute;
+        right: 20px;
+        margin-right: 10px;
+        width: 0;
+        height: 0;
+        border-left: 18px solid transparent;
+        border-right: 18px solid transparent;
+        border-top: 18px solid #fff;   
+    }
+.acordion-order-dispatched .card-link{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+}
+.acordion-order-dispatched .card-body{
+    display: block;
+    float: left;
+    margin: 20px 0;
+    clear: both;
+    width: 100%;
+}
+.acordion-documents .card-body{
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    justify-content:  flex-start;
+    -webkit-justify-content: flex-start;
+}
+    .card-documents{
+        position: relative;
+        display: inline-block;
+        padding: 20px;
+        margin: 0 20px;
+		width: calc(100%/4);
+        height: 200px;
+        text-transform: uppercase;
+        text-align: center;
+        border: 2px solid #1EC857;
+        border-radius: 5px;
+        color: #1EC857;
+    }
+    .card-documents h2{
+        margin-bottom: 30px;
+        min-height: 35px;
+        font-weight: bold;
+		color: #060606;
+    }
+        .card-documents h2 > span{
+            font-size: 9px;
+        }
+    .card-documents p{
+        margin-bottom: 20px;
+        font-size: 11px;
+        line-height: 1.2;
+		color: #5E5E5E;
+    }
+    .card-documents a{
+        position: absolute;
+        bottom: 19px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        padding: 10px;
+        width: 80%;
+        text-align: center;
+        font-size: 13px;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 5px;
+        background: #1EC857;
+        color: #fff;
+    }
+        .card-documents a:hover{
+            text-decoration: none;
+            background: #1D8841;
+        }
+
+    .solicitation-next{
+        float: right;
+    }
+    .solicitation-back{
+        float: left;
+        color: #1D8841!important;
+        border: 1px solid #1D8841;
+        background: #ffffff!important;
+    }
+        .solicitation-back:hover{
+            float: left;
+            color: #fff!important;
+            background: #1D8841!important;
+        }
+
+
+  @media only screen and (max-width: 1044px){
+    .order-dispatched{
+        display: block;
+        text-align: center;
+    }
+    .order-dispatched div{
+        margin: 20px ;
+    }  
+    .acordion-documents .card-body{
+        display: block;
+        margin: 0;
+    }
+    .card-documents{
+        margin: 20px 0;
+        width: 100%;
+    }
+ }   
+ 
+ @media only screen and (min-width: 1045px) and (max-width: 1199px){
+    .card-documents{
+        height: 250px;
+    }
+}
+
+/************************************************************************************************************
+* 
+*
+	PAGINA PEDIDO DE EMPRESTIMO 
+		1.4 Assinatura de contrato
+************************************************************************************************************/   
+.acordion-signature p{
+    display: block;
+    clear: both;
+	margin-bottom: 20px;
+    width: 100%;
+    font-size: 14px;
+	line-height: 1.5;
+    text-align: center;
+    text-transform: uppercase;
+    color: #067010;
+}
+.solicitation-next i{
+    padding-right: 10px;
+}
+
+/************************************************************************************************************
+* 
+*
+	PAGINA PEDIDO DE EMPRESTIMO 
+		1.5 Envio de fotos do documento
+************************************************************************************************************/   
+.photo-document__item{
+    text-align: center;
+    color: #958F8F;
+}
+    .photo-document__item h2{
+        font-size: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 1.5;
+		color: #040404;
+    }
+    .photo-document__item p{
+        padding: 20px 10px;
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+    .box-photo{
+        height: 380px;
+        border-radius: 5px;
+        background: #C2BFBF;
+    }
+    .send-photo{
+        display: inline-block;
+        padding: 11px 25px;
+        margin: 20px 0;
+        font-weight: bold;
+        border-radius: 5px;
+        background: #1EC857;
+        color: #fff;
+    }
+        .send-photo:hover{
+            text-decoration: none;
+            color: #ffffff;
+            background: #1D8841;
+        }
+        .send-photo i{
+            padding-right: 10px;
+        }
+		
+	a.select-document{
+		display: block;
+		text-decoration: underline;
+		color: #5E5E5E;
+	}		
+
+.photo-document{
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+}
+    .photo-document .col-sm-6{
+        float: left;
+        padding: 0;
+        margin-bottom: 30px;
+    }    
+        .photo-document p{
+            padding-bottom: 0;
+        }
+        .photo-document .box-photo{
+            height: 250px;
+        }
+
+/************************************************************************************************************
+* 
+*
+	PAGINA PEDIDO DE EMPRESTIMO 
+		1.6 Envio de comprovante de residência
+************************************************************************************************************/           
+.photo-doc-home h2{
+    padding-bottom: 20px;
+    color: #1EC857;
+}
+.photo-doc-home p,
+.photo-doc-home label{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.photo-doc-home p{
+	color: #1D8841;
+}
+
+.photo-doc-home label{
+	display: block;
+    margin: 0 10px 0 0;
+	color: #5E5E5E;
+}
+.photo-doc-home input[type=radio]{
+	margin: 20px 10px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -o-appearance: none;
+    outline: none;
+    content: none;
+}
+    .photo-doc-home input[type=radio]:before{
+        display: block;
+        width: 20px;
+        height: 20px;
+        font-size: 15px;
+        font-family: "FontAwesome";
+        content: "\f00c";
+        color: transparent;
+        border-radius: 25px;
+        border: 2px solid #1D8841;
+    }
+    .photo-doc-home input[type=radio]:checked:before {
+        color: #1D8841;
+    }
+
+/************************************************************************************************************
+* 
+*
+	PAGINA PEDIDO DE EMPRESTIMO 
+		FOOTER
+************************************************************************************************************/           
+footer{
+    padding: 20px 0;
+    text-align: center;
+    background: #ECEBEB;
+}
+    footer p{
+        font-size: 13px;
+        color: #B6B9B8;
+    }

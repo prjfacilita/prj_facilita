@@ -1,0 +1,79 @@
+/************************************************************************************************************
+* 
+*
+* - STYLE PAGINA DE EMPRESTIMO NEGADO
+************************************************************************************************************/
+#user .user-name{
+    padding: 20px 0;
+    text-align: center;
+}
+    .icon-user{
+        padding-top: 10px;
+        max-width: 100%;
+        width: 60px;
+        height: auto;
+    }
+    .user-name p{
+        font-size: 30px;
+        line-height: 1.8;
+        font-weight: bold;
+        color: #067010;
+    }
+
+.request-denied-message{
+    padding: 30px;
+    text-align: center;
+    color: #fff;
+    background: #1EC857;
+    border-radius: 30px;   
+}
+    .request-denied-message p{
+        padding: 20px 0;
+        font-size: 18px;
+        line-height: 1.2;
+    }
+
+.request-denied-motive{
+    padding: 40px 20px 20px;
+    margin: 40px 0;
+    border: 1px solid #1EC857;
+}
+    .request-denied-motive h2{
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        font-size: 28px;
+        font-weight: bold;
+        color: #1EC857;
+    }
+    .request-denied-motive .card{
+        padding: 20px 0;
+        border: none;
+    }
+        .request-denied-motive .card-link{
+            text-transform: uppercase;
+            font-size: 17px;
+            font-weight: bold;
+            color: #958F8F;
+        }
+        .request-denied-motive .card-link.collapsed{
+            font-weight: 400;
+        }
+        .request-denied-motive .card-link:before{
+            display: inline-block;
+            padding-right: 15px;
+            font: normal normal normal 25px/1 FontAwesome;
+            color: #1EC857;      
+        }
+        .request-denied-motive .card-link.collapsed:before{
+            content: "\f055";          
+        }
+        .request-denied-motive .card-link:before{
+            content: "\f056";           
+        }
+        .request-denied-motive .card-body{
+            padding: 20px 50px;
+        }
+            .request-denied-motive .card p{
+                font-size: 14px;
+                line-height: 1.5;
+            }
