@@ -329,7 +329,7 @@ class PropostaController extends Controller
             //        $token = session('token_key');
 
 
-            return $data_banco->nr_pedido;
+//            return $data_banco->nr_pedido;
 
 
             $curl = curl_init();
@@ -365,9 +365,14 @@ class PropostaController extends Controller
                 $response = json_decode($response, true);
 
 
+
+
                 //        print_r($response);
 
                 $retorno =  $response['retorno']['listaSituacaoPropostas'][0]['statusProposta'];
+
+
+                return $retorno;
 
                 if($retorno == "REALIZANDO_ANALISE_PREVIA"){
 
