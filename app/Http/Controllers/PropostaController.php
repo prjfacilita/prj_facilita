@@ -311,7 +311,7 @@ class PropostaController extends Controller
         }
 
 
-        /*Metódo responsável por controlar todo o status das propostas, ele vai definir para qual fase o usuário vai ser direcionado*/
+
         public function  ConsultarStatusProposta(){
 
             /*Consultar api e direcionar para metódo*/
