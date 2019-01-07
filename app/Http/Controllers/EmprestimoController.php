@@ -18,40 +18,12 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Session;
 use App\Emprestimo;
 
+
 /*
  *
  * http://www.befirstcode.com/2017/03/integrate-swagger-in-laravel-project-l5.html
  * */
 
-/**
- * Class EmprestimoController
- *
- * @package App\Http\Controllers
- *
- * @SWG\Swagger(
- *     basePath="",
- *     host="localhost:8000",
- *     schemes={"http"},
- *     @SWG\Info(
- *         version="0.1",
- *         title="Emprestimo Facilita API",
- *         @SWG\Contact(name="Rodrigo Teles Correia", url="rtelesc@gmail.com"),
- *     ),
- *     @SWG\Definition(
- *         definition="Error",
- *         required={"code", "message"},
- *         @SWG\Property(
- *             property="code",
- *             type="integer",
- *             format="int32"
- *         ),
- *         @SWG\Property(
- *             property="message",
- *             type="string"
- *         )
- *     )
- * )
- */
 class EmprestimoController extends Controller
 {
 
@@ -91,12 +63,6 @@ class EmprestimoController extends Controller
 
 //        }
     }
-
-    /**
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     *
-     *
-     */
 
 
     public function ConfiguracoesAPI(){
@@ -340,6 +306,8 @@ class EmprestimoController extends Controller
 
     }
 
+
+    /*Quando o usuário acessa o sistema e entra na página de pedido, é chamado esta função para definir o status da proposta e direcionar o usuário para o local correto*/
     public function PedirEmprestimo(Request $request){
 
         /*Consultar API*/
@@ -363,22 +331,24 @@ class EmprestimoController extends Controller
             $teste = new PropostaController();
             $retorno = $teste->StatusPreAnalise($data_status_pre_analise->id);
 
-//            print_r($retorno);
-
-
             if ($retorno == "REALIZANDO_ANALISE_PREVIA") {
 
 
+                $call = new PropostaController();
+                $call->ConsultarStatusProposta();
+
                 /*O sistema pode demorar um pouco para realizar aa analise previa e retornar ANALISE_PREVIA_CONCLUIDA onde será preciso mandar para Avaiação de crédito V2*/
-                return view('emprestimo.status_analise');
+
 //
             }
 
 
             if($retorno == "ANALISE_PREVIA_CONCLUIDA"){
 
-                /*Chamar api de analise cadastral*/
-                return view('emprestimo.status_analise');
+
+                $call = new PropostaController();
+                $call->ConsultarStatusProposta();
+
 
 
             }
@@ -386,12 +356,6 @@ class EmprestimoController extends Controller
             if ($retorno == "ANALISE_CADASTRAL_CONCLUIDA") {
 //
 //
-//                return view('emprestimo.status_analise');
-//                redirect()->route('/resumo');
-
-//                $data = DB::table('cadastro')->where('email',  Auth::user()->email)->first();
-
-//                return view('emprestimo.resumo');
 
                 return redirect('/resumo');
 
@@ -401,13 +365,23 @@ class EmprestimoController extends Controller
 //
             if ($retorno == "REPROVADA") {
 //
-                return view('emprestimo.status_reprovada');
+                $call = new PropostaController();
+                $call->ConsultarStatusProposta();
             }
 
             if ($retorno == "APROVADA") {
 
-                return 'testeg';
+                $call = new PropostaController();
+                $call->ConsultarStatusProposta();
 
+            }
+
+
+            if($retorno == "EXPIRADA"){
+
+
+                $call = new PropostaController();
+                $call->ConsultarStatusProposta();
             }
 
 
@@ -434,108 +408,7 @@ class EmprestimoController extends Controller
 
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 
 
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\JsonResponse
-     *
-     * @SWG\Get(
-     *     path="/api/emprestimo2",
-     *     description="Returns dashboard overview.",
-     *     operationId="api.emprestimo2.index",
-     *     produces={"application/json"},
-     *     tags={"emprestimo"},
-     *     @SWG\Response(
-     *         response=200,
-     *         description="Dashboard overview."
-     *     ),
-     *     @SWG\Response(
-     *         response=401,
-     *         description="Unauthorized action.",
-     *     )
-     * )
-     */
 
-    public function get(){
-        return response()->json([
-            'result'    => [
-                'statistics' => [
-                    'users' => [
-                        'name'  => 'Name',
-                        'email' => 'user@example.com'
-                    ]
-                ],
-            ],
-            'message'   => '',
-            'type'      => 'success',
-            'status'    => 0
-        ]);
-    }
 }

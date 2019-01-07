@@ -195,6 +195,8 @@ class PropostaController extends Controller
 
 
 
+
+        /*Este metódo é chamado toda vez que o usuário acessa o sistemaa para verifiacar o status da proposta*/
         public function StatusPreAnalise($id){
 
             $data_cadastro = DB::table('cadastro')->where('id',  $id)->first();
@@ -309,12 +311,43 @@ class PropostaController extends Controller
         }
 
 
-        public  function RetornoAnalise(){
+        /*Metódo responsável por controlar todo o status das propostas, ele vai definir para qual fase o usuário vai ser direcionado*/
+        public function  ConsultarStatusProposta(){
 
         }
 
+        /*Metódo para REALIZANDO_ANALISE_PREVIA*/
+        public function REALIZANDO_ANALISE_PREVIA(){
+
+
+            return view(    'emprestimo.status_analise');
+
+        }
+
+        /*Metódo para ANALISE_PREVIA_CONCLUID*/
+
+        public function ANALISE_PREVIA_CONCLUIDA(){
+
+            return view('emprestimo.status_analise');
+        }
+
+
+        /*Metódo para ANALISE_CADASTRAL_CONCLUIDA*/
         public function ANALISE_CADASTRAL_CONCLUIDA(){
 
+
+
+//                return view('emprestimo.status_analise');
+//                redirect()->route('/resumo');
+
+//                $data = DB::table('cadastro')->where('email',  Auth::user()->email)->first();
+
+//                return view('emprestimo.resumo');
+
+            // chamar api de especificação financeira e retornar o resumo
+
+            // chamar api de validação dos dados bancários
+            // após continuar chamar as pendências e incluir o kitprobatóro
             /*Buscar proposta completa*/
 
 
