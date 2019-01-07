@@ -376,16 +376,11 @@ class PropostaController extends Controller
 
                 if($retorno == "REALIZANDO_ANALISE_PREVIA"){
 
-                    $this->REALIZANDO_ANALISE_PREVIA();
+                   return  $this->REALIZANDO_ANALISE_PREVIA();
                 }
 
                 if($retorno == "ANALISE_PREVIA_CONCLUIDA"){
 
-//                    $this->ANALISE_PREVIA_CONCLUIDA();
-
-//                    return view('emprestimo.status_analise');
-//                    $call = new PropostaController();
-//                    $call->ANALISE_PREVIA_CONCLUIDA();
 
                    return $this->ANALISE_PREVIA_CONCLUIDA();
                 }
@@ -394,16 +389,16 @@ class PropostaController extends Controller
                 if($retorno == "REALIZANDO_ANALISE_CADASTRAL"){
 
 
-                    $this->REALIZANDO_ANALISE_CADASTRAL();
+                   return  $this->REALIZANDO_ANALISE_CADASTRAL();
                 }
 
                 if($retorno == "ANALISE_CADASTRAL_CONCLUIDA"){
 
-                    $this->ANALISE_CADASTRAL_CONCLUIDA();
+                   return  $this->ANALISE_CADASTRAL_CONCLUIDA();
                 }
 
                 if($retorno == "REPROVADA"){
-                    $this->REPROVADA();
+                    return  $this->REPROVADA();
                 }
 
             }
