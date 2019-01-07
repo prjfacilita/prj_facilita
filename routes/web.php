@@ -10,7 +10,7 @@ Route::any('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/pendencias', 'PropostaController@PENDENCIAS')->name('pendencias');
+
 
 
 Route::any('/index', function () {
@@ -52,7 +52,12 @@ Route::get('confirmar-usuario/{code}', [ 'as' => 'confirmar-usuario/{code}', 'us
 
 
 
+
+
 Route::get('pedido', [ 'as' => 'pedido', 'uses' => 'EmprestimoController@PedirEmprestimo']);
+Route::get('pendencias', [ 'as' => 'pendencias', 'uses' => 'PropostaController@PENDENCIAS']);
+//Route::get('/pendencias', 'PropostaController@PENDENCIAS')->name('pendencias');
+
 
 //Route::get('ativar-conta', ['as' => 'ativar-conta', 'uses' => 'Auth\LoginController@CriarSenha']);
 
