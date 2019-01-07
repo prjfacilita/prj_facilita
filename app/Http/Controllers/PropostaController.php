@@ -319,6 +319,8 @@ class PropostaController extends Controller
 
 //            return 'teste';
             $data_cadastro = DB::table('cadastro')->where('email',  Auth::user()->email)->first();
+
+            return $data_cadastro->id;
             $data_banco = DB::table('dados_bancarios')->where('id_cadastro',  $data_cadastro->id)->first();
 
             $simulacao = new EmprestimoController();
