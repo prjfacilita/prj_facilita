@@ -610,14 +610,19 @@ class PropostaController extends Controller
         public function PENDENCIAS(){
 
 
-            $status_anliase = new Login();
-            $status_anliase->exists = true;
-            $status_anliase->id = Auth::user()->id;
-            $status_anliase->status_analise = 3;
-            $status_anliase->save();
+            if(Auth::user()->status_analise == 2){
+
+                $status_anliase = new Login();
+                $status_anliase->exists = true;
+                $status_anliase->id = Auth::user()->id;
+                $status_anliase->status_analise = 3;
+                $status_anliase->save();
 
 
-            return $this->ANALISE_CADASTRAL_CONCLUIDA_STEP_DOCUMENTOS();
+                return $this->ANALISE_CADASTRAL_CONCLUIDA_STEP_DOCUMENTOS();
+            }
+
+
 
 
         }
