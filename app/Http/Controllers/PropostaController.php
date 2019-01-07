@@ -385,7 +385,7 @@ class PropostaController extends Controller
 
 //                    return view('emprestimo.status_analise');
                     $call = new PropostaController();
-                    $call->REALIZANDO_ANALISE_PREVIA();
+                    $call->ANALISE_PREVIA_CONCLUIDA();
                 }
 
 
