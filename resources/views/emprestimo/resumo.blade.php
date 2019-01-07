@@ -253,7 +253,7 @@
                                         <p class="order-alert order-alert-alter">você pode alterar o número de pacelas, o valor do empréstimo e a data de vencimento clicando em "alterar pedido"</p>
 
                                         <div class="solicitation-register-btn">
-                                            <a href="{{route('/pendencias')}}">Continuar</a>
+                                            <a href="{{route('pendencias')}}">Continuar</a>
                                         </div>
                                     </div>
                                 </div>
