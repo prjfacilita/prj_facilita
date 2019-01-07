@@ -381,8 +381,11 @@ class PropostaController extends Controller
 
                 if($retorno == "ANALISE_PREVIA_CONCLUIDA"){
 
-                    $this->ANALISE_PREVIA_CONCLUIDA();
+//                    $this->ANALISE_PREVIA_CONCLUIDA();
+
+                    return view('emprestimo.status_analise');
                 }
+
 
                 if($retorno == "REALIZANDO_ANALISE_CADASTRAL"){
 
