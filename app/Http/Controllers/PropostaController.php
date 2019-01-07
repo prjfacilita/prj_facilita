@@ -368,7 +368,7 @@ class PropostaController extends Controller
 
 
 
-                return $response;
+//                return $response;
                 //        print_r($response);
 
                 $retorno =  $response['retorno']['listaSituacaoPropostas'][0]['statusProposta'];
@@ -388,14 +388,14 @@ class PropostaController extends Controller
                     $this->REALIZANDO_ANALISE_CADASTRAL();
                 }
 
-                if($retorno == "ANALISE_CADASTRAL_CONCLUIDA"){
-
-                    $this->ANALISE_CADASTRAL_CONCLUIDA();
-                }
-
-                if($retorno == "REPROVADA"){
-                    $this->REPROVADA();
-                }
+//                if($retorno == "ANALISE_CADASTRAL_CONCLUIDA"){
+//
+////                    $this->ANALISE_CADASTRAL_CONCLUIDA();
+//                }
+//
+//                if($retorno == "REPROVADA"){
+////                    $this->REPROVADA();
+//                }
 
             }
         }
@@ -423,111 +423,6 @@ class PropostaController extends Controller
         }
 
 
-        /*Metódo para ANALISE_CADASTRAL_CONCLUIDA*/
-        public function ANALISE_CADASTRAL_CONCLUIDA(){
-
-
-
-//                return view('emprestimo.status_analise');
-//                redirect()->route('/resumo');
-
-//                $data = DB::table('cadastro')->where('email',  Auth::user()->email)->first();
-
-//                return view('emprestimo.resumo');
-
-            // chamar api de especificação financeira e retornar o resumo
-
-            // chamar api de validação dos dados bancários
-            // após continuar chamar as pendências e incluir o kitprobatóro
-            /*Buscar proposta completa*/
-
-
-            /**/
-
-            $simulacao = new EmprestimoController();
-            $token = $simulacao->ConfiguracoesAPI();
-
-
-            $this->InserirEspecificacaoFinanceira();
-
-
-            $data = DB::table('dados_bancarios')->where('cpf',  Auth::user()->cpf)->first();
-
-            $data_pre_cadastro = DB::table('pre_cadastro')->where('cpf', Auth::user()->cpf)->first();
-
-
-            $curl = curl_init();
-
-            curl_setopt_array($curl, array(
-                CURLOPT_URL => "https://c2gvw4lxh9.execute-api.sa-east-1.amazonaws.com/hmg/api/v1/ep/propostas/".$data->nr_pedido."",
-                CURLOPT_RETURNTRANSFER => true,
-                CURLOPT_ENCODING => "",
-                CURLOPT_MAXREDIRS => 10,
-                CURLOPT_TIMEOUT => 30,
-                CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-                CURLOPT_CUSTOMREQUEST => "GET",
-    //            CURLOPT_POSTFIELDS => "{\n    \"nomeMae\": \"".$data_cadastro->nome_mae."\",\n    \"email\": \"".Auth::user()->email."\",\n    \"estadoCivil\": \"SOLTEIRO\",\n    \"naturalidade\": \"São Paulo\",\n    \"valorPatrimonio\": \"5000\",\n    \"documentosPessoais\": [\n        {\n            \"numeroDocumento\": 125478991,\n            \"tipoDocumento\": \"RG\"\n        }\n    ],\n    \"endereco\": {\n        \"cep\": 11740000,\n        \"logradouro\": \"Rua Butantã\",\n        \"numero\": 123,\n        \"bairro\": \"Pinheiros\",\n        \"cidade\": \"Sao Paulo\",\n        \"complemento\": \"10o andar\"\n    },\n    \"enderecoComercial\": {\n        \"cep\": 11740000,\n        \"logradouro\": \"Rua Butantã\",\n        \"numero\": 123,\n        \"bairro\": \"Pinheiros\",\n        \"cidade\": \"Sao Paulo\",\n        \"uf\": \"SP\",\n        \"complemento\": \"10o andar\"\n    },\n    \"telefones\": [\n        {\n            \"ddd\": 11,\n            \"numero\": 985478547,\n            \"tipoTelefone\": \"CELULAR\",\n            \"ramal\": 444\n        }\n    ],\n    \"renda\": {\n        \"tipoComprovanteRenda\": \"EXTRATO_FGTS\"\n    }\n}",
-                CURLOPT_HTTPHEADER => array(
-                    "Authorization: Bearer ".$token."",
-                    "Content-Type: application/json",
-    //                "Postman-Token: 06ec2ce6-7d28-4a29-9f61-957d375a0f04",
-                    "cache-control: no-cache"
-                ),
-            ));
-
-            $response = curl_exec($curl);
-            $err = curl_error($curl);
-
-            curl_close($curl);
-
-
-            if ($err) {
-                echo "cURL Error #:" . $err;
-            } else {
-
-
-                $response = json_decode($response, true);
-
-
-    //        print_r($response);
-
-//                return $response;
-
-
-                return view('emprestimo.resumo',
-                    [
-
-                        'valorPrincipal' => $response['retorno']['especificacaoFinanceira']['valorPrincipal'],
-                        'iof' => $response['retorno']['especificacaoFinanceira']['iof'],
-                        'cet'=> $response['retorno']['especificacaoFinanceira']['cet'],
-                        'taxaJuros' => $response['retorno']['especificacaoFinanceira']['taxaJuros'],
-                        'taxaJurosAno' => $response['retorno']['especificacaoFinanceira']['taxaJurosAno'],
-                        'valorFinanciado' => $response['retorno']['especificacaoFinanceira']['valorFinanciado'],
-                        'valorParcela' => $response['retorno']['especificacaoFinanceira']['valorParcela'],
-                        'dataPrimeiraParcela' => $response['retorno']['especificacaoFinanceira']['dataPrimeiraParcela'],
-                        'quantidadeParcelas' => $response['retorno']['especificacaoFinanceira']['quantidadeParcelas'],
-                        'valorTC' => $response['retorno']['especificacaoFinanceira']['valorTC'],
-                        'motivo_solicitacao' => $data_pre_cadastro->finalidade,
-                        'dataSolicitacao' => $response['retorno']['dataStatusProposta']
-                    ]
-                );
-
-            }
-
-        }
-
-
-        /*Metódo InserirEspecificacaoFinanceira*/
-
-        public function InserirEspecificacaoFinanceira(){
-
-        }
-
-        /*Metódo para proposta REPROVADA*/
-
-        public function REPROVADA(){
-
-        }
 
 
 

@@ -332,7 +332,7 @@ class EmprestimoController extends Controller
 //            return 'teste';
 
             $call = new PropostaController();
-            $call->teste();
+            $call->ConsultarStatusProposta();
 
         }else{
 
