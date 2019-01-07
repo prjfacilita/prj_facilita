@@ -620,6 +620,9 @@ class PropostaController extends Controller
 
 
                 return $this->ANALISE_CADASTRAL_CONCLUIDA_STEP_DOCUMENTOS();
+            }else{
+
+                redirect('pendencias');
             }
 
 
