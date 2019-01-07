@@ -343,7 +343,7 @@ class EmprestimoController extends Controller
         }
 
 
-        else{
+        if(Auth::user()->status_analise == 0){
 
             $get_finalidade = DB::table('pre_cadastro')
                 ->where('email', '=',  Auth::user()->email)
@@ -360,6 +360,7 @@ class EmprestimoController extends Controller
 
                 ]);
         }
+
 
 
     }
