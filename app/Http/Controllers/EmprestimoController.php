@@ -59,7 +59,7 @@ class EmprestimoController extends Controller
 //      else{
 
 
-            return view('emprestimo.pedido');
+        return view('emprestimo.pedido');
 
 //        }
     }
@@ -262,17 +262,17 @@ class EmprestimoController extends Controller
             return redirect()->back()->withInput();
         }
 
-            /*
-            var cep     =   $("#form-2 input[name=cep]").val();
-            var endereco     =   $("#form-2 input[name=endereco]").val();
-            var nro     =   $("#form-2 input[name=nro]").val();
-            var complemento     =   $("#form-2 input[name=complemento]").val();
-            var bairro     =   $("#form-2 input[name=bairro]").val();
-            var cidade     =   $("#form-2 input[name=cidade]").val();
-            var valor_patrimonio     =   $("#form-2 input[name=valor-patrimonio-name]").val();
-            // var cep     =   $("#form-2 input[name=cep]").val();
-            var residencia    =   $('#tipo-residencia-id').find(":selected").text();
-            var escolaridade    =   $('#uf').find(":selected").text();*/
+        /*
+        var cep     =   $("#form-2 input[name=cep]").val();
+        var endereco     =   $("#form-2 input[name=endereco]").val();
+        var nro     =   $("#form-2 input[name=nro]").val();
+        var complemento     =   $("#form-2 input[name=complemento]").val();
+        var bairro     =   $("#form-2 input[name=bairro]").val();
+        var cidade     =   $("#form-2 input[name=cidade]").val();
+        var valor_patrimonio     =   $("#form-2 input[name=valor-patrimonio-name]").val();
+        // var cep     =   $("#form-2 input[name=cep]").val();
+        var residencia    =   $('#tipo-residencia-id').find(":selected").text();
+        var escolaridade    =   $('#uf').find(":selected").text();*/
 
 
         $data = DB::table('cadastro')->where('email',  Auth::user()->email)->first();
@@ -390,10 +390,10 @@ class EmprestimoController extends Controller
         }else{
 
             $get_finalidade = DB::table('pre_cadastro')
-            ->where('email', '=',  Auth::user()->email)
+                ->where('email', '=',  Auth::user()->email)
 ////            ->where('cpf', '=',  $request->simulation_cpf)
 ////                ->orderBy('quantity', 'asc')
-            ->first();
+                ->first();
 
             return view('emprestimo.pedido',
                 ['valor_solicitacao'        => $user->valorSolicitado ,
