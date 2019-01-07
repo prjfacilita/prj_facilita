@@ -621,7 +621,7 @@ class PropostaController extends Controller
             $status_anliase->save();
 
 
-            return $this->ANALISE_CADASTRAL_CONCLUIDA_STEP_DOCUMENTOS();
+            return redirect('pendencias');
 
 
         }
