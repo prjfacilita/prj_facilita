@@ -80,9 +80,9 @@
                 <div class="col-sm-8 banner__text">
                     <div>
                         <h1>Crédito para você superar os obstáculos do dia-a-dia!</h1>
-                        <p>Valores de 1.000 a 20.000 mil reais.</p>
+                        <p>Valores de 1.000 a 20.000 reais.</p>
                         <p>Prazo de 3 a 24 meses.</p>
-                        <p>Taxas a partir de 3,99% ao mês. </p>
+                        <p>*Taxas a partir de 3,99% ao mês. </p>
                         
                     </div>
                 </div>

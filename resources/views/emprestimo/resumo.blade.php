@@ -18,6 +18,7 @@
     <!-- SCRIPT -->
     <script src="assets/resumo/js/jquery-3.3.1.min.js"></script>
     <script src="assets/resumo/js/bootstrap.min.js"></script>
+    <script src="assets/resumo/js/resumo.js"></script>
 
 </head>
 
@@ -252,7 +253,7 @@
                                         <p class="order-alert order-alert-alter">você pode alterar o número de pacelas, o valor do empréstimo e a data de vencimento clicando em "alterar pedido"</p>
 
                                         <div class="solicitation-register-btn">
-                                            <a href="">Continuar</a>
+                                            <a href="{{route('/pendencias')}}">Continuar</a>
                                         </div>
                                     </div>
                                 </div>

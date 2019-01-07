@@ -10,6 +10,7 @@ Route::any('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/pendencias', 'PropostaController@PENDENCIAS')->name('pendencias');
 
 
 Route::any('/index', function () {

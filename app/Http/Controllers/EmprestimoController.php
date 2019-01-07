@@ -334,7 +334,10 @@ class EmprestimoController extends Controller
             $call = new PropostaController();
             return  $call->ConsultarStatusProposta();
 
-        }else{
+        }
+
+
+        else{
 
             $get_finalidade = DB::table('pre_cadastro')
                 ->where('email', '=',  Auth::user()->email)

@@ -450,13 +450,25 @@ class PropostaController extends Controller
             /*Buscar proposta completa*/
 
 
-            /**/
+            /*Verificar o status_analise, se for == a 2 continua se for == 3 ele entra para outro metódo*/
 
             $simulacao = new EmprestimoController();
             $token = $simulacao->ConfiguracoesAPI();
 
 
+            if(Auth::user()->status_analise == 3){
+
+
+                return $this->ANALISE_CADASTRAL_CONCLUIDA_STEP_DOCUMENTOS();
+
+
+
+            }
+
+
              $this->InserirEspecificacaoFinanceira();
+
+
 
 
             $data = DB::table('dados_bancarios')->where('cpf',  Auth::user()->cpf)->first();
@@ -589,6 +601,30 @@ class PropostaController extends Controller
             return view('emprestimo.status_reprovada');
         }
 
+        /*Metódo para retornar a view de documentos*/
+
+        public function ANALISE_CADASTRAL_CONCLUIDA_STEP_DOCUMENTOS(){
+
+
+            return 'teste';
+
+        }
+
+
+        public function PENDENCIAS(){
+
+
+            $status_anliase = new Login();
+            $status_anliase->exists = true;
+            $status_anliase->id = Auth::user()->id;
+            $status_anliase->status_analise = 3;
+            $status_anliase->save();
+
+
+            return $this->ANALISE_CADASTRAL_CONCLUIDA_STEP_DOCUMENTOS();
+
+
+        }
 
 
 }
