@@ -124,7 +124,7 @@
 
         <div class="col-md-12 col-xs-12 col-lg-12 teste">
             <div class="facilita-logo col-md-6 col-lg-6 col-sm-6">
-                <img class="mt-1 ml-5" src="/imagens/LogoFacilita.png" width="35%">
+                <img class="mt-1 ml-5" src="{{asset('imagens/LogoFacilita.png')}}" width="35%">
             </div>
 
         </div>
@@ -212,10 +212,10 @@
 
 
 <link href="{{asset('css/facilita.css')}}" rel="stylesheet">
-<link href="/node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css" rel="stylesheet">
+<link href="{{asset('node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css')}}" rel="stylesheet">
 
 
-<script src="/node_modules/jQuery-Mask-Plugin-master/dist/jquery.mask.js"></script>
+<script src="{{asset('node_modules/jQuery-Mask-Plugin-master/dist/jquery.mask.js')}}"></script>
 <script>
 
     //    $( document ).ready(function() {
