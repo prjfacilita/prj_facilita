@@ -555,7 +555,7 @@
                                                 </div>
 
                                                 <div class="col-sm-3">
-                                                    <label>Valor do Patrimônio: <input type="text" name="valor-patrimonio-name" class="solicitation-form__name solicitation-input"></label>
+                                                    <label>Valor do Patrimônio: <input type="text" name="valor-patrimonio-name" class="valor_patrimonio_input solicitation-form__name solicitation-input"></label>
                                                 </div>
 
 
@@ -809,6 +809,7 @@
 <script>
     $('.solicitation-form__phone').mask('(00) 0000-00000');
     $(".salario_nome_input").maskMoney({prefix:'R$ ', allowNegative: true, thousands:'.', decimal:',', affixesStay: false});
+    $(".valor_patrimonio_input").maskMoney({prefix:'R$ ', allowNegative: true, thousands:'.', decimal:',', affixesStay: false});
 
 </script>
 </body>

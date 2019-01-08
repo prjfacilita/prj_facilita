@@ -136,6 +136,9 @@ class PropostaController extends Controller
             $pontos = array(',','.','-');
             $cpf = str_replace( $pontos,   "",  Auth::user()->cpf);
 
+
+            $salario = str_replace('.', '', $data->salario);
+            $salario = str_replace(',', '.', $salario);
             $retorno01  =  $client->request('POST', EmprestimoController::URL_ENDPOINT(). '/api/v1/ep/propostas',
                 [
                     \GuzzleHttp\RequestOptions::JSON => ["nome" => $data->nome_completo,
@@ -146,7 +149,7 @@ class PropostaController extends Controller
                         "dataNascimento" =>  $data->dt_nasc ,
                         "naturezaOcupacao" => $data->nat_ocup,
                         "genero" => strtoupper($data->sexo),
-                        "rendaMensal" => $data->salario,
+                        "rendaMensal" => $salario,
                         "uf" => $data->uf_nasc
                     ]
                 ]);
