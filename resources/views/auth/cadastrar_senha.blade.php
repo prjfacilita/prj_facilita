@@ -35,7 +35,7 @@
         <div class="row">
             <a class="logomarca" href="#"><img src="{{asset('/assets/cadastro/images/logo-facilita.png')}}" alt="Logomarca Facilita" class="image-logomarca"/></a>
             <div class="user-logged">
-                <img src="{{asset('/assets/cadastro/images/icon-user.png')}}" alt="Ícone Usuário" class="icon-user-logged"/>
+                <img src="{{asset('/assets/cadastro/images/icon-user.png')}}" alt="Ícone Usuário" class="icon-user-logged mr-5"/>
                 {{--<p>Olá Maria, seja bem vinda!</p>--}}
             </div>
         </div>
