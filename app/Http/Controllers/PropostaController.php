@@ -662,7 +662,7 @@ class PropostaController extends Controller
 //            /**/
 
             $retorno =   $this->ValidarDadosBancarios();
-            return view('emprestimo.pendencias', ['conta' => $retorno['contaValida']]);
+            return view('emprestimo.pendencias', ['conta' => $retorno['contaValida'], 'agencia' => $retorno['agenciaValida'], 'bancoValido' => $retorno['bancoValido']]);
 
         }
 
