@@ -422,7 +422,7 @@ class PropostaController extends Controller
             /*Chamar API Para realizar analise cadastral*/
 
 
-            $callback = $this->AnaliseCadastral();
+          return  $callback = $this->AnaliseCadastral();
             return view('emprestimo.status_analise', ['status' => $callback]);
         }
 
