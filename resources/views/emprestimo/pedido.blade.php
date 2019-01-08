@@ -10,6 +10,9 @@
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
     <!-- CSS -->
+
+    <link rel="stylesheet" type="text/css"  href="{{ asset('fonts/fonts.css') }}">
+
     <link rel="stylesheet" type="text/css"  href="assets/pedido/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css"  href="assets/pedido/css/style.css">
     <link rel="stylesheet" type="text/css"  href="assets/pedido/css/style-pedido-emprestimo.css">
