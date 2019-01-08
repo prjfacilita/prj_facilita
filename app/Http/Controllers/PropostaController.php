@@ -269,6 +269,8 @@ class PropostaController extends Controller
 
     //        $token = session('token_key');
 
+            $val_patrimonio = str_replace('.', '', $data_cadastro->val_patriominio);
+            $val_patrimonio = str_replace(',', '.', $val_patrimonio);
 
             $curl = curl_init();
 
@@ -280,7 +282,7 @@ class PropostaController extends Controller
                 CURLOPT_TIMEOUT => 30,
                 CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
                 CURLOPT_CUSTOMREQUEST => "PUT",
-            CURLOPT_POSTFIELDS => "{\n    \"nomeMae\": \"".$data_cadastro->nome_mae."\",\n    \"email\": \"".Auth::user()->email."\",\n    \"estadoCivil\": \"".$data_cadastro->estado_civil."\",\n    \"naturalidade\": \"$data_cadastro->nacionalidade\",\n    \"valorPatrimonio\": \"".$data_cadastro->val_patriominio."\",\n    \"documentosPessoais\": [\n        {\n            \"numeroDocumento\": ".$data_cadastro->nr_doc.",\n            \"tipoDocumento\": \"".$data_cadastro->tp_doc."\"\n        }\n    ],\n    \"endereco\": {\n        \"cep\": 11740000,\n        \"logradouro\": \"Rua Butantã\",\n        \"numero\": 123,\n        \"bairro\": \"Pinheiros\",\n        \"cidade\": \"Sao Paulo\",\n        \"complemento\": \"10o andar\"\n    },\n    \"enderecoComercial\": {\n        \"cep\": 11740000,\n        \"logradouro\": \"Rua Butantã\",\n        \"numero\": 123,\n        \"bairro\": \"Pinheiros\",\n        \"cidade\": \"Sao Paulo\",\n        \"uf\": \"SP\",\n        \"complemento\": \"10o andar\"\n    },\n    \"telefones\": [\n        {\n            \"ddd\": 11,\n            \"numero\": 985478547,\n            \"tipoTelefone\": \"CELULAR\",\n            \"ramal\": 444\n        }\n    ],\n    \"renda\": {\n        \"tipoComprovanteRenda\": \"EXTRATO_FGTS\"\n    }\n}",
+            CURLOPT_POSTFIELDS => "{\n    \"nomeMae\": \"".$data_cadastro->nome_mae."\",\n    \"email\": \"".Auth::user()->email."\",\n    \"estadoCivil\": \"".$data_cadastro->estado_civil."\",\n    \"naturalidade\": \"$data_cadastro->nacionalidade\",\n    \"valorPatrimonio\": \"".$val_patrimonio."\",\n    \"documentosPessoais\": [\n        {\n            \"numeroDocumento\": ".$data_cadastro->nr_doc.",\n            \"tipoDocumento\": \"".$data_cadastro->tp_doc."\"\n        }\n    ],\n    \"endereco\": {\n        \"cep\": 11740000,\n        \"logradouro\": \"Rua Butantã\",\n        \"numero\": 123,\n        \"bairro\": \"Pinheiros\",\n        \"cidade\": \"Sao Paulo\",\n        \"complemento\": \"10o andar\"\n    },\n    \"enderecoComercial\": {\n        \"cep\": 11740000,\n        \"logradouro\": \"Rua Butantã\",\n        \"numero\": 123,\n        \"bairro\": \"Pinheiros\",\n        \"cidade\": \"Sao Paulo\",\n        \"uf\": \"SP\",\n        \"complemento\": \"10o andar\"\n    },\n    \"telefones\": [\n        {\n            \"ddd\": 11,\n            \"numero\": 985478547,\n            \"tipoTelefone\": \"CELULAR\",\n            \"ramal\": 444\n        }\n    ],\n    \"renda\": {\n        \"tipoComprovanteRenda\": \"EXTRATO_FGTS\"\n    }\n}",
                 CURLOPT_HTTPHEADER => array(
                     "Authorization: Bearer ".$token."",
                     "Content-Type: application/json",
