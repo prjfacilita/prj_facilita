@@ -10,7 +10,8 @@
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Verdana">
+
+    {{--<link rel="stylesheet" href="{{asset('node_modules/')}}/fonts.css">--}}
     <link rel="stylesheet" type="text/css"  href="assets/pendencias/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css"  href="assets/pendencias/css/style.css">
     <link rel="stylesheet" type="text/css"  href="assets/pendencias/css/style-pedido-emprestimo.css">
@@ -40,8 +41,8 @@
             <div class="header-content">
                 <a class="logomarca" href="#"><img src="assets/pendencias/images/logo-facilita.png" alt="Logomarca Facilita" class="image-logomarca"/></a>
                 <div class="user-logged">
-                    <img src="assets/pendencias/images/icon-user.png" alt="Ícone Usuário" class="icon-user-logged"/>
-                    <p>Olá Maria, pedido em andamento!</p>
+                    <img src="assets/pendencias/images/icon-user.png" alt="Ícone Usuário" class="icon-user-logged mr-5"/>
+                    <p class="mr-5">Olá {{Auth::user()->nome}}, pedido em andamento!</p>
                 </div>
                 <div class="nav">
                     <nav>
