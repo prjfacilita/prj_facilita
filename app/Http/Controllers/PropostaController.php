@@ -607,6 +607,10 @@ class PropostaController extends Controller
         public function ANALISE_CADASTRAL_CONCLUIDA_STEP_DOCUMENTOS(){
 
 
+            /*Validar dados bancários*/
+//            /**/
+
+
             return view('emprestimo.pendencias');
 
         }

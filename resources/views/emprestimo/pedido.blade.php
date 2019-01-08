@@ -609,8 +609,14 @@
                                                 </div>
 
                                                 <div class="col-sm-3">
-                                                    <label>CONTA C/ DÍGITO: <input type="text" name="nro_conta" class="solicitation-form__name solicitation-input"></label>
+                                                    <label>CONTA S/ DÍGITO: <input type="text" name="nro_conta" class="solicitation-form__name solicitation-input"></label>
                                                 </div>
+
+                                                <div class="col-sm-3">
+                                                    <label>Digito Conta: <input type="text" name="dig_conta" class="solicitation-form__name solicitation-input"></label>
+                                                </div>
+
+
 
                                                 <div class="col-sm-2">
                                                     <label>CONTA TIPO:

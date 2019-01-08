@@ -765,6 +765,7 @@
             var cpf_ref_pessoal     =   $("#form-4 input[name=cpf-referencia-pessoal]").val();
             var grau_rel            =   $("#form-4 input[name=grau-relacionamento]").val();
             var tel_relacionamento  =   $("#form-4 input[name=telefone-relacionamentoo]").val();
+            var dig_conta           =   $("#form-4 input[name=dig_conta]").val();
 
 
             if(banco_id === ""){
@@ -886,6 +887,7 @@
                     nro_agencia: nro_agencia,
                     nro_conta: nro_conta,
                     tipo_conta: tipo_conta,
+                    dig_conta: dig_conta,
                     conta_desde: conta_desde,
                     nome_ref_pessoal: nome_ref_pessoal,
                     cpf_ref_pessoal: cpf_ref_pessoal,
