@@ -14,12 +14,12 @@
     <link rel="stylesheet" type="text/css"  href="{{ asset('fonts/fonts.css') }}">
 
     <link rel="stylesheet" type="text/css"  href="assets/pedido/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css"  href="assets/pedido/css/style.css">
+    <link rel="stylesheet" type="text/css"  href="assets/pendencias/css/style.css">
     <link rel="stylesheet" type="text/css"  href="assets/pedido/css/style-pedido-emprestimo.css">
     <link rel="stylesheet" type="text/css"  href="assets/pedido/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css"  href="assets/pedido/css/loading.css">
 
-    <link rel="stylesheet" type="type/css" href="assets/pedido/css/menu.css">
+    {{--<link rel="stylesheet" type="type/css" href="assets/pedido/css/menu.css">--}}
 
     <!-- SCRIPT -->
     <script src="assets/pedido/js/jquery-3.3.1.min.js"></script>
