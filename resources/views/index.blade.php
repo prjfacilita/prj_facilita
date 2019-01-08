@@ -11,6 +11,7 @@
 
     <!-- CSS -->
 
+    <link rel="stylesheet" type="text/css"  href="{{ asset('fonts/fonts.css') }}">
 
     <link rel="stylesheet" type="text/css"  href="{{ asset('assets/index/css/bootstrap.min.css') }}">
     <link rel="stylesheet" type="text/css"  href="{{ asset('assets/index/css/style.css') }}">
