@@ -83,9 +83,9 @@
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css"  href="/teste/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css"  href="/teste/assets/css/register.css">
-    <link rel="stylesheet" type="text/css"  href="/teste/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css"  href="{{asset('assets/cadastro/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" type="text/css"  href="{{asset('assets/cadastro/css/register.css')}}">
+    <link rel="stylesheet" type="text/css"  href="{{asset('assets/cadastro/css/font-awesome.min.css')}}">
 
     <style>
         .reset-form{
@@ -236,6 +236,6 @@
 
 </body>
 </html>
-
+g
 
 
