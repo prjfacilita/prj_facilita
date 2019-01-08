@@ -602,6 +602,53 @@ class PropostaController extends Controller
             return view('emprestimo.status_reprovada');
         }
 
+
+        /*Metódo para chamada da api para validação dos dados bancários*/
+
+        public function ValidarDadosBancarios(){
+
+
+            $simulacao = new EmprestimoController();
+            $token = $simulacao->ConfiguracoesAPI();
+
+            $curl = curl_init();
+            curl_setopt_array($curl, array(
+                CURLOPT_URL => "https://c2gvw4lxh9.execute-api.sa-east-1.amazonaws.com/hmg/api/v1/ep/validadores/dadosbancarios",
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_ENCODING => "",
+                CURLOPT_MAXREDIRS => 10,
+                CURLOPT_TIMEOUT => 30,
+                CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                CURLOPT_CUSTOMREQUEST => "POST",
+                            CURLOPT_POSTFIELDS => "{
+  \"codigoBanco\": 341,
+  \"numeroAgencia\": 4508,
+  \"numeroConta\": 29825,
+  \"digitoConta\": \"6\",
+  \"tipoConta\": \"CONTA_CORRENTE_INDIVIDUAL\"
+}",
+                CURLOPT_HTTPHEADER => array(
+                    "Authorization: Bearer ".$token."",
+                    "Content-Type: application/json",
+                    //                "Postman-Token: 06ec2ce6-7d28-4a29-9f61-957d375a0f04",
+                    "cache-control: no-cache"
+                ),
+            ));
+
+            $response = curl_exec($curl);
+            $err = curl_error($curl);
+
+            curl_close($curl);
+
+
+            if ($err) {
+                echo "cURL Error #:" . $err;
+            } else {
+
+                return $response;
+            }
+        }
+
         /*Metódo para retornar a view de documentos*/
 
         public function ANALISE_CADASTRAL_CONCLUIDA_STEP_DOCUMENTOS(){
@@ -610,7 +657,7 @@ class PropostaController extends Controller
             /*Validar dados bancários*/
 //            /**/
 
-
+            $callback = $this->ValidarDadosBancarios();
             return view('emprestimo.pendencias');
 
         }
