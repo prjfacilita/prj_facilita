@@ -284,12 +284,14 @@
 
                                         <div class="card-documents">
                                             <h2>Conta bancária</h2>
-                                            <p>@if($conta  == true)
-                                                <td>Conta valida</td>
+                                            <p>@if($conta  == true && $agencia == true && $bancoValido == true )
+                                                <td>Dados validados com sucesso</td>
                                             @else
-                                                <td>Conta invalida</td>
+                                                <td>@if($conta == false) Conta invalida @endif;</td>
+                                                <td> @if($agencia == false) Agencia invalida @endif;</td>
+                                                <td> @if($bancoValido == false) Banco invalido @endif;</td>
                                                 @endif
-                                            Estamos analisando esta informação</p>
+                                            {{--Estamos analisando esta informação</p>--}}
                                         </div>
 
                                         <div class="card-documents">
