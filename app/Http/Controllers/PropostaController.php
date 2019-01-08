@@ -644,8 +644,12 @@ class PropostaController extends Controller
             if ($err) {
                 echo "cURL Error #:" . $err;
             } else {
+//                echo json_
 
-                return $response;
+                $retorno = json_decode($response, true);
+
+
+                return $retorno['retorno'];
             }
         }
 
@@ -658,7 +662,7 @@ class PropostaController extends Controller
 //            /**/
 
             $callback = $this->ValidarDadosBancarios();
-            return view('emprestimo.pendencias');
+            return view('emprestimo.pendencias', ['status' => $callback]);
 
         }
 
