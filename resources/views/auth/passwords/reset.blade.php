@@ -142,7 +142,7 @@
 <header>
     <div class="container">
         <div class="row">
-            <a class="logomarca" href="#"><img src="/teste/assets/images/logo-facilita.png" alt="Logomarca Facilita" class="image-logomarca"/></a>
+            <a class="logomarca" href="#"><img src="{{asset('imagens/LogoFacilita.png')}}" alt="Logomarca Facilita" class="image-logomarca"/></a>
         </div>
     </div>
 </header>
