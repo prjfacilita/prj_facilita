@@ -49,7 +49,7 @@
                                 <ul class="sub-menu">
                                     <li><a href="#">Meus emprestimos</a></li>
                                     <li class="nav-config"><a href="#">senha</a></li>
-                                    <li><a href="#">sair</a></li>
+                                    <li><a href="{{route('logout')}}">sair</a></li>
                                 </ul>
                             </li>
                         </ul>
