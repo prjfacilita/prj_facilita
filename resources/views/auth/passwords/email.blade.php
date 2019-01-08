@@ -211,7 +211,7 @@
 
 
 
-<link href="/css/facilita.css" rel="stylesheet">
+<link href="{{asset('css/facilita.css')}}" rel="stylesheet">
 <link href="/node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css" rel="stylesheet">
 
 
