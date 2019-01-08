@@ -19,6 +19,8 @@
     <link rel="stylesheet" type="text/css"  href="assets/pedido/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css"  href="assets/pedido/css/loading.css">
 
+    <link rel="stylesheet" type="type/css" href="assets/pedido/css/menu.css">
+
     <!-- SCRIPT -->
     <script src="assets/pedido/js/jquery-3.3.1.min.js"></script>
     <script src="assets/pedido/js/bootstrap.min.js"></script>
@@ -59,16 +61,19 @@
 
 
 
-            <a href="{{ route('logout') }}"
-               onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                Logout
-            </a>
-
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                {{ csrf_field() }}
-            </form>
-
+            <div class="nav">
+                <nav>
+                    <ul>
+                        <li class="nav-text"><a>Menu<i class="fa fa-caret-down" aria-hidden="true"></i></a></i>
+                            <ul class="sub-menu">
+                                <li><a href="#">Meus emprestimos</a></li>
+                                <li class="nav-config"><a href="#">senha</a></li>
+                                <li><a href="{{route('logout')}}">sair</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </div>
 </header>

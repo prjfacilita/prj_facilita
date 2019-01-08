@@ -1,0 +1,102 @@
+.header-content{
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    width: 100%;
+}
+header .nav{
+    float: right;
+}
+header nav li{
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+}
+header nav .nav-text > a{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 17px;
+    cursor: pointer;
+    color: #fff !important;
+}
+header nav .nav-text i{
+    padding-left: 10px;
+    font-size: 17px;
+    color: #fff;
+}
+header nav li.nav-login{
+    padding: 10px 40px;
+    border-radius: 25px;
+    background: #707070;
+}
+header nav li.nav-login:hover{
+    background: #38936a;
+}
+header nav li.nav-login:hover a{
+    text-decoration: none;
+    color: #ffffff;
+}
+header nav li a{
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+}
+header nav li a:hover{
+    text-decoration: none;
+    color: #1ec857;
+}
+nav .sub-menu{
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    padding: 0px;
+    overflow: hidden;
+    transition: all 150ms ease-in-out;
+    width: 250px;
+    height: 0;
+    text-align: left;
+    z-index: 10;
+    box-shadow: 2px 5px 6px rgba(0, 0, 0, 0.1);
+    background: #067010;
+}
+nav li:hover .sub-menu{
+    display: block;
+    overflow: visible;
+    visibility: visible;
+    padding: 10px;
+    height: auto;
+}
+nav .sub-menu li{
+    display: block;
+}
+nav .sub-menu a{
+    text-transform: capitalize
+}
+nav .sub-menu li:first-child{
+    border-bottom: 1px solid #ffffff;
+}
+nav .sub-menu li:first-child a{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+nav .sub-menu .nav-config{
+    padding: 10px 10px;
+}
+nav .sub-menu .nav-config span{
+    display: none;
+}
+nav .sub-menu .nav-config a{
+    font-size: 13px;
+}
+nav .sub-menu li:last-child{
+    border-top: 1px solid #ffffff;
+}
+nav .sub-menu li:last-child a{
+    text-transform: uppercase;
+    font-weight: bold;
+}
