@@ -10,6 +10,7 @@
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
     <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Verdana">
     <link rel="stylesheet" type="text/css"  href="assets/pendencias/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css"  href="assets/pendencias/css/style.css">
     <link rel="stylesheet" type="text/css"  href="assets/pendencias/css/style-pedido-emprestimo.css">
