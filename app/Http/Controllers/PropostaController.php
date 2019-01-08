@@ -661,8 +661,8 @@ class PropostaController extends Controller
             /*Validar dados bancários*/
 //            /**/
 
-            $callback = $this->ValidarDadosBancarios();
-            return view('emprestimo.pendencias', ['status' => $callback]);
+            return  $this->ValidarDadosBancarios();
+            return view('emprestimo.pendencias');
 
         }
 
