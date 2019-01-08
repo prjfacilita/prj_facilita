@@ -345,7 +345,7 @@
                                                 {{ csrf_field() }}
 
                                                 <div class="col-sm-2">
-                                                    <label>Salário: <input type="text" name="salario-name" class="solicitation-form__name solicitation-input"></label>
+                                                    <label>Salário: <input type="text" name="salario-name" class="salario_nome_input solicitation-form__name solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-5">
@@ -803,8 +803,13 @@
         }
     }
 </style>
+
+<script src="{{asset('js/plentz-jquery-maskmoney-cdbeeac/dist/jquery.maskMoney.js')}}"></script>
+
 <script>
     $('.solicitation-form__phone').mask('(00) 0000-00000');
+    $(".salario_nome_input").maskMoney({prefix:'R$ ', allowNegative: true, thousands:'.', decimal:',', affixesStay: false});
+
 </script>
 </body>
 </html>
