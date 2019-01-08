@@ -284,7 +284,12 @@
 
                                         <div class="card-documents">
                                             <h2>Conta bancária</h2>
-                                            <p>Estamos analisando esta informação</p>
+                                            <p>@if($conta  == true)
+                                                <td>Conta valida</td>
+                                            @else
+                                                <td>Conta invalida</td>
+                                                @endif
+                                            Estamos analisando esta informação</p>
                                         </div>
 
                                         <div class="card-documents">
