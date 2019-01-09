@@ -278,15 +278,15 @@
                                                 </div>
 
                                                 <div class="col-sm-3">
-                                                    <label>Telefone: <input required type="text" name="telefone" value="@foreach ($data_cadastro as $rec){{ $rec->tel_fixo}}   @endforeach" class="solicitation-form__phone solicitation-input"></label>
+                                                    <label>Telefone: <input required type="text" name="telefone" value="@foreach ($data_cadastro as $rec){{ $rec->tel_fixo}}@endforeach" class="solicitation-form__phone solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-3">
-                                                    <label>Celular: <input required type="text" name="celular" value="@foreach ($data_cadastro as $rec){{ $rec->tel_cel}}   @endforeach" class="solicitation-form__phone solicitation-input"></label>
+                                                    <label>Celular: <input required type="text" name="celular" value="@foreach ($data_cadastro as $rec){{ $rec->tel_cel}}@endforeach" class="solicitation-form__phone solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-4">
-                                                    <label>Telefone de Recado e Contato: <input required type="text" name="telefone_recado" value="@foreach ($data_cadastro as $rec){{ $rec->telefone_contato}}   @endforeach" class="solicitation-form__phone solicitation-input"></label>
+                                                    <label>Telefone de Recado e Contato: <input required type="text" name="telefone_recado" value="@foreach ($data_cadastro as $rec){{ $rec->telefone_contato}}@endforeach" class="solicitation-form__phone solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-6">
@@ -353,7 +353,7 @@
                                                 {{ csrf_field() }}
 
                                                 <div class="col-sm-2">
-                                                    <label>Salário: <input type="text" name="salario-name" class="salario_nome_input solicitation-form__name solicitation-input"></label>
+                                                    <label>Salário: <input type="text" name="salario-name" class="salario_nome_input solicitation-form__name solicitation-input" value="@foreach ($data_cadastro as $rec){{ $rec->salario}}@endforeach"></label>
                                                 </div>
 
                                                 <div class="col-sm-5">
