@@ -183,11 +183,11 @@
                                                 </div>
 
                                                 <div class="col-sm-2">
-                                                    <label>Nascimento: <input type="date" name="solicitation-birth" class="solicitation-form__birth solicitation-input" required></label>
+                                                    <label>Nascimento: <input type="date" name="solicitation-birth" value="@foreach ($data_cadastro as $rec){{ $rec->dt_nasc }}   @endforeach" class="solicitation-form__birth solicitation-input" required></label>
                                                 </div>
 
                                                 <div class="col-sm-3">
-                                                    <label>Nro. Documento: <input type="text" name="solicitation-doc" class="solicitation-form__id solicitation-input" required></label>
+                                                    <label>Nro. Documento: <input type="text" name="solicitation-doc" class="solicitation-form__id solicitation-input" value="@foreach ($data_cadastro as $rec){{ $rec->nr_doc }} required></label>
                                                 </div>
 
                                                 <div class="col-sm-4">
