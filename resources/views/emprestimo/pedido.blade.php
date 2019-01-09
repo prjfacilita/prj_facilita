@@ -187,7 +187,7 @@
                                                 </div>
 
                                                 <div class="col-sm-3">
-                                                    <label>Nro. Documento: <input type="text" name="solicitation-doc" class="solicitation-form__id solicitation-input" value="@foreach ($data_cadastro as $rec){{ $rec->nr_doc }} required></label>
+                                                    <label>Nro. Documento: <input type="text" name="solicitation-doc" class="solicitation-form__id solicitation-input" value="@foreach ($data_cadastro as $rec){{ $rec->nr_doc }} @endforeach" required></label>
                                                 </div>
 
                                                 <div class="col-sm-4">
