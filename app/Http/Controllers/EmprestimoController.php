@@ -351,12 +351,17 @@ class EmprestimoController extends Controller
 ////                ->orderBy('quantity', 'asc')
                 ->first();
 
+
+
+            $data_cadastro = DB::table('cadastro')->where('email',  Auth::user()->email)->first();
+
             return view('emprestimo.pedido',
                 ['valor_solicitacao'        => $user->valorSolicitado ,
                     'data_solicitacao'          =>  $user->created_at,
                     'qtde_parcelas'           =>  $user->qteParcelas,
                     'finalidade'    =>   $get_finalidade->finalidade,
-                    'simulacao_id' => $user->id
+                    'simulacao_id' => $user->id,
+                    'data_cadastro' => $data_cadastro
 
                 ]);
         }
