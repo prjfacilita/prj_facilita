@@ -209,7 +209,7 @@
                                                 </div>
 
                                                 <div class="col-sm-3">
-                                                    <label>Orgão Expedidor: <input required type="text" name="solicitation-organ" value="@foreach ($data_cadastro as $rec){{ $rec->emissor}} } @endforeach" class="solicitation-form__id solicitation-input"></label>
+                                                    <label>Orgão Expedidor: <input required type="text" name="solicitation-organ" value="@foreach ($data_cadastro as $rec){{ $rec->emissor}}   @endforeach" class="solicitation-form__id solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-2">
@@ -236,7 +236,7 @@
 
 
                                                 <div class="col-sm-4">
-                                                    <label>Nacionalidade: <input required type="text" name="nacionalidade" class=" solicitation-input"></label>
+                                                    <label>Nacionalidade: <input required type="text" name="nacionalidade" value="@foreach ($data_cadastro as $rec){{ $rec->nacionalidade}}   @endforeach" class=" solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-4">
