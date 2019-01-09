@@ -286,7 +286,7 @@
                                                 </div>
 
                                                 <div class="col-sm-4">
-                                                    <label>Telefone de Recado e Contato: <input required type="text" name="telefone_recado" class="solicitation-form__phone solicitation-input"></label>
+                                                    <label>Telefone de Recado e Contato: <input required type="text" name="telefone_recado" value="@foreach ($data_cadastro as $rec){{ $rec->telefone_contato}}   @endforeach" class="solicitation-form__phone solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-6">
