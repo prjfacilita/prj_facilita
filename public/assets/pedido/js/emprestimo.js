@@ -38,10 +38,10 @@
             var tel_recado = $("#form-1 input[name=telefone-recado]").val();
             var nome_mae = $("#form-1 input[name=nome-mae]").val();
             var nat_ocup  = $("#form-1 input[name=nat_ocup]").val();
-            // var nome_conjuge = $("#form-1 input[name=nome-conjuge]").val();
-            // var cpf_conjuge = $("#form-1 input[name=cpf-conjuge]").val();
-            // var nasto_conjuge = $("#form-1 input[name=nascto-conjuge]").val();
-            // var sexo_conjuge = $('#sexo-conjuge').find(":selected").text();
+            var nome_conjuge = $("#form-1 input[name=nome-conjuge]").val();
+            var cpf_conjuge = $("#form-1 input[name=cpf-conjuge]").val();
+            var nasto_conjuge = $("#form-1 input[name=nascto-conjuge]").val();
+            var sexo_conjuge = $('#sexo-conjuge').find(":selected").text();
             var pb_exposta = $('#publicamente-exposta').find(":selected").text();
             var telefone_recado = $('#form-1 input[name=telefone_recado]').val();
 

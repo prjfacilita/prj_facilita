@@ -294,7 +294,7 @@
                                                 </div>
 
                                                 <div class="col-sm-6">
-                                                    <label>Nome Cônjuge<input required onkeypress="return this.value.length<=35 " type="text" name="nome-conjuge" value="@foreach ($data_cadastro as $rec){{ $rec->nome_conj}}   @endforeach" class="solicitation-form__name solicitation-input"></label>
+                                                    <label>Nome Cônjuge<input required onkeypress="return this.value.length<=35 " type="text" name="nome_conjuge" value="@foreach ($data_cadastro as $rec){{ $rec->nome_conj}}   @endforeach" class="solicitation-form__name solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-4">
