@@ -192,7 +192,7 @@
 
                                                 <div class="col-sm-4">
                                                     <label>Tipo Documento:
-                                                        <select name="tipo-documento" id="tipo-documento" required>
+                                                        <select value="@foreach ($data_cadastro as $rec){{ $rec->tp_doc }} @endforeach" name="tipo-documento" id="tipo-documento" required>
                                                             <option disabled selected>Selecionar</option>
                                                             <option value="rg">RG</option>
                                                             <option value="cnh">CNH</option>
