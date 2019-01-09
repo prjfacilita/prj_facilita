@@ -383,36 +383,36 @@
                                                 </div>
 
                                                 <div class="col-sm-6">
-                                                    <label>Profissão: <input type="text" name="profissao-emission-id" class="solicitation-form__id solicitation-input"></label>
+                                                    <label>Profissão: <input value="@foreach ($data_cadastro as $rec){{ $rec->profissao}}@endforeach" type="text" name="profissao-emission-id" class="solicitation-form__id solicitation-input"></label>
                                                 </div>
                                                 <div class="col-sm-6">
-                                                    <label>Cargo: <input type="text" name="cargo-emission-id" class="solicitation-form__id solicitation-input"></label>
+                                                    <label>Cargo: <input type="text" value="@foreach ($data_cadastro as $rec){{ $rec->cargo}}@endforeach" name="cargo-emission-id" class="solicitation-form__id solicitation-input"></label>
                                                 </div>
                                                 <div class="col-sm-9">
-                                                    <label>Empresa: <input type="text" name="empresa" class="solicitation-form__id solicitation-input"></label>
+                                                    <label>Empresa: <input value="@foreach ($data_cadastro as $rec){{ $rec->empresa}}@endforeach" type="text" name="empresa" class="solicitation-form__id solicitation-input"></label>
                                                 </div>
                                                 <div class="col-sm-3">
                                                     <label>Data de Admissão: <input type="date" name="data-admissao" class="solicitation-form__id solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-8">
-                                                    <label>Endereço Comercial: <input type="text" name="endereco_comercial" class=" solicitation-input"></label>
+                                                    <label>Endereço Comercial: <input value="@foreach ($data_cadastro as $rec){{ $rec->end_comercial}}@endforeach" type="text" name="endereco_comercial" class=" solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-2">
-                                                    <label>Nro: <input type="text" name="endereco_comercial_nro" class=" solicitation-input"></label>
+                                                    <label>Nro: <input type="text" value="@foreach ($data_cadastro as $rec){{ $rec->end_comercial_nro}}@endforeach" name="endereco_comercial_nro" class=" solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-2">
-                                                    <label>CEP: <input type="text" name="endereco_comercial_cep" class="solicitation- solicitation-input"></label>
+                                                    <label>CEP: <input type="text" value="@foreach ($data_cadastro as $rec){{ $rec->end_comercial_cep}}@endforeach" name="endereco_comercial_cep" class="solicitation- solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-5">
-                                                    <label>Bairro: <input type="text" name="endereco_comercial_bairro" class="solicitation- solicitation-input"></label>
+                                                    <label>Bairro: <input type="text" value="@foreach ($data_cadastro as $rec){{ $rec->bairro_comerc}}@endforeach" name="endereco_comercial_bairro" class="solicitation- solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-5">
-                                                    <label>Cidade: <input type="text" name="endereco_comercial_cidade" class="solicitation- solicitation-input"></label>
+                                                    <label>Cidade: <input type="text" value="@foreach ($data_cadastro as $rec){{ $rec->cidade_comerc}}@endforeach" name="endereco_comercial_cidade" class="solicitation- solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-2">
@@ -454,10 +454,10 @@
                                                 </div>
 
                                                 <div class="col-sm-3">
-                                                    <label>Telefone Comercial: <input type="text" name="telefone_comercial" class="solicitation-form__phone solicitation-input"></label>
+                                                    <label>Telefone Comercial: <input type="text" value="@foreach ($data_cadastro as $rec){{ $rec->compl_comerc}}@endforeach" name="telefone_comercial" class="solicitation-form__phone solicitation-input"></label>
                                                 </div>
                                                 <div class="col-sm-2">
-                                                    <label>Ramal: <input type="text" name="ramal" class="solicitation- solicitation-input"></label>
+                                                    <label>Ramal: <input type="text" value="@foreach ($data_cadastro as $rec){{ $rec->ramal}}@endforeach" name="ramal" class="solicitation- solicitation-input"></label>
                                                 </div>
 
 
