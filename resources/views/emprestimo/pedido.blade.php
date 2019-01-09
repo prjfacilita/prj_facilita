@@ -240,7 +240,7 @@
                                                 </div>
 
                                                 <div class="col-sm-4">
-                                                    <label>Naturalidade: <input required type="text" name="naturalidade" class=" solicitation-input"></label>
+                                                    <label>Naturalidade: <input required type="text" name="naturalidade" value="@foreach ($data_cadastro as $rec){{ $rec->nat_ocup}}   @endforeach" class=" solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-2">
