@@ -37,6 +37,7 @@
             var celular = $("#form-1 input[name=celular]").val();
             var tel_recado = $("#form-1 input[name=telefone-recado]").val();
             var nome_mae = $("#form-1 input[name=nome-mae]").val();
+            var nat_ocup  = $("#form-1 input[name=nat_ocup]").val();
             // var nome_conjuge = $("#form-1 input[name=nome-conjuge]").val();
             // var cpf_conjuge = $("#form-1 input[name=cpf-conjuge]").val();
             // var nasto_conjuge = $("#form-1 input[name=nascto-conjuge]").val();
@@ -253,7 +254,8 @@
                     cpf_conjuge: cpf_conjuge,
                     nasto_conjuge: nasto_conjuge,
                     sexo_conjuge: sexo_conjuge,
-                    pb_exposta: pb_exposta
+                    pb_exposta: pb_exposta,
+                    nat_ocup: nat_ocup
 
                 })
                     .then(function (response) {

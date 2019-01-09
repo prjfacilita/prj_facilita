@@ -151,6 +151,7 @@ class EmprestimoController extends Controller
         $dados_pessoais->emissor            =   $request->solicitation_organ;
         $dados_pessoais->status_cadastro          =   1; // status do passo a passo cadastro;
         $dados_pessoais->estado_civil       =   $request->estado_civil;
+        $dados_pessoais->nat_ocup           =   $request->
 
 
 
