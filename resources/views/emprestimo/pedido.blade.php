@@ -179,7 +179,10 @@
                                             <form action="{{route('pedido_emprestimo_parte01')}}" class="pedido_emprestimo_parte01" id="pedido_emprestimo_parte01" method="post" >
                                                 {{ csrf_field() }}
                                                 <div class="col-sm-10">
-                                                    <label>Nome: <input type="text" id="solicitation_name" name="solicitation-name" class="solicitation-form__name solicitation-input" value="{{{ $data_cadastro->data_cadastro->nome_completo or  ""}}}" onkeypress="return this.value.length<=30 " required></label>
+                                                    <label>Nome: <input type="text" id="solicitation_name" name="solicitation-name" class="solicitation-form__name solicitation-input" value="@foreach ($data_cadastro as $rec)
+
+                                                        {{ $rec->nome_completo }} //here Code is your JSON object name.
+@endforeach" onkeypress="return this.value.length<=30 " required></label>
                                                 </div>
 
                                                 <div class="col-sm-2">
