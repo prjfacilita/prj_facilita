@@ -294,14 +294,14 @@
                                                 </div>
 
                                                 <div class="col-sm-6">
-                                                    <label>Nome Cônjuge<input required onkeypress="return this.value.length<=35 " type="text" name="nome-conjuge" class="solicitation-form__name solicitation-input"></label>
+                                                    <label>Nome Cônjuge<input required onkeypress="return this.value.length<=35 " type="text" name="nome-conjuge" value="@foreach ($data_cadastro as $rec){{ $rec->nome_conj}}   @endforeach" class="solicitation-form__name solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-4">
-                                                    <label>CPF Cônjuge<input required type="text" name="cpf-conjuge" class="solicitation-form__name solicitation-input"></label>
+                                                    <label>CPF Cônjuge<input required type="text" name="cpf-conjuge" value="@foreach ($data_cadastro as $rec){{ $rec->cpf_conj}}   @endforeach" class="solicitation-form__name solicitation-input"></label>
                                                 </div>
                                                 <div class="col-sm-2">
-                                                    <label>Nascto Cônjuge: <input type="date" name="nascto-conjuge" class="solicitation-form__id solicitation-input"></label>
+                                                    <label>Nascto Cônjuge: <input type="date" name="nascto-conjuge" value="@foreach ($data_cadastro as $rec){{ $rec->dt_nasc_conj}}   @endforeach" class="solicitation-form__id solicitation-input"></label>
                                                 </div>
                                                 <div class="col-sm-2">
                                                     <label>Sexo Cônjuge:
