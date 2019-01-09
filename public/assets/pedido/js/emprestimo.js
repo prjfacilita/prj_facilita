@@ -37,7 +37,7 @@
             var celular = $("#form-1 input[name=celular]").val();
             var tel_recado = $("#form-1 input[name=telefone-recado]").val();
             var nome_mae = $("#form-1 input[name=nome-mae]").val();
-            var nat_ocup  = $("#form-1 input[name=nat_ocup]").val();
+            var nat_ocup  = $("#form-1 input[name=naturalidade]").val();
             var nome_conjuge = $("#form-1 input[name=nome_conjuge]").val();
             var cpf_conjuge = $("#form-1 input[name=cpf-conjuge]").val();
             var nasto_conjuge = $("#form-1 input[name=nascto-conjuge]").val();
