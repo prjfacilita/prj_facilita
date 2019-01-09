@@ -278,11 +278,11 @@
                                                 </div>
 
                                                 <div class="col-sm-3">
-                                                    <label>Telefone: <input required type="text" name="telefone" class="solicitation-form__phone solicitation-input"></label>
+                                                    <label>Telefone: <input required type="text" name="telefone" value="@foreach ($data_cadastro as $rec){{ $rec->tel_fixo}}   @endforeach" class="solicitation-form__phone solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-3">
-                                                    <label>Celular: <input required type="text" name="celular" class="solicitation-form__phone solicitation-input"></label>
+                                                    <label>Celular: <input required type="text" name="celular" value="@foreach ($data_cadastro as $rec){{ $rec->tel_cel}}   @endforeach" class="solicitation-form__phone solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-4">
