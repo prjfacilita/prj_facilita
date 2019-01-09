@@ -43,6 +43,7 @@
             // var nasto_conjuge = $("#form-1 input[name=nascto-conjuge]").val();
             // var sexo_conjuge = $('#sexo-conjuge').find(":selected").text();
             var pb_exposta = $('#publicamente-exposta').find(":selected").text();
+            var telefone_recado = $('#form-1 input[name=telefone_recado]').val();
 
 
             if(nome_solicitante === ""){console.log('error');
@@ -255,7 +256,8 @@
                     nasto_conjuge: nasto_conjuge,
                     sexo_conjuge: sexo_conjuge,
                     pb_exposta: pb_exposta,
-                    nat_ocup: nat_ocup
+                    nat_ocup: nat_ocup,
+                    telefone_recado: telefone_recado
 
                 })
                     .then(function (response) {
