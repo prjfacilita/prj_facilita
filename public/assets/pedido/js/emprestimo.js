@@ -37,10 +37,10 @@
             var celular = $("#form-1 input[name=celular]").val();
             var tel_recado = $("#form-1 input[name=telefone-recado]").val();
             var nome_mae = $("#form-1 input[name=nome-mae]").val();
-            var nome_conjuge = $("#form-1 input[name=nome-conjuge]").val();
-            var cpf_conjuge = $("#form-1 input[name=cpf-conjuge]").val();
-            var nasto_conjuge = $("#form-1 input[name=nascto-conjuge]").val();
-            var sexo_conjuge = $('#sexo-conjuge').find(":selected").text();
+            // var nome_conjuge = $("#form-1 input[name=nome-conjuge]").val();
+            // var cpf_conjuge = $("#form-1 input[name=cpf-conjuge]").val();
+            // var nasto_conjuge = $("#form-1 input[name=nascto-conjuge]").val();
+            // var sexo_conjuge = $('#sexo-conjuge').find(":selected").text();
             var pb_exposta = $('#publicamente-exposta').find(":selected").text();
 
 
@@ -178,42 +178,43 @@
                     type: 'danger'
                 });
             return false;}
-            if(nome_conjuge === ""){console.log('error');
-
-                $.notify({
-                    title: '<strong>Erro!</strong>',
-                    message: 'Por favor, insira o nome do seu conjuge'
-                },{
-                    type: 'danger'
-                });
-            return false;}
-            if(cpf_conjuge === ""){console.log('error');
-
-                $.notify({
-                    title: '<strong>Erro!</strong>',
-                    message: 'Por favor, insira o cpf do seu conjuge'
-                },{
-                    type: 'danger'
-                });
-            return false;}
-            if(nasto_conjuge === ""){console.log('error');
-
-                $.notify({
-                    title: '<strong>Erro!</strong>',
-                    message: 'Por favor, insira a data de nascimento do seu conjuge'
-                },{
-                    type: 'danger'
-                });
-            return false;}
-            if(sexo_conjuge === ""){console.log('error');
-
-                $.notify({
-                    title: '<strong>Erro!</strong>',
-                    message: 'Por favor, insira  o sexo do seu conjuge'
-                },{
-                    type: 'danger'
-                });
-            return false;}
+            // if(nome_conjuge === ""){console.log('error');
+            //
+            //     $.notify({
+            //         title: '
+            // <strong>Erro!</strong>',
+            //         message: 'Por favor, insira o nome do seu conjuge'
+            //     },{
+            //         type: 'danger'
+            //     });
+            // return false;}
+            // if(cpf_conjuge === ""){console.log('error');
+            //
+            //     $.notify({
+            //         title: '<strong>Erro!</strong>',
+            //         message: 'Por favor, insira o cpf do seu conjuge'
+            //     },{
+            //         type: 'danger'
+            //     });
+            // return false;}
+            // if(nasto_conjuge === ""){console.log('error');
+            //
+            //     $.notify({
+            //         title: '<strong>Erro!</strong>',
+            //         message: 'Por favor, insira a data de nascimento do seu conjuge'
+            //     },{
+            //         type: 'danger'
+            //     });
+            // return false;}
+            // if(sexo_conjuge === ""){console.log('error');
+            //
+            //     $.notify({
+            //         title: '<strong>Erro!</strong>',
+            //         message: 'Por favor, insira  o sexo do seu conjuge'
+            //     },{
+            //         type: 'danger'
+            //     });
+            // return false;}
             if(pb_exposta === ""){console.log('error');
 
                 $.notify({
