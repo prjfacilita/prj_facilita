@@ -192,7 +192,7 @@
 
                                                 <div class="col-sm-4">
                                                     <label>Tipo Documento:
-                                                        <select value="@foreach ($data_cadastro as $rec){{ $rec->tp_doc }} @endforeach" name="tipo-documento" id="tipo-documento" required>
+                                                        <select value="@foreach ($data_cadastro as $rec){{ $rec->tp_doc}} } @endforeach" name="tipo-documento" id="tipo-documento" required>
                                                             <option disabled selected>Selecionar</option>
                                                             <option value="rg">RG</option>
                                                             <option value="cnh">CNH</option>
@@ -209,7 +209,7 @@
                                                 </div>
 
                                                 <div class="col-sm-3">
-                                                    <label>Orgão Expedidor: <input required type="text" name="solicitation-organ" class="solicitation-form__id solicitation-input"></label>
+                                                    <label>Orgão Expedidor: <input required type="text" name="solicitation-organ" value="@foreach ($data_cadastro as $rec){{ $rec->emissor}} } @endforeach" class="solicitation-form__id solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-2">
