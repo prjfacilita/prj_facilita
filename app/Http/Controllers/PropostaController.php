@@ -661,7 +661,54 @@ class PropostaController extends Controller
 //            /**/
 
             $retorno =   $this->ValidarDadosBancarios();
-            return view('emprestimo.pendencias', ['conta' => $retorno['contaValida'], 'agencia' => $retorno['agenciaValida'], 'bancoValido' => $retorno['bancoValido']]);
+
+            $data = DB::table('dados_bancarios')->where('cpf',  Auth::user()->cpf)->first();
+
+            $data_pre_cadastro = DB::table('pre_cadastro')->where('cpf', Auth::user()->cpf)->first();
+
+
+            $curl = curl_init();
+
+            $simulacao = new EmprestimoController();
+            $token = $simulacao->ConfiguracoesAPI();
+
+            curl_setopt_array($curl, array(
+                CURLOPT_URL => "https://c2gvw4lxh9.execute-api.sa-east-1.amazonaws.com/hmg/api/v1/ep/propostas/".$data->nr_pedido."",
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_ENCODING => "",
+                CURLOPT_MAXREDIRS => 10,
+                CURLOPT_TIMEOUT => 30,
+                CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                CURLOPT_CUSTOMREQUEST => "GET",
+                //            CURLOPT_POSTFIELDS => "{\n    \"nomeMae\": \"".$data_cadastro->nome_mae."\",\n    \"email\": \"".Auth::user()->email."\",\n    \"estadoCivil\": \"SOLTEIRO\",\n    \"naturalidade\": \"São Paulo\",\n    \"valorPatrimonio\": \"5000\",\n    \"documentosPessoais\": [\n        {\n            \"numeroDocumento\": 125478991,\n            \"tipoDocumento\": \"RG\"\n        }\n    ],\n    \"endereco\": {\n        \"cep\": 11740000,\n        \"logradouro\": \"Rua Butantã\",\n        \"numero\": 123,\n        \"bairro\": \"Pinheiros\",\n        \"cidade\": \"Sao Paulo\",\n        \"complemento\": \"10o andar\"\n    },\n    \"enderecoComercial\": {\n        \"cep\": 11740000,\n        \"logradouro\": \"Rua Butantã\",\n        \"numero\": 123,\n        \"bairro\": \"Pinheiros\",\n        \"cidade\": \"Sao Paulo\",\n        \"uf\": \"SP\",\n        \"complemento\": \"10o andar\"\n    },\n    \"telefones\": [\n        {\n            \"ddd\": 11,\n            \"numero\": 985478547,\n            \"tipoTelefone\": \"CELULAR\",\n            \"ramal\": 444\n        }\n    ],\n    \"renda\": {\n        \"tipoComprovanteRenda\": \"EXTRATO_FGTS\"\n    }\n}",
+                CURLOPT_HTTPHEADER => array(
+                    "Authorization: Bearer ".$token."",
+                    "Content-Type: application/json",
+                    //                "Postman-Token: 06ec2ce6-7d28-4a29-9f61-957d375a0f04",
+                    "cache-control: no-cache"
+                ),
+            ));
+
+            $response = curl_exec($curl);
+            $err = curl_error($curl);
+
+            curl_close($curl);
+
+
+            $response = json_decode($response, true);
+
+            return view('emprestimo.pendencias', ['conta' => $retorno['contaValida'], 'agencia' => $retorno['agenciaValida'], 'bancoValido' => $retorno['bancoValido'], 'valorPrincipal' => $response['retorno']['especificacaoFinanceira']['valorPrincipal'],
+                        'iof' => $response['retorno']['especificacaoFinanceira']['iof'],
+                        'cet'=> $response['retorno']['especificacaoFinanceira']['cet'],
+                        'taxaJuros' => $response['retorno']['especificacaoFinanceira']['taxaJuros'],
+                        'taxaJurosAno' => $response['retorno']['especificacaoFinanceira']['taxaJurosAno'],
+                        'valorFinanciado' => $response['retorno']['especificacaoFinanceira']['valorFinanciado'],
+                        'valorParcela' => $response['retorno']['especificacaoFinanceira']['valorParcela'],
+                        'dataPrimeiraParcela' => $response['retorno']['especificacaoFinanceira']['dataPrimeiraParcela'],
+                        'quantidadeParcelas' => $response['retorno']['especificacaoFinanceira']['quantidadeParcelas'],
+                        'valorTC' => $response['retorno']['especificacaoFinanceira']['valorTC'],
+                        'motivo_solicitacao' => $data_pre_cadastro->finalidade,
+                        'dataSolicitacao' => $response['retorno']['dataStatusProposta']]);
 
         }
 
