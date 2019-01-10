@@ -147,7 +147,7 @@ class PropostaController extends Controller
     //                    ],
                         "cpf" => $cpf,
                         "dataNascimento" =>  $data->dt_nasc ,
-                        "naturezaOcupacao" => $data->nat_ocup,
+                        "naturezaOcupacao" => $data->ocupacao,
                         "genero" => strtoupper($data->sexo),
                         "rendaMensal" => $salario,
                         "uf" => $data->uf_nasc

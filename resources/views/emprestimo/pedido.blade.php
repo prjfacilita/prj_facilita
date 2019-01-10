@@ -360,13 +360,13 @@
                                                     <label>Ocupação:
                                                         <select name="ocupacao" id="ocupacao-id">
                                                             <option disabled selected>Selecionar</option>
-                                                            <option value="empregado_setor_privado">EMPREGADO SETOR PRIVADO</option>
-                                                            <option value="empregado_setor_publico">EMPREGADO SETOR PÚBLICO</option>
-                                                            <option value="profissional_liberal">PROFISSIONAL LIBERAL</option>
-                                                            <option value="empresario">EMPRESÁRIO</option>
-                                                            <option value="aposentado_ou_pensionista">APOSENTADO OU PENSIONISTA</option>
-                                                            <option value="autonomo">AUTÔNOMO</option>
-                                                            <option value="outros">OUTROS</option>
+                                                            <option value="ASSALARIADO">EMPREGADO SETOR PRIVADO</option>
+                                                            <option value="FUNCIONARIO_PUBLICO">EMPREGADO SETOR PÚBLICO</option>
+                                                            <option value="PROFISSIONAL_LIBERAL">PROFISSIONAL LIBERAL</option>
+                                                            <option value="EMPRESARIO">EMPRESÁRIO</option>
+                                                            <option value="APOSENTADO">APOSENTADO OU PENSIONISTA</option>
+                                                            <option value="AUTONOMO">AUTÔNOMO</option>
+                                                            <option value="OUTROS">OUTROS</option>
                                                         </select></label>
                                                 </div>
 
