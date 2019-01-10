@@ -361,7 +361,7 @@
                                                         <select name="ocupacao" id="ocupacao-id">
                                                             <option disabled selected>Selecionar</option>
                                                             <option value="ASSALARIADO">EMPREGADO SETOR PRIVADO</option>
-                                                            <option value="FUNCIONARIO_PUBLICO">EMPREGADO SETOR PÚBLICO</option>
+                                                            <option value="ASSALARIADO">EMPREGADO SETOR PÚBLICO</option>
                                                             <option value="PROFISSIONAL_LIBERAL">PROFISSIONAL LIBERAL</option>
                                                             <option value="EMPRESARIO">EMPRESÁRIO</option>
                                                             <option value="APOSENTADO">APOSENTADO OU PENSIONISTA</option>
