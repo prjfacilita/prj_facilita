@@ -56,7 +56,8 @@
             <a class="logomarca" href="#"><img src="assets/pedido/images/logo-facilita.png" alt="Logomarca Facilita" class="image-logomarca"/></a>
             <div class="user-logged">
                 <img src="assets/pedido/images/icon-user.png" alt="Ícone Usuário" class="icon-user-logged"/>
-                <p>Olá Maria, seja bem vinda!</p>
+                <p  class="mr-5" style="color: #fff;">Olá {{Auth::user()->email}}, pedido em andamento!</p>
+
             </div>
 
 
