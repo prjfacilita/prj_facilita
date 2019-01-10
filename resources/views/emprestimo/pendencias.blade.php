@@ -206,7 +206,7 @@
                                             <div class="order-item-main order__box">
                                                 <div>
                                                     <p>Sua avaliação de crédito</p>
-                                                    <span>E2</span>
+                                                    <span> NÃO VEM NA PROPOSTA -> E2</span>
                                                 </div>
                                             </div>
 
@@ -215,8 +215,8 @@
                                                     <p>Sua taxa de juros</p>
                                                 </div>
                                                 <div class="order__box-divisoy">
-                                                    <span>73,73% A.A.</span>
-                                                    <span>4,80% A.M.</span>
+                                                    <span>{{$taxaJurosAno}}% A.A.</span>
+                                                    <span>{{$taxaJuros}}% A.M.</span>
                                                 </div>
                                             </div>
 
@@ -225,8 +225,8 @@
                                                     <p>CET</p>
                                                 </div>
                                                 <div class="order__box-divisoy">
-                                                    <span>104,56% A.A.</span>
-                                                    <span>6,15% A.M.</span>
+                                                    <span>NÃO VEM NA PROPOSTA -> 104,56% A.A.</span>
+                                                    <span>{{$cet}}% A.M.</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -235,21 +235,21 @@
                                             <div class="order-item-main order__box">
                                                 <div>
                                                     <p>Valor da parcela</p>
-                                                    <span>R$ 601,12 / 12</span>
+                                                    <span>R$ {{$valorParcela}} / {{$quantidadeParcelas}}</span>
                                                 </div>
                                             </div>
 
                                             <div class="order-item order__box order-item-divisoy">
                                                 <div>
                                                     <p>Primeira parcela</p>
-                                                    <span>3 DEZ</span>
-                                                    <span>2018</span>
+                                                    <span>{{ date('d', strtotime(str_replace('-','/', $dataPrimeiraParcela)))}} {{ date('F', strtotime(str_replace('-','/', $dataPrimeiraParcela)))}}</span>
+                                                    <span>{{ date('Y', strtotime(str_replace('-','/', $dataPrimeiraParcela)))}}</span>
                                                 </div>
                                             </div>
 
                                             <div class="order-item order__box order-plots">
                                                 <div>
-                                                    <p>12</p>
+                                                    <p>{{$quantidadeParcelas}}</p>
                                                     <span>Parcelas</span>
                                                 </div>
                                             </div>
@@ -257,8 +257,8 @@
                                             <div class="order-item order__box">
                                                 <div>
                                                     <p>Última parcela</p>
-                                                    <span>4 NOV</span>
-                                                    <span>2019</span>
+                                                    <span>{{date('d', strtotime("+".($quantidadeParcelas - 1)." months", strtotime($dataPrimeiraParcela)))}}  {{ date('F', strtotime(str_replace('-','/', date('n', strtotime("+".($quantidadeParcelas - 1)." months", strtotime($dataPrimeiraParcela))))))}}</span>
+                                                    <span>{{ date('Y', strtotime(str_replace('-','/', date('Y-m-d', strtotime("+".($quantidadeParcelas - 1)." months", strtotime($dataPrimeiraParcela))))))}}</span>
                                                 </div>
                                             </div>
                                         </div>
