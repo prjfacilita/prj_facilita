@@ -357,6 +357,8 @@ class EmprestimoController extends Controller
 
             $data_cadastro = DB::table('cadastro')->where('email',  Auth::user()->email)->get();
 
+
+
             return view('emprestimo.pedido',
                 ['valor_solicitacao'        => $user->valorSolicitado ,
                     'data_solicitacao'          =>  $user->created_at,

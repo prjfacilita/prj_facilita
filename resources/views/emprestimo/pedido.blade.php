@@ -141,7 +141,7 @@
 
                 <div class="col-sm-3 solicitation-inf-area solicitation-reason">
                     <p>Motivo</p>
-                    <span>{{$finalidade}}</span>
+                    <span style="font-size:13px;">{{$finalidade}}</span>
 
                     <a href="#" class="solicitation-inf__alter">Alterar</a>
                 </div>
