@@ -182,7 +182,7 @@
                     </div> <!--acordions-->
 
                     <div class="solicitation-register-btn">
-                        <a href="" class="solicitation-back">Voltar</a>
+                        <a href="{{route('pendencias')}}" class="solicitation-back">Voltar</a>
                         <a href="" class="solicitation-next">Continuar</a>
                     </div>
 
