@@ -249,6 +249,12 @@ class EmprestimoController extends Controller
                 ramal: ramal*/
     }
 
+
+    public function EnviarComprovanteDeResidencia(Request $request){
+
+        return view('upload.comprovante_residencia');
+
+    }
     public function EmprestimoEndereco(Request $request){
 
 

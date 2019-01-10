@@ -299,7 +299,7 @@
                                         <div class="card-documents">
                                             <h2>Comprovante de residência</h2>
                                             <p>Envie seu comprovante de residência para continuar</p>
-                                            <a href="">Enviar documento</a>
+                                            <a href="{{route('enviar_documento')}}">Enviar documento</a>
                                         </div>
 
                                         <div class="card-documents">
