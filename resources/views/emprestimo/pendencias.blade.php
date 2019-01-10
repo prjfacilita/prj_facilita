@@ -176,28 +176,28 @@
                                             <div class="order-item-main order__box">
                                                 <div>
                                                     <p>Valor a ser depositado na conta</p>
-                                                    <span>R$ 5.000,00</span>
+                                                    <span>R$ {{$valorPrincipal}}</span>
                                                 </div>
                                             </div>
 
                                             <div class="order-item order__box">
                                                 <div>
                                                     <p>Taxa de serviço</p>
-                                                    <span>R$ 269,43</span>
+                                                    <span>R$ {{$valorTC}}</span>
                                                 </div>
                                             </div>
 
                                             <div class="order-item order__box">
                                                 <div>
                                                     <p>IOF</p>
-                                                    <span>R$ 119,19</span>
+                                                    <span>R$ {{$iof}}</span>
                                                 </div>
                                             </div>
 
                                             <div class="order-item order__box">
                                                 <div>
                                                     <p>Valor do empréstimo</p>
-                                                    <span>R$ 5.388,62</span>
+                                                    <span>R$ {{$valorFinanciado}}</span>
                                                 </div>
                                             </div>
                                         </div>
