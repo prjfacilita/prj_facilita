@@ -558,7 +558,7 @@ class PropostaController extends Controller
                 CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
                 CURLOPT_CUSTOMREQUEST => "PUT",
                             CURLOPT_POSTFIELDS => "{
-  \"dataPrimeiraParcela\": \"2019-02-11\",
+  \"dataPrimeiraParcela\": \"2019-02-14\",
   \"valorPrincipal\": 2000,
   \"quantidadeParcelas\": 12,
   \"dadosBancarios\": {
