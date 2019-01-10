@@ -316,8 +316,8 @@
 
 
             var salario     =   $("#form-2 input[name=salario-name]").val();
-            var ocupacao    =   $('#ocupacao-id').find(":selected").text();
-            var escolaridade    =   $('#escolaridade-id').find(":selected").text();
+            var ocupacao    =   $('#ocupacao-id').find(":selected").val();
+            var escolaridade    =   $('#escolaridade-id').find(":selected").val();
             var profissao    =   $("#form-2 input[name=profissao-emission-id]").val();
             var cargo       =   $("#form-2 input[name=cargo-emission-id]").val();
             var empresa       =   $("#form-2 input[name=empresa]").val();
@@ -327,7 +327,7 @@
             var endereco_comercial_cep    =  $("#form-2 input[name=endereco_comercial_cep]").val();
             var endereco_comercial_bairro    =  $("#form-2 input[name=endereco_comercial_bairro]").val();
             var endereco_comercial_cidade    =  $("#form-2 input[name=endereco_comercial_cidade]").val();
-            var endereco_comercial_uf    =   $('#endereco_comercial_uf').find(":selected").text();
+            var endereco_comercial_uf    =   $('#endereco_comercial_uf').find(":selected").val();
             var complemento_endereco_comercial    =  $("#form-2 input[name=complemento_endereco_comercial]").val();
             var telefone_comercial    =  $("#form-2 input[name=telefone_comercial]").val();
             var ramal    =  $("#form-2 input[name=ramal]").val();
