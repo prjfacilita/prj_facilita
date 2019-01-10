@@ -109,4 +109,4 @@ Route::post('pedido_emprestimo_parte04', 'DadosBancariosController@InserirDadosB
 Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
 
 Route::get('resumo', [ 'as' => 'resumo', 'uses' => 'PropostaController@ANALISE_CADASTRAL_CONCLUIDA']);
-Route::get('enviar_documento', [ 'as' => 'enviar_documento', 'uses' => 'PropostaController@ANALISE_CADASTRAL_CONCLUIDA']);
+Route::get('enviar_documento', [ 'as' => 'enviar_documento', 'uses' => 'EmprestimoController@EnviarComprovanteDeResidencia']);
