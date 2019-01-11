@@ -167,28 +167,20 @@ class PropostaController extends Controller
             /*inserir em dados bancários*/
 
 
-            /*DATA =
-               $table->increments('id');
-                $table->string('nr_pedido')->default(0);
-                $table->string('nro_proc_bco')->default(0);
-                $table->string('cpf')->default(0);
-                $table->string('banco')->default(0);
-                $table->string('agencia')->default(0);
-                $table->string('dig_ag')->default(0);
-                $table->string('conta')->default(0);
-                $table->string('dig_conta')->default(0);
-                $table->string('tipo')->default(0);
-                $table->string('conta_desde')->default(0);
-                $table->string('id_cadastro')->default(0);
 
-            */
-
-            dd($arr->retorno);
+            try {
             $dados_bancarios = new DadosBancarios();
             $dados_bancarios->nr_pedido = $arr->retorno->numeroProposta;
             $dados_bancarios->nro_proc_bco = $arr->retorno->identificadorOperacao;
             $dados_bancarios->id_cadastro = $id;
             $dados_bancarios->save();
+
+            }
+
+            catch(\Exception $e){
+                // do task when error
+                echo $e->getMessage();   // insert query
+            }
 
 
             $status_anliase = new Login();
