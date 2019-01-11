@@ -35,6 +35,9 @@ class DadosBancariosController extends Controller
         $data_bancarios     = DB::table('dados_bancarios')->where('id_cadastro', $id)->first();
 
 
+
+
+        print_r($data->id);
 //        print_r($data_bancarios->id);
 
         if($data->status_cadastro == 3) {
