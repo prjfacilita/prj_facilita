@@ -72,7 +72,7 @@ TEL_CEL*/
             $table->string('tel_fixo')->default(0);
             $table->string('tel_cel')->default(0);
             $table->string('pb_exposta')->default(0);
-            $table->integer('operador')->default(0);
+            $table->integer('operador')->default(0)->nullable();;
             $table->string('estado_civil')->default(0);
 
 
@@ -91,10 +91,10 @@ TEL_CEL*/
             $table->string('bairro_comerc')->default(0);
             $table->string('cidade_comerc')->default(0);
             $table->string('uf_comerc')->default(0);
-            $table->string('compl_comerc')->default(0);
+            $table->string('compl_comerc')->default(0)->nullable();;
             $table->string('tel_comerc')->default(0);
-            $table->string('ramal')->default(0);
-            $table->string('val_patriominio')->default(0);
+            $table->string('ramal')->default(0)->nullable();
+            $table->string('val_patriominio')->default(0)->nullable();;
             $table->string('status_cadastro')->default(0);
 
 

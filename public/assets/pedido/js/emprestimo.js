@@ -490,18 +490,18 @@
 
                 return false;
             }
-            if(complemento_endereco_comercial === ""){
-                console.log('error');
-
-                $.notify({
-                    title: '<strong>Erro!</strong>',
-                    message: 'Por favor, informe o  complemento do seu endereço comercial '
-                },{
-                    type: 'danger'
-                });
-
-                return false;
-            }
+            // if(complemento_endereco_comercial === ""){
+            //     console.log('error');
+            //
+            //     $.notify({
+            //         title: '<strong>Erro!</strong>',
+            //         message: 'Por favor, informe o  complemento do seu endereço comercial '
+            //     },{
+            //         type: 'danger'
+            //     });
+            //
+            //     return false;
+            // }
             if(telefone_comercial === ""){
                 console.log('error');
 
@@ -514,18 +514,18 @@
 
                 return false;
             }
-            if(ramal === ""){
-                console.log('error');
-
-                $.notify({
-                    title: '<strong>Erro!</strong>',
-                    message: 'Por favor, informe o  ramal '
-                },{
-                    type: 'danger'
-                });
-
-                return false;
-            }
+            // if(ramal === ""){
+            //     console.log('error');
+            //
+            //     $.notify({
+            //         title: '<strong>Erro!</strong>',
+            //         message: 'Por favor, informe o  ramal '
+            //     },{
+            //         type: 'danger'
+            //     });
+            //
+            //     return false;
+            // }
 
 
             $(".loading").css('display', 'block');
@@ -635,18 +635,18 @@
 
                 return false;
             }
-            if(complemento === ""){
-                console.log('error');
-
-                $.notify({
-                    title: '<strong>Erro!</strong>',
-                    message: 'Por favor, informe o seu cep '
-                },{
-                    type: 'danger'
-                });
-
-                return false;
-            }
+            // if(complemento === ""){
+            //     console.log('error');
+            //
+            //     $.notify({
+            //         title: '<strong>Erro!</strong>',
+            //         message: 'Por favor, informe o seu cep '
+            //     },{
+            //         type: 'danger'
+            //     });
+            //
+            //     return false;
+            // }
             if(bairro === ""){
                 console.log('error');
 
@@ -833,54 +833,54 @@
 
                 return false;
             }
-            if(nome_ref_pessoal === ""){
-                console.log('error');
-
-                $.notify({
-                    title: '<strong>Erro!</strong>',
-                    message: 'Por favor, informe uma referencia pessoal'
-                },{
-                    type: 'danger'
-                });
-
-                return false;
-            }
-            if(cpf_ref_pessoal === ""){
-                console.log('error');
-
-                $.notify({
-                    title: '<strong>Erro!</strong>',
-                    message: 'Por favor, informe uma referencia pessoal'
-                },{
-                    type: 'danger'
-                });
-
-                return false;
-            }
-            if(grau_rel === ""){
-                console.log('error');
-
-                $.notify({
-                    title: '<strong>Erro!</strong>',
-                    message: 'Por favor, informe uma referencia pessoal'
-                },{
-                    type: 'danger'
-                });
-
-                return false;
-            }
-            if(tel_relacionamento === ""){
-                console.log('error');
-
-                $.notify({
-                    title: '<strong>Erro!</strong>',
-                    message: 'Por favor, informe uma referencia pessoal'
-                },{
-                    type: 'danger'
-                });
-
-                return false;
-            }
+            // if(nome_ref_pessoal === ""){
+            //     console.log('error');
+            //
+            //     $.notify({
+            //         title: '<strong>Erro!</strong>',
+            //         message: 'Por favor, informe uma referencia pessoal'
+            //     },{
+            //         type: 'danger'
+            //     });
+            //
+            //     return false;
+            // }
+            // if(cpf_ref_pessoal === ""){
+            //     console.log('error');
+            //
+            //     $.notify({
+            //         title: '<strong>Erro!</strong>',
+            //         message: 'Por favor, informe uma referencia pessoal'
+            //     },{
+            //         type: 'danger'
+            //     });
+            //
+            //     return false;
+            // }
+            // if(grau_rel === ""){
+            //     console.log('error');
+            //
+            //     $.notify({
+            //         title: '<strong>Erro!</strong>',
+            //         message: 'Por favor, informe uma referencia pessoal'
+            //     },{
+            //         type: 'danger'
+            //     });
+            //
+            //     return false;
+            // }
+            // if(tel_relacionamento === ""){
+            //     console.log('error');
+            //
+            //     $.notify({
+            //         title: '<strong>Erro!</strong>',
+            //         message: 'Por favor, informe uma referencia pessoal'
+            //     },{
+            //         type: 'danger'
+            //     });
+            //
+            //     return false;
+            // }
 
 
             $(".loading").css('display', 'block');
