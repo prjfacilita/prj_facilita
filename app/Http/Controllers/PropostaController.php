@@ -156,7 +156,7 @@ class PropostaController extends Controller
 
 
 
-            dd($cpf, $data->dt_nasc, $data->ocupacao, $salario, $data->uf_nasc);
+//            dd($cpf, $data->dt_nasc, $data->ocupacao, $salario, $data->uf_nasc);
 
             $arr = json_decode($retorno01->getBody());
 
@@ -182,6 +182,8 @@ class PropostaController extends Controller
                 $table->string('id_cadastro')->default(0);
 
             */
+
+            dd($arr->retorno);
             $dados_bancarios = new DadosBancarios();
             $dados_bancarios->nr_pedido = $arr->retorno->numeroProposta;
             $dados_bancarios->nro_proc_bco = $arr->retorno->identificadorOperacao;
