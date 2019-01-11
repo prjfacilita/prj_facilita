@@ -155,6 +155,9 @@ class PropostaController extends Controller
                 ]);
 
 
+
+            dd($cpf, $data->dt_nasc, $data->ocupacao, $salario, $data->uf_nasc);
+
             $arr = json_decode($retorno01->getBody());
 
             /*tratar retorno $arr*/
