@@ -57,10 +57,10 @@ TEL_CEL*/
             $table->string('nome_mae')->default(0); // nome completo da mãe
             $table->string('telefone_contato')->default(0);
             $table->string('grau_instr')->default(0);
-            $table->string('nome_conj')->default(0);
-            $table->string('cpf_conj')->default(0);
-            $table->string('dt_nasc_conj')->default(0);
-            $table->string('sexo_conj')->default(0);
+            $table->string('nome_conj')->default(0)->nullable();
+            $table->string('cpf_conj')->default(0)->nullable();
+            $table->string('dt_nasc_conj')->default(0)->nullable();
+            $table->string('sexo_conj')->default(0)->nullable();
             $table->string('cep_res')->default(0);
             $table->string('end_res')->default(0);
             $table->string('num_res')->default(0);
