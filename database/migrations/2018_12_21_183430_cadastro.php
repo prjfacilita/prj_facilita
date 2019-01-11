@@ -55,7 +55,7 @@ TEL_CEL*/
             $table->string('nr_doc')->default(0); // número do documento
             $table->string('emissor')->default(0); // orgão emissor do documento
             $table->string('nome_mae')->default(0); // nome completo da mãe
-            $table->string('telefone_contato')->default(0);
+            $table->string('telefone_contato')->default(0)->nullable();
             $table->string('grau_instr')->default(0);
             $table->string('nome_conj')->default(0)->nullable();
             $table->string('cpf_conj')->default(0)->nullable();
