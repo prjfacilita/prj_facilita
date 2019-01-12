@@ -130,6 +130,8 @@ class EmprestimoController extends Controller
             return redirect()->back()->withInput();
         }
 
+
+        return dd($request);
         $dados_pessoais = new Emprestimo();
         $dados_pessoais->nome_completo      =   $request->nome_solicitante;
         $dados_pessoais->email              =   Auth::user()->email;
