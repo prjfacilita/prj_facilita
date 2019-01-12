@@ -61,7 +61,7 @@ class DadosBancariosController extends Controller
             $dados_bancarios->save();
 
 
-            return $data_bancarios;
+//            return $data_bancarios;
 
 
 //            $dados_emprestimo = new Emprestimo();
