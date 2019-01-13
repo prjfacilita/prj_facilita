@@ -10,7 +10,7 @@ Route::any('/', function () {
 
 Route::any('index', function () {
     return view('index');
-});
+})->name('index');;
 
 
 Auth::routes();
