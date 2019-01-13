@@ -50,6 +50,12 @@
         <div class="row">
             <div class="header-content">
 
+                @if ($message = Session::get('error'))
+                    <div class="alert alert-danger">
+                        <p>{{ $message }}</p>
+                    </div>
+                @endif
+
                 <div class="col-sm-6">
                     <a class="logomarca" href="#"><img src="{{ asset('assets/index/images/logo-facilita.png') }}" alt="Logomarca Facilita" class="image-logomarca"/></a>
                 </div>
@@ -279,11 +285,7 @@
         <div class="footer-content">
             <div class="container">
 
-                @if ($message = Session::get('error'))
-                    <div class="alert alert-success">
-                        <p>{{ $message }}</p>
-                    </div>
-                @endif
+
                 <div class="row">
                     <div class="col-12 footer-logo">
                         <a class="logomarca" href="#"><img src="assets/index/images/logo-facilita.png" alt="Logomarca Facilita" class="image-logomarca"/></a>
