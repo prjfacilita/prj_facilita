@@ -114,11 +114,6 @@ class EmprestimoController extends Controller
 
     public function EmprestimoDadosPessoais(Request $request){
 
-        /*Verificar se cliente já fez alguma proposta e excluir do cadastro e se possuir excluir*/
-//        return $request;
-
-
-
         $validator = Validator::make($request->all(), [
             'nome_solicitante' => 'required|max:30',
 //            'name' => 'required|string|max:50',
@@ -130,11 +125,6 @@ class EmprestimoController extends Controller
             return redirect()->back()->withInput();
         }
 
-        /*VERIFICAR SE JÁ EXISTE CADASTRO DE EMPRESTIMO DESTE CLIENTE*/
-
-
-
-//        $data = DB::table('cadastro')->where('email',  Auth::user()->email)->count();
 
         $data = DB::table('cadastro')->where('email',  Auth::user()->email)->count();
         $id = DB::table('cadastro')->where('email',  Auth::user()->email)->first();
@@ -149,7 +139,7 @@ class EmprestimoController extends Controller
         }else{
             $dados_pessoais = new Emprestimo();
         }
-//        return dd($request);
+
 
 
 
@@ -181,15 +171,13 @@ class EmprestimoController extends Controller
 //        $dados_pessoais->emissor            =   '1';
         $dados_pessoais->save();
 
-//        Session::put('dados_emprestimo',['id_cadastro',$dados_pessoais->id]);
-        // return Session::get('dados_emprestimo.id_cadastro')
+
 
         $request->session()->put('id_cadastro', $dados_pessoais->id);
 
-        return response('Dados inseridos com sucesso'. $request->session()->get('id_cadastro').'', 200)
+        return response('Dados inseridos com sucesso $id->'. $request->session()->get('id_cadastro').'', 200)
             ->header('Content-Type', 'text/plain');
-        /*inputar no banco de dados*/
-//        return $request->nome_solicitanteg;
+
     }
 
     public function EmprestimoRenda(Request $request){
@@ -210,7 +198,7 @@ class EmprestimoController extends Controller
 
         $data = DB::table('cadastro')->where('email',  Auth::user()->email)->first();
 
-        if($data->status_cadastro == 1){
+//        if($data->status_cadastro == 1){
 
 
 
@@ -247,7 +235,7 @@ class EmprestimoController extends Controller
 
 
 
-        }
+//
 
 
     }
@@ -277,21 +265,8 @@ class EmprestimoController extends Controller
 
         $data = DB::table('cadastro')->where('email',  Auth::user()->email)->first();
 
-        if($data->status_cadastro == 2) {
-
-            $count = DB::table('cadastro')->where('email',  Auth::user()->email)->count();
-//            $id = DB::table('cadastro')->where('email',  Auth::user()->email)->first();
-
-//            $count = $data;
-
-            if($count > 0 ){
-
-
-                $endereco = Emprestimo::find($data->id);
-
-            }else{
-                $endereco = new Emprestimo();
-            }
+            $endereco = new Emprestimo();
+//            }
 //            $endereco = new Emprestimo();
             $endereco->exists           = true;
             $endereco->id               = $data->id; //already exists in database.
@@ -315,7 +290,7 @@ class EmprestimoController extends Controller
             return response('concluido com sucesso', 200)
                 ->header('Content-Type', 'text/plain');
 
-        }
+
 
 
     }
