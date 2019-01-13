@@ -279,7 +279,7 @@ class EmprestimoController extends Controller
             $endereco->val_patriominio  = $request->valor_patrimonio;
             $endereco->tipo_res         = $request->residencia;
             $endereco->uf_res           = $request->uf_id;
-            $endereco->status_cadastro  = 3;
+//            $endereco->status_cadastro  = 3;
             $endereco->save();
 
             $teste = new PropostaController();
