@@ -42,6 +42,10 @@ class DadosBancariosController extends Controller
             $dados_bancarios->conta_desde = $request->conta_desde;
             $dados_bancarios->save();
 
+
+            $teste = new PropostaController();
+            $retorno_dados = $teste->InserirProposta($data->id);
+
             $chamada_analise = new PropostaController();
             $chamada_analise->StatusPreAnalise($data->id);
 

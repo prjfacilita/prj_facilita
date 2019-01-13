@@ -266,8 +266,6 @@ class EmprestimoController extends Controller
         $data = DB::table('cadastro')->where('email',  Auth::user()->email)->first();
 
             $endereco = new Emprestimo();
-//            }
-//            $endereco = new Emprestimo();
             $endereco->exists           = true;
             $endereco->id               = $data->id; //already exists in database.
             $endereco->cep_res          = $request->cep;
@@ -279,13 +277,7 @@ class EmprestimoController extends Controller
             $endereco->val_patriominio  = $request->valor_patrimonio;
             $endereco->tipo_res         = $request->residencia;
             $endereco->uf_res           = $request->uf_id;
-//            $endereco->status_cadastro  = 3;
             $endereco->save();
-
-            $teste = new PropostaController();
-            $retorno_dados = $teste->InserirProposta($data->id);
-            /*CHAMAR CONTROLADOR PROPOSTA*/
-
 
             return response('concluido com sucesso', 200)
                 ->header('Content-Type', 'text/plain');
