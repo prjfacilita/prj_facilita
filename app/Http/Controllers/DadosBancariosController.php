@@ -24,7 +24,7 @@ class DadosBancariosController extends Controller
 
 
 
-        try{
+//        try{
 
             $data               = DB::table('cadastro')->where('email',  Auth::user()->email)->first();
 
@@ -58,9 +58,6 @@ class DadosBancariosController extends Controller
 
             return redirect('pedido');
 
-        }catch (\Exception $e) {
-            return $e->getMessage();
-        }
 
 
 
