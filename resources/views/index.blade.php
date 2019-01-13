@@ -56,20 +56,7 @@
                     <a class="logomarca" href="#"><img src="{{ asset('assets/index/images/logo-facilita.png') }}" alt="Logomarca Facilita" class="image-logomarca"/></a>
                 </div>
 
-                <div class="col-sm-6">
-                    @if ($message = Session::get('error'))
-                        {{--<div class="alert alert-danger">--}}
-                        {{--<p>{{ $message }}</p>--}}
-                        {{--</div>--}}
 
-                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                            <strong>Erro!</strong> {{ $message }}
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                    @endif
-                </div>
                 <div class="col-sm-6">
                     <div class="nav">
                         <nav>
@@ -113,6 +100,19 @@
 
                         {{--<div class="part1">--}}
                         <h2 class="pt1">Quanto você precisa?</h2>
+
+                        @if ($message = Session::get('error'))
+                            {{--<div class="alert alert-danger">--}}
+                            {{--<p>{{ $message }}</p>--}}
+                            {{--</div>--}}
+
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                <strong>Erro!</strong> {{ $message }}
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        @endif
                         <form class="pt1" id="part-1-simulation" id="pt1" name="part-1-simulation" >
 
                             {{--<a class="simulation-box__value">R$ 1.000,00</a>--}}
