@@ -134,15 +134,17 @@ class EmprestimoController extends Controller
 
 
 
-        $data = DB::table('cadastro')->where('email',  Auth::user()->email)->count();
+//        $data = DB::table('cadastro')->where('email',  Auth::user()->email)->count();
 
+        $data = DB::table('cadastro')->where('email',  Auth::user()->email)->count();
+        $id = DB::table('cadastro')->where('email',  Auth::user()->email)->first();
 
         $count = $data;
 
         if($count > 0 ){
 
 
-            $dados_pessoais = Emprestimo::find(1);
+            $dados_pessoais = Emprestimo::find($id->id);
 
         }else{
             $dados_pessoais = new Emprestimo();
@@ -212,7 +214,22 @@ class EmprestimoController extends Controller
 
 
 
-            $renda_ocupacao = new Emprestimo();
+//            $renda_ocupacao = new Emprestimo();
+
+            $count = DB::table('cadastro')->where('email',  Auth::user()->email)->count();
+//            $id = DB::table('cadastro')->where('email',  Auth::user()->email)->first();
+
+
+//            $count = $data;
+
+            if($count > 0 ){
+
+
+                $renda_ocupacao = Emprestimo::find($data->id);
+
+            }else{
+                $renda_ocupacao = new Emprestimo();
+            }
 
 //        $value = $request->session()->get('id_cadastro');
             $renda_ocupacao->exists             = true;
@@ -247,26 +264,6 @@ class EmprestimoController extends Controller
         }
 
 
-
-
-
-
-        /* salario: salario,
-                ocupacao: ocupacao,
-                escolaridade: escolaridade,
-                profissao: profissao,
-                cargo: cargo,
-                empresa: empresa,
-                data_admissao: data_admissao,
-                end_comercial: end_comercial,
-                end_com_nro: end_com_nro,
-                endereco_comercial_cep: endereco_comercial_cep,
-                endereco_comercial_bairro: endereco_comercial_bairro,
-                endereco_comercial_cidade: endereco_comercial_cidade,
-                endereco_comercial_uf: endereco_comercial_uf,
-                complemento_endereco_comercial: complemento_endereco_comercial,
-                telefone_comercial: telefone_comercial,
-                ramal: ramal*/
     }
 
 
@@ -290,23 +287,26 @@ class EmprestimoController extends Controller
             return redirect()->back()->withInput();
         }
 
-        /*
-        var cep     =   $("#form-2 input[name=cep]").val();
-        var endereco     =   $("#form-2 input[name=endereco]").val();
-        var nro     =   $("#form-2 input[name=nro]").val();
-        var complemento     =   $("#form-2 input[name=complemento]").val();
-        var bairro     =   $("#form-2 input[name=bairro]").val();
-        var cidade     =   $("#form-2 input[name=cidade]").val();
-        var valor_patrimonio     =   $("#form-2 input[name=valor-patrimonio-name]").val();
-        // var cep     =   $("#form-2 input[name=cep]").val();
-        var residencia    =   $('#tipo-residencia-id').find(":selected").text();
-        var escolaridade    =   $('#uf').find(":selected").text();*/
 
 
         $data = DB::table('cadastro')->where('email',  Auth::user()->email)->first();
 
         if($data->status_cadastro == 2) {
-            $endereco = new Emprestimo();
+
+            $count = DB::table('cadastro')->where('email',  Auth::user()->email)->count();
+//            $id = DB::table('cadastro')->where('email',  Auth::user()->email)->first();
+
+//            $count = $data;
+
+            if($count > 0 ){
+
+
+                $endereco = Emprestimo::find($data->id);
+
+            }else{
+                $endereco = new Emprestimo();
+            }
+//            $endereco = new Emprestimo();
             $endereco->exists           = true;
             $endereco->id               = $data->id; //already exists in database.
             $endereco->cep_res          = $request->cep;
