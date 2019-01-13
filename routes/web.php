@@ -7,8 +7,13 @@ Route::any('/', function () {
     return view('index');
 });
 
+Route::get('/index', function(){
+//    Auth::logout();
+//    Session::flush();
+    return redirect("/index");
+})->name('index');
 
-Route::view('index', 'index')->name('index');
+
 Auth::routes();
 
 
