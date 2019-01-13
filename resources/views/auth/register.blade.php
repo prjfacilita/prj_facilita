@@ -122,7 +122,7 @@
                                         <input id="cpf" type="text" placeholder="CPF:" class="login-form__email" name="cpf" value="{{ $cpf or "" }}" required autofocus autocomplete="off>
 
                                         @if ($errors->has('cpf'))
-                                            <span class="help-block'>
+                                            <span class="help-block">
                                         <strong>{{ $errors->first('cpf') }}</strong>
                                             </span>
                                         @endif

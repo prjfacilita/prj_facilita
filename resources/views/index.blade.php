@@ -78,6 +78,7 @@
         <div class="container">
             <div class="row">
 
+
                 <div class="col-sm-8 banner__text">
                     <div>
                         <h1>Crédito para você superar os obstáculos do dia-a-dia!</h1>
@@ -278,6 +279,11 @@
         <div class="footer-content">
             <div class="container">
 
+                @if ($message = Session::get('error'))
+                    <div class="alert alert-success">
+                        <p>{{ $message }}</p>
+                    </div>
+                @endif
                 <div class="row">
                     <div class="col-12 footer-logo">
                         <a class="logomarca" href="#"><img src="assets/index/images/logo-facilita.png" alt="Logomarca Facilita" class="image-logomarca"/></a>

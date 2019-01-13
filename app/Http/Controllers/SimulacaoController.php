@@ -140,7 +140,11 @@ class SimulacaoController extends Controller
 
 //            return 0;
 
-            return 'errk';
+//            return redirect()->route('index')->with('message', 'Você já possui cadastro, por favor entre com seus dados!');
+//            return 'errk';
+
+            return redirect()->route('index')
+                ->with('error','Você já possui cadastro, por favor entre com seus dados!');
 
         }
 
