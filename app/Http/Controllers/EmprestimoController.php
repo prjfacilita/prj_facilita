@@ -214,22 +214,8 @@ class EmprestimoController extends Controller
 
 
 
-//            $renda_ocupacao = new Emprestimo();
-
-            $count = DB::table('cadastro')->where('email',  Auth::user()->email)->count();
-//            $id = DB::table('cadastro')->where('email',  Auth::user()->email)->first();
-
-
-//            $count = $data;
-
-            if($count > 0 ){
-
-
-                $renda_ocupacao = Emprestimo::find($data->id);
-
-            }else{
-                $renda_ocupacao = new Emprestimo();
-            }
+            $renda_ocupacao = new Emprestimo();
+//
 
 //        $value = $request->session()->get('id_cadastro');
             $renda_ocupacao->exists             = true;
