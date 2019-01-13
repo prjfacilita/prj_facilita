@@ -92,15 +92,15 @@ class RegisterController extends Controller
 
         /*verificar se existe email ou cpf cadastrado*/
 
-        $data = DB::table('login')->where('email',  $data['email'])->get();
-
-        $return = $data->count();
-
-        if($return > 0){
-
-
-            return 'ja cadastrado';
-        }
+//        $data = DB::table('login')->where('email',  $data['email'])->get();
+//
+//        $return = $data->count();
+//
+//        if($return > 0){
+//
+//
+//            return 'ja cadastrado';
+//        }
 
 
 
