@@ -24,6 +24,8 @@ class DadosBancariosController extends Controller
 
 
 
+        try{
+
             $data               = DB::table('cadastro')->where('email',  Auth::user()->email)->first();
 
             $teste = new PropostaController();
@@ -52,7 +54,16 @@ class DadosBancariosController extends Controller
             $chamada_analise = new PropostaController();
             $chamada_analise->StatusPreAnalise($data->id);
 
+
+            echo  response('concluido com sucesso', 200)
+                ->header('Content-Type', 'text/plain');
             return view('emprestimo.status_analise');
+
+        }catch (\Exception $e) {
+            return $e->getMessage();
+        }
+
+
 
 
     }
