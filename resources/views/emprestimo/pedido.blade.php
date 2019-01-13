@@ -180,11 +180,11 @@
                                             <form action="{{route('pedido_emprestimo_parte01')}}" class="pedido_emprestimo_parte01" id="pedido_emprestimo_parte01" method="post" >
                                                 {{ csrf_field() }}
                                                 <div class="col-sm-10">
-                                                    <label>Nome: <input type="text" id="solicitation_name" name="solicitation-name" class="solicitation-form__name solicitation-input" value="@foreach ($data_cadastro as $rec){{ $rec->nome_completo }}   @endforeach  " onkeypress="return this.value.length<=30 " required></label>
+                                                    <label>Nome: <input type="text" id="solicitation_name" name="solicitation-name" class="solicitation-form__name solicitation-input" value="@foreach ($data_cadastro as $rec){{ $rec->nome_completo }}@endforeach  " onkeypress="return this.value.length<=30 " required></label>
                                                 </div>
 
                                                 <div class="col-sm-2">
-                                                    <label>Nascimento: <input type="date" name="solicitation-birth" value="@foreach ($data_cadastro as $rec){{ $rec->dt_nasc }}   @endforeach" class="solicitation-form__birth solicitation-input" required></label>
+                                                    <label>Nascimento: <input type="date" name="solicitation-birth" value="@foreach ($data_cadastro as $rec){{ $rec->dt_nasc }}@endforeach" class="solicitation-form__birth solicitation-input" required></label>
                                                 </div>
 
                                                 <div class="col-sm-3">
@@ -195,12 +195,12 @@
                                                     <label>Tipo Documento:
                                                         <select value="@foreach ($data_cadastro as $rec){{ $rec->tp_doc}} } @endforeach" name="tipo-documento" id="tipo-documento" required>
                                                             <option disabled selected>Selecionar</option>
-                                                            <option value="rg">RG</option>
-                                                            <option value="cnh">CNH</option>
-                                                            <option value="passaporte">Passaporte</option>
-                                                            <option value="rne">RNE</option>
-                                                            <option value="carteira-funcional">Carteira funcional</option>
-                                                            <option value="carteira-de-classe">Carteira de classe</option>
+                                                                <option value="RG">RG</option>
+                                                            <option value="CNH">CNH</option>
+                                                            <option value="PASSAPORTE">Passaporte</option>
+                                                            <option value="RNE">RNE</option>
+                                                            <option value="CARTEIRA_FUNCIONAL">Carteira funcional</option>
+                                                            <option value="CARTEIRA_DE_CLASSE">Carteira de classe</option>
                                                         </select></label>
                                                 </div>
 
@@ -210,15 +210,15 @@
                                                 </div>
 
                                                 <div class="col-sm-3">
-                                                    <label>Orgão Expedidor: <input required type="text" name="solicitation-organ" value="@foreach ($data_cadastro as $rec){{ $rec->emissor}}   @endforeach" class="solicitation-form__id solicitation-input"></label>
+                                                    <label>Orgão Expedidor: <input required type="text" name="solicitation-organ" value="@foreach ($data_cadastro as $rec){{ $rec->emissor}}@endforeach" class="solicitation-form__id solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-2">
                                                     <label>Sexo:
                                                         <select required name="sexo" id="sexo">
                                                             <option disabled selected>Selecionar</option>
-                                                            <option value="feminino">Feminino</option>
-                                                            <option value="masculino">Masculino</option>
+                                                            <option value="FEMININO">Feminino</option>
+                                                            <option value="MASCULINO">Masculino</option>
                                                         </select></label>
                                                 </div>
 
@@ -237,11 +237,11 @@
 
 
                                                 <div class="col-sm-4">
-                                                    <label>Nacionalidade: <input required type="text" name="nacionalidade" value="@foreach ($data_cadastro as $rec){{ $rec->nacionalidade}}   @endforeach" class=" solicitation-input"></label>
+                                                    <label>Nacionalidade: <input required type="text" name="nacionalidade" value="@foreach ($data_cadastro as $rec){{ $rec->nacionalidade}}@endforeach" class=" solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-4">
-                                                    <label>Naturalidade: <input required type="text" name="naturalidade" value="@foreach ($data_cadastro as $rec){{ $rec->nat_ocup}}   @endforeach" class=" solicitation-input"></label>
+                                                    <label>Naturalidade: <input required type="text" name="naturalidade" value="@foreach ($data_cadastro as $rec){{ $rec->nat_ocup}}@endforeach" class=" solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-2">
@@ -291,18 +291,18 @@
                                                 </div>
 
                                                 <div class="col-sm-6">
-                                                    <label>Nome da Mãe<input required onkeypress="return this.value.length<=35 " type="text" name="nome-mae" value="@foreach ($data_cadastro as $rec){{ $rec->nome_mae}}   @endforeach" class="solicitation-form__name solicitation-input"></label>
+                                                    <label>Nome da Mãe<input required onkeypress="return this.value.length<=30" type="text" name="nome-mae" value="@foreach ($data_cadastro as $rec){{ $rec->nome_mae}}@endforeach" class="solicitation-form__name solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-6">
-                                                    <label>Nome Cônjuge<input required onkeypress="return this.value.length<=35 " type="text" name="nome_conjuge" value="@foreach ($data_cadastro as $rec){{ $rec->nome_conj}}   @endforeach" class="solicitation-form__name solicitation-input"></label>
+                                                    <label>Nome Cônjuge<input required onkeypress="return this.value.length<=30" type="text" name="nome_conjuge" value="@foreach ($data_cadastro as $rec){{ $rec->nome_conj}}@endforeach" class="solicitation-form__name solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-4">
-                                                    <label>CPF Cônjuge<input required type="text" name="cpf-conjuge" value="@foreach ($data_cadastro as $rec){{ $rec->cpf_conj}}   @endforeach" class="solicitation-form__name solicitation-input"></label>
+                                                    <label>CPF Cônjuge<input required type="text" name="cpf-conjuge" value="@foreach ($data_cadastro as $rec){{ $rec->cpf_conj}}@endforeach" class="solicitation-form__name solicitation-input"></label>
                                                 </div>
                                                 <div class="col-sm-2">
-                                                    <label>Nascto Cônjuge: <input type="date" name="nascto-conjuge" value="@foreach ($data_cadastro as $rec){{ $rec->dt_nasc_conj}}   @endforeach" class="solicitation-form__id solicitation-input"></label>
+                                                    <label>Nascto Cônjuge: <input type="date" name="nascto-conjuge" value="@foreach ($data_cadastro as $rec){{ $rec->dt_nasc_conj}}@endforeach" class="solicitation-form__id solicitation-input"></label>
                                                 </div>
                                                 <div class="col-sm-2">
                                                     <label>Sexo Cônjuge:

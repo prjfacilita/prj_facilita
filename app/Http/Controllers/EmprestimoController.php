@@ -130,9 +130,27 @@ class EmprestimoController extends Controller
             return redirect()->back()->withInput();
         }
 
+        /*VERIFICAR SE JÁ EXISTE CADASTRO DE EMPRESTIMO DESTE CLIENTE*/
 
+
+
+        $data = DB::table('cadastro')->where('email',  Auth::user()->email)->first();
+
+
+        $count = $data->count();
+
+        if($count > 0 ){
+
+
+            $dados_pessoais = Emprestimo::find(1);
+
+        }else{
+            $dados_pessoais = new Emprestimo();
+        }
 //        return dd($request);
-        $dados_pessoais = new Emprestimo();
+
+
+
         $dados_pessoais->nome_completo      =   $request->nome_solicitante;
         $dados_pessoais->email              =   Auth::user()->email;
         $dados_pessoais->dt_nasc            =   $request->dtn_solicitante;
