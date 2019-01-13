@@ -7,6 +7,12 @@ Route::any('/', function () {
     return view('index');
 });
 
+
+Route::any('index', function () {
+    return view('index');
+});
+
+
 Auth::routes();
 
 
