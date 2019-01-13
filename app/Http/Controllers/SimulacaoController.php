@@ -140,7 +140,7 @@ class SimulacaoController extends Controller
 
 //            return 0;
 
-            return redirect()->intended('index');
+            return 'errk';
 
         }
 
