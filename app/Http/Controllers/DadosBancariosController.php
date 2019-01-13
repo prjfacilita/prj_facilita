@@ -55,9 +55,8 @@ class DadosBancariosController extends Controller
             $chamada_analise->StatusPreAnalise($data->id);
 
 
-            echo  response('concluido com sucesso', 200)
-                ->header('Content-Type', 'text/plain');
-            return view('emprestimo.status_analise');
+
+            return redirect('pedido');
 
         }catch (\Exception $e) {
             return $e->getMessage();
