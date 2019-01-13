@@ -121,7 +121,7 @@ class SimulacaoController extends Controller
 
         $data = DB::table('pre_cadastro')->where('email',  $request->simulation_email)->get();
 
-        if($data->count > 0){
+        if($data->count() > 0){
 
             return 'erro';
         }
