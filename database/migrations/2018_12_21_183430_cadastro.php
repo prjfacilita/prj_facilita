@@ -64,7 +64,7 @@ TEL_CEL*/
             $table->string('cep_res')->default(0);
             $table->string('end_res')->default(0);
             $table->string('num_res')->default(0);
-            $table->string('compl_res')->default(0);
+            $table->string('compl_res')->default(0)->nullable();
             $table->string('bairro_res')->default(0);
             $table->string('cidade_res')->default(0);
             $table->string('uf_res')->default(0);

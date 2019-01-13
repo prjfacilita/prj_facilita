@@ -107,7 +107,6 @@ class PropostaController extends Controller
             $simulacao = new EmprestimoController();
             $token = $simulacao->ConfiguracoesAPI();
 
-    //        $token = session('token_key');
 
             $client =   new Client([
                 'base_uri' => EmprestimoController::URL_TOKEN_API(),
@@ -119,17 +118,6 @@ class PropostaController extends Controller
             ]);
 
 
-            /*CONSULTAR OS DADOS PARA ENVIO*/
-
-            /*  "nome": "João da Silva",
-      "cpf": "03552031383",
-      "dataNascimento": "1980-05-12",
-      "naturezaOcupacao": "ASSALARIADO",
-      "genero": "MASCULINO",
-      "rendaMensal": 2500,
-      "uf": "SP"*/
-
-
             $data = DB::table('cadastro')->where('id',  $id)->first();
 
 
@@ -139,6 +127,7 @@ class PropostaController extends Controller
 
             $salario = str_replace('.', '', $data->salario);
             $salario = str_replace(',', '.', $salario);
+
             $retorno01  =  $client->request('POST', EmprestimoController::URL_ENDPOINT(). '/api/v1/ep/propostas',
                 [
                     \GuzzleHttp\RequestOptions::JSON => ["nome" => $data->nome_completo,
@@ -169,10 +158,10 @@ class PropostaController extends Controller
 
 
             try {
-            $dados_bancarios = new DadosBancarios();
-            $dados_bancarios->nr_pedido = $arr->retorno->numeroProposta;
-            $dados_bancarios->nro_proc_bco = $arr->retorno->identificadorOperacao;
-            $dados_bancarios->id_cadastro = $id;
+            $dados_bancarios                = new DadosBancarios();
+            $dados_bancarios->nr_pedido     = $arr->retorno->numeroProposta;
+            $dados_bancarios->nro_proc_bco  = $arr->retorno->identificadorOperacao;
+            $dados_bancarios->id_cadastro   = $id;
             $dados_bancarios->save();
 
             }
@@ -183,12 +172,12 @@ class PropostaController extends Controller
             }
 
 
-            $status_anliase = new Login();
-            $status_anliase->exists = true;
-            $status_anliase->id = Auth::user()->id;
+            $status_anliase                 = new Login();
+            $status_anliase->exists         = true;
+            $status_anliase->id             = Auth::user()->id;
             $status_anliase->status_analise = 2;
             $status_anliase->save();
-    //        session()->put('id_dados_bancarios', $dados_bancarios->id);
+
 
             return $arr;
         }
