@@ -119,7 +119,7 @@ class SimulacaoController extends Controller
 
         /*VERIFICAR NA TABELA pre_cadastro se já existe, se não existir cadastrar*/
 
-        $data = DB::table('pre_cadastro')->where('email',  $request->email)->first();
+        $data = DB::table('pre_cadastro')->where('email',  $request->email)->get();
 
         if($data->count > 0){
 
