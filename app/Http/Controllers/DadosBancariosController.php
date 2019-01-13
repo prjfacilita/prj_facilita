@@ -23,7 +23,11 @@ class DadosBancariosController extends Controller
     public function  InserirDadosBacnarios(Request $request){
 
 
+
             $data               = DB::table('cadastro')->where('email',  Auth::user()->email)->first();
+
+            $teste = new PropostaController();
+            $retorno_dados = $teste->InserirProposta($data->id);
 
             $id = $data->id;
             $data_bancarios     = DB::table('dados_bancarios')->where('id_cadastro', $id)->first();
@@ -43,8 +47,7 @@ class DadosBancariosController extends Controller
             $dados_bancarios->save();
 
 
-            $teste = new PropostaController();
-            $retorno_dados = $teste->InserirProposta($data->id);
+
 
             $chamada_analise = new PropostaController();
             $chamada_analise->StatusPreAnalise($data->id);
