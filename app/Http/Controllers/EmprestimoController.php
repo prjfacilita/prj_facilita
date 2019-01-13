@@ -134,10 +134,10 @@ class EmprestimoController extends Controller
 
 
 
-        $data = DB::table('cadastro')->where('email',  Auth::user()->email)->first();
+        $data = DB::table('cadastro')->where('email',  Auth::user()->email)->count();
 
 
-        $count = $data->count();
+        $count = $data;
 
         if($count > 0 ){
 
