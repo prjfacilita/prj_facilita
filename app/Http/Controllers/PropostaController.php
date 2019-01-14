@@ -547,7 +547,7 @@ class PropostaController extends Controller
                 CURLOPT_CUSTOMREQUEST => "PUT",
                             CURLOPT_POSTFIELDS => "{
   \"dataPrimeiraParcela\": \"".$data_simulacao->dataPrimeiraParcela."\",
-  \"valorPrincipal\": ".$data_simulacao->valorSolicitado.",
+  \"valorPrincipal\": \".$data_simulacao->valorSolicitado.\",
   \"quantidadeParcelas\": \".$data_simulacao->qteParcelas.\",
   \"dadosBancarios\": {
     \"tipoConta\": \"".$data_bancarios->tipo."\",
