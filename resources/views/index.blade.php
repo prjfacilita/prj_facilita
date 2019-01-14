@@ -370,11 +370,11 @@
                         <input type="hidden" name="allow_register" value="1">
                         <input type="hidden" name="simulacao_id" value="0">
                         {{--<span class="plots">Em quantas parcelas?x</span>--}}
-                        <input style="display: none;" type="radio" name="simulation-plots2" value="03" class="simulation-item" data-line="03" disabled>
+                        <input style="display: none;" type="radio" name="simulation-plots2" value="3" class="simulation-item" data-line="3" disabled>
                         <input style="display: none;" type="radio" name="simulation-plots2" value="20" class="simulation-item" data-line="20" disabled>
                         <input style="display: none;" type="radio" name="simulation-plots2" value="18" class="simulation-item" data-line="18" disabled>
                         <input style="display: none;" type="radio" name="simulation-plots2" value="12" class="simulation-item" data-line="12" disabled>
-                        <input style="display: none;" type="radio" name="simulation-plots2" value="06" class="simulation-item" data-line="06" disabled>
+                        <input style="display: none;" type="radio" name="simulation-plots2" value="6" class="simulation-item" data-line="6" disabled>
                         {{--<input style="display: none;" type="radio" name="simulation-plots2" value="03" class="simulation-item" data-line="03" disabled>--}}
 
                         <span class="plots-value"></span>
