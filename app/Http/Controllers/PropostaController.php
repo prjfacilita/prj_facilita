@@ -452,7 +452,7 @@ class PropostaController extends Controller
             }
 
 
-             $this->InserirEspecificacaoFinanceira();
+             return $this->InserirEspecificacaoFinanceira();
 
 
 
