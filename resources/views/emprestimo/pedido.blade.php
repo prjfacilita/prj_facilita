@@ -315,9 +315,9 @@
                                                 <div class="col-sm-4">
                                                     <label>Publicamente Exposta?:
                                                         <select required name="publicamente-gexposta" id="publicamente-exposta">
-                                                            <option disabled selected>Selecionar</option>
+                                                            {{--<option disabled>Selecionar</option>--}}
                                                             <option value="sim">Sim</option>
-                                                            <option value="nao">Não</option>
+                                                            <option value="nao" selected>Não</option>
                                                         </select></label>
                                                 </div>
 

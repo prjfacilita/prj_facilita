@@ -904,10 +904,16 @@
                     .then(function (response) {
                         console.log(response);
 
+
+
                         step = 5;
 
 
                         $('#form-4').collapse('toggle');
+                        if(response == "concluido com sucesso"){
+
+                            location.reload();
+                        }
                     })
                     .catch(function (error) {
                         console.log(error);
