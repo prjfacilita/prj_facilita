@@ -133,8 +133,8 @@
                         <p style="display: none;" class="pt2"></p>
                         <form style="display: none;" id="pt2" class="pt2">
                             <span class="plots">Em quantas parcelas?</span>
-                            <input type="radio" name="simulation-plots" value="03" class="simulation-item" data-line="03">
-                            <input type="radio" name="simulation-plots" value="06" class="simulation-item" data-line="06">
+                            <input type="radio" name="simulation-plots" value="3" class="simulation-item" data-line="3">
+                            <input type="radio" name="simulation-plots" value="6" class="simulation-item" data-line="6">
                             <input type="radio" name="simulation-plots" value="12" class="simulation-item" data-line="12">
                             <input type="radio" name="simulation-plots" value="18" class="simulation-item" data-line="18">
                             <input type="radio" name="simulation-plots" value="20" class="simulation-item" data-line="20">
