@@ -139,7 +139,7 @@ class PropostaController extends Controller
                         "naturezaOcupacao" => $data->ocupacao,
                         "genero" => strtoupper($data->sexo),
                         "rendaMensal" => $salario,
-                        "uf" => $data->uf_nasc
+                        "uf" => strtoupper($data->uf_nasc)
                     ]
                 ]);
 
