@@ -916,7 +916,7 @@
 
                 $(".loading").css('display', 'none');
 
-                location.reload();
+                // location.reload();
 
             }, 3000);
 
