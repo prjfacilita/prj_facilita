@@ -631,8 +631,8 @@
                                                     <label>CONTA TIPO:
                                                         <select id="conta-tipo">
                                                             <option disabled selected>Selecionar</option>
-                                                            <option value="CONTA_CORRENTE">Conta-Corrente</option>
-                                                            <option value="CONTA_POUPANÇA">Poupança</option>
+                                                            <option value="CONTA_CORRENTE_INDIVIDUAL">Conta-Corrente</option>
+                                                            <option value="CONTA_CORRENTE_INDIVIDUAL">Poupança</option>
                                                         </select></label>
                                                 </div>
 
