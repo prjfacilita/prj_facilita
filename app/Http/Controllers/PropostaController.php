@@ -534,7 +534,7 @@ class PropostaController extends Controller
             $data = DB::table('dados_bancarios')->where('cpf',  Auth::user()->cpf)->first();
 
             $data_pre_cadastro = DB::table('pre_cadastro')->where('cpf', Auth::user()->cpf)->first();
-            $data_simulacao     = DB::table('simulacao')->where('cpf', Auth::user()->cpf)->first();
+            $data_simulacao     = DB::table('simulacao')->where('user_id', Auth::user()->id)->first();
             $data_bancarios     = DB::table('dados_bancarios')->where('cpf', Auth::user()->cpf)->first();
 
             curl_setopt_array($curl, array(
