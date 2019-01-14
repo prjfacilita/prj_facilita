@@ -575,7 +575,7 @@ class PropostaController extends Controller
                 echo "cURL Error #:" . $err;
             } else {
 
-                return $data_simulacao->qteParcelas;
+                return $response;
             }
         }
 
