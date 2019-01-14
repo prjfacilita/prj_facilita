@@ -1,0 +1,21 @@
+
+
+Fluxo proposta
+
+POST
+/api/v1/ep/propostas
+
+
+
+PUT
+/api/v2/ep/propostas/{numeroProposta}/analisecadastral
+
+
+
+GET
+/api/v1/ep/propostas/{numeroProposta}/limites
+
+ -> Cliente Selecionar o produto
+
+
+ EspecificaçãoFnanceira

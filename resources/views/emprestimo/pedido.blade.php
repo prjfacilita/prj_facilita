@@ -363,11 +363,11 @@
                                                             <option disabled selected>Selecionar</option>
                                                             <option value="ASSALARIADO">EMPREGADO SETOR PRIVADO</option>
                                                             <option value="ASSALARIADO">EMPREGADO SETOR PÚBLICO</option>
-                                                            <option value="PROFISSIONAL_LIBERAL">PROFISSIONAL LIBERAL</option>
-                                                            <option value="EMPRESARIO">EMPRESÁRIO</option>
-                                                            <option value="APOSENTADO">APOSENTADO OU PENSIONISTA</option>
-                                                            <option value="AUTONOMO">AUTÔNOMO</option>
-                                                            <option value="OUTROS">OUTROS</option>
+                                                            <option value="ASSALARIADO">PROFISSIONAL LIBERAL</option>
+                                                            <option value="ASSALARIADO">EMPRESÁRIO</option>
+                                                            <option value="ASSALARIADO">APOSENTADO OU PENSIONISTA</option>
+                                                            <option value="ASSALARIADO">AUTÔNOMO</option>
+                                                            <option value="ASSALARIADO">OUTROS</option>
                                                         </select></label>
                                                 </div>
 
