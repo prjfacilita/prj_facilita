@@ -546,15 +546,15 @@ class PropostaController extends Controller
                 CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
                 CURLOPT_CUSTOMREQUEST => "PUT",
                             CURLOPT_POSTFIELDS => "{
-  \"dataPrimeiraParcela\": \"2019-02-13\",
-  \"valorPrincipal\": \"1000\",
-  \"quantidadeParcelas\": \"03\",
+  \"dataPrimeiraParcela\": \"".$data_simulacao->dataPrimeiraParcela."\",
+  \"valorPrincipal\": \".$data_simulacao->valorSolicitado.\",
+  \"quantidadeParcelas\": \".$data_simulacao->qteParcelas.\",
   \"dadosBancarios\": {
-    \"tipoConta\": \"CONTA_CORRENTE_INDIVIDUAL\",
-    \"codigoBanco\": \"341\",
-    \"numeroAgencia\": \"4508\",
-    \"numeroConta\": \"29825\",
-    \"digitoConta\": \"6\"
+    \"tipoConta\": \"".$data_bancarios->tipo."\",
+    \"codigoBanco\": \".$data_bancarios->banco.\",
+    \"numeroAgencia\": \".$data_bancarios->agencia.\",
+    \"numeroConta\": \".$data_bancarios->conta.\",
+    \"digitoConta\": \"".$data_bancarios->dig_conta."\"
   }
 }",
                 CURLOPT_HTTPHEADER => array(
