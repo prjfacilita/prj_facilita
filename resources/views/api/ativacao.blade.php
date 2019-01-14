@@ -202,8 +202,8 @@
     // $('#confirmation_code').mask("0000000", {placeholder: "__/__/____"});
 
 window.setTimeout( function(){
-    window.location = "/prj_facilita/public/login";
-}, 300 );
+    window.location = "{{route('index')}}}";
+}, 1000 );
 </script>
 </body>
 </html>
