@@ -910,7 +910,7 @@
 
 
                         $('#form-4').collapse('toggle');
-                        if(response == "concluido com sucesso"){
+                        if(response.data == "concluido com sucesso"){
 
                             location.reload();
                         }
