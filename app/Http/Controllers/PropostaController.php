@@ -288,7 +288,7 @@ class PropostaController extends Controller
 
 
 
-                return response('concluido com sucesso', 200)
+                return response($response, 200)
                     ->header('Content-Type', 'text/plain');
     //            echo $response;
 
