@@ -31,6 +31,8 @@ class DadosBancariosController extends Controller
             $teste = new PropostaController();
             $retorno_dados = $teste->InserirProposta($data->id);
 
+            if($retorno_dados)
+
             $id = $data->id;
             $data_bancarios     = DB::table('dados_bancarios')->where('id_cadastro', $id)->first();
 
@@ -56,7 +58,8 @@ class DadosBancariosController extends Controller
 
 
 
-            return redirect('pedido');
+        return response('concluido com sucesso', 200)
+            ->header('Content-Type', 'text/plain');
 
 
 
