@@ -25,14 +25,14 @@
             var nome_solicitante = $("#form-1 input[name=solicitation-name]").val();
             var dtn_solicitante = $("#form-1 input[name=solicitation-birth]").val();
             var nro_documento = $("#form-1 input[name=solicitation-doc]").val();
-            var tp_documento = $('#tipo-documento').find(":selected").text();
+            var tp_documento = $('#tipo-documento').find(":selected").val();
             var solicitation_emission_id = $("#form-1 input[name=solicitation-emission-id]").val();
             var solicitation_organ = $("#form-1 input[name=solicitation-organ]").val();
             var sexo = $('#sexo').find(":selected").text();;
             var estado_civil = $('#estado_civil').find(":selected").val();
             var nacionalidade = $("#form-1 input[name=nacionalidade]").val();
             var naturalidade = $("#form-1 input[name=naturalidade]").val();
-            var uf_nascimento = $('#uf-nascimento').find(":selected").text();
+            var uf_nascimento = $('#uf-nascimento').find(":selected").val();
             var telefone = $("#form-1 input[name=telefone]").val();
             var celular = $("#form-1 input[name=celular]").val();
             var tel_recado = $("#form-1 input[name=telefone-recado]").val();
@@ -41,8 +41,8 @@
             var nome_conjuge = $("#form-1 input[name=nome_conjuge]").val();
             var cpf_conjuge = $("#form-1 input[name=cpf-conjuge]").val();
             var nasto_conjuge = $("#form-1 input[name=nascto-conjuge]").val();
-            var sexo_conjuge = $('#sexo-conjuge').find(":selected").text();
-            var pb_exposta = $('#publicamente-exposta').find(":selected").text();
+            var sexo_conjuge = $('#sexo-conjuge').find(":selected").val();
+            var pb_exposta = $('#publicamente-exposta').find(":selected").val();
             var telefone_recado = $('#form-1 input[name=telefone_recado]').val();
 
 
@@ -595,8 +595,8 @@
             var cidade     =   $("#form-3 input[name=cidade]").val();
             var valor_patrimonio     =   $("#form-3 input[name=valor-patrimonio-name]").val();
             // var cep     =   $("#form-2 input[name=cep]").val();
-            var residencia    =   $('#tipo-residencia-id').find(":selected").text();
-            var uf_id    =   $('#uf').find(":selected").text();
+            var residencia    =   $('#tipo-residencia-id').find(":selected").val();
+            var uf_id    =   $('#uf').find(":selected").val();
 
 
             if(cep === ""){
@@ -761,10 +761,10 @@
             if(step > 4) return alert('Você não pode editar as informações nessa etapa pois já preencheu os dados');
 
 
-            var banco_id     =   $('#banco-id').find(":selected").text();
+            var banco_id     =   $('#banco-id').find(":selected").val();
             var nro_agencia     =   $("#form-4 input[name=nro_agencia-name]").val();
             var nro_conta       =   $("#form-4 input[name=nro_conta]").val();
-            var tipo_conta      =   $('#conta-tipo').find(":selected").text();
+            var tipo_conta      =   $('#conta-tipo').find(":selected").val();
             var conta_desde     =   $("#form-4 input[name=conta-desde]").val();
             var nome_ref_pessoal    =   $("#form-4 input[name=nome-referencia-pessoal]").val();
             var cpf_ref_pessoal     =   $("#form-4 input[name=cpf-referencia-pessoal]").val();

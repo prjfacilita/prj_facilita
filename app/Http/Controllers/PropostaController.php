@@ -534,6 +534,8 @@ class PropostaController extends Controller
             $data = DB::table('dados_bancarios')->where('cpf',  Auth::user()->cpf)->first();
 
             $data_pre_cadastro = DB::table('pre_cadastro')->where('cpf', Auth::user()->cpf)->first();
+            $data_simulacao     = DB::table('simulacao')->where('cpf', Auth::user()->cpf)->first();
+            $data_bancarios     = DB::table('dados_bancarios')->where('cpf', Auth::user()->cpf)->first();
 
             curl_setopt_array($curl, array(
                 CURLOPT_URL => "https://c2gvw4lxh9.execute-api.sa-east-1.amazonaws.com/hmg/api/v1/ep/propostas/".$data->nr_pedido."/especificacaofinanceira",
@@ -544,15 +546,15 @@ class PropostaController extends Controller
                 CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
                 CURLOPT_CUSTOMREQUEST => "PUT",
                             CURLOPT_POSTFIELDS => "{
-  \"dataPrimeiraParcela\": \"2019-02-14\",
-  \"valorPrincipal\": 2000,
-  \"quantidadeParcelas\": 12,
+  \"dataPrimeiraParcela\": \"".$data_simulacao->dataPrimeiraParcela."\",
+  \"valorPrincipal\": ".$data_simulacao->valorSolicitado.",
+  \"quantidadeParcelas\": ".$data_simulacao->qteParcelas.",
   \"dadosBancarios\": {
-    \"tipoConta\": \"CONTA_CORRENTE_INDIVIDUAL\",
-    \"codigoBanco\": 341,
-    \"numeroAgencia\": 111,
-    \"numeroConta\": 12345,
-    \"digitoConta\": \"01\"
+    \"tipoConta\": \"".$data_bancarios->tipo."\",
+    \"codigoBanco\": ".$data_bancarios->banco.",
+    \"numeroAgencia\": ".$data_bancarios->agencia.",
+    \"numeroConta\": ".$data_bancarios->conta.",
+    \"digitoConta\": \"".$data_bancarios->dig_conta."\"
   }
 }",
                 CURLOPT_HTTPHEADER => array(
