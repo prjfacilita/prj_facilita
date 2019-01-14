@@ -202,7 +202,7 @@
     // $('#confirmation_code').mask("0000000", {placeholder: "__/__/____"});
 
 window.setTimeout( function(){
-    window.location = "{{route('index')}}}";
+    window.location = "{{route('index')}}";
 }, 1000 );
 </script>
 </body>
