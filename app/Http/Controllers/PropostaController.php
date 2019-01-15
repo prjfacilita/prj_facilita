@@ -417,7 +417,7 @@ class PropostaController extends Controller
 
                 $data_erro = ['tipo_erro' => $retorno['erros']['tipo'], 'mensagem_erro' => $retorno['erros']['mensagem']];
             }
-            return view('emprestimo.status_analise',  ['erros' => $retorno['erros']['tipo']]);
+            return view('emprestimo.status_analise',  ['erros' => $retorno->erros->tipo]);
         }
 
 
