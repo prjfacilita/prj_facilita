@@ -91,7 +91,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="request-denied-message">
-                        <p>Aguarde enquanto nossos especialistas análisam seu pedido de emprestimo {{$status->erros}}</p>
+                        <p>Aguarde enquanto nossos especialistas análisam seu pedido de emprestimo @foreach($status as $field) $field->erros->tipo @endforeach</p>
                         {{--<p>Lembramos que a Facilita não solicita nenhum valor antecipado, portanto, desconfie de ofertas desse tipo, mesmo que sejam feitas em nome da Facilita.</p>--}}
                     </div>
                 </div>
