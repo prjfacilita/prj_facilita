@@ -20,8 +20,8 @@
                 e.preventDefault();
 
 
-                var valor_pedido        =   $('#banco-id').find(":selected").val();
-                var qtde_parcelas       =   $("#form-4 input[name=nro_agencia-name]").val();
+                var valor_pedido        =   $('#alterar_valor').find(":selected").val();
+                var qtde_parcelas       =   $("#form_alterar_pedido input[name=alterar_parcelas]").val();
 
 
                 axios.post(APP_URL + '/alterar_pedido', {

@@ -159,17 +159,17 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <form id="" method="POST" action="{{route('alterar_pedido')}}" enctype="multipart/form-data">
+                                <form name="#form_alterar_pedido" method="POST" action="{{route('alterar_pedido')}}" enctype="multipart/form-data">
 
                                     <div class="solicitation-register__form">
                                         <div class="col-sm-10">
-                                            <label>Valor: <input type="text" id="" name="alterar_valor" class="solicitation-form__name solicitation-input valor_alterar"  required></label>
+                                            <label>Valor: <input type="text" id="alterar_valor" name="alterar_valor" class="solicitation-form__name solicitation-input valor_alterar"  required></label>
                                         </div>
 
                                         <div class="col-sm-10">
                                             {{--<div class="col-sm-2">--}}
                                             <label>Parcelas
-                                                <select required name="parcelas" id="alterar_parcelas">
+                                                <select required name="alterar_parcelas" id="alterar_parcelas">
                                                     {{--<option disabled="" selected="">Selecionar</option>--}}
                                                     <option value="3">3</option>
                                                     <option value="6">6</option>
