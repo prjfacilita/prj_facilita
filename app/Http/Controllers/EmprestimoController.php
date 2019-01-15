@@ -388,7 +388,7 @@ class EmprestimoController extends Controller
                 $alterar_simulacao = new Simulacao();
                 $alterar_simulacao->exists          = true;
                 $alterar_simulacao->id              = $data_simulacao->id;
-                $alterar_simulacao->valorSolicitado = $request->valor_pedido;
+                $alterar_simulacao->valorSolicitado = $valor_pedido;
                 $alterar_simulacao->qteParcelas     =  $request->qtde_parcelas;
 //                $alterar_simulacao->dataPrimeiraParcela =
                 $alterar_simulacao->save();
