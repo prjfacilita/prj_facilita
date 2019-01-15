@@ -381,7 +381,7 @@ class EmprestimoController extends Controller
             $valor_pedido = str_replace(',', '.', $valor_pedido);
 
 
-            if($data_cadastro_count == 0){
+//            if($data_cadastro_count == 0){
 
                 /*não existe cadastro então atualiza no banco de dados na simulacao*/
 
@@ -394,7 +394,7 @@ class EmprestimoController extends Controller
                 $alterar_simulacao->save();
 
 
-            }
+//            }
 
 
             if($data_cadastro_count > 0){
@@ -411,7 +411,7 @@ class EmprestimoController extends Controller
                         $especificacao = new PropostaController();
                         $retorno = $especificacao->InserirEspecificacaoFinanceira();
 
-                        return $request;
+                        return $retorno;
 
                 }else{
 
