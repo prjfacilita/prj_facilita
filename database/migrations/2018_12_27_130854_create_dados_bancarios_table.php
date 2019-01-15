@@ -15,7 +15,7 @@ class CreateDadosBancariosTable extends Migration
     {
         Schema::create('dados_bancarios', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nr_pedido')->default(0);
+            $table->string('nr_pedido')->nullable();
             $table->string('nro_proc_bco')->default(0);
             $table->string('cpf')->default(0);
             $table->string('banco')->default(0);

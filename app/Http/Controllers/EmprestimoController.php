@@ -372,6 +372,7 @@ class EmprestimoController extends Controller
 
 
             $data_cadastro_count = DB::table('cadastro')->where('email',  Auth::user()->email)->count();
+            $data_cadastro = DB::table('cadastro')->where('email',  Auth::user()->email)->first();
             $data_simulacao = DB::table('simulacao')->where('user_id',  Auth::user()->id)->first();
 
 
@@ -392,6 +393,24 @@ class EmprestimoController extends Controller
 
 
             if($data_cadastro_count > 0){
+
+                /**/
+
+                $data_bancarios = DB::table('dados_bancarios')->where('id_cadastro', $data_cadastro->id)->first();
+
+                if($data_bancarios->nr_pedido  != null){
+
+                    /*Será necessário fazer pesquisa de limites*/
+
+                    return 'com proposta';
+
+
+                }else{
+
+                    /*ainda não foi gerada proposta*/
+
+                    return 'sem proposta';
+                }
 
             }
 
