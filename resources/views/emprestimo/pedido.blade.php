@@ -144,7 +144,7 @@
                     <p>Motivo</p>
                     <span style="font-size:13px;">{{$finalidade}}</span>
 
-                    <a href="javascript:void(0);" class="solicitation_inf__alter">Alterar</a>
+                    <a href="javascript:void(0);" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" class="solicitation-inf__alter">Alterar</a>
                 </div>
 
             </div>
