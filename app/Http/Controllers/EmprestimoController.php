@@ -367,8 +367,33 @@ class EmprestimoController extends Controller
             /*o usuario pode alterar o pedido até antes de formalizar a proposta*/
 //            $simulacao = new Simulacao();
 
+            /*verificar se ja´existe cadastro no banco de dados da proposta (APENAS BANCO)*/
+            /*se ainda nao existir a proposta em si (ENVIADA PARA  O BANCO), alterar apenas no banco de dados*/
 
-            /*se ainda nao existir a proposta em si, alterar apenas no banco de dados*/
+
+            $data_cadastro_count = DB::table('cadastro')->where('email',  Auth::user()->email)->count();
+            $data_simulacao = DB::table('simulacao')->where('user_id',  Auth::user()->id)->first();
+
+
+            if($data_cadastro_count == 0){
+
+                /*não existe cadastro então atualiza no banco de dados na simulacao*/
+
+                $alterar_simulacao = new Simulacao();
+                $alterar_simulacao->exists;
+                $alterar_simulacao->id              = $data_simulacao->id;
+                $alterar_simulacao->valorSolicitado = $request->valor_pedido;
+                $alterar_simulacao->qteParcelas     =  $request->qtde_parcelas;
+//                $alterar_simulacao->dataPrimeiraParcela =
+                $alterar_simulacao->save();
+
+
+            }
+
+
+            if($data_cadastro_count > 0){
+
+            }
 
 
 
