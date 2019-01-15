@@ -170,6 +170,8 @@
                                 </div>
                                 <div class="modal-body">
                                     <form>
+
+                                        <div class="solicitation-register__form">
                                         <div class="form-group">
                                             <label for="recipient-name" class="col-form-label">Valor:</label>
                                             <input type="text" class="solicitation-form__name solicitation-input" id="recipient-name">
@@ -178,6 +180,10 @@
                                         <div class="form-group">
                                             <label for="recipient-name" class="col-form-label">Parcelas:</label>
                                             <input type="text" class="solicitation-form__name solicitation-input" id="recipient-name">
+                                        </div>
+
+
+
                                         </div>
 
 
