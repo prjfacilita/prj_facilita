@@ -173,13 +173,12 @@
 
                                         <div class="solicitation-register__form">
                                             <div class="col-sm-10">
-                                                <label>Nome: <input type="text" id="solicitation_name" name="solicitation-name" class="solicitation-form__name solicitation-input" value="@foreach ($data_cadastro as $rec){{ $rec->nome_completo }}@endforeach  " onkeypress="return this.value.length<=30 " required></label>
+                                                <label>Valor: <input type="text" id="" name="alterar_valor" class="solicitation-form__name solicitation-input"  required></label>
                                             </div>
 
-                                        <div class="form-group">
-                                            <label for="recipient-name" class="col-form-label">Parcelas:</label>
-                                            <input type="text" class="solicitation-form__name solicitation-input" id="recipient-name">
-                                        </div>
+                                            <div class="col-sm-10">
+                                                <label>Parcelas: <input type="text" id="" name="alterar_parcelas" class="solicitation-form__name solicitation-input"  required></label>
+                                            </div>
 
 
 
@@ -224,7 +223,7 @@
                                             <form action="{{route('pedido_emprestimo_parte01')}}" class="pedido_emprestimo_parte01" id="pedido_emprestimo_parte01" method="post" >
                                                 {{ csrf_field() }}
                                                 <div class="col-sm-10">
-                                                    <label>Nome: <input type="text" id="solicitation_name" name="solicitation-name" class="solicitation-form__name solicitation-input" value="@foreach ($data_cadastro as $rec){{ $rec->nome_completo }}@endforeach  " onkeypress="return this.value.length<=30 " required></label>
+                                                    <label>Nome: <input type="text" id="solicitation_name" name="solicitation-name" class="solicitation-form__name solicitation-input" value="@foreach ($data_cadastro as $rec){{ $rec->nome_completo }}@endforeach" onkeypress="return this.value.length<=30 " required></label>
                                                 </div>
 
                                                 <div class="col-sm-2">
