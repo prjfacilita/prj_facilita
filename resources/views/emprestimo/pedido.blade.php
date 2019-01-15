@@ -171,18 +171,26 @@
                                 <div class="modal-body">
                                     <form>
                                         <div class="form-group">
-                                            <label for="recipient-name" class="col-form-label">Recipient:</label>
-                                            <input type="text" class="form-control" id="recipient-name">
+                                            <label for="recipient-name" class="col-form-label">Valor:</label>
+                                            <input type="text" class="solicitation-form__name solicitation-input" id="recipient-name">
                                         </div>
+
                                         <div class="form-group">
-                                            <label for="message-text" class="col-form-label">Message:</label>
-                                            <textarea class="form-control" id="message-text"></textarea>
+                                            <label for="recipient-name" class="col-form-label">Parcelas:</label>
+                                            <input type="text" class="solicitation-form__name solicitation-input" id="recipient-name">
                                         </div>
+
+
+                                        {{--<div class="form-group">--}}
+                                            {{--<label>Alterar data vencimento: <input type="date" name="solicitation-birth" value="@foreach ($data_cadastro as $rec){{ $rec->dt_nasc }}@endforeach" class="solicitation-form__birth solicitation-input" required></label>--}}
+
+                                        {{--</div>--}}
+
                                     </form>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Send message</button>
+                                    <button type="button" class="btn btn-primary">Salvar</button>
                                 </div>
                             </div>
                         </div>
