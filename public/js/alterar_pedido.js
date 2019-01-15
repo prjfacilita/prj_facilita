@@ -25,16 +25,8 @@
 
 
                 axios.post(APP_URL + '/alterar_pedido', {
-                    banco_id: banco_id,
-                    nro_agencia: nro_agencia,
-                    nro_conta: nro_conta,
-                    tipo_conta: tipo_conta,
-                    dig_conta: dig_conta,
-                    conta_desde: conta_desde,
-                    nome_ref_pessoal: nome_ref_pessoal,
-                    cpf_ref_pessoal: cpf_ref_pessoal,
-                    grau_rel: grau_rel,
-                    tel_relacionamento: tel_relacionamento
+                    valor_pedido: valor_pedido,
+                    qtde_parcelas: qtde_parcelas
 
 
                 })
