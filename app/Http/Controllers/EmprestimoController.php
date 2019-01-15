@@ -376,6 +376,11 @@ class EmprestimoController extends Controller
             $data_simulacao = DB::table('simulacao')->where('user_id',  Auth::user()->id)->first();
 
 
+
+            $valor_pedido = str_replace('.', '', $request->valor_pedido);
+            $valor_pedido = str_replace(',', '.', $valor_pedido);
+
+
             if($data_cadastro_count == 0){
 
                 /*não existe cadastro então atualiza no banco de dados na simulacao*/
