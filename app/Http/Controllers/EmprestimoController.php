@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Simulacao;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 use GuzzleHttp\Client;
@@ -358,6 +359,23 @@ class EmprestimoController extends Controller
         public function AlterarPedido(Request $request){
 
 //            return $request;
+
+            /*RETORNO LIMITES*/
+
+            /*validar se o valor ultrapassa 20 mil*/
+
+            /*o usuario pode alterar o pedido até antes de formalizar a proposta*/
+//            $simulacao = new Simulacao();
+
+
+            /*se ainda nao existir a proposta em si, alterar apenas no banco de dados*/
+
+
+
+
+
+
+
 
             /**/
         }
