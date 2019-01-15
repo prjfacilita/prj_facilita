@@ -499,7 +499,7 @@ class PropostaController extends Controller
             } else {
 
 
-                $response = json_decode($response, true);
+             return   $response = json_decode($response, true);
 
 
     //        print_r($response);
