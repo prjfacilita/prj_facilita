@@ -409,14 +409,14 @@ class PropostaController extends Controller
             /*Chamar API Para realizar analise cadastral*/
 
 
-//            $data_erro = "";
+            $data_erro = "";
             $retorno  =  $this->AnaliseCadastral();
 
             if (array_key_exists("erros", $retorno)){
 
                 $data_erro = ['tipo_erro' => $retorno['erros']['tipo'], 'mensagem_erro' => $retorno['erros']['mensagem']];
             }
-            return view('emprestimo.status_analise',  ['erros' => $data_erro or null]);
+            return view('emprestimo.status_analise',  ['erros' => $data_erro]);
         }
 
 
