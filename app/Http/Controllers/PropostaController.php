@@ -411,6 +411,7 @@ class PropostaController extends Controller
 
             $data_erro = "";
             $retorno  =  $this->AnaliseCadastral();
+            $retorno = json_decode($retorno, true);
 
             if (array_key_exists("erros", $retorno)){
 
