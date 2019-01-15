@@ -459,7 +459,7 @@ class PropostaController extends Controller
             }
 
 
-             $this->InserirEspecificacaoFinanceira();
+             return $this->InserirEspecificacaoFinanceira();
 
 
 
@@ -498,8 +498,7 @@ class PropostaController extends Controller
                 echo "cURL Error #:" . $err;
             } else {
 
-
-             return   $response = json_decode($response, true);
+                $response = json_decode($response, true);
 
 
     //        print_r($response);
