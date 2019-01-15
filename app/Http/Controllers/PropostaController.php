@@ -411,13 +411,13 @@ class PropostaController extends Controller
 
             $data_erro = "";
             $retorno  =  $this->AnaliseCadastral();
-            $retorno = json_decode($retorno, true);
+//            $retorno = json_decode($retorno, true);
 
-            if (array_key_exists("erros", $retorno)){
-
-                $data_erro = ['tipo_erro' => $retorno['erros']['tipo'], 'mensagem_erro' => $retorno['erros']['mensagem']];
-            }
-            return view('emprestimo.status_analise',  ['erros' => $retorno->erros->tipo]);
+//            if (array_key_exists("erros", $retorno)){
+//
+//                $data_erro = ['tipo_erro' => $retorno['erros']['tipo'], 'mensagem_erro' => $retorno['erros']['mensagem']];
+//            }
+            return view('emprestimo.status_analise',  ['status' => $retorno]);
         }
 
 
