@@ -169,7 +169,7 @@
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    <form name="#form_alterar_pedido" method="POST" action="{{route('alterar_pedido')}}" enctype="multipart/form-data">
+                                    <form id="form_alterar_pedido" name="form_alterar_pedido" method="POST" action="{{route('alterar_pedido')}}" enctype="multipart/form-data">
 
                                         <div class="solicitation-register__form">
                                             <div class="col-sm-10">
