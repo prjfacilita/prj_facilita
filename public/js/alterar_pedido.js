@@ -20,8 +20,8 @@
                 e.preventDefault();
 
 
-                var valor_pedido        =   $('#alterar_valor').find(":selected").val();
-                var qtde_parcelas       =   $("#form_alterar_pedido input[name=alterar_parcelas]").val();
+                var valor_pedido        =   $("#form_alterar_pedido input[name=alterar_parcelas]").val();
+                var qtde_parcelas       =   $('#alterar_valor').find(":selected").val();
 
 
                 axios.post(APP_URL + '/alterar_pedido', {
