@@ -173,7 +173,7 @@
 
                                         <div class="solicitation-register__form">
                                             <div class="col-sm-10">
-                                                <label>Valor: <input type="text" id="" name="alterar_valor" class="solicitation-form__name solicitation-input"  required></label>
+                                                <label>Valor: <input type="text" id="" name="alterar_valor" class="solicitation-form__name solicitation-input valor_alterar"  required></label>
                                             </div>
 
                                             <div class="col-sm-10">
@@ -743,7 +743,6 @@
 <script src="{{asset('node_modules/inputmask/dist/inputmask/jquery.inputmask.js')}}"></script>
 <script src="{{asset('node_modules/jquery-validation/dist/jquery.validate.js')}}"></script>
 <script src="{{asset('js/bootstrap-notify.js')}}"></script>
-<script src="{{asset('js/alterar_pedido.js')}}"></script>
 <script src="assets/pedido/js/emprestimo.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
@@ -875,11 +874,14 @@
 </style>
 
 <script src="{{asset('js/plentz-jquery-maskmoney-cdbeeac/dist/jquery.maskMoney.js')}}"></script>
+<script src="{{asset('js/alterar_pedido.js')}}"></script>
+
 
 <script>
     $('.solicitation-form__phone').mask('(00) 0000-00000');
     $(".salario_nome_input").maskMoney({prefix:'R$ ', allowNegative: true, thousands:'.', decimal:',', affixesStay: false});
     $(".valor_patrimonio_input").maskMoney({prefix:'R$ ', allowNegative: true, thousands:'.', decimal:',', affixesStay: false});
+    $(".valor_alterar").maskMoney({prefix:'R$ ', allowNegative: true, thousands:'.', decimal:',', affixesStay: false});
 
 </script>
 </body>
