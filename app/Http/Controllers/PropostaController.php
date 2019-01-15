@@ -691,7 +691,30 @@ class PropostaController extends Controller
 
             $response = json_decode($response, true);
 
-            return view('emprestimo.pendencias', ['conta' => $retorno['contaValida'], 'agencia' => $retorno['agenciaValida'], 'bancoValido' => $retorno['bancoValido'], 'valorPrincipal' => $response['retorno']['especificacaoFinanceira']['valorPrincipal'],
+//            return view('emprestimo.pedido',
+//                ['valor_solicitacao'        => $user->valorSolicitado ,
+//                    'data_solicitacao'          =>  $user->created_at,
+//                    'qtde_parcelas'           =>  $user->qteParcelas,
+//                    'finalidade'    =>   $get_finalidade->finalidade,
+//                    'simulacao_id' => $user->id,
+//                    'data_cadastro' => $data_cadastro
+//
+//                ]);
+            $userId = Auth::id();
+            $user = DB::table('simulacao')->where('user_id',  $userId)->orderBy('created_at', 'DESC')->first();
+
+            $get_finalidade = DB::table('pre_cadastro')
+                ->where('email', '=',  Auth::user()->email)
+////            ->where('cpf', '=',  $request->simulation_cpf)
+////                ->orderBy('quantity', 'asc')
+                ->first();
+            return view('emprestimo.pendencias', ['valor_solicitacao'        => $user->valorSolicitado ,
+                        'data_solicitacao'          =>  $user->created_at,
+                        'qtde_parcelas'           =>  $user->qteParcelas,
+                        'finalidade'    =>   $get_finalidade->finalidade,
+                        'simulacao_id' => $user->id,
+//                        'data_cadastro' => $data_cadastro,
+                        'conta' => $retorno['contaValida'], 'agencia' => $retorno['agenciaValida'], 'bancoValido' => $retorno['bancoValido'], 'valorPrincipal' => $response['retorno']['especificacaoFinanceira']['valorPrincipal'],
                         'iof' => $response['retorno']['especificacaoFinanceira']['iof'],
                         'cet'=> $response['retorno']['especificacaoFinanceira']['cet'],
                         'taxaJuros' => $response['retorno']['especificacaoFinanceira']['taxaJuros'],
