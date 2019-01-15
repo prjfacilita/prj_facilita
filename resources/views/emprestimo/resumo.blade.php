@@ -19,6 +19,8 @@
     <script src="assets/resumo/js/jquery-3.3.1.min.js"></script>
     <script src="assets/resumo/js/bootstrap.min.js"></script>
     <script src="assets/resumo/js/resumo.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
 
 </head>
 
