@@ -149,7 +149,7 @@ class LoginController extends Controller
                 // validation not successful, send back to form
 
                // echo 'erro!';
-                return Redirect::to('/prj_facilita/public/login');
+                return redirect()->intended('index');
 
             }
 
