@@ -407,8 +407,11 @@ class EmprestimoController extends Controller
 
                     /*Será necessário fazer pesquisa de limites*/
 
-                    return 'com proposta';
+//                    return 'com proposta';
+                        $especificacao = new PropostaController();
+                        $retorno = $especificacao->InserirEspecificacaoFinanceira();
 
+                        return $request;
 
                 }else{
 
