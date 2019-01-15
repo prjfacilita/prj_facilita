@@ -144,7 +144,7 @@
                     <p>Motivo</p>
                     <span style="font-size:13px;">{{$finalidade}}</span>
 
-                    <a href="#" class="solicitation-inf__alter">Alterar</a>
+                    <a href="javascript:void(0);" class="solicitation_inf__alter">Alterar</a>
                 </div>
 
             </div>
@@ -689,6 +689,7 @@
 <script src="{{asset('node_modules/inputmask/dist/inputmask/jquery.inputmask.js')}}"></script>
 <script src="{{asset('node_modules/jquery-validation/dist/jquery.validate.js')}}"></script>
 <script src="{{asset('js/bootstrap-notify.js')}}"></script>
+<script src="{{asset('js/alterar_pedido.js')}}"></script>
 <script src="assets/pedido/js/emprestimo.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
