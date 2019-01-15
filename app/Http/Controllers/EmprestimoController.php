@@ -380,7 +380,7 @@ class EmprestimoController extends Controller
                 /*não existe cadastro então atualiza no banco de dados na simulacao*/
 
                 $alterar_simulacao = new Simulacao();
-                $alterar_simulacao->exists;
+                $alterar_simulacao->exists          = true;
                 $alterar_simulacao->id              = $data_simulacao->id;
                 $alterar_simulacao->valorSolicitado = $request->valor_pedido;
                 $alterar_simulacao->qteParcelas     =  $request->qtde_parcelas;
