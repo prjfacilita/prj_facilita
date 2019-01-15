@@ -177,7 +177,18 @@
                                             </div>
 
                                             <div class="col-sm-10">
-                                                <label>Parcelas: <input type="text" id="" name="alterar_parcelas" class="solicitation-form__name solicitation-input"  required></label>
+                                                {{--<div class="col-sm-2">--}}
+                                                    <label>Parcelas
+                                                        <select required name="parcelas" id="alterar_parcelas">
+                                                            {{--<option disabled="" selected="">Selecionar</option>--}}
+                                                            <option value="3">3</option>
+                                                            <option value="6">6</option>
+                                                            <option value="12">12</option>
+                                                            <option value="18">18</option>
+                                                            <option value="20">20</option>
+                                                            <option value="24">24</option>
+                                                        </select></label>
+                                                {{--</div>--}}
                                             </div>
 
 
