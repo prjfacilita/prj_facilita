@@ -355,6 +355,12 @@ class EmprestimoController extends Controller
     }
 
 
+        public function AlterarPedido(Request $request){
+
+            return $request;
+        }
+
+
 
 
 }

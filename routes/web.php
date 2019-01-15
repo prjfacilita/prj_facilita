@@ -117,3 +117,5 @@ Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('re
 
 Route::get('resumo', [ 'as' => 'resumo', 'uses' => 'PropostaController@ANALISE_CADASTRAL_CONCLUIDA']);
 Route::get('enviar_documento', [ 'as' => 'enviar_documento', 'uses' => 'EmprestimoController@EnviarComprovanteDeResidencia']);
+//Route::post
+Route::post('alterar_pedido', 'EmprestimoController@AlterarPedido');
