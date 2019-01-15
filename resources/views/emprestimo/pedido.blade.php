@@ -169,7 +169,7 @@
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    <form>
+                                    <form id="" method="POST" action="{{route('alterar_pedido')}}" enctype="multipart/form-data">
 
                                         <div class="solicitation-register__form">
                                             <div class="col-sm-10">
@@ -202,11 +202,14 @@
                                         {{--</div>--}}
 
                                     </form>
+
+
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                     <button type="button" class="btn btn-success salvar_alteracao_pedido">Salvar</button>
                                 </div>
+
                             </div>
                         </div>
                     </div>

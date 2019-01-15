@@ -20,6 +20,30 @@
                 e.preventDefault();
 
 
+                var valor_pedido        =   $('#banco-id').find(":selected").val();
+                var qtde_parcelas       =   $("#form-4 input[name=nro_agencia-name]").val();
+
+
+                axios.post(APP_URL + '/alterar_pedido', {
+                    banco_id: banco_id,
+                    nro_agencia: nro_agencia,
+                    nro_conta: nro_conta,
+                    tipo_conta: tipo_conta,
+                    dig_conta: dig_conta,
+                    conta_desde: conta_desde,
+                    nome_ref_pessoal: nome_ref_pessoal,
+                    cpf_ref_pessoal: cpf_ref_pessoal,
+                    grau_rel: grau_rel,
+                    tel_relacionamento: tel_relacionamento
+
+
+                })
+                    .then(function (response) {
+                        console.log(response);
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
 
 
 
