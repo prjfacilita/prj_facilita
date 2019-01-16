@@ -130,7 +130,9 @@
                 <div class="solicitation-inf-area">
                     <span>TAXA: 4,80% A.M.</span>
                     <span>CET: 6,15% A.M.</span>
-                    <a href="#" class="solicitation-inf__alter">Alterar</a>
+                    {{--<a href="#" class="solicitation-inf__alter">Alterar</a>--}}
+                    <a href="javascript:void(0);" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" class="solicitation-inf__alter">Alterar</a>
+
                 </div>
 
             </div>
@@ -142,6 +144,63 @@
     <section class="solicitation-register">
         <div class="container">
             <div class="row">
+
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Alterar pedido</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="form_alterar_pedido" name="form_alterar_pedido" method="POST" action="{{route('alterar_pedido')}}" enctype="multipart/form-data">
+
+                                    <div class="solicitation-register__form">
+                                        <div class="col-sm-10">
+                                            <label>Valor: <input type="text" id="alterar_valor" name="alterar_valor" class="solicitation-form__name solicitation-input valor_alterar"  required></label>
+                                        </div>
+
+                                        <div class="col-sm-10">
+                                            {{--<div class="col-sm-2">--}}
+                                            <label>Parcelas
+                                                <select required name="alterar_parcelas" id="alterar_parcelas">
+                                                    {{--<option disabled="" selected="">Selecionar</option>--}}
+                                                    <option value="3">3</option>
+                                                    <option value="6">6</option>
+                                                    <option value="12">12</option>
+                                                    <option value="18">18</option>
+                                                    <option value="20">20</option>
+                                                    <option value="24">24</option>
+                                                </select></label>
+                                            {{--</div>--}}
+                                        </div>
+
+
+
+                                    </div>
+
+
+                                    {{--<div class="form-group">--}}
+                                    {{--<label>Alterar data vencimento: <input type="date" name="solicitation-birth" value="@foreach ($data_cadastro as $rec){{ $rec->dt_nasc }}@endforeach" class="solicitation-form__birth solicitation-input" required></label>--}}
+
+                                    {{--</div>--}}
+
+                                </form>
+
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-success salvar_alteracao_pedido">Salvar</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
                 <div class="col-12 solicitation-register__area">
 
                     <div class="order-dispatched">
@@ -363,5 +422,13 @@
     </footer>
 
 </div>
+<script src="{{asset('js/plentz-jquery-maskmoney-cdbeeac/dist/jquery.maskMoney.js')}}"></script>
+
+<script src="{{asset('js/alterar_pedido.js')}}"></script>
+
+<script>
+    $(".valor_alterar").maskMoney({prefix:'R$ ', allowNegative: true, thousands:'.', decimal:',', affixesStay: false});
+
+</script>
 </body>
 </html>
