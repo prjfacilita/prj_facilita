@@ -32,6 +32,10 @@
                 })
                     .then(function (response) {
                         console.log(response);
+                        if(response.data == "concluido com sucesso"){
+
+                            location.reload();
+                        }
                     })
                     .catch(function (error) {
                         console.log(error);

@@ -411,7 +411,11 @@ class EmprestimoController extends Controller
                         $especificacao = new PropostaController();
                         $retorno = $especificacao->InserirEspecificacaoFinanceira();
 
-                        return $retorno;
+//                        return $retorno;?
+
+
+//                    return response('concluido com sucesso', 200)
+//                        ->header('Content-Type', 'text/plain');
 
                 }else{
 
@@ -419,6 +423,11 @@ class EmprestimoController extends Controller
 
                     return 'sem proposta';
                 }
+
+
+                return response('concluido com sucesso', 200)
+                    ->header('Content-Type', 'text/plain');
+
 
             }
 
