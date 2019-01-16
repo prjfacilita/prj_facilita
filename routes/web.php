@@ -119,4 +119,4 @@ Route::get('resumo', [ 'as' => 'resumo', 'uses' => 'PropostaController@ANALISE_C
 Route::get('enviar_documento', [ 'as' => 'enviar_documento', 'uses' => 'EmprestimoController@EnviarComprovanteDeResidencia']);
 //Route::post
 Route::post('alterar_pedido', 'EmprestimoController@AlterarPedido')->name('alterar_pedido');
-Route::resource('file','File');
+Route::resource('file','FileController');

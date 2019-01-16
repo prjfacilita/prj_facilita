@@ -163,7 +163,9 @@
                                                 <h2>Comprovante de residência</h2>
 
                                                 <div class="box-photo"></div>
-                                                <form action="{{route('enviar_documentos')}}" method="post" enctype="multipart/form-data">
+                                                <form action="{{route('file.store')}}" method="post" enctype="multipart/form-data">
+
+                                                    {{ csrf_field() }}
                                                     <a href="" class="send-photo"><i class="fa fa-folder-open" aria-hidden="true"></i>Selecionar</a>
                                                     <input type="file" class="send-photo" name="image">
 
