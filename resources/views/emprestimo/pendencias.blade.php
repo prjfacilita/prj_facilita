@@ -109,27 +109,27 @@
 
                 <div class="solicitation-inf-area solicitation-date">
                     <p>Data da solicitação</p>
-                    <span>07/11/2018</span>
+                    <span>{{$dataSolicitacao}}</span>
+                </div>
+
+                <div class="solicitation-inf-area solicitation-date">
+                    <p>Data de pagamento</p>
+                    <span>{{$dataPrimeiraParcela}}</span>
                 </div>
 
                 <div class="solicitation-inf-area solicitation-value">
                     <p>Valor da solicitação</p>
-                    <span>R$ 2.000,00</span>
+                    <span>R$ {{$valorPrincipal}}</span>
                 </div>
 
                 <div class="solicitation-inf-area solicitation-payment">
                     <p>Pagamento em</p>
-                    <span>12 meses</span>
+                    <span>{{$quantidadeParcelas}} meses</span>
                 </div>
 
                 <div class="solicitation-inf-area">
-                    <p>Valor da parcela</p>
-                    <span>R$ 601,12</span>
-                </div>
-
-                <div class="solicitation-inf-area">
-                    <span>TAXA: 4,80% A.M.</span>
-                    <span>CET: 6,15% A.M.</span>
+                    <p>Motivo</p>
+                    <span>{{$motivo_solicitacao}}</span>
                     {{--<a href="#" class="solicitation-inf__alter">Alterar</a>--}}
                     <a href="javascript:void(0);" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" class="solicitation-inf__alter">Alterar</a>
 
