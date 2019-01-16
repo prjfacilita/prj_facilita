@@ -179,6 +179,16 @@ class PropostaController extends Controller
             $status_anliase->save();
 
 
+            $data_email['nome'] = $data->nome_completo;
+
+
+            Mail::send('emails.pre_analise',  $data, function( $message ) use ($data_email)
+            {
+                $message->from('rtelesc@gmail.com', 'Proposta enviada', $data_email['nome']);
+                $message->to(Auth::user()->email);
+            });
+
+
             return $arr;
         }
 

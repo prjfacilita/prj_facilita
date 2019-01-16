@@ -154,7 +154,7 @@
                                     </a>
                                 </div>
 
-                                <div id="form-1" class="accordion-form collapse show" data-parent="#accordion">
+                                <div id="form-1" class="accordion-form collapse show" data-parent="#accordion" enctype="multipart/form-data">
 
                                     <div class="card-body acordion-photo-document photo-doc-home">
                                         <div class="row">
@@ -165,6 +165,7 @@
                                                 <div class="box-photo"></div>
 
                                                 <a href="" class="send-photo"><i class="fa fa-folder-open" aria-hidden="true"></i>Selecionar</a>
+                                                <input type="file" class="send-photo" name="image">
 
                                                 <label>Comprovante está em seu nome?</br>
                                                     <input type="radio" name="nome-no-documento" value="sim" checked> Sim

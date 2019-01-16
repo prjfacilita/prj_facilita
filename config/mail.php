@@ -55,7 +55,7 @@ return [
     |
     */
 
-    'from' => ['address' => 'rtelesc@gmail.com', 'name' => 'Bruce Wane'],
+    'from' => ['address' => 'rtelesc@gmail.com', 'name' => 'Facilita emprestimo'],
 
     /*
     |--------------------------------------------------------------------------
