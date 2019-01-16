@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class FileController extends Controller
+class File extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -36,10 +36,10 @@ class FileController extends Controller
     {
         //
 
-        return $request;
+//        return $request;
         $data = new \App\File();
         $data->name = 'teste';
-        $file = $request->file('image');
+        $file = $request->file('file');
         $ext = $file->getClientOriginalExtension();
         $newName = rand(100000,1001238912).".".$ext;
         $file->move('uploads/file',$newName);

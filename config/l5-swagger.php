@@ -104,7 +104,7 @@ return [
 
         /*
         |--------------------------------------------------------------------------
-        | FileController name of the generated json documentation file
+        | File name of the generated json documentation file
         |--------------------------------------------------------------------------
         */
 
