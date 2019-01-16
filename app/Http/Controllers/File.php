@@ -37,14 +37,14 @@ class File extends Controller
         //
 
 //        return $request;
-        $data = new \App\File();
-        $data->name = 'teste';
+//        $data = new \App\File();
+//        $data->name = 'teste';
         $file = $request->file('file');
         $ext = $file->getClientOriginalExtension();
         $newName = rand(100000,1001238912).".".$ext;
         $file->move('uploads/file',$newName);
-        $data->file = $newName;
-        $data->save();
+//        $data->file = $newName;
+//        $data->save();
         return redirect()->route('file.index')->with('alert-success','Data berhasil ditambahkan!');
     }
 
