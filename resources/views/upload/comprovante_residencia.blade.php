@@ -163,14 +163,16 @@
                                                 <h2>Comprovante de residência</h2>
 
                                                 <div class="box-photo"></div>
+                                                <form action="url-aqui" method="post" enctype="multipart/form-data">
+                                                    <a href="" class="send-photo"><i class="fa fa-folder-open" aria-hidden="true"></i>Selecionar</a>
+                                                    <input type="file" class="send-photo" name="image">
 
-                                                <a href="" class="send-photo"><i class="fa fa-folder-open" aria-hidden="true"></i>Selecionar</a>
-                                                <input type="file" class="send-photo" name="image">
+                                                    <label>Comprovante está em seu nome?</br>
+                                                        <input type="radio" name="nome-no-documento" value="sim" checked> Sim
+                                                        <input type="radio" name="nome-no-documento" value="nao"> Não
+                                                    </label>
 
-                                                <label>Comprovante está em seu nome?</br>
-                                                    <input type="radio" name="nome-no-documento" value="sim" checked> Sim
-                                                    <input type="radio" name="nome-no-documento" value="nao"> Não
-                                                </label>
+
 
                                             </div>
                                         </div>
@@ -187,6 +189,7 @@
                         <a href="" class="solicitation-next">Continuar</a>
                     </div>
 
+                    </form>
                 </div>
             </div> <!--row -->
         </div> <!--container -->
