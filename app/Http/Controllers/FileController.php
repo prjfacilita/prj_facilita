@@ -35,9 +35,11 @@ class FileController extends Controller
     public function store(Request $request)
     {
         //
+
+        return $request;
         $data = new \App\File();
-        $data->name = $request->input('name');
-        $file = $request->file('file');
+        $data->name = 'teste';
+        $file = $request->file('image');
         $ext = $file->getClientOriginalExtension();
         $newName = rand(100000,1001238912).".".$ext;
         $file->move('uploads/file',$newName);
