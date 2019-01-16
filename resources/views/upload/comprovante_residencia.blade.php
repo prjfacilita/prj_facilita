@@ -188,7 +188,8 @@
 
                     <div class="solicitation-register-btn">
                         <a href="{{route('pendencias')}}" class="solicitation-back">Voltar</a>
-                        <a href="" class="solicitation-next">Continuar</a>
+                        {{--<a href="" class="solicitation-next">Continuar</a>--}}
+                        <button type="submit" class="solicitation-next">Continuar</button>
                     </div>
 
                     </form>
