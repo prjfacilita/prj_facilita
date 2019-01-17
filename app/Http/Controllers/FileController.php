@@ -13,6 +13,6 @@ class FileController extends Controller
 
         $request->image->store('logos');
 
-        return $request;
+        return $request->image;
     }
 }
