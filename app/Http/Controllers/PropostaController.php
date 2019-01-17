@@ -14,6 +14,8 @@ use GuzzleHttp\Client;
 use Illuminate\Support\Facades\DB;
 //use App\Http\Controllers\EmprestimoController
 use App\Http\Controllers\DadosBancariosController;
+
+use Illuminate\Support\Facades\Mail;
 class PropostaController extends Controller
 {
     //
