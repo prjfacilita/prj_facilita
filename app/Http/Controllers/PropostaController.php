@@ -184,11 +184,11 @@ class PropostaController extends Controller
             $data_email = $data->nome_completo;
 
 
-            Mail::send('emails.pre_analise',  $data, function( $message ) use ($data_email)
-            {
-                $message->from('rtelesc@gmail.com', 'Proposta enviada', $data_email);
-                $message->to(Auth::user()->email);
-            });
+//            Mail::send('emails.pre_analise',  $data, function( $message ) use ($data_email)
+//            {
+//                $message->from('rtelesc@gmail.com', 'Proposta enviada', $data_email);
+//                $message->to(Auth::user()->email);
+//            });
 
 
             return $arr;
