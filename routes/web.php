@@ -122,4 +122,4 @@ Route::post('alterar_pedido', 'EmprestimoController@AlterarPedido')->name('alter
 //Route::resource('file','File');
 
 
-Route::post('enviar_arquivo','FileController@store');
+Route::post('enviar_arquivo','FileController@store')->name('enviar_arquivo');
