@@ -11,8 +11,7 @@ class FileController extends Controller
 
     public function store(Request $request){
 
-        $request->image->store();
-        $request->logo->storeAs('1.png');
+        $request->image->store('logos');
 
         return $request->image;
     }
