@@ -140,7 +140,7 @@ class PropostaController extends Controller
     //                        $request->qteParcelas,
     //                    ],
                         "cpf" => $cpf,
-                        "dataNascimento" =>  $data->dt_nasc ,
+                        "dataNascimento" =>  date('Y-m-d', strtotime($data->dt_nasc)) ,
                         "naturezaOcupacao" => $data->ocupacao,
                         "genero" => strtoupper($data->sexo),
                         "rendaMensal" => $salario,
