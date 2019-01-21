@@ -247,6 +247,13 @@ class EmprestimoController extends Controller
         return view('upload.comprovante_residencia');
 
     }
+
+
+    public function EnviarComprovanteDeRenda(Request $request){
+
+        return view('upload.enviar_comprovante_renda');
+
+    }
     public function EmprestimoEndereco(Request $request){
 
 

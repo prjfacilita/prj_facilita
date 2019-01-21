@@ -241,7 +241,7 @@
                                                 </div>
 
                                                 <div class="col-sm-2">
-                                                    <label>Nascimento: <input type="date" name="solicitation-birth" value="@foreach ($data_cadastro as $rec){{ $rec->dt_nasc }}@endforeach" class="solicitation-form__birth solicitation-input" required></label>
+                                                    <label>Nascimento: <input type="text" readonly="true" id="id_data_nascimento" name="solicitation-birth" value="@foreach ($data_cadastro as $rec){{ $rec->dt_nasc }}@endforeach" class="solicitation-form__birth solicitation-input" required></label>
                                                 </div>
 
                                                 <div class="col-sm-3">
@@ -263,7 +263,7 @@
 
 
                                                 <div class="col-sm-2">
-                                                    <label>Data de Emissão: <input required type="date" name="solicitation-emission-id" class="solicitation-form__id solicitation-input"></label>
+                                                    <label>Data de Emissão: <input required type="text" readonly="true" id="id_data_emissao" name="solicitation-emission-id" class="solicitation-form__id solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-3">
@@ -359,7 +359,7 @@
                                                     <label>CPF Cônjuge<input required type="text" name="cpf-conjuge" value="@foreach ($data_cadastro as $rec){{ $rec->cpf_conj}}@endforeach" class="solicitation-form__name solicitation-input"></label>
                                                 </div>
                                                 <div class="col-sm-2">
-                                                    <label>Nascto Cônjuge: <input type="date" name="nascto-conjuge" value="@foreach ($data_cadastro as $rec){{ $rec->dt_nasc_conj}}@endforeach" class="solicitation-form__id solicitation-input"></label>
+                                                    <label>Nascto Cônjuge: <input readonly="true" type="text" id="id_nascto_conjuge" name="nascto-conjuge" value="@foreach ($data_cadastro as $rec){{ $rec->dt_nasc_conj}}@endforeach" class="solicitation-form__id solicitation-input"></label>
                                                 </div>
                                                 <div class="col-sm-2">
                                                     <label>Sexo Cônjuge:
@@ -450,7 +450,7 @@
                                                     <label>Empresa: <input value="@foreach ($data_cadastro as $rec){{ $rec->empresa}}@endforeach" type="text" name="empresa" class="solicitation-form__id solicitation-input"></label>
                                                 </div>
                                                 <div class="col-sm-3">
-                                                    <label>Data de Admissão: <input type="date" name="data-admissao" class="solicitation-form__id solicitation-input"></label>
+                                                    <label>Data de Admissão: <input type="text" readonly="true" id="id_data_admissao" name="data-admissao" class="solicitation-form__id solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-8">
@@ -462,7 +462,7 @@
                                                 </div>
 
                                                 <div class="col-sm-2">
-                                                    <label>CEP: <input type="text" value="@foreach ($data_cadastro as $rec){{ $rec->end_comercial_cep}}@endforeach" name="endereco_comercial_cep" class="solicitation- solicitation-input"></label>
+                                                    <label>CEP: <input maxlength="8" type="text" value="@foreach ($data_cadastro as $rec){{ $rec->end_comercial_cep}}@endforeach" name="endereco_comercial_cep" class="solicitation- solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-5">
@@ -475,7 +475,7 @@
 
                                                 <div class="col-sm-2">
                                                     <label>UF:
-                                                        <select id="endereco_comercial_uf">
+                                                        <select name="endereco_comercial_uf" id="endereco_comercial_uf">
                                                             <option disabled selected>Selecionar</option>
                                                             <option value="ac">AC</option>
                                                             <option value="al">AL</option>
@@ -551,7 +551,7 @@
                                                 {{ csrf_field() }}
 
                                                 <div class="col-sm-2">
-                                                    <label>CEP: <input type="text" name="cep" class="solicitation- solicitation-input"></label>
+                                                    <label>CEP: <input maxlength="8" type="text" id="cep_parte1" name="cep" class="solicitation- solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-8">
@@ -588,7 +588,7 @@
 
                                                 <div class="col-sm-2">
                                                     <label>UF:
-                                                        <select id="uf">
+                                                        <select name="uf" id="uf">
                                                             <option disabled selected>Selecionar</option>
                                                             <option value="ac">AC</option>
                                                             <option value="al">AL</option>
@@ -694,7 +694,7 @@
                                                 </div>
 
                                                 <div class="col-sm-2">
-                                                    <label>CONTA DESDE: <input type="date" name="conta-desde" class="solicitation-form__id solicitation-input"></label>
+                                                    <label>CONTA DESDE: <input readonly="true" id="conta-desde" type="text" name="conta-desde" class="solicitation-form__id solicitation-input"></label>
                                                 </div>
 
                                                 <div class="col-sm-7">
@@ -878,7 +878,10 @@
 
 <script src="{{asset('js/plentz-jquery-maskmoney-cdbeeac/dist/jquery.maskMoney.js')}}"></script>
 <script src="{{asset('js/alterar_pedido.js')}}"></script>
-
+<script src="{{asset('js/cep_pedido_pt1.js')}}"></script>
+<script src="{{asset('node_modules/jquery-datepicker/jquery-datepicker.js')}}"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js" type="text/javascript"></script>
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="Stylesheet" type="text/css" />
 
 <script>
     $('.solicitation-form__phone').mask('(00) 0000-00000');
@@ -886,6 +889,86 @@
     $(".valor_patrimonio_input").maskMoney({prefix:'R$ ', allowNegative: true, thousands:'.', decimal:',', affixesStay: false});
     $(".valor_alterar").maskMoney({prefix:'R$ ', allowNegative: true, thousands:'.', decimal:',', affixesStay: false});
 
+    // $(function() {
+        $("#id_data_nascimento").datepicker({
+            // defaultDate: "08/02/2016"
+            dateFormat: 'dd/mm/yy',
+            locale: 'pt-br',
+            maxDate: 0,
+            // constrainInput: false,
+            // .date-picker').datepicker( {
+            changeMonth: true,
+            changeYear: true,
+            yearRange: "-100:+0",
+    //     showButtonPanel: true,
+            // maxDate: "today",
+            // m
+        });
+
+
+
+    $("#id_data_emissao").datepicker({
+        // defaultDate: "08/02/2016"
+        dateFormat: 'dd/mm/yy',
+        locale: 'pt-br',
+        maxDate: 0,
+        // constrainInput: false,
+        // .date-picker').datepicker( {
+        changeMonth: true,
+        changeYear: true,
+        yearRange: "-100:+0",
+        //     showButtonPanel: true,
+        // maxDate: "today",
+        // m
+    });
+
+    $("#id_nascto_conjuge").datepicker({
+        // defaultDate: "08/02/2016"
+        dateFormat: 'dd/mm/yy',
+        locale: 'pt-br',
+        maxDate: 0,
+        // constrainInput: false,
+        // .date-picker').datepicker( {
+        changeMonth: true,
+        changeYear: true,
+        yearRange: "-100:+0",
+        //     showButtonPanel: true,
+        // maxDate: "today",
+        // m
+    });
+
+    $("#id_data_admissao").datepicker({
+        // defaultDate: "08/02/2016"
+        dateFormat: 'dd/mm/yy',
+        locale: 'pt-br',
+        maxDate: 0,
+        // constrainInput: false,
+        // .date-picker').datepicker( {
+        changeMonth: true,
+        changeYear: true,
+        yearRange: "-100:+0",
+        //     showButtonPanel: true,
+        // maxDate: "today",
+        // m
+    });    $("#conta-desde").datepicker({
+        // defaultDate: "08/02/2016"
+        dateFormat: 'dd/mm/yy',
+        locale: 'pt-br',
+        maxDate: 0,
+        // constrainInput: false,
+        // .date-picker').datepicker( {
+        changeMonth: true,
+        changeYear: true,
+        yearRange: "-100:+0",
+        //     showButtonPanel: true,
+        // maxDate: "today",
+        // m
+    });
+
+
+
+
+    // });
 </script>
 </body>
 </html>

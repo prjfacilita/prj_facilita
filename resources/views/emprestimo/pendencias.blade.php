@@ -369,7 +369,7 @@
                                         <div class="card-documents">
                                             <h2>Comprovante de renda <span>(Opcional)</span></h2>
                                             <p>Envie seu comprovante de renda para continuar</p>
-                                            <a href="">Enviar documento</a>
+                                            <a href="{{route('enviar_documento')}}">Enviar documento</a>
                                         </div>
                                     </div>
 
@@ -390,7 +390,8 @@
                                     <div class="card-body acordion-signature">
                                         <p>mesmo após a assinatura dos contratos, seu emprétimo será efetivado somente se a sua documentação e o seu cadastro forem aprovados.</p>
 
-                                        <div>ESPAÇO PARA PDF</div>
+                                        <embed src="{{route('documento_formalizacao')}}" width="100%" height="500"
+                                               type="application/pdf">
                                         <div class="solicitation-register-btn">
                                             <a href="" class="solicitation-next"><i class="fa fa-check" aria-hidden="true"></i>Assinar 2 documentos</a>
                                         </div>

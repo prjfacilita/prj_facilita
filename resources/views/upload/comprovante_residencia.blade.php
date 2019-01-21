@@ -174,6 +174,8 @@
                                                         <input type="radio" name="nome-no-documento" value="nao"> Não
                                                     </label>
 
+                                                    <input type="hidden" name="tipodoc" value="EXTRATO_BANCARIO">
+
 
 
                                             </div>

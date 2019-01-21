@@ -115,11 +115,24 @@ Route::post('pedido_emprestimo_parte04', 'DadosBancariosController@InserirDadosB
 
 Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
 
+
 Route::get('resumo', [ 'as' => 'resumo', 'uses' => 'PropostaController@ANALISE_CADASTRAL_CONCLUIDA']);
 Route::get('enviar_documento', [ 'as' => 'enviar_documento', 'uses' => 'EmprestimoController@EnviarComprovanteDeResidencia']);
+Route::get('enviar_comprovante_renda', [ 'as' => 'enviar_comprovante_renda', 'uses' => 'EmprestimoController@EnviarComprovanteDeRenda']);
+
+
+Route::get('documento_formalizacao', 'PropostaController@RetornarDocumentoFormalizacao')->name('documento_formalizacao');
+
+
 //Route::post
 Route::post('alterar_pedido', 'EmprestimoController@AlterarPedido')->name('alterar_pedido');
 //Route::resource('file','File');
 
 
 Route::post('enviar_arquivo','FileController@store')->name('enviar_arquivo');
+
+
+/*ROTAS PARA TESTAR FUNÇÕES*/
+
+Route::get('teste_documento', 'PropostaController@INSERIR_DOCUMENTO')->name('teste_documento');
+Route::get('teste_pdf', 'PropostaController@RetornarDocumentoFormalizacao')->name('teste_pdf');
