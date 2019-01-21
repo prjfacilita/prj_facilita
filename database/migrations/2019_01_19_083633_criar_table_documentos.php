@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Support\Facades\DB;
 
 class CriarTableDocumentos extends Migration
 {
@@ -30,14 +31,16 @@ class CriarTableDocumentos extends Migration
             $table->string('data_doc');
             $table->string('status_doc');
             $table->string('nome_doc');
-            $table->binary('base64_doc');
+//            $table->LONGBLOB('base64_doc');
             $table->string('id_cadastro');
             $table->string('tipo_doc');
-            $table->string('nr_doc');
+            $table->string('nr_doc')->default(0);
 //            $table->timestamps();
 
 
         });
+
+        DB::statement("ALTER TABLE documentos ADD base64_dc LONGBLOB");
     }
 
     /**

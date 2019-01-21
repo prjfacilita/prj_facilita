@@ -46,7 +46,8 @@ class FileController extends Controller
         $store_image->status_doc        =       '1';
         $store_image->base64_doc        =       $image;
         $store_image->tipo_doc          =       $request->tipodoc;
-        $store_image->id_cadastro     =      $data_cadastro->id;
+        $store_image->id_cadastro       =      $data_cadastro->id;
+        $store_image->nr_doc            =   0;
         $store_image->save();
 
 
