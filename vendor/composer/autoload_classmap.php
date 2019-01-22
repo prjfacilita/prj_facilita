@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'AddGrupoIdToLogin' => $baseDir . '/database/migrations/2019_01_22_120537_add_grupo_id_to_login.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\DadosBancarios' => $baseDir . '/app/DadosBancarios.php',
     'App\\Emprestimo' => $baseDir . '/app/Emprestimo.php',

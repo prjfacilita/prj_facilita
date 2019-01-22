@@ -242,6 +242,11 @@ class EmprestimoController extends Controller
     }
 
 
+    public function  EnviarFoto(Request $request){
+
+        return \view('upload.envio_fotografia');
+    }
+
     public function EnviarComprovanteDeResidencia(Request $request){
 
         return view('upload.comprovante_residencia');
@@ -251,7 +256,7 @@ class EmprestimoController extends Controller
 
     public function EnviarComprovanteDeRenda(Request $request){
 
-        return view('upload.enviar_comprovante_renda');
+        return view('upload.comprovante_renda');
 
     }
     public function EmprestimoEndereco(Request $request){

@@ -40,15 +40,60 @@
                         <table class="inner-body" align="center" width="570" cellpadding="0" cellspacing="0" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; background-color: #ffffff; margin: 0 auto; padding: 0; width: 570px; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 570px;">
                             <!-- Body content --><tr>
                                 <td class="content-cell" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; padding: 35px;">
-                                    <h3 style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #2F3133; font-size: 14px; font-weight: bold; margin-top: 0; text-align: left;">Proposta enviada para Pré analise</h3>
+                                    <h3 style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #2F3133; font-size: 14px; font-weight: bold; margin-top: 0; text-align: left;">Parabéns! Você foi pré-aprovado!</h3>
 
                                     {{--<a href="" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #3869d4;">doloremque eaque</a>,--}}
-                                    <p style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787e; font-size: 16px; line-height: 1.5em; margin-top: 0; text-align: left;">Olá {{$nome_completo}},
+                                    <p style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787e; font-size: 16px; line-height: 1.5em; margin-top: 0; text-align: left;">
+                                        Olá {{$nome_compl}},
+                                        Chegou a hora de você enviar seus documentos!
+                                        Precisamos que a documentação abaixo seja enviada para seguirmos com a análise da sua proposta:
+                                        [Documento de identificação]
+                                        o Serão aceitos documentos como: CNH, Carteira de Identidade, RNE, Passaporte ou carteiras
+                                        de ordens profissionais tais como OAB e CFM. Todos devem ter foto e estar dentro da data
+                                        de validade;
+                                        o Deve ser digitalizada a frente e o verso do documento;
+                                        o Tire o documento do plástico para evitar reflexo. Verifique se as informações da imagem
+                                        estão legíveis e se a imagem não está cortada;
+                                        o CPF – Necessário somente se o outro documento de Identidade não contiver o número do
+                                        CPF. Se for o "cartão azul", somente a frente é necessária. Se for antigo, deverá ser enviado a
+                                        frente e o verso do documento.
+                                        [Selfie] (foto de identificação)
+                                        o Foto recente do seu rosto;
+                                        o Tire a foto em um local iluminado;
+                                        o Retire qualquer acessório que impossibilite a visualização completa do rosto, como óculos ou
+                                        chapéu;
+                                        o Verifique se a imagem não está desfocada.
+                                        [Comprovante de residência]
+                                        o Serão aceitas contas de consumo como: água, luz, telefone, celular, internet, TV por
+                                        assinatura e gás;
+                                        o O comprovante deverá estar em seu nome ou parente de primeiro grau com o mesmo
+                                        sobrenome;
+                                        o A data de emissão do comprovante não deve ser anterior a 90 dias;
+                                        o Confira se todos os campos estão legíveis e se a imagem não está cortada.
+                                        [Comprovante de renda]
+                                        o Os comprovantes deverão estar em seu nome;
+                                        o Serão aceitos:
+                                        ▪ Extrato Bancário (Conta corrente ou poupança);
+                                        ▪ Extrato INSS;
+                                        ▪ Extrato de conta com INSS;
+                                        Comprovante de Recebimento Previdência Privada;
+                                        ▪ Holerite;
+                                        ▪ Comprovante de saque INSS;
+                                        ▪ Pró-labore;
+                                        ▪ DECORE ANUAL.
+                                        Confira se todos os campos estão legíveis e se a imagem não está cortada.
+                                        {Enviar documentação}
+                                        Atenciosamente,
+                                        Banco CBSS
+                                        ● Mesa de Análise – Primeiro envio:
+                                        Assunto: Falta Pouco!
+                                        Olá [Nome Cliente],
                                         Agora é com a gente!
-                                        Estamos analisando suas informações e em breve você terá uma resposta nossa. Isso pode levar até 2 dias
+                                        Estamos analisando suas informações e em breve você tterá uma resposta nossa. Isso pode levar até 2 dias
                                         úteis.
                                         Atenciosamente,
                                         Banco CBSS
+
                                     </p>
                                     {{--<table class="action" align="center" width="100%" cellpadding="0" cellspacing="0" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; margin: 30px auto; padding: 0; text-align: center; width: 100%; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 100%;"><tr>--}}
                                     {{--<td align="center" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">--}}
@@ -64,18 +109,18 @@
                                     {{--</td>--}}
                                     {{--</tr></table>--}}
                                     {{--<table class="action" align="center" width="100%" cellpadding="0" cellspacing="0" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; margin: 30px auto; padding: 0; text-align: center; width: 100%; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 100%;"><tr>--}}
-                                            {{--<td align="center" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">--}}
-                                                {{--<table width="100%" border="0" cellpadding="0" cellspacing="0" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;"><tr>--}}
-                                                        {{--<td align="center" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">--}}
-                                                            {{--<table border="0" cellpadding="0" cellspacing="0" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;"><tr>--}}
-                                                                    {{--<td style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">--}}
-                                                                        {{--<a href="{{ url('/confirmar-usuario/') }}/{!! $rand !!}" class="button button-green" target="_blank" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; border-radius: 3px; box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16); color: #ffffff; display: inline-block; text-decoration: none; -webkit-text-size-adjust: none; background-color: #2ab27b; border-top: 10px solid #2ab27b; border-right: 18px solid #2ab27b; border-bottom: 10px solid #2ab27b; border-left: 18px solid #2ab27b;">Confirmar conta</a>--}}
-                                                                    {{--</td>--}}
-                                                                {{--</tr></table>--}}
-                                                        {{--</td>--}}
-                                                    {{--</tr></table>--}}
-                                            {{--</td>--}}
-                                        {{--</tr></table>--}}
+                                    {{--<td align="center" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">--}}
+                                    {{--<table width="100%" border="0" cellpadding="0" cellspacing="0" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;"><tr>--}}
+                                    {{--<td align="center" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">--}}
+                                    {{--<table border="0" cellpadding="0" cellspacing="0" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;"><tr>--}}
+                                    {{--<td style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">--}}
+                                    {{--<a href="{{ url('/confirmar-usuario/') }}/{!! $rand !!}" class="button button-green" target="_blank" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; border-radius: 3px; box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16); color: #ffffff; display: inline-block; text-decoration: none; -webkit-text-size-adjust: none; background-color: #2ab27b; border-top: 10px solid #2ab27b; border-right: 18px solid #2ab27b; border-bottom: 10px solid #2ab27b; border-left: 18px solid #2ab27b;">Confirmar conta</a>--}}
+                                    {{--</td>--}}
+                                    {{--</tr></table>--}}
+                                    {{--</td>--}}
+                                    {{--</tr></table>--}}
+                                    {{--</td>--}}
+                                    {{--</tr></table>--}}
                                     {{--<table class="action" align="center" width="100%" cellpadding="0" cellspacing="0" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; margin: 30px auto; padding: 0; text-align: center; width: 100%; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 100%;"><tr>--}}
                                     {{--<td align="center" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">--}}
                                     {{--<table width="100%" border="0" cellpadding="0" cellspacing="0" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;"><tr>--}}

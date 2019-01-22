@@ -47,7 +47,7 @@
                 <a class="logomarca" href="#"><img src="assets/pendencias/images/logo-facilita.png" alt="Logomarca Facilita" class="image-logomarca"/></a>
                 <div class="user-logged">
                     <img src="assets/pendencias/images/icon-user.png" alt="Ícone Usuário" class="icon-user-logged mr-5"/>
-                    <p class="mr-5" style="color: #fff;">Olá {{Auth::user()->email}}, pedido em andamento!</p>
+                    <p class="mr-5" style="color: #fff;">Olá {{ ucwords(\App\PreCadastro::where('email',Auth::user()->email)->first()->nome_compl) }}, pedido em andamento!</p>
                 </div>
                 <div class="nav">
                     <nav>
@@ -114,12 +114,12 @@
 
                 <div class="solicitation-inf-area solicitation-date">
                     <p>Data da solicitação</p>
-                    <span>{{$dataSolicitacao}}</span>
+                    <span><span>{{ \Carbon\Carbon::parse($data_solicitacao)->format('d/m/Y')}}</span></span>
                 </div>
 
                 <div class="solicitation-inf-area solicitation-date">
                     <p>Data de pagamento</p>
-                    <span>{{$dataPrimeiraParcela}}</span>
+                    <span><span>{{ \Carbon\Carbon::parse($dataPrimeiraParcela)->format('d/m/Y')}}</span></span>
                 </div>
 
                 <div class="solicitation-inf-area solicitation-value">
@@ -134,7 +134,8 @@
 
                 <div class="solicitation-inf-area">
                     <p>Motivo</p>
-                    <span>{{$motivo_solicitacao}}</span>
+                    <span style="font-size:13px;">{{$motivo_solicitacao}}</span>
+
                     {{--<a href="#" class="solicitation-inf__alter">Alterar</a>--}}
                     <a href="javascript:void(0);" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" class="solicitation-inf__alter">Alterar</a>
 
@@ -334,7 +335,7 @@
                             <!-- formulário documentos pendentes  -->
                             <div class="acordion-order-dispatched acordion-documents">
                                 <div>
-                                    <a class="card-link collapsed" data-toggle="collapse" href="#form-2">
+                                    <a class="card-link {{ $pendencias  }}" data-toggle="collapse" href="#form-2">
                                         Documentos pendentes
                                     </a>
                                 </div>
@@ -345,7 +346,7 @@
                                         <div class="card-documents">
                                             <h2>Foto pessoal e documento de identificação</h2>
                                             <p>Envie seus documentos para continuar</p>
-                                            <a href="">Enviar documentos</a>
+                                            <a href="{{route('enviar_foto')}}">Enviar documentos</a>
                                         </div>
 
                                         <div class="card-documents">
@@ -369,7 +370,7 @@
                                         <div class="card-documents">
                                             <h2>Comprovante de renda <span>(Opcional)</span></h2>
                                             <p>Envie seu comprovante de renda para continuar</p>
-                                            <a href="{{route('enviar_documento')}}">Enviar documento</a>
+                                            <a href="{{route('enviar_comprovante_renda')}}">Enviar documento</a>
                                         </div>
                                     </div>
 

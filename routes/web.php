@@ -119,6 +119,10 @@ Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('re
 Route::get('resumo', [ 'as' => 'resumo', 'uses' => 'PropostaController@ANALISE_CADASTRAL_CONCLUIDA']);
 Route::get('enviar_documento', [ 'as' => 'enviar_documento', 'uses' => 'EmprestimoController@EnviarComprovanteDeResidencia']);
 Route::get('enviar_comprovante_renda', [ 'as' => 'enviar_comprovante_renda', 'uses' => 'EmprestimoController@EnviarComprovanteDeRenda']);
+Route::get('enviar_foto', [ 'as' => 'enviar_foto', 'uses' => 'EmprestimoController@EnviarFoto']);
+
+Route::get('documentos_pendentes', [ 'as' => 'documentos_pendentes', 'uses' => 'PropostaController@DocumentosPendentes']);
+
 
 
 Route::get('documento_formalizacao', 'PropostaController@RetornarDocumentoFormalizacao')->name('documento_formalizacao');

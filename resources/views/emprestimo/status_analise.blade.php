@@ -76,7 +76,7 @@
                 <div class="col-12">
                     <div class="user-name">
                         <img src="assets/analise/images/icon-user.png" alt="Ícone Usuário" class="icon-user"/>
-                        <p>{{Auth::user()->email}}</p>
+                        <p>{{ ucwords(\App\PreCadastro::where('email',Auth::user()->email)->first()->nome_compl) }}</p>
                     </div>
                 </div>
             </div>

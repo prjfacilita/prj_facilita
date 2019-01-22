@@ -432,6 +432,7 @@ class ComposerStaticInitcba2091fa4da6492fa300fcb69cd7494
     );
 
     public static $classMap = array (
+        'AddGrupoIdToLogin' => __DIR__ . '/../..' . '/database/migrations/2019_01_22_120537_add_grupo_id_to_login.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\DadosBancarios' => __DIR__ . '/../..' . '/app/DadosBancarios.php',
         'App\\Emprestimo' => __DIR__ . '/../..' . '/app/Emprestimo.php',

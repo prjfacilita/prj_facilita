@@ -46,7 +46,7 @@
                 <a class="logomarca" href="#"><img src="assets/resumo/images/logo-facilita.png" alt="Logomarca Facilita" class="image-logomarca"/></a>
                 <div class="user-logged">
                     <img src="assets/resumo/images/icon-user.png" alt="Ícone Usuário" class="icon-user-logged"/>
-                    <p  class="mr-5" style="color: #fff;">Olá {{Auth::user()->email}}, pedido em andamento!</p>
+                    <p  class="mr-5" style="color: #fff;">Olá {{ ucwords(\App\PreCadastro::where('email',Auth::user()->email)->first()->nome_compl) }}, pedido em andamento!</p>
                 </div>
                 <div class="nav">
                     <nav>
@@ -113,12 +113,12 @@
 
                 <div class="solicitation-inf-area solicitation-date">
                     <p>Data da solicitação</p>
-                    <span>{{$dataSolicitacao}}</span>
+                    <span><span>{{ \Carbon\Carbon::parse($dataSolicitacao)->format('d/m/Y')}}</span></span>
                 </div>
 
                 <div class="solicitation-inf-area solicitation-date">
                     <p>Data de pagamento</p>
-                    <span>{{$dataPrimeiraParcela}}</span>
+                    <span><span>{{ \Carbon\Carbon::parse($dataPrimeiraParcela)->format('d/m/Y')}}</span></span>
                 </div>
 
                 <div class="solicitation-inf-area solicitation-value">
@@ -133,7 +133,8 @@
 
                 <div class="solicitation-inf-area">
                     <p>Motivo</p>
-                    <span>{{$motivo_solicitacao}}</span>
+                    <span style="font-size:13px;">{{$motivo_solicitacao}}</span>
+
                     {{--<a href="#" class="solicitation-inf__alter">Alterar</a>--}}
                     <a href="javascript:void(0);" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" class="solicitation-inf__alter">Alterar</a>
 

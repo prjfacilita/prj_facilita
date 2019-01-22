@@ -40,7 +40,7 @@ class CriarTableDocumentos extends Migration
 
         });
 
-        DB::statement("ALTER TABLE documentos ADD base64_dc LONGBLOB");
+        DB::statement("ALTER TABLE documentos ADD base64_doc LONGBLOB");
     }
 
     /**

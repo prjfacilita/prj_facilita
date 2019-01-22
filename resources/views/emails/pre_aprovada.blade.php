@@ -40,15 +40,19 @@
                         <table class="inner-body" align="center" width="570" cellpadding="0" cellspacing="0" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; background-color: #ffffff; margin: 0 auto; padding: 0; width: 570px; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 570px;">
                             <!-- Body content --><tr>
                                 <td class="content-cell" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; padding: 35px;">
-                                    <h3 style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #2F3133; font-size: 14px; font-weight: bold; margin-top: 0; text-align: left;">Proposta enviada para Pré analise</h3>
+                                    <h3 style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #2F3133; font-size: 14px; font-weight: bold; margin-top: 0; text-align: left;">Parabéns! Você foi pré-aprovado!</h3>
 
                                     {{--<a href="" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #3869d4;">doloremque eaque</a>,--}}
-                                    <p style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787e; font-size: 16px; line-height: 1.5em; margin-top: 0; text-align: left;">Olá {{$nome_completo}},
-                                        Agora é com a gente!
-                                        Estamos analisando suas informações e em breve você terá uma resposta nossa. Isso pode levar até 2 dias
-                                        úteis.
+                                    <p style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787e; font-size: 16px; line-height: 1.5em; margin-top: 0; text-align: left;">
+                                        Olá {{$nome_compl}},
+                                        Temos uma ótima notícia, sua proposta foi pré-aprovada*!
+                                        Ficamos contentes em poder ajudá-lo!
+                                        Clique no botão abaixo e confira as condições** pré-aprovadas
+                                        {VER CONDIÇÕES PRÉ-APROVADAS}
                                         Atenciosamente,
                                         Banco CBSS
+                                        * Oferta válida apenas para o CPF cadastrado.
+                                        ** Sujeito a reanálise de crédito
                                     </p>
                                     {{--<table class="action" align="center" width="100%" cellpadding="0" cellspacing="0" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; margin: 30px auto; padding: 0; text-align: center; width: 100%; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 100%;"><tr>--}}
                                     {{--<td align="center" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">--}}
@@ -64,18 +68,18 @@
                                     {{--</td>--}}
                                     {{--</tr></table>--}}
                                     {{--<table class="action" align="center" width="100%" cellpadding="0" cellspacing="0" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; margin: 30px auto; padding: 0; text-align: center; width: 100%; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 100%;"><tr>--}}
-                                            {{--<td align="center" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">--}}
-                                                {{--<table width="100%" border="0" cellpadding="0" cellspacing="0" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;"><tr>--}}
-                                                        {{--<td align="center" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">--}}
-                                                            {{--<table border="0" cellpadding="0" cellspacing="0" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;"><tr>--}}
-                                                                    {{--<td style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">--}}
-                                                                        {{--<a href="{{ url('/confirmar-usuario/') }}/{!! $rand !!}" class="button button-green" target="_blank" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; border-radius: 3px; box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16); color: #ffffff; display: inline-block; text-decoration: none; -webkit-text-size-adjust: none; background-color: #2ab27b; border-top: 10px solid #2ab27b; border-right: 18px solid #2ab27b; border-bottom: 10px solid #2ab27b; border-left: 18px solid #2ab27b;">Confirmar conta</a>--}}
-                                                                    {{--</td>--}}
-                                                                {{--</tr></table>--}}
-                                                        {{--</td>--}}
-                                                    {{--</tr></table>--}}
-                                            {{--</td>--}}
-                                        {{--</tr></table>--}}
+                                    {{--<td align="center" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">--}}
+                                    {{--<table width="100%" border="0" cellpadding="0" cellspacing="0" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;"><tr>--}}
+                                    {{--<td align="center" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">--}}
+                                    {{--<table border="0" cellpadding="0" cellspacing="0" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;"><tr>--}}
+                                    {{--<td style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">--}}
+                                    {{--<a href="{{ url('/confirmar-usuario/') }}/{!! $rand !!}" class="button button-green" target="_blank" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; border-radius: 3px; box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16); color: #ffffff; display: inline-block; text-decoration: none; -webkit-text-size-adjust: none; background-color: #2ab27b; border-top: 10px solid #2ab27b; border-right: 18px solid #2ab27b; border-bottom: 10px solid #2ab27b; border-left: 18px solid #2ab27b;">Confirmar conta</a>--}}
+                                    {{--</td>--}}
+                                    {{--</tr></table>--}}
+                                    {{--</td>--}}
+                                    {{--</tr></table>--}}
+                                    {{--</td>--}}
+                                    {{--</tr></table>--}}
                                     {{--<table class="action" align="center" width="100%" cellpadding="0" cellspacing="0" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; margin: 30px auto; padding: 0; text-align: center; width: 100%; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 100%;"><tr>--}}
                                     {{--<td align="center" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">--}}
                                     {{--<table width="100%" border="0" cellpadding="0" cellspacing="0" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;"><tr>--}}

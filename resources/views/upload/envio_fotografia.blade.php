@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="pt-BR">
 <head>
@@ -41,7 +40,7 @@
                 <a class="logomarca" href="#"><img src="assets/comprovante_residencia/images/logo-facilita.png" alt="Logomarca Facilita" class="image-logomarca"/></a>
                 <div class="user-logged">
                     <img src="assets/comprovante_residencia/images/icon-user.png" alt="Ícone Usuário" class="icon-user-logged"/>
-                    <p class="mr-5" style="color: #fff;">Olá {{Auth::user()->email}}, pedido em andamento!</p>
+                    <p class="mr-5" style="color: #fff;">Olá {{ ucwords(\App\PreCadastro::where('email',Auth::user()->email)->first()->nome_compl) }} pedido em andamento!</p>
                 </div>
                 <div class="nav">
                     <nav>
@@ -68,14 +67,14 @@
         <div class="container">
             <div class="row">
 
-                <div class="col-sm-3 solicitation-header__area">
+                <div class="col-sm-3 solicitation-header__area solicitation-header__checked">
                     <div>
                         <span>1</span>
                         <h2>Faça seu pedido</h2>
                     </div>
                 </div>
 
-                <div class="col-sm-3 solicitation-header__area">
+                <div class="col-sm-3 solicitation-header__area solicitation-header__checked">
                     <div>
                         <span>2</span>
                         <h2>Veja nossa proposta</h2>
@@ -154,31 +153,83 @@
                                     </a>
                                 </div>
 
-                                <div id="form-1" class="accordion-form collapse show" data-parent="#accordion" enctype="multipart/form-data">
+                                <div id="form-1" class="accordion-form collapse show" data-parent="#accordion">
 
-                                    <div class="card-body acordion-photo-document photo-doc-home">
+                                    <div class="card-body acordion-photo-document">
                                         <div class="row">
 
-                                            <div class="col-sm-12 photo-document__item">
-                                                <h2>Comprovante de residência</h2>
 
-                                                <div class="box-photo"></div>
-                                                <form action="{{route('enviar_arquivo')}}" method="post" enctype="multipart/form-data">
+                                            <div class="col-sm-4 photo-document__item">
+
+                                                <form action="{{route('enviar_arquivo')}}" id="envio_fotografia_form" method="post" enctype="multipart/form-data">
+
+                                                <h2>Sua foto</h2>
+
 
                                                     {{ csrf_field() }}
-                                                    <a href="" class="send-photo"><i class="fa fa-folder-open" aria-hidden="true"></i>Selecionar</a>
-                                                    <input type="file" class="send-photo" name="image">
+                                                <p>Enquadre bem seu rosto</p>
 
-                                                    <label>Comprovante está em seu nome?</br>
-                                                        <input type="radio" name="nome-no-documento" value="sim" checked> Sim
-                                                        <input type="radio" name="nome-no-documento" value="nao"> Não
-                                                    </label>
+                                                <div class="box-photo"></div>
 
-                                                    <input type="hidden" name="tipodoc" value="CONTA_LUZ">
+                                                    <input type="hidden" name="tipodoc" value="FOTO">
 
+                                                <input style="display: none;" type="file" id="image_fotografia" class="" name="image">
+                                                <a href="" class="send-photo">Fotografar</a>
+                                                <a id="select_documento_fotografia" href="javascript:void(0);" class="select-document">Selecionar</a>
+
+
+                                            </form>
 
 
                                             </div>
+
+
+
+
+
+
+                                            <div class="col-sm-8 photo-document__item">
+
+                                                <form id="envio_identificacao_form" action="{{route('enviar_arquivo')}}" method="post" enctype="multipart/form-data">
+
+                                                {{ csrf_field() }}
+
+
+                                                <!--frente do documento -->
+                                                <div class="photo-document">
+                                                    <div class="col-sm-6">
+                                                        <h2>Documento de frente</h2>
+                                                        <p>parte de cima da CNH ou frente do RG</p>
+
+                                                        <input type="hidden" name="tipodoc" value="RG">
+
+                                                        <input style="display: none;" type="file" id="image_identificacao" class="" name="image">
+
+                                                        <a href="" class="send-photo">Fotografar</a>
+                                                        {{--<a href="" class="select-document">Selecionar</a>--}}
+                                                        <a href="javascript:void(0);" id="select_documento_identificacao" class="select-document">Selecionar</a>
+
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="box-photo"></div>
+                                                    </div>
+                                                </div>
+                                                <!--verso do documento -->
+                                                <div class="photo-document">
+                                                    <div class="col-sm-6">
+                                                        <h2>Documento verso</h2>
+                                                        <p>parte de baixo da CNH ou verso do RG (com CPF)</p>
+                                                        <a href="" class="send-photo">Fotografar</a>
+                                                        <a href="javascript:void(0);" id="select_documento_identificacao" class="select-document">Selecionar</a>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="box-photo"></div>
+                                                    </div>
+                                                </div>
+                                                </form>
+
+                                            </div>
+
                                         </div>
                                     </div>
 
@@ -194,7 +245,6 @@
                         <button type="submit" class="solicitation-next">Continuar</button>
                     </div>
 
-                    </form>
                 </div>
             </div> <!--row -->
         </div> <!--container -->
@@ -211,6 +261,34 @@
             </div>
         </div>
     </footer>
+
+
+    <script>
+        $("#select_documento_fotografia").on('click', function(e){
+            e.preventDefault();
+            $("#image_fotografia:hidden").trigger('click');
+        });
+
+
+        $("#select_documento_identificacao").on('click', function(e){
+            e.preventDefault();
+            $("#image_identificacao:hidden").trigger('click');
+        });
+
+        jQuery("input#image_fotografia").change(function () {
+            // alert(jQuery(this).val())
+            document.getElementById("envio_fotografia_form").submit();
+            document.reload();
+
+        });
+
+        jQuery("input#image_identificacao").change(function () {
+            // alert(jQuery(this).val())
+            document.getElementById("envio_identificacao_form").submit();
+            document.reload();
+
+        });
+    </script>
 
 </div>
 </body>

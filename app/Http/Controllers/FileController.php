@@ -36,6 +36,8 @@ class FileController extends Controller
         $image                          =       base64_encode(file_get_contents($request->file('image')));
 
 
+
+//        return $image;
 //        return $request->file('image')->extension();
 
         $store_image = new File();
@@ -46,8 +48,9 @@ class FileController extends Controller
         $store_image->status_doc        =       '1';
         $store_image->base64_doc        =       $image;
         $store_image->tipo_doc          =       $request->tipodoc;
-        $store_image->id_cadastro       =      $data_cadastro->id;
-        $store_image->nr_doc            =   0;
+        $store_image->id_cadastro       =       $data_cadastro->id;
+        $store_image->nr_doc            =       0;
+        /*criar campo para identificação se o comprovante estar no nome do requerente*/
         $store_image->save();
 
 
@@ -56,7 +59,11 @@ class FileController extends Controller
 
 
             $send_api = new PropostaController();
-            return  $send_api->INSERIR_DOCUMENTO();
+             $send_api->INSERIR_DOCUMENTO($request);
+
+//             redirect('pendencias');
+            return redirect()->back()->withInput();
+
 
         }
 
